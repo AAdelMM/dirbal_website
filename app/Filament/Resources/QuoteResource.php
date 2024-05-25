@@ -18,6 +18,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\RichEditor;
 
 use IntlDateFormatter;
 
@@ -51,13 +52,27 @@ class QuoteResource extends Resource
                 ->directory('quotes') // Specify the directory
                 ->disk('public') // Use the public disk
                 ->visibility('public'), // Ensure the file is publicly accessible,
-                Textarea::make('body')
+                /* Textarea::make('body')
                 ->label('النص')
                 ->required()
                 ->rows(5)
                 ->maxLength(1024)
-                ->label('النص'),
-                    
+                ->label('النص'), */
+                RichEditor::make('body')
+                ->label('النص')
+                ->required()
+                ->toolbarButtons([
+                    'bold',
+                    'italic',
+                    'bulletList',
+                    'underline',
+                    'heading-one',
+                    'heading-two',
+                    'heading-three',
+                    'link',
+                    'attach-files',
+                ]),   
+
                 TextInput::make('source')
                 ->label('المصدر')
                 ->required()
@@ -87,6 +102,7 @@ class QuoteResource extends Resource
                     }
                     return $state;
                 }),
+              
                 Tables\Columns\TextColumn::make('source')
                 ->label('المصدر'),
                
