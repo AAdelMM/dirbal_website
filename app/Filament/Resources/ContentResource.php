@@ -74,15 +74,16 @@ class ContentResource extends Resource
                     }
                     return [];
                 })
-                ->reactive()
-                ->required(),
+                ->reactive(),
+                //->required(),
             Textarea::make('text')
                 ->label('النص')
                 ->required(),
             FileUpload::make('audio_file')
                 ->label('ملف صوتي')
                 ->disk('public')
-                ->directory('audio_files'),
+                ->directory('audio_files')
+                ->visibility('public'),
             TextInput::make('video_link')
                 ->label('رابط فيديو')
                 ->url(),
