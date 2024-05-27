@@ -25,7 +25,7 @@ class BranchResource extends Resource
 
     protected static ?string $modelLabel ='الفروع' ;
     protected static ?string $navigationGroup = 'إدارة المحتوى'; // إضافة هذه السطر لتحديد مجموعة التنقل
-    protected static ?int $sort = 2; // ترتيب العنصر
+    
 
     public static function form(Form $form): Form
     {

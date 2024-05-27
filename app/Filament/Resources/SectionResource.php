@@ -26,7 +26,7 @@ class SectionResource extends Resource
     protected static ?string $modelLabel ='الاقسام' ;
     
     protected static ?string $navigationGroup = 'إدارة المحتوى'; // إضافة هذه السطر لتحديد مجموعة التنقل
-    protected static ?int $sort = 1; // ترتيب العنصر
+   
     public static function form(Form $form): Form
     {
         return $form

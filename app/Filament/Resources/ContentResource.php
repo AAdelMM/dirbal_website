@@ -26,13 +26,16 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ContentResource extends Resource
 {
     protected static ?string $model = Content::class;
-
+    public static function getPluralModelLabel(): string
+    {
+        return 'المحتوى'; // Plural label
+    }
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
     protected static ?string $navigationLabel ='المحتوى' ;
 
     protected static ?string $modelLabel ='المحتوى' ;
     protected static ?string $navigationGroup = 'إدارة المحتوى'; // إضافة هذه السطر لتحديد مجموعة التنقل
-    protected static ?int $sort = 4; // ترتيب العنصر
+    protected static ?int $sort = 1; // ترتيب العنصر
     public static function form(Form $form): Form
     {
         return $form
