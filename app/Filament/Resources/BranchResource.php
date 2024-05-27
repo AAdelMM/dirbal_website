@@ -16,7 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class BranchResource extends Resource
 {
     protected static ?string $model = Branch::class;
-
+    public static function getPluralModelLabel(): string
+    {
+        return 'الفروع'; // Plural label
+    }
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-check';
     protected static ?string $navigationLabel ='الفروع' ;
 

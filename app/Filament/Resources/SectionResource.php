@@ -16,7 +16,10 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class SectionResource extends Resource
 {
     protected static ?string $model = Section::class;
-
+    public static function getPluralModelLabel(): string
+    {
+        return 'الاقسام'; // Plural label
+    }
     protected static ?string $navigationIcon = 'heroicon-o-building-library';
     protected static ?string $navigationLabel ='الاقسام' ;
 
