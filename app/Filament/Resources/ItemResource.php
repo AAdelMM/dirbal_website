@@ -25,7 +25,7 @@ class ItemResource extends Resource
 
     protected static ?string $modelLabel ='العناصر' ;
     protected static ?string $navigationGroup = 'إدارة المحتوى'; // إضافة هذه السطر لتحديد مجموعة التنقل
-    
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {

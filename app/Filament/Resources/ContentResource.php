@@ -35,7 +35,7 @@ class ContentResource extends Resource
 
     protected static ?string $modelLabel ='المحتوى' ;
     protected static ?string $navigationGroup = 'إدارة المحتوى'; // إضافة هذه السطر لتحديد مجموعة التنقل
-    protected static ?int $sort = 1; // ترتيب العنصر
+    protected static ?int $navigationSort = 4; // ترتيب العنصر
     public static function form(Form $form): Form
     {
         return $form
@@ -43,8 +43,8 @@ class ContentResource extends Resource
             Select::make('type')
                 ->label('نوع المحتوى')
                 ->options([
-                    'article' => 'مقال',
-                    'judicial' => 'نص حكم قضائي',
+                    'مقال' => 'مقال',
+                    'نص حكم' => 'نص حكم قضائي',
                 ])
                 ->required(),
             Select::make('section_id')
