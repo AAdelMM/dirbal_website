@@ -29,7 +29,7 @@ class LikeResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel ='الاعجابات' ;
 
-    
+    protected static ?string $navigationGroup = 'التفاعل'; // إضافة هذه السطر لتحديد مجموعة التنقل
 
     public static function table(Table $table): Table
     {

@@ -27,6 +27,7 @@ class CommentResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel ='التعليقات' ;
+    protected static ?string $navigationGroup = 'التفاعل'; // إضافة هذه السطر لتحديد مجموعة التنقل
 
     public static function form(Form $form): Form
     {
