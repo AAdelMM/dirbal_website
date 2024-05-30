@@ -25,7 +25,7 @@ class CommentResource extends Resource
         return 'تعليق';
     }
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chat-bubble-left-right';
     protected static ?string $navigationLabel ='التعليقات' ;
     protected static ?string $navigationGroup = 'التفاعل'; // إضافة هذه السطر لتحديد مجموعة التنقل
 
