@@ -1,33 +1,10 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    './storage/framework/views/*.php',
-    './resources/views/**/*.blade.php',
-    './app/Http/Livewire/**/*.php',
-  ],
-  theme: {
-    extend: {
-       colors: {
-        'gold': '#FFD700',
-      },
-    },
-  },
-  plugins: [],
-}
+import preset from './vendor/filament/support/tailwind.config.preset'
 
-module.exports = {
-  content: [
-    './storage/framework/views/*.php',
-    './resources/views/**/*.blade.php',
-    './app/Http/Livewire/**/*.php',
-  ],
-  theme: {
-    extend: { 
-      colors: {
-         'gold': '#FFD700',
-    },},
-  },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+export default {
+    presets: [preset],
+    content: [
+        './app/Filament/**/*.php',
+        './resources/views/**/*.blade.php',
+        './vendor/filament/**/*.blade.php',
+    ],
 }

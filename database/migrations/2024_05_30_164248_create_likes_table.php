@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contents', function (Blueprint $table) {
+        Schema::create('likes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('contents_id')->constrained()->onDelete('cascade'); // افترض أن لديك جدول للمحتويات
+            $table->string('user_ip'); // افترض أنك تستخدم عنوان IP للمستخدم لتتبع الإعجابات
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contents');
+        Schema::dropIfExists('likes');
     }
 };

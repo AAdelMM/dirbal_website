@@ -6,14 +6,16 @@ use App\Filament\Resources\BranchResource;
 use App\Filament\Resources\ItemResource;
 use App\Filament\Resources\ContentResource;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\LikeController;
 
 Route::get('/', function () {
     return view('uc');
 });
 
 
-
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::post('/likes', [LikeController::class, 'store'])->name('likes.store');
 
 Route::middleware(['auth', 'filament'])->group(function () {
     Route::get('/admin/section', [SectionResource::class, 'index'])->name('admin.sections');
