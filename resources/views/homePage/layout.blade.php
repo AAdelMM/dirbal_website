@@ -67,7 +67,7 @@
 
                 <div class="icons8-bookmark-1-child"></div>
                 
-                <div class="div1"">3</div>
+                <div class="div1">3</div>
                 </div>
               <div class="spanmkd-vertical-separator"></div>
               <img
