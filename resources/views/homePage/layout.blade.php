@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8" dir="rtl"/>
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="{{ asset('css/global.css')}}" />
@@ -29,7 +29,7 @@
         <div class="home1">
           <img class="adfinal-2-icon" alt="" src="{{asset('images/homeHero.png')}}" />
 
-          <img class="icon" alt="" src="./public/7-659@2x.png" />
+          <img class="icon" alt="" src="{{asset('images/heroquran.png')}}" />
 
           <img
             class="accessibility-boutton-icon"
@@ -39,65 +39,51 @@
 
           <div class="content-carrousol">
             <div class="light">
-              <div class="rectangle-parent">
-                <img
-                  class="frame-child"
-                  alt=""
-                  src="./public/rectangle-452@2x.png"
-                />
+            <div class="Frame280" style="width: 790px; height: 170px; position: relative">
+            <img class="Rectangle452" style="width: 309px; height: 170px; left: 0px; top: 0px; position: absolute; border-radius: 6px" src="{{asset('images/judge.jpg')}}" />
+            <div style="width: 790px; left: 0px; top: 104px; position: absolute; text-align: right; color: #AB8219; font-size: 55px; font-family: Zahra Arabic; font-weight: 700; word-wrap: break-word">قبسات</div>
+          </div>
+          <div class="Divider" style="width: 782px; height: 1px; background: rgba(45.98, 56.59, 71.19, 0.50)"></div>
 
-                <b class="b">قبسات</b>
-              </div>
-              <div class="divider"></div>
-              <div class="div">
-                إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن
-                نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن
-                نفكر في أشياء نحسبها راقية جداً .
-              </div>
+          <div style="width: 782px; text-align: justify; color: #161D27; font-size: 30px; font-family: Zahra Arabic; font-weight: 400; word-wrap: break-word">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً . </div>
+
               <b class="b1">المصدر : كتاب القانون المدني</b>
             </div>
           </div>
           <div class="header-home">
             <div class="line"></div>
             <img
-              class="header-home-child"
-              alt=""
-              src="./public/group-20@2x.png"
-            />
+              class="header-home-child" alt="bsm allah"  src="{{asset('images/bsm2.png')}}"/>
 
             <div class="logo">
-              <img class="logo-child" alt="" src="./public/group-47@2x.png" />
+              <img class="logo-child" alt="" src="{{asset('images/LOGO.png')}}" />
 
               <div class="logo-item"></div>
-              <img class="aa-1-icon" alt="" src="./public/aa-1@2x.png" />
+              <img class="aa-1-icon" alt="" src="{{asset('images/favicon.png')}}" />
             </div>
             <div class="icons8-bookmark-1-parent">
               <div class="icons8-bookmark-1" id="icons8Bookmark1Container">
-                <img class="vector-icon" alt="" src="./public/vector.svg" />
+                <img class="vector-icon" alt="" src="{{asset('images/fav.png')}}" />
 
                 <div class="icons8-bookmark-1-child"></div>
-                <div class="div1">3</div>
-              </div>
+                
+                <div class="div1"">3</div>
+                </div>
               <div class="spanmkd-vertical-separator"></div>
               <img
-                class="icons8-search-1-1"
-                alt=""
-                src="./public/icons8search-1-1.svg"
-                id="icons8Search11"
-              />
-
+                class="icons8-search-1-1"  alt="" src="{{asset('images/search.svg')}}" id="icons8Search11" />
               <div class="spanmkd-vertical-separator"></div>
               <img
                 class="icons8-menu-1-1"
                 alt=""
-                src="./public/icons8menu-1-1.svg"
+                src="{{asset('images/menu.svg')}}"
                 id="icons8Menu11"
               />
 
               <div class="spanmkd-vertical-separator"></div>
             </div>
           </div>
-          <img class="switchrtf-icon" alt="" src="./public/switchrtf.svg" />
+          <img class="switchrtf-icon" alt="" src="{{asset('images/SWITCH(RTF).png')}}" />
         </div>
         <div class="practice-areas">
           <img class="background-icon" alt="" src="./public/background.svg" />
@@ -118,10 +104,7 @@
                     <div class="divmkd-post-info-date">
                       <div class="copy">
                         <img
-                          class="vector-icon1"
-                          alt=""
-                          src="./public/vector1.svg"
-                        />
+                          class="vector-icon1" alt="" src="{{asset('images/fav.png')}}"/>
                       </div>
                     </div>
                     <div
@@ -483,7 +466,7 @@
           <div class="all-rights-resrved">
             <div class="all-rights-resrved-child"></div>
             <div class="div36">
-              © دربال، جميع الحقوق محفوظة، 2023 ، ضد الاستعمال التجاري.
+              © دربال، جميع الحقوق محفوظة، 2024 ، ضد الاستعمال التجاري.
             </div>
           </div>
           <div class="divtextwidget-parent">
