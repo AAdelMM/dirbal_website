@@ -1602,6 +1602,7 @@
   /* height: 58.438rem; */
   height: 70rem;
   overflow: hidden;
+  margin-top: -20px;
 }
 .menu2 {
   position: absolute;
@@ -1618,5 +1619,6 @@
   color: var(--color-white);
   font-family: var(--font-zahra-arabic);
   left:12rem;
-
+  
+  
 }
