@@ -1613,10 +1613,10 @@
 .menu1 {
   width: 110rem;
   position: relative;
-  
   text-align: center;
   font-size: var(--font-size-41xl);
   color: var(--color-white);
   font-family: var(--font-zahra-arabic);
-  padding-right: 0;
+  left:12rem;
+
 }
