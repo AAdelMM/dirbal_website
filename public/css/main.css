@@ -1620,5 +1620,258 @@
   font-family: var(--font-zahra-arabic);
   left:12rem;
   
-  
+}
+
+/*media query code*/
+
+/* Styles for screen width 1366px */
+@media screen and (max-width: 1370px) {
+  .adfinal-2-icon {
+    width: 85rem;
+    height: 41.688rem;
+  }
+  .icon {
+    top: 11.872rem;
+    left: 2.623rem;
+    width: 40.271rem;
+    height: 19.097rem;
+  }
+  .accessibility-boutton-icon {
+    top: 39.656rem;
+    left: 2.822rem;
+    width: 2.733rem;
+    height: 2.750rem;
+  }
+  .b, .frame-child {
+    width: 36.875rem;
+  }
+  .b {
+    top: 4.875rem;
+  }
+  .rectangle-parent, .b1 {
+    width: 36.875rem;
+  }
+  .light {
+    top: 5.625rem;
+    left: 43.078rem;
+  }
+  .content-carrousol {
+    top: calc(50% - 261.39px);
+    left: calc(50% - 718.5px);
+    width: 89.906rem;
+    height: 38.25rem;
+  }
+  .line {
+    top: 5.273rem;
+    width: 80.438rem;
+  }
+  .header-home-child {
+    top: 0.656rem;
+    left: 33.908rem;
+    width: 11.859rem;
+    height: 5.156rem;
+  }
+  .logo-child {
+    width: 9.698rem;
+    height: 3.563rem;
+  }
+  .logo-item {
+    height: 3.328rem;
+  }
+  .aa-1-icon {
+    width: 3.141rem;
+    height: 3.984rem;
+  }
+  .icons8-bookmark-1-parent {
+    left: 69.516rem;
+  }
+  .header-home {
+    left: calc(50% - 645.082px);
+    width: 80.714rem;
+    height: 5.865rem;
+  }
+  .switchrtf-icon {
+    top: calc(50% - 20.29px);
+    left: calc(50% - 720px);
+    width: 89.906rem;
+    height: 2.817rem;
+  }
+  .home1 {
+    width: 90rem;
+    height: 43.828rem;
+  }
+  .icon1 {
+    top: 0.43%;
+    right: -2.828%;
+    bottom: -0.43%;
+    left: 2.865%;
+  }
+}
+
+/* Styles for screen width 1280px */
+@media screen and (max-width: 1280px) {
+  .adfinal-2-icon {
+    width: 80rem;
+    height: 39rem;
+  }
+  .icon {
+    top: 11.172rem;
+    left: 2.473rem;
+    width: 37.694rem;
+    height: 17.969rem;
+  }
+  .accessibility-boutton-icon {
+    top: 37.167rem;
+    left: 2.644rem;
+    width: 2.578rem;
+    height: 2.594rem;
+  }
+  .b, .frame-child {
+    width: 34.375rem;
+  }
+  .b {
+    top: 4.5rem;
+  }
+  .rectangle-parent, .b1 {
+    width: 34.375rem;
+  }
+  .light {
+    top: 5.25rem;
+    left: 40.438rem;
+  }
+  .content-carrousol {
+    top: calc(50% - 246px);
+    left: calc(50% - 678px);
+    width: 84.906rem;
+    height: 36.5rem;
+  }
+  .line {
+    top: 5rem;
+    width: 76.25rem;
+  }
+  .header-home-child {
+    top: 0.625rem;
+    left: 32.71rem;
+    width: 11.25rem;
+    height: 4.875rem;
+  }
+  .logo-child {
+    width: 9.188rem;
+    height: 3.375rem;
+  }
+  .logo-item {
+    height: 3.156rem;
+  }
+  .aa-1-icon {
+    width: 2.969rem;
+    height: 3.75rem;
+  }
+  .icons8-bookmark-1-parent {
+    left: 65.5rem;
+  }
+  .header-home {
+    left: calc(50% - 602.11px);
+    width: 76.714rem;
+    height: 5.571rem;
+  }
+  .switchrtf-icon {
+    top: calc(50% - 19.05px);
+    left: calc(50% - 680px);
+    width: 84.906rem;
+    height: 2.69rem;
+  }
+  .home1 {
+    width: 85rem;
+    height: 41.25rem;
+  }
+  .icon1 {
+    top: 0.43%;
+    right: -2.551%;
+    bottom: -0.43%;
+    left: 2.591%;
+  }
+}
+
+/* Styles for screen width 400px */
+@media screen and (max-width: 400px) {
+  .adfinal-2-icon {
+    width: 25rem;
+    height: 12.188rem;
+  }
+  .icon {
+    top: 3.492rem;
+    left: 0.773rem;
+    width: 11.073rem;
+    height: 5.281rem;
+  }
+  .accessibility-boutton-icon {
+    top: 10.958rem;
+    left: 0.78rem;
+    width: 0.76rem;
+    height: 0.75rem;
+  }
+  .b, .frame-child {
+    width: 11.875rem;
+  }
+  .b {
+    top: 1.5rem;
+  }
+  .rectangle-parent, .b1 {
+    width: 11.875rem;
+  }
+  .light {
+    top: 1.75rem;
+    left: 14.438rem;
+  }
+  .content-carrousol {
+    top: calc(50% - 78px);
+    left: calc(50% - 214px);
+    width: 26.906rem;
+    height: 11.5rem;
+  }
+  .line {
+    top: 1.563rem;
+    width: 24.75rem;
+  }
+  .header-home-child {
+    top: 0.188rem;
+    left: 10.210rem;
+    width: 3.125rem;
+    height: 1.563rem;
+  }
+  .logo-child {
+    width: 2.844rem;
+    height: 1.063rem;
+  }
+  .logo-item {
+    height: 0.938rem;
+  }
+  .aa-1-icon {
+    width: 0.938rem;
+    height: 1.219rem;
+  }
+  .icons8-bookmark-1-parent {
+    left: 20.875rem;
+  }
+  .header-home {
+    left: calc(50% - 190.055px);
+    width: 24.714rem;
+    height: 1.857rem;
+  }
+  .switchrtf-icon {
+    top: calc(50% - 6.05px);
+    left: calc(50% - 210px);
+    width: 26.906rem;
+    height: 0.817rem;
+  }
+  .home1 {
+    width: 25rem;
+    height: 12.188rem;
+  }
+  .icon1 {
+    top: 0.43%;
+    right: -0.745%;
+    bottom: -0.43%;
+    left: 0.754%;
+  }
 }
