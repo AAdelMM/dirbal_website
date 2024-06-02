@@ -153,7 +153,7 @@
                   </div>
                 </div>
               </div>
-              <img class="icon4" alt="" src="./public/icon1.svg" />
+              <img class="icon4" alt="" src="{{asset('images/IconHline.png')}}" />
 
               <div class="frame-parent1">
                 <div class="parent5">
@@ -202,7 +202,7 @@
                   </div>
                 </div>
               </div>
-              <img class="icon4" alt="" src="./public/icon2.svg" />
+              <img class="icon4" alt="" src="{{asset('images/IconHline.png')}}" />
 
               <div class="frame-parent1">
                 <div class="parent8">
