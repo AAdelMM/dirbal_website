@@ -3,6 +3,13 @@
 @tailwind components;
 @tailwind utilities;
  */
+
+ @font-face {
+  font-family: 'Zahra Arabic'; /* Replace with your font name */
+  src: url('../fonts/18618-zahra.arabic.otf') format('truetype'),
+       url('../fonts/ZahraArabic-Regular.woff') format('woff'); /* Include formats for wider browser compatibility */
+}
+
 .adfinal-2-icon,
 .icon {
   position: absolute;
@@ -92,6 +99,7 @@
   justify-content: center;
   padding: var(--padding-41xl) var(--padding-33xl);
   gap: var(--gap-13xl);
+  font-family:'Zahra Arabic',ZahraArabic;
 }
 .content-carrousol {
   position: absolute;
@@ -171,7 +179,7 @@
   align-items: flex-end;
   width: 0.5rem;
   height: 1.188rem;
-  font-size: 1.25rem;
+  font-size: 1.875rem;
 }
 .icons8-bookmark-1 {
   width: 2.413rem;
@@ -253,6 +261,7 @@
   bottom: -0.43%;
   left: 3.82%;
   object-fit: cover;
+  
 }
 .divmkd-separator {
   width: 6.094rem;
@@ -553,6 +562,7 @@
 }
 .p {
   margin: 0;
+  
 }
 .span1,
 .span2 {
@@ -697,6 +707,7 @@
   margin-top: -0.063rem;
   text-align: center;
   font-family: var(--font-roboto);
+  background: #161D27;
 }
 .background-icon1 {
   position: absolute;
@@ -1000,6 +1011,7 @@
   left: calc(50% - 924.5px);
   width: 115.563rem;
   height: 48.625rem;
+  direction: rtl;
 }
 .mokhtarat {
   width: 120.313rem;
@@ -1008,6 +1020,12 @@
   margin-top: -0.063rem;
   text-align: center;
   font-size: var(--font-size-31xl);
+  /* Background */
+
+  
+
+  background: #1F2732;
+
 }
 .all-rights-resrved-child,
 .footer-child {
@@ -1055,6 +1073,8 @@
   align-items: center;
   width: 7.706rem;
   height: 1.188rem;
+  direction: rtl;
+
 }
 .div37,
 .div38,
@@ -1074,6 +1094,7 @@
   display: flex;
   align-items: center;
   width: 25.375rem;
+  direction: rtl;
 }
 .inputwpcf7-form-control {
   position: absolute;
@@ -1093,6 +1114,7 @@
   display: flex;
   align-items: center;
   width: 25.188rem;
+  direction: rtl;
 }
 .textareawpcf7-form-control {
   position: absolute;
@@ -1146,10 +1168,11 @@
 .div40,
 .div41 {
   position: absolute;
+  
 }
 .div40 {
   top: 0.938rem;
-  left: 4rem;
+  left: 6.5rem;
   line-height: 1.5rem;
   text-transform: uppercase;
   display: flex;
@@ -1162,9 +1185,10 @@
   left: 1.938rem;
   font-size: var(--font-size-5xl);
   line-height: 140%;
-  font-family: var(--font-sakkal-majalla);
+  font-family: var(--font-sakkal-majalla),'Zahra Arabic';
   color: var(--color-lightgray);
   text-align: justify;
+  direction: rtl;
 }
 .divtextwidget1 {
   position: absolute;
@@ -1172,6 +1196,7 @@
   left: 3.125rem;
   width: 24rem;
   height: 8.563rem;
+ 
 }
 .div42 {
   position: absolute;
@@ -1193,7 +1218,7 @@
   overflow: hidden;
 }
 .inputwpcf7-form-control1 {
-  top: 6.563rem;
+  top: 8.563rem;
   left: 2.063rem;
   background-color: var(--color-silver-200);
   border: 1px solid var(--color-darkslategray-100);
@@ -1202,6 +1227,7 @@
   height: 2.563rem;
   font-size: var(--font-size-6xl);
   color: var(--color-whitesmoke-100);
+  direction: rtl;
 }
 .divmkd-column-inner {
   position: absolute;
@@ -1315,7 +1341,8 @@
 }
 .inputwpcf7-form-control3 {
   position: absolute;
-  top: 27.5rem;
+  /* top: 27.5rem; */
+  top: 28.5rem;
   left: 27.656rem;
   border-radius: var(--br-10xs);
   background-color: #c18f59;
@@ -1327,18 +1354,20 @@
   text-align: right;
 }
 .div46 {
+  direction: rtl;
   position: absolute;
   top: 3.75rem;
   left: -2.562rem;
   font-size: 1.688rem;
   line-height: 140%;
-  font-family: var(--font-sakkal-majalla);
+  font-family: var(--font-sakkal-majalla),'Zahra Arabic';
   color: var(--color-lightgray);
   text-align: justify;
   display: flex;
   align-items: center;
   width: 38rem;
   height: 25.563rem;
+  
 }
 .logo-icon {
   position: absolute;

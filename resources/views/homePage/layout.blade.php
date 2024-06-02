@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" dir="rtl"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="{{ asset('css/global.css')}}" />
@@ -26,6 +26,7 @@
   <body>
     <div class="home">
       <div class="home-parent">
+        <!--hero section start-->
         <div class="home1">
           <img class="adfinal-2-icon" alt="" src="{{asset('images/homeHero.png')}}" />
 
@@ -45,7 +46,7 @@
           </div>
           <div class="Divider" style="width: 782px; height: 1px; background: rgba(45.98, 56.59, 71.19, 0.50)"></div>
 
-          <div style="width: 782px; text-align: justify; color: #161D27; font-size: 30px; font-family: Zahra Arabic; font-weight: 400; word-wrap: break-word">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً . </div>
+          <div style="width: 782px; text-align: justify; color: #161D27; font-size: 40px; font-family: Zahra Arabic; font-weight: 500; word-wrap: break-word">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً . </div>
 
               <b class="b1">المصدر : كتاب القانون المدني</b>
             </div>
@@ -85,230 +86,25 @@
           </div>
           <img class="switchrtf-icon" alt="" src="{{asset('images/SWITCH(RTF).png')}}" />
         </div>
-        <div class="practice-areas">
-          <img class="background-icon" alt="" src="./public/background.svg" />
-
-          <img class="icon1" alt="" src="./public/1-617113833@2x.png" />
-
-          <div class="bars">
-            <div class="divmkd-separator"></div>
-            <img class="bars-child" alt="" src="./public/group-80@2x.png" />
-
-            <div class="divmkd-separator"></div>
-          </div>
-          <div class="last-topics">
-            <div class="frame-parent">
-              <div class="frame-group">
-                <div class="menu-wrapper">
-                  <div class="menu">
-                    <div class="divmkd-post-info-date">
-                      <div class="copy">
-                        <img
-                          class="vector-icon1" alt="" src="{{asset('images/fav.png')}}"/>
-                      </div>
-                    </div>
-                    <div
-                      class="divmkd-post-info-comments-hol"
-                      id="divmkdPostInfoCommentsHolContainer"
-                    >
-                      <div class="comment">
-                        <img
-                          class="vector-icon2"
-                          alt=""
-                          src="./public/vector2.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="amkd-social-share-dropdown-op">
-                      <div class="share">
-                        <img
-                          class="vector-icon3"
-                          alt=""
-                          src="./public/vector3.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <img
-                  class="btn-keep-read-icon"
-                  alt=""
-                  src="./public/btnkeepread@2x.png"
-                  id="bTNKEEPREADImage"
-                />
-              </div>
-              <div class="divvc-column-inner-parent">
-                <div class="divvc-column-inner">
-                  <div class="divmkd-blog-list-item-inner">
-                    <div class="divmkd-post-info-date1">
-                      <div class="spanmkd-post-info-date-day">
-                        <div class="div2">18</div>
-                      </div>
-                      <div class="spanmkd-post-info-date-month">
-                        <div class="div3">أغسطس</div>
-                      </div>
-                    </div>
-                    <div class="divmkd-item-text-holder">
-                      <div class="div4">
-                        69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎
-                      </div>
-                      <div class="parent">
-                        <b class="b2">القضاء المدني‎</b>
-                        <img
-                          class="frame-icon"
-                          alt=""
-                          src="./public/frame.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="divmkd-blog-list-item-inner">
-                    <div class="divmkd-post-info-date1">
-                      <div class="spanmkd-post-info-date-day">
-                        <div class="div2">18</div>
-                      </div>
-                      <div class="spanmkd-post-info-date-month">
-                        <div class="div3">أغسطس</div>
-                      </div>
-                    </div>
-                    <div class="divmkd-item-text-holder">
-                      <div class="div4">
-                        69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎
-                      </div>
-                      <div class="parent">
-                        <b class="b2">القضاء المدني‎</b>
-                        <img
-                          class="frame-icon"
-                          alt=""
-                          src="./public/frame1.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="divmkd-blog-list-item-inner">
-                    <div class="divmkd-post-info-date1">
-                      <div class="spanmkd-post-info-date-day">
-                        <div class="div2">18</div>
-                      </div>
-                      <div class="spanmkd-post-info-date-month">
-                        <div class="div3">أغسطس</div>
-                      </div>
-                    </div>
-                    <div class="divmkd-item-text-holder">
-                      <div class="div4">
-                        69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎
-                      </div>
-                      <div class="parent">
-                        <b class="b2">القضاء المدني‎</b>
-                        <img
-                          class="frame-icon"
-                          alt=""
-                          src="./public/frame2.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="divmkd-blog-list-item-inner">
-                    <div class="divmkd-post-info-date4">
-                      <div class="spanmkd-post-info-date-day">
-                        <div class="div2">18</div>
-                      </div>
-                      <div class="spanmkd-post-info-date-month">
-                        <div class="div3">أغسطس</div>
-                      </div>
-                    </div>
-                    <div class="divmkd-item-text-holder">
-                      <div class="div4">
-                        69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎
-                      </div>
-                      <div class="parent">
-                        <b class="b2">القضاء المدني‎</b>
-                        <img
-                          class="frame-icon"
-                          alt=""
-                          src="./public/frame3.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="divmkd-elements-holder-item-c">
-                  <div class="span">
-                    <div class="parent1">
-                      <b class="b6"
-                        >69 م د: فسخ عقد مبرم بين الغير ( عدم قبول لعدم المصلحة
-                        )‎</b
-                      >
-                      <div class="group-parent">
-                        <img
-                          class="frame-item"
-                          alt=""
-                          src="./public/group-49@2x.png"
-                        />
-
-                        <div class="div14">القضاء المدني</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="div15">
-                    <span class="txt">
-                      <p class="p">
-                        [المصلحة الشخصية المشروعة المباشرة شرط لقبول الدعوى.
-                        مِلاكها أن يكون للمدعي من وراء التجائه إلى القضاء منفعةٌ
-                        حقيقة، منفعةٌ لا تقوم بالضرورة بل قضاء. فلا تكون المصلحة
-                        قائمة إذا كان ما يسعى إليه قضاءً لن يعود عليه بفائدة
-                        حقيقة، بحيث لا يكون في وسعه القانوني أن يضيف إليه حقاً
-                        يدعيه، ولا هو بالحتمي لدفع ضرر يتوقع أن يصيبه.
-                      </p>
-                      <p class="p">
-                        <span
-                          >العقد شريعة المتعاقدِين، وقوته الملزمة تنبع من
-                          إرادتهم ترتيبَ أثار محددة عليه، وإذن فمن الطبيعي أن
-                          يكون نسبي الآثار، بحيث لا تتعدى الالتزامات والحقوق
-                          التي يولدها غيرَ أطرافه. فغيرُهم لم يُردها، ولهذا لم
-                          يكن طرفاً في العقد، فلا تطاله، وإذن فلا يصح الاحتجاج
-                          به
-                        </span>
-                        <span class="span1"
-                          >عليه. فإذا انعقد على عقار يقول بملكيته فيه، فلا يسلبه
-                          هذا الملكَ ولا يتنقص من حقوقه</span
-                        >
-                        <span class="span2"> </span>
-                      </p>
-                    </span>
-                  </div>
-                  <div class="divmkd-elements-holder-item-c-child"></div>
-                </div>
-              </div>
-              <div class="rectangle-group">
-                <div class="group-child"></div>
-                <b class="b7">محدث</b>
-              </div>
-            </div>
-            <div class="title">
-              <div class="content">
-                <div class="title1">
-                  <div class="div16">آخر الموضوعات</div>
-                  <img class="iocn-icon" alt="" src="./public/iocn.svg" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!--hero section end-->
+        <!--last topics section start-->
+        
+         <!--last topics section end-->
+        <!--mokhtarat section start-->
         <div class="mokhtarat">
-          <img class="background-icon1" alt="" src="./public/background1.svg" />
+          <img class="background-icon1" alt="" src="{{asset('images/section2bg.png')}}" />
 
           <img class="icon2" alt="" src="./public/1-617113832@2x.png" />
 
           <div class="bars1">
             <div class="divmkd-separator"></div>
-            <img class="bars-child" alt="" src="./public/group-81@2x.png" />
+            <img class="bars-child" alt="" src="{{asset('images/bars.png')}}" />
 
             <div class="divmkd-separator"></div>
           </div>
           <div class="choeses">
             <div class="heading">
-              <img class="icon3" alt="" src="./public/icon.svg" />
+              <img class="icon3" alt="" src="{{asset('images/Icon.png')}}" />
 
               <div class="div17">مختارات‎</div>
             </div>
@@ -323,7 +119,7 @@
                     <img
                       class="frame-inner"
                       alt=""
-                      src="./public/group-60@2x.png"
+                      src="{{asset('images/mokhIcon1.png')}}"
                     />
 
                     <div class="div14">قرارات قضائية</div>
@@ -338,7 +134,7 @@
                     <img
                       class="frame-inner"
                       alt=""
-                      src="./public/group-50@2x.png"
+                      src="{{asset('images/mokhIcon2.png')}}"
                     />
 
                     <div class="div14">القضاء الجنائي</div>
@@ -351,10 +147,7 @@
                   <b class="heading-6">عدم تنفيذ عقد عمل</b>
                   <div class="group-parent2">
                     <img
-                      class="frame-inner"
-                      alt=""
-                      src="./public/group-49@2x.png"
-                    />
+                      class="frame-inner"  alt=""  src="{{asset('images/mokhIcon3.png')}}"/>
 
                     <div class="div14">القضاء المدني</div>
                   </div>
@@ -372,7 +165,7 @@
                     <img
                       class="frame-child2"
                       alt=""
-                      src="./public/group-59@2x.png"
+                      src="{{asset('images/mokhIcon4.png')}}"
                     />
 
                     <div class="div14">القضاء الشرعي</div>
@@ -387,7 +180,7 @@
                     <img
                       class="frame-child3"
                       alt=""
-                      src="./public/group-58@2x.png"
+                      src="{{asset('images/mokhIcon5.png')}}"
                     />
 
                     <div class="div14">حقوق الإنسان</div>
@@ -402,7 +195,7 @@
                     <img
                       class="frame-inner"
                       alt=""
-                      src="./public/group-54@2x.png"
+                      src="{{asset('images/mokhIcon6.png')}}"
                     />
 
                     <div class="div14">متنوعة</div>
@@ -421,7 +214,7 @@
                     <img
                       class="frame-child5"
                       alt=""
-                      src="./public/group-57@2x.png"
+                      src="{{asset('images/mokhIcon7.png')}}"
                     />
 
                     <div class="div14">قانونية</div>
@@ -436,7 +229,7 @@
                     <img
                       class="frame-child6"
                       alt=""
-                      src="./public/group-56@2x.png"
+                      src="{{asset('images/mokhIcon8.png')}}"
                     />
 
                     <div class="div14">القضاء المدني</div>
@@ -451,7 +244,7 @@
                     <img
                       class="frame-inner"
                       alt=""
-                      src="./public/group-51@2x.png"
+                      src="{{asset('images/mokhIcon9.png')}}"
                     />
 
                     <div class="div14">شؤون فنية</div>
@@ -461,6 +254,8 @@
             </div>
           </div>
         </div>
+        <!--mokhtarat section start-->
+        <!--footer section start-->
         <div class="footer">
           <div class="footer-child"></div>
           <div class="all-rights-resrved">
@@ -487,7 +282,7 @@
               <img
                 class="envelope-solid-1-icon"
                 alt=""
-                src="./public/envelopesolid-1.svg"
+                src="{{asset('images/envelop.png')}}"
               />
             </div>
             <div class="divmkd-column-inner">
@@ -503,8 +298,9 @@
                 <img
                   class="paper-plane-regular-1-icon"
                   alt=""
-                  src="./public/paperplaneregular-1.svg"
+                  src="{{asset('images/paper-plane.png')}}"
                 />
+                
               </div>
             </div>
             <div class="divmkd-column-inner1">
@@ -515,20 +311,20 @@
                   <img
                     class="whatsapp-icon"
                     alt=""
-                    src="./public/whatsapp.svg"
+                    src="{{asset('images/whatsapp.svg')}}"
                   />
 
                   <div class="spanmkd-vertical-separator3"></div>
-                  <img class="viber-icon" alt="" src="./public/viber.svg" />
+                  <img class="viber-icon" alt="" src="{{asset('images/viber.png')}}" />
 
                   <div class="spanmkd-vertical-separator3"></div>
-                  <img class="viber-icon" alt="" src="./public/frame4.svg" />
+                  <img class="viber-icon" alt="" src="{{asset('images/facebook.svg')}}" />
 
                   <div class="spanmkd-vertical-separator3"></div>
                   <img
                     class="viber-icon"
                     alt=""
-                    src="./public/facebookmessenger.svg"
+                    src="{{asset('images/messenger.png')}}"
                   />
                 </div>
               </div>
@@ -544,7 +340,7 @@
                   id="inputwpcf7FormControlContainer1"
                 >
                   <div class="div45">سيرة ذاتية‎</div>
-                  <img class="vector-icon4" alt="" src="./public/vector4.svg" />
+                  <img class="vector-icon4" alt="" src="{{asset('images/arrowleft.png')}}" />
                 </div>
                 <div class="div46">
                   <span class="txt">
@@ -564,21 +360,21 @@
                     </p>
                   </span>
                 </div>
-                <img class="logo-icon" alt="" src="./public/logo@2x.png" />
+                <img class="logo-icon" alt="" src="{{asset('images/footerlogo.png')}}" />
               </div>
             </div>
           </div>
           <div class="pseudo"></div>
           <div class="pseudo1"></div>
           <div class="pseudo2"></div>
-          <img class="footer-item" alt="" src="./public/group-67@2x.png" />
+          <img class="footer-item" alt="" src="{{asset('images/ayah1.png')}}" />
         </div>
       </div>
-      <img class="switchutd-icon" alt="" src="./public/switchutd@2x.png" />
+      <img class="switchutd-icon" alt="" src="{{asset('images/SWITCH(UTD).png')}}" />
 
       <div class="scroll-botton">
         <div class="angle-right-wrapper">
-          <img class="angle-right-icon" alt="" src="./public/angleright.svg" />
+          <img class="angle-right-icon" alt="" src="{{asset('images/scrolicon.png')}}" />
         </div>
       </div>
     </div>
@@ -665,7 +461,7 @@
         </div>
       </div>
     </div>
-
+    <!--footer section end-->
     <script>
       var popuppRINCIPALContainer = document.getElementById(
         "popuppRINCIPALContainer"
