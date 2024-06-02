@@ -12,7 +12,8 @@ body {
   
   :root {
     /* fonts */
-    --font-sakkal-majalla: "Sakkal Majalla";
+    /* --font-sakkal-majalla: "Sakkal Majalla"; */
+    --font-sakkal-majalla: "Arial";
     --font-zahra-arabic: "Zahra Arabic";
     --font-amiri: Amiri;
     --font-roboto: Roboto;
