@@ -387,33 +387,33 @@
             <div class="principal" id="popuppRINCIPALContainer">
               <div class="head">
                 <div class="div47">الرئيسية</div>
-                <img class="vector-icon5" alt="" src="./public/vector5.svg" />
+                <img class="vector-icon5" alt="" src="{{asset('images/arrowleft2.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">القضاء</div>
-                <img class="vector-icon6" alt="" src="./public/vector6.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/arrowleft-gold.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">المحكمة العليا</div>
-                <img class="vector-icon6" alt="" src="./public/vector7.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">قراءة</div>
-                <img class="vector-icon6" alt="" src="./public/vector8.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">معهد القضاء</div>
-                <img class="vector-icon6" alt="" src="./public/vector9.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
               </div>
             </div>
             <div class="judge">
               <div class="head">
                 <div class="div47">القضاء</div>
-                <img class="vector-icon6" alt="" src="./public/vector10.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">المحكمة العليا</div>
-                <img class="vector-icon6" alt="" src="./public/vector11.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">قراءة</div>
@@ -427,7 +427,7 @@
             <div class="judge">
               <div class="head5">
                 <div class="div48">المحكمة العليا</div>
-                <img class="vector-icon6" alt="" src="./public/vector14.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">قراءة</div>
@@ -441,7 +441,7 @@
             <div class="judge">
               <div class="head5">
                 <div class="div48">مدونة</div>
-                <img class="vector-icon6" alt="" src="./public/vector17.svg" />
+                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
               </div>
               <div class="branch-1">
                 <div class="div48">معهد القضاء</div>
@@ -449,15 +449,15 @@
               </div>
             </div>
           </div>
-          <img class="menu-item" alt="" src="./public/group-41@2x.png" />
+          <img class="menu-item" alt="" src="{{asset('images/menu-logo.png')}}" />
 
           <img
             class="the-best-of-knowledge-is-the-o"
             alt=""
-            src="./public/-the-best-of-knowledge-is-the-one-that-benefits--1@2x.png"
+            src="{{asset('images/menu-ayah.png')}}"
           />
 
-          <img class="close-icon" alt="" src="./public/close.svg" />
+          <img class="close-icon" alt="" src="{{asset('images/close.png')}}" />
         </div>
       </div>
     </div>
@@ -468,7 +468,7 @@
       );
       if (popuppRINCIPALContainer) {
         popuppRINCIPALContainer.addEventListener("click", function (e) {
-          window.location.href = "./h-o-m-e.html";
+          window.location.href = "#";
         });
       }
       
