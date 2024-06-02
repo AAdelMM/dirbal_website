@@ -12,6 +12,9 @@ use App\Http\Controllers\LikeController;
 Route::get('/', function () {
     return view('homePage.layout');
 });
+Route::get('/test', function () {
+    return view('homePage.test');
+});
 
 
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');

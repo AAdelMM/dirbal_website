@@ -1626,21 +1626,23 @@
 
 /* Styles for screen width 1366px */
 @media screen and (max-width: 1370px) {
+
   .adfinal-2-icon {
-    width: 85rem;
+    
     height: 41.688rem;
+    width:1370px;
   }
   .icon {
     top: 11.872rem;
     left: 2.623rem;
-    width: 40.271rem;
-    height: 19.097rem;
+    width: 35rem;
+    height: 18rem;
   }
   .accessibility-boutton-icon {
-    top: 39.656rem;
-    left: 2.822rem;
-    width: 2.733rem;
-    height: 2.750rem;
+    top: 27.75rem;
+    left: 1.96rem;
+    width: 1.9rem;
+    height: 1.92rem;
   }
   .b, .frame-child {
     width: 36.875rem;
@@ -1653,7 +1655,8 @@
   }
   .light {
     top: 5.625rem;
-    left: 43.078rem;
+    left: 44rem;
+    width: 45%;
   }
   .content-carrousol {
     top: calc(50% - 261.39px);
@@ -1661,14 +1664,21 @@
     width: 89.906rem;
     height: 38.25rem;
   }
+  .Rectangle452{
+    
+    left:15rem !important;
+  }
+  .frmae280{
+    width: 25%;
+  }
   .line {
     top: 5.273rem;
-    width: 80.438rem;
+    width: 80rem;
   }
   .header-home-child {
     top: 0.656rem;
     left: 33.908rem;
-    width: 11.859rem;
+    width: 11rem;
     height: 5.156rem;
   }
   .logo-child {
@@ -1676,18 +1686,19 @@
     height: 3.563rem;
   }
   .logo-item {
-    height: 3.328rem;
+    height: 3rem;
+    
   }
   .aa-1-icon {
     width: 3.141rem;
     height: 3.984rem;
   }
   .icons8-bookmark-1-parent {
-    left: 69.516rem;
+    left: 66rem;
   }
   .header-home {
     left: calc(50% - 645.082px);
-    width: 80.714rem;
+    width: 70rem;
     height: 5.865rem;
   }
   .switchrtf-icon {
@@ -1705,6 +1716,9 @@
     right: -2.828%;
     bottom: -0.43%;
     left: 2.865%;
+  }
+  .mokhtarat{
+    width: 1370px;
   }
 }
 
