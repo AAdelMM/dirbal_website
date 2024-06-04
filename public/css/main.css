@@ -6,8 +6,8 @@
 
  @font-face {
   font-family: 'Zahra Arabic'; /* Replace with your font name */
-  src: url('../fonts/18618-zahra.arabic.otf') format('truetype'),
-       url('../fonts/ZahraArabic-Regular.woff') format('woff'); /* Include formats for wider browser compatibility */
+  src: url("{{asset('fonts/18618-zahra.arabic.otf')}}") format('truetype'),
+       url("{{asset('fonts/ZahraArabic-Regular.woff')}}") format('woff'); /* Include formats for wider browser compatibility */
 }
 
 .adfinal-2-icon,

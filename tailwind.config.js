@@ -9,4 +9,14 @@ export default {
         "./resources/**/*.js",
         "./resources/**/*.vue",
     ],
+    theme: {
+        extend: {
+          fontFamily: {
+            'Zahra Arabic': ['url(./public/fonts/ZahraArabic-Regular.woff)', 'Zahra Arabic'],
+          },
+        },
+      },
 }
+module.exports = {
+   
+  };
