@@ -24,23 +24,19 @@
       body{
         width: -moz-available, -webkit-fill-available;
       }
-      @font-face {
-        font-family: 'Zahra Arabic'; /* Replace with your font name */
-        src: url("{{asset('fonts/18618-zahra.arabic.otf')}}") format('truetype'),
-            url("{{asset('fonts/ZahraArabic-Regular.woff')}}") format('woff'); /* Include formats for wider browser compatibility */
-      }
+     
     </style>
 </head>
 <body>
    <!--sectiom-1 Main Start--> 
-<div class="container-fluid">
-<div class="Home w-full h-auto relative">
-      <img class="HeroBg 2xl:w-full xl:w-[100%] h-auto left-0 top-0 absolute" src="{{ asset('images/homeHero.png') }}" />
-      <img class="HeroQuran 2xl:w-[44.7%] 2xl:h-43.6p xl:w-[35%] xl:h-25p left-2.9p 2xl:top-[20em] xl:top-[15em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
-      <div class="2xl:w-[58.85px] xl:w-[30px] 2xl:h-[59.06px] xl:h-[40px] left-[60.85px] top-[856.92px] absolute">
-        <div class="Ellipse4 w-[60px] h-[60px] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
+<div class="container-fluid ">
+<div class="Home w-screen h-screen relative">
+      <img class="HeroBg w-screen h-screen left-0 top-0 bg-cover" src="{{ asset('images/homeHero.png') }}" />
+      <img class="HeroQuran w-[44.7vw] h-[43.6vh]  2xl:top-[20em] xl:top-[15em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
+      <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
+        <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
       </div>
-      <div class="ContentCarrousol 2xl:w-[1918px] xl:w-[83.9em] 2xl:h-[816px] xl:h-[35.7em] 2xl:left-[2px] xl:left-[1.4px] 2xl:top-[118.98px] xl:top-[5.2em] absolute">
+      <div class="ContentCarrousol w-[99vw] 2xl:h-[816px] xl:h-[35.7em] 2xl:left-[2px] xl:left-[1.4px] 2xl:top-[118.98px] xl:top-[5.2em] absolute">
         <!--quotes start-->
         <div class="quotes 2xl:w-[894px] xl:w-[39.1em] 2xl:px-[52px] xl:px-[2.3em] 2xl:py-[60px] xl:py-[2.7em] 2xl:left-[919px] xl:left-[41em] 2xl:top-[120px] xl:top-[5.3em] absolute bg-white/opacity-40 rounded-xl shadow border border-gray-700/opacity-50 flex-col justify-center items-end 2xl:gap-8 xl:gap-4 inline-flex">
           <div class="Frame280 2xl:w-[790px] xl:w-[35.3em] 2xl:h-[170px] xl:h-[7.4em] relative">
