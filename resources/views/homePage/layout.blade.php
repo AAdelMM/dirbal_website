@@ -1,543 +1,100 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-
-    <link rel="stylesheet" href="{{ asset('css/global.css')}}" />
-    <link rel="stylesheet" href="{{ asset('css/main.css')}}" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Zahra Arabic:wght@400;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Sakkal Majalla:wght@400;700&display=swap"
-    />
-  </head>
-  <body>
-    <div class="home">
-      <div class="home-parent">
-        <!--hero section start-->
-        <div class="home1">
-          <img class="adfinal-2-icon" alt="" src="{{asset('images/homeHero.png')}}" />
-
-          <img class="icon" alt="" src="{{asset('images/heroquran.png')}}" />
-
-          <img
-            class="accessibility-boutton-icon"
-            alt=""
-            src="./public/accessibility-boutton.svg"
-          />
-
-          <div class="content-carrousol">
-            <div class="light">
-            <div class="Frame280" style="width: 790px; height: 170px; position: relative">
-            <img class="Rectangle452" style="width: 309px; height: 170px; left: 0px; top: 0px; position: absolute; border-radius: 6px" src="{{asset('images/judge.jpg')}}" />
-            <div style="width: 790px; left: 0px; top: 104px; position: absolute; text-align: right; color: #AB8219; font-size: 55px; font-family: Zahra Arabic; font-weight: 700; word-wrap: break-word">قبسات</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>still testing</title>
+    <meta name="author" content="David Grzyb">
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap" rel="stylesheet"> 
+    <!-- Tailwind -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zahra Arabic:wght@400;700&display=swap"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <style>
+      html{
+        width: -moz-available, -webkit-fill-available;
+      }
+      body{
+        width: -moz-available, -webkit-fill-available;
+      }
+      @font-face {
+        font-family: 'Zahra Arabic'; /* Replace with your font name */
+        src: url("{{asset('fonts/18618-zahra.arabic.otf')}}") format('truetype'),
+            url("{{asset('fonts/ZahraArabic-Regular.woff')}}") format('woff'); /* Include formats for wider browser compatibility */
+      }
+    </style>
+</head>
+<body>
+   <!--sectiom-1 Main Start--> 
+<div class="container-fluid">
+<div class="Home w-full h-auto relative">
+      <img class="HeroBg 2xl:w-full xl:w-[100%] h-auto left-0 top-0 absolute" src="{{ asset('images/homeHero.png') }}" />
+      <img class="HeroQuran 2xl:w-[44.7%] 2xl:h-43.6p xl:w-[35%] xl:h-25p left-2.9p 2xl:top-[20em] xl:top-[15em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
+      <div class="2xl:w-[58.85px] xl:w-[30px] 2xl:h-[59.06px] xl:h-[40px] left-[60.85px] top-[856.92px] absolute">
+        <div class="Ellipse4 w-[60px] h-[60px] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
+      </div>
+      <div class="ContentCarrousol 2xl:w-[1918px] xl:w-[83.9em] 2xl:h-[816px] xl:h-[35.7em] 2xl:left-[2px] xl:left-[1.4px] 2xl:top-[118.98px] xl:top-[5.2em] absolute">
+        <!--quotes start-->
+        <div class="quotes 2xl:w-[894px] xl:w-[39.1em] 2xl:px-[52px] xl:px-[2.3em] 2xl:py-[60px] xl:py-[2.7em] 2xl:left-[919px] xl:left-[41em] 2xl:top-[120px] xl:top-[5.3em] absolute bg-white/opacity-40 rounded-xl shadow border border-gray-700/opacity-50 flex-col justify-center items-end 2xl:gap-8 xl:gap-4 inline-flex">
+          <div class="Frame280 2xl:w-[790px] xl:w-[35.3em] 2xl:h-[170px] xl:h-[7.4em] relative">
+            <img class="Rectangle452 2xl:w-[309px] xl:w-[13.5em] 2xl:h-[170px] xl:h-[7.4em] left-0 top-0 absolute rounded-md" src="{{ asset('images/judge.jpg') }}" />
+            <div class=" 2xl:w-[790px] xl:w-[15em] left-0 2xl:top-[104px] xl:top-[2em] absolute text-right text-yellow-700 2xl:text-[55px] xl:text-[2.4em] font-bold " style="font-family:'El Messiri';">قبسات</div>
           </div>
-          <div class="Divider" style="width: 782px; height: 1px; background: rgba(45.98, 56.59, 71.19, 0.50)"></div>
-
-          <div style="width: 782px; text-align: justify; color: #161D27; font-size: 40px; font-family: Zahra Arabic; font-weight: 500; word-wrap: break-word">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً . </div>
-
-              <b class="b1">المصدر : كتاب القانون المدني</b>
-            </div>
-          </div>
-          <div class="header-home">
-            <div class="line"></div>
-            <img
-              class="header-home-child" alt="bsm allah"  src="{{asset('images/bsm2.png')}}"/>
-
-            <div class="logo">
-              <img class="logo-child" alt="" src="{{asset('images/LOGO.png')}}" />
-
-              <div class="logo-item"></div>
-              <img class="aa-1-icon" alt="" src="{{asset('images/favicon.png')}}" />
-            </div>
-            <div class="icons8-bookmark-1-parent">
-              <div class="icons8-bookmark-1" id="icons8Bookmark1Container">
-                <img class="vector-icon" alt="" src="{{asset('images/fav.png')}}" />
-
-                <div class="icons8-bookmark-1-child"></div>
-                
-                <div class="div1">3</div>
-                </div>
-              <div class="spanmkd-vertical-separator"></div>
-              <img
-                class="icons8-search-1-1"  alt="" src="{{asset('images/search.svg')}}" id="icons8Search11" />
-              <div class="spanmkd-vertical-separator"></div>
-              <img
-                class="icons8-menu-1-1"
-                alt=""
-                src="{{asset('images/menu.svg')}}"
-                id="icons8Menu11"
-              />
-
-              <div class="spanmkd-vertical-separator"></div>
-            </div>
-          </div>
-          <img class="switchrtf-icon" alt="" src="{{asset('images/SWITCH(RTF).png')}}" />
+          <div class="Divider 2xl:w-[782px] xl:w-[34.2em] h-px bg-gray-700/opacity-50"></div>
+          <div class=" 2xl:w-[782px] xl:w-[28em] text-justify text-gray-900 2xl:text-[40px] xl:text-[20px] font-normal " style="font-family:'El Messiri';direction:rtl;">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً .     </div>
+          <div class=" 2xl:w-[790px] xl:w-[28em]  text-yellow-700 2xl:text-[25px] xl:text-[20px] font-bold "style="font-family:'Marhey'; ">المصدر : كتاب القانون المدني</div>
         </div>
-        <!--hero section end-->
-        <!--last topics section start-->
+        <!--quotes end-->
+      </div>
+      <div class="HeaderHome 2xl:w-[1037.46px] xl:w-[45.39em] 2xl:h-[125.13px] xl:h-[5.5em] 2xl:left-[60.57px] xl:left-[2.7em] top-0 absolute">
+    <div class="Line 2xl:w-[1715px] xl:w-[79em] h-[0px] left-[8.72px] 2xl:top-[113px] xl:top-[4.9em] absolute border border-gray-900"></div>
+    <div class="Group20 2xl:w-[253px] xl:w-[11.1em] 2xl:h-[110px] xl:h-[4.8em] 2xl:left-[723.36px] xl:left-[31.7em] 2xl:top-[14px] xl:top-[0.6em] absolute">
+      <img class=" 2xl:w-[253px] xl:w-[11.1em] 2xl:h-[110px] xl:h-[4.8em] left-0 top-0 absolute" src="{{ asset('images/bsm.svg') }}" />
+      <div class="Rectangle446 w-[270px] h-[127px] 2xl:left-[-11px] xl:left-[-0.5em] top-[-19px] absolute "></div>
+    </div>
         
-         <!--last topics section end-->
-        <!--mokhtarat section start-->
-        <div class="mokhtarat">
-          <img class="background-icon1" alt="" src="{{asset('images/section2bg.png')}}" />
-
-          <img class="icon2" alt="" src="./public/1-617113832@2x.png" />
-
-          <div class="bars1">
-            <div class="divmkd-separator"></div>
-            <img class="bars-child" alt="" src="{{asset('images/bars.png')}}" />
-
-            <div class="divmkd-separator"></div>
+        <div class="Logo left-0 2xl:top-[14px] xl:top-[0.6em] absolute justify-center items-center 2xl:gap-2.5 xl:gap-1.5 inline-flex">
+          <div class="Group47 2xl:w-[206.88px] xl:w-[9em] 2xl:h-[76px] xl:h-[3.3em] relative">
+            <img class="Aaaaaa1 2xl:w-[206.88px] xl:w-[9em] 2xl:h-[76px] xl:h-[3.3em] left-0 top-0 absolute" src="{{ asset('images/LOGO.png') }}" />
+            <div class="Aaaaaa2 2xl:w-[206.88px] xl:w-[9em] 2xl:h-[76px] xl:h-[3.3em] left-0 top-0 absolute "></div>
           </div>
-          <div class="choeses">
-            <div class="heading">
-              <img class="icon3" alt="" src="{{asset('images/Icon.png')}}" />
-
-              <div class="div17">مختارات‎</div>
-            </div>
-            <div class="frame-container">
-              <div class="frame-parent1">
-                <div class="parent2">
-                  <div class="div18">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-container">
-                    <img
-                      class="frame-inner"
-                      alt=""
-                      src="{{asset('images/mokhIcon1.png')}}"
-                    />
-
-                    <div class="div14">قرارات قضائية</div>
-                  </div>
-                </div>
-                <div class="parent3">
-                  <div class="div20">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent1">
-                    <img
-                      class="frame-inner"
-                      alt=""
-                      src="{{asset('images/mokhIcon2.png')}}"
-                    />
-
-                    <div class="div14">القضاء الجنائي</div>
-                  </div>
-                </div>
-                <div class="parent4">
-                  <div class="div22">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent2">
-                    <img
-                      class="frame-inner"  alt=""  src="{{asset('images/mokhIcon3.png')}}"/>
-
-                    <div class="div14">القضاء المدني</div>
-                  </div>
-                </div>
-              </div>
-              <img class="icon4" alt="" src="{{asset('images/IconHline.png')}}" />
-
-              <div class="frame-parent1">
-                <div class="parent5">
-                  <div class="div18">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent3">
-                    <img
-                      class="frame-child2"
-                      alt=""
-                      src="{{asset('images/mokhIcon4.png')}}"
-                    />
-
-                    <div class="div14">القضاء الشرعي</div>
-                  </div>
-                </div>
-                <div class="parent6">
-                  <div class="div20">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent1">
-                    <img
-                      class="frame-child3"
-                      alt=""
-                      src="{{asset('images/mokhIcon5.png')}}"
-                    />
-
-                    <div class="div14">حقوق الإنسان</div>
-                  </div>
-                </div>
-                <div class="parent7">
-                  <div class="div22">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent5">
-                    <img
-                      class="frame-inner"
-                      alt=""
-                      src="{{asset('images/mokhIcon6.png')}}"
-                    />
-
-                    <div class="div14">متنوعة</div>
-                  </div>
-                </div>
-              </div>
-              <img class="icon4" alt="" src="{{asset('images/IconHline.png')}}" />
-
-              <div class="frame-parent1">
-                <div class="parent8">
-                  <div class="div18">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent6">
-                    <img
-                      class="frame-child5"
-                      alt=""
-                      src="{{asset('images/mokhIcon7.png')}}"
-                    />
-
-                    <div class="div14">قانونية</div>
-                  </div>
-                </div>
-                <div class="parent9">
-                  <div class="div20">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent1">
-                    <img
-                      class="frame-child6"
-                      alt=""
-                      src="{{asset('images/mokhIcon8.png')}}"
-                    />
-
-                    <div class="div14">القضاء المدني</div>
-                  </div>
-                </div>
-                <div class="parent10">
-                  <div class="div22">
-                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
-                  </div>
-                  <b class="heading-6">عدم تنفيذ عقد عمل</b>
-                  <div class="group-parent5">
-                    <img
-                      class="frame-inner"
-                      alt=""
-                      src="{{asset('images/mokhIcon9.png')}}"
-                    />
-
-                    <div class="div14">شؤون فنية</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="Line38 2xl:w-[70px] xl:w-[3.1em] h-[0px] 2xl:mt-[80px] xl:mt-[3em] origin-top-left -rotate-90 border border-gray-700"></div>
+          <img class="Aa1 2xl:w-[67px] xl:w-[2.9em] 2xl:h-[85px] xl:h-[3.7em]" src="{{ asset('images/favicon.png') }}" />
         </div>
-        <!--mokhtarat section start-->
-        <!--footer section start-->
-        <div class="footer">
-          <div class="footer-child"></div>
-          <div class="all-rights-resrved">
-            <div class="all-rights-resrved-child"></div>
-            <div class="div36">
-              © دربال، جميع الحقوق محفوظة، 2024 ، ضد الاستعمال التجاري.
-            </div>
+        <div class="Frame43 2xl:left-[1483px] xl:left-[64.9em] 2xl:top-[27px] xl:top-[1.2em] absolute justify-center items-center 2xl:gap-[15px] xl:gap-[1em] inline-flex">
+          <div class="Icons8Bookmark1 2xl:w-[38.64px] xl:w-[1.6em] 2xl:h-[54.21px] xl:h-[2.3em] relative">
+            <div class="Ellipse3 2xl:w-[25px] xl:w-[1.1em] 2xl:h-[25px] xl:h-[1.1em] 2xl:left-[13.64px] xl:left-[0.6em] 2xl:top-0 xl:top-[-0.4em] absolute bg-red-600 rounded-full"></div>
+            <div class=" 2xl:w-2 xl:w-1 h-[19px] 2xl:left-[20.5px] xl:left-[1em] 2xl:top-[-3px] xl:top-[-0.6em] absolute  text-white 2xl:text-[1.25em] xl:text-[0.9em] font-normal " style="font-family:'Arial';">3</div>  
           </div>
-          <div class="divtextwidget-parent">
-            <div class="divtextwidget">
-              <div class="wrapper">
-                <div class="div37">تواصل‎</div>
-              </div>
-              <div class="formwpcf7-form">
-                <div class="inputwpcf7-form-control-parent">
-                  <div class="inputwpcf7-form-control">
-                    <div class="div38">بريدك الإلكتروني*</div>
-                  </div>
-                  <div class="textareawpcf7-form-control">
-                    <div class="div39">نص الرسالة‎ ...</div>
-                  </div>
-                </div>
-              </div>
-              <img
-                class="envelope-solid-1-icon"
-                alt=""
-                src="{{asset('images/envelop.png')}}"
-              />
-            </div>
-            <div class="divmkd-column-inner">
-              <div class="divtextwidget1">
-                <div class="divtextwidget-child"></div>
-                <div class="div40">اشترك في نشرة أخبار الموقع</div>
-                <div class="div41">
-                  لاستقبال إشعارات المواضيع الجديدة، يرجى الاشتراك
-                </div>
-              </div>
-              <div class="inputwpcf7-form-control1">
-                <div class="div42">بريدك الإلكتروني*</div>
-                <img
-                  class="paper-plane-regular-1-icon"
-                  alt=""
-                  src="{{asset('images/paper-plane.png')}}"
-                />
-                
-              </div>
-            </div>
-            <div class="divmkd-column-inner1">
-              <div class="divtextwidget1">
-                <div class="divtextwidget-child"></div>
-                <div class="div43">شارك الصفحة بواسطة:</div>
-                <div class="whatsapp-parent">
-                  <img
-                    class="whatsapp-icon"
-                    alt=""
-                    src="{{asset('images/whatsapp.svg')}}"
-                  />
-
-                  <div class="spanmkd-vertical-separator3"></div>
-                  <img class="viber-icon" alt="" src="{{asset('images/viber.png')}}" />
-
-                  <div class="spanmkd-vertical-separator3"></div>
-                  <img class="viber-icon" alt="" src="{{asset('images/facebook.svg')}}" />
-
-                  <div class="spanmkd-vertical-separator3"></div>
-                  <img
-                    class="viber-icon"
-                    alt=""
-                    src="{{asset('images/messenger.png')}}"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="divmkd-column-inner2">
-              <div class="logo-parent">
-                <div class="logo1"></div>
-                <div class="inputwpcf7-form-control2">
-                  <div class="div44">إرسال‎</div>
-                </div>
-                <div
-                  class="inputwpcf7-form-control3"
-                  id="inputwpcf7FormControlContainer1"
-                >
-                  <div class="div45">سيرة ذاتية‎</div>
-                  <img class="vector-icon4" alt="" src="{{asset('images/arrowleft.png')}}" />
-                </div>
-                <div class="div46">
-                  <span class="txt">
-                    <p class="p">
-                      وبعد، فمنذ الصبا، واهتمامات شتى تتجاذبني، لا يخلو أي منها
-                      من الفائدة. لكنها متمايزة فلا يبدو لي من رباط بينها غير
-                      حبّ العمل، والنفور من إهدار الوقت والكسل. وبقدر ما حمدت
-                      الله تعالى على ما حققه لي ذلك من رضا، أدركت أن العرفان
-                      الحقيقي بفضله سبحانه لا يكون بالحمد على النعم باللسان فقط،
-                      بل بهذا مقروناً بالفعل، وأنه لا أجزأ لي من الإفاضة على
-                      الغير ببعض ما أملك مصداقاً لأمره جلّ وعلا: “وَأَحْسِن
-                      كَمَا أَحْسَنَ اللَّهُ إِلَيْكَ”. فطنت حينئذٍ إلى أن
-                      كثيراً من أنفاس زماني كانت في الحقيقة قد غادرت فارغة.
-                      فالتشتت استنفد وسعي ووقتي، ولم يحظ أيُّ جانب بالوافر
-                      اللازم ليتمخض عما يصلح بذله. فلا عجب أنْ لم يتعد جلُّ ما
-                      نتج الفتات في هذا المجال وفي ذاك.
-                    </p>
-                  </span>
-                </div>
-                <img class="logo-icon" alt="" src="{{asset('images/footerlogo.png')}}" />
-              </div>
-            </div>
-          </div>
-          <div class="pseudo"></div>
-          <div class="pseudo1"></div>
-          <div class="pseudo2"></div>
-          <img class="footer-item" alt="" src="{{asset('images/ayah1.png')}}" />
+          <img src="{{ asset('images/fav.png') }}" alt="fav">
+          <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 xl:h-10 border-r border-gray-900"></div>
+          <div class="Icons8Search11 2xl:w-10 xl:w-8 2xl:h-10 xl:h-8 relative"></div>
+          <img src="{{ asset('images/search.svg') }}" alt="search">
+          <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 xl:h-10 border-r border-gray-900"></div>
+          <div class="Icons8Menu11 2xl:w-10 xl:w-8 2xl:h-10 xl:h-8  relative"></div>
+          <img src="{{ asset('images/menu.svg') }}" alt="menu">
+          <div class="SpanMkdVerticalSeparator w-px h-12 border-r border-gray-900"></div>
+          
         </div>
       </div>
-      <img class="switchutd-icon" alt="" src="{{asset('images/SWITCH(UTD).png')}}" />
-
-      <div class="scroll-botton">
-        <div class="angle-right-wrapper">
-          <img class="angle-right-icon" alt="" src="{{asset('images/scrolicon.png')}}" />
-        </div>
+      <div class="SwitchRtf w-[1918px] h-[60.06px] left-[-0px] top-[440.45px] absolute">
+        <div class="AngleLeft w-[60px] h-[60px] left-[60px] top-[60px] absolute origin-top-left -rotate-180 bg-zinc-300/opacity-50"></div>
+        <div class="AngleRight w-[60px] h-[60px] left-[1860px] top-0 absolute bg-zinc-300/opacity-50"></div>
       </div>
-    </div>
+</div>
+</div>
+   <!--sectiom-1 Main End-->
+   <!--sectiom-2 Start-->
+   <!--sectiom-2 End-->
+  <!--sectiom-3 last topic-->
 
-    <div id="menuContainer" class="popup-overlay" style="display: none">
-      <div class="menu1">
-        <div class="menu2">
-          <div class="menu-child"></div>
-          <div class="principal-parent">
-            <div class="principal" id="popuppRINCIPALContainer">
-              <div class="head">
-                <div class="div47">الرئيسية</div>
-                <img class="vector-icon5" alt="" src="{{asset('images/arrowleft2.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">القضاء</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/arrowleft-gold.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">المحكمة العليا</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">قراءة</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">معهد القضاء</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
-              </div>
-            </div>
-            <div class="judge">
-              <div class="head">
-                <div class="div47">القضاء</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">المحكمة العليا</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">قراءة</div>
-                <img class="vector-icon6" alt="" src="./public/vector12.svg" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">معهد القضاء</div>
-                <img class="vector-icon6" alt="" src="./public/vector13.svg" />
-              </div>
-            </div>
-            <div class="judge">
-              <div class="head5">
-                <div class="div48">المحكمة العليا</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">قراءة</div>
-                <img class="vector-icon6" alt="" src="./public/vector15.svg" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">معهد القضاء</div>
-                <img class="vector-icon6" alt="" src="./public/vector16.svg" />
-              </div>
-            </div>
-            <div class="judge">
-              <div class="head5">
-                <div class="div48">مدونة</div>
-                <img class="vector-icon6" alt="" src="{{asset('images/plus2.png')}}" />
-              </div>
-              <div class="branch-1">
-                <div class="div48">معهد القضاء</div>
-                <img class="vector-icon6" alt="" src="./public/vector18.svg" />
-              </div>
-            </div>
-          </div>
-          <img class="menu-item" alt="" src="{{asset('images/menu-logo.png')}}" />
-
-          <img
-            class="the-best-of-knowledge-is-the-o"
-            alt=""
-            src="{{asset('images/menu-ayah.png')}}"
-          />
-
-          <img class="close-icon" alt="" src="{{asset('images/close.png')}}" />
-        </div>
-      </div>
-    </div>
-    <!--footer section end-->
-    <script>
-      var popuppRINCIPALContainer = document.getElementById(
-        "popuppRINCIPALContainer"
-      );
-      if (popuppRINCIPALContainer) {
-        popuppRINCIPALContainer.addEventListener("click", function (e) {
-          window.location.href = "#";
-        });
-      }
-      
-      var icons8Bookmark1Container = document.getElementById(
-        "icons8Bookmark1Container"
-      );
-      if (icons8Bookmark1Container) {
-        icons8Bookmark1Container.addEventListener("click", function (e) {
-          // Please sync "FAVORITE" to the project
-        });
-      }
-      
-      var icons8Search11 = document.getElementById("icons8Search11");
-      if (icons8Search11) {
-        icons8Search11.addEventListener("click", function (e) {
-          // Please sync "SEARCH" to the project
-        });
-      }
-      
-      var icons8Menu11 = document.getElementById("icons8Menu11");
-      if (icons8Menu11) {
-        icons8Menu11.addEventListener("click", function () {
-          var popup = document.getElementById("menuContainer");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-      
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
-              }
-            };
-          popup.addEventListener("click", onClick);
-        });
-      }
-      
-      var divmkdPostInfoCommentsHolContainer = document.getElementById(
-        "divmkdPostInfoCommentsHolContainer"
-      );
-      if (divmkdPostInfoCommentsHolContainer) {
-        divmkdPostInfoCommentsHolContainer.addEventListener("click", function (e) {
-          // Please sync "ARTICLES" to the project
-        });
-      }
-      
-      var bTNKEEPREADImage = document.getElementById("bTNKEEPREADImage");
-      if (bTNKEEPREADImage) {
-        bTNKEEPREADImage.addEventListener("click", function (e) {
-          // Please sync "ARTICLES" to the project
-        });
-      }
-      
-      var inputwpcf7FormControlContainer1 = document.getElementById(
-        "inputwpcf7FormControlContainer1"
-      );
-      if (inputwpcf7FormControlContainer1) {
-        inputwpcf7FormControlContainer1.addEventListener("click", function (e) {
-          // Please sync "CV" to the project
-        });
-      }
-      </script>
-  </body>
+<!--end of section 3-->
+</body>
 </html>

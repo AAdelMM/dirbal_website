@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local test</title>
+    <title>still testing</title>
     <meta name="author" content="David Grzyb">
     <meta name="description" content="">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap" rel="stylesheet"> 
     <!-- Tailwind -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Zahra Arabic:wght@400;700&display=swap"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zahra Arabic:wght@400;700&display=swap"/>
     <script src="https://cdn.tailwindcss.com"></script>
     
     
@@ -32,48 +33,52 @@
 </head>
 <body>
    <!--sectiom-1 Main Start--> 
-<div class="Home w-[1920px] h-[935px] relative">
-      <img class="Adfinal2 w-[1920px] h-[935px] left-0 top-0 absolute" src="{{ asset('images/homeHero.png') }}" />
-      <img class="659 w-[859.11px] h-[407.44px] left-[55.94px] top-[253.27px] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
-      <div class="AccessibilityBoutton w-[58.85px] h-[59.06px] left-[60.85px] top-[856.92px] absolute">
+<div class="container-fluid">
+<div class="Home w-full h-auto relative">
+      <img class="HeroBg 2xl:w-full xl:w-[100%] h-auto left-0 top-0 absolute" src="{{ asset('images/homeHero.png') }}" />
+      <img class="HeroQuran 2xl:w-[44.7%] 2xl:h-43.6p xl:w-[35%] xl:h-25p left-2.9p 2xl:top-[20em] xl:top-[15em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
+      <div class="2xl:w-[58.85px] xl:w-[30px] 2xl:h-[59.06px] xl:h-[40px] left-[60.85px] top-[856.92px] absolute">
         <div class="Ellipse4 w-[60px] h-[60px] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
       </div>
-      <div class="ContentCarrousol w-[1918px] h-[816px] left-[2px] top-[118.98px] absolute">
-        <div class="Light w-[894px] px-[52px] py-[60px] left-[919px] top-[120px] absolute bg-white/opacity-40 rounded-xl shadow border border-gray-700/opacity-50 flex-col justify-center items-end gap-8 inline-flex">
-          <div class="Frame280 w-[790px] h-[170px] relative">
-            <img class="Rectangle452 w-[309px] h-[170px] left-0 top-0 absolute rounded-md" src="{{ asset('images/judge.jpg') }}" />
-            <div class=" w-[790px] left-0 top-[104px] absolute text-right text-yellow-700 text-[55px] font-bold " style="font-family:'Zahra Arabic">قبسات</div>
+      <div class="ContentCarrousol 2xl:w-[1918px] xl:w-[83.9em] 2xl:h-[816px] xl:h-[35.7em] 2xl:left-[2px] xl:left-[1.4px] 2xl:top-[118.98px] xl:top-[5.2em] absolute">
+        <!--quotes start-->
+        <div class="quotes 2xl:w-[894px] xl:w-[39.1em] 2xl:px-[52px] xl:px-[2.3em] 2xl:py-[60px] xl:py-[2.7em] 2xl:left-[919px] xl:left-[41em] 2xl:top-[120px] xl:top-[5.3em] absolute bg-white/opacity-40 rounded-xl shadow border border-gray-700/opacity-50 flex-col justify-center items-end 2xl:gap-8 xl:gap-4 inline-flex">
+          <div class="Frame280 2xl:w-[790px] xl:w-[35.3em] 2xl:h-[170px] xl:h-[7.4em] relative">
+            <img class="Rectangle452 2xl:w-[309px] xl:w-[13.5em] 2xl:h-[170px] xl:h-[7.4em] left-0 top-0 absolute rounded-md" src="{{ asset('images/judge.jpg') }}" />
+            <div class=" 2xl:w-[790px] xl:w-[15em] left-0 2xl:top-[104px] xl:top-[2em] absolute text-right text-yellow-700 2xl:text-[55px] xl:text-[2.4em] font-bold " style="font-family:'El Messiri';">قبسات</div>
           </div>
-          <div class="Divider w-[782px] h-px bg-gray-700/opacity-50"></div>
-          <div class=" w-[782px] text-justify text-gray-900 text-[40px] font-normal "style="font-family:'Zahra Arabic">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً .     </div>
-          <div class=" w-[790px] text-yellow-700 text-[25px] font-bold "style="font-family:'Zahra Arabic">المصدر : كتاب القانون المدني</div>
+          <div class="Divider 2xl:w-[782px] xl:w-[34.2em] h-px bg-gray-700/opacity-50"></div>
+          <div class=" 2xl:w-[782px] xl:w-[28em] text-justify text-gray-900 2xl:text-[40px] xl:text-[20px] font-normal " style="font-family:'El Messiri';direction:rtl;">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً .     </div>
+          <div class=" 2xl:w-[790px] xl:w-[28em]  text-yellow-700 2xl:text-[25px] xl:text-[20px] font-bold "style="font-family:'Marhey'; ">المصدر : كتاب القانون المدني</div>
         </div>
+        <!--quotes end-->
       </div>
-      <div class="HeaderHome w-[1721.93px] h-[125.13px] left-[99.89px] top-0 absolute">
-        <div class="Line w-[1715px] h-[0px] left-[8.72px] top-[113px] absolute border border-gray-900"></div>
-        <div class="Group20 w-[253px] h-[110px] left-[723.36px] top-[14px] absolute">
-          <img class="FavpngBasmalaQuranIslamicArtArabicCalligraphy1 w-[253px] h-[110px] left-0 top-0 absolute" src="{{ asset('images/bsm.svg') }}" />
-          <div class="Rectangle446 w-[270px] h-[127px] left-[-11px] top-[-19px] absolute "></div>
-        </div>
-        <div class="Logo left-0 top-[14px] absolute justify-center items-center gap-2.5 inline-flex">
-          <div class="Group47 w-[206.88px] h-[76px] relative">
-            <img class="Aaaaaa1 w-[206.88px] h-[76px] left-0 top-0 absolute" src="{{ asset('images/LOGO.png') }}" />
-            <div class="Aaaaaa2 w-[206.88px] h-[76px] left-0 top-0 absolute "></div>
+      <div class="HeaderHome 2xl:w-[1037.46px] xl:w-[45.39em] 2xl:h-[125.13px] xl:h-[5.5em] 2xl:left-[60.57px] xl:left-[2.7em] top-0 absolute">
+    <div class="Line 2xl:w-[1715px] xl:w-[79em] h-[0px] left-[8.72px] 2xl:top-[113px] xl:top-[4.9em] absolute border border-gray-900"></div>
+    <div class="Group20 2xl:w-[253px] xl:w-[11.1em] 2xl:h-[110px] xl:h-[4.8em] 2xl:left-[723.36px] xl:left-[31.7em] 2xl:top-[14px] xl:top-[0.6em] absolute">
+      <img class=" 2xl:w-[253px] xl:w-[11.1em] 2xl:h-[110px] xl:h-[4.8em] left-0 top-0 absolute" src="{{ asset('images/bsm.svg') }}" />
+      <div class="Rectangle446 w-[270px] h-[127px] 2xl:left-[-11px] xl:left-[-0.5em] top-[-19px] absolute "></div>
+    </div>
+        
+        <div class="Logo left-0 2xl:top-[14px] xl:top-[0.6em] absolute justify-center items-center 2xl:gap-2.5 xl:gap-1.5 inline-flex">
+          <div class="Group47 2xl:w-[206.88px] xl:w-[9em] 2xl:h-[76px] xl:h-[3.3em] relative">
+            <img class="Aaaaaa1 2xl:w-[206.88px] xl:w-[9em] 2xl:h-[76px] xl:h-[3.3em] left-0 top-0 absolute" src="{{ asset('images/LOGO.png') }}" />
+            <div class="Aaaaaa2 2xl:w-[206.88px] xl:w-[9em] 2xl:h-[76px] xl:h-[3.3em] left-0 top-0 absolute "></div>
           </div>
-          <div class="Line38 w-[70px] h-[0px] origin-top-left -rotate-90 border border-gray-700"></div>
-          <img class="Aa1 w-[67px] h-[85px]" src="{{ asset('images/favicon.png') }}" />
+          <div class="Line38 2xl:w-[70px] xl:w-[3.1em] h-[0px] 2xl:mt-[80px] xl:mt-[3em] origin-top-left -rotate-90 border border-gray-700"></div>
+          <img class="Aa1 2xl:w-[67px] xl:w-[2.9em] 2xl:h-[85px] xl:h-[3.7em]" src="{{ asset('images/favicon.png') }}" />
         </div>
-        <div class="Frame43 left-[1483px] top-[27px] absolute justify-center items-center gap-[23px] inline-flex">
-          <div class="Icons8Bookmark1 w-[38.64px] h-[54.21px] relative">
-            <div class="Ellipse3 w-[25px] h-[25px] left-[13.64px] top-0 absolute bg-red-600 rounded-full"></div>
-            <div class=" w-2 h-[19px] left-[21.64px] top-[-8px] absolute  text-white text-3xl font-normal " style="font-family:'Zahra Arabic">3</div>  
+        <div class="Frame43 2xl:left-[1483px] xl:left-[64.9em] 2xl:top-[27px] xl:top-[1.2em] absolute justify-center items-center 2xl:gap-[15px] xl:gap-[1em] inline-flex">
+          <div class="Icons8Bookmark1 2xl:w-[38.64px] xl:w-[1.6em] 2xl:h-[54.21px] xl:h-[2.3em] relative">
+            <div class="Ellipse3 2xl:w-[25px] xl:w-[1.1em] 2xl:h-[25px] xl:h-[1.1em] 2xl:left-[13.64px] xl:left-[0.6em] 2xl:top-0 xl:top-[-0.4em] absolute bg-red-600 rounded-full"></div>
+            <div class=" 2xl:w-2 xl:w-1 h-[19px] 2xl:left-[20.5px] xl:left-[1em] 2xl:top-[-3px] xl:top-[-0.6em] absolute  text-white 2xl:text-[1.25em] xl:text-[0.9em] font-normal " style="font-family:'Arial';">3</div>  
           </div>
           <img src="{{ asset('images/fav.png') }}" alt="fav">
-          <div class="SpanMkdVerticalSeparator w-px h-12 border-r border-gray-900"></div>
-          <div class="Icons8Search11 w-10 h-10 relative"></div>
+          <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 xl:h-10 border-r border-gray-900"></div>
+          <div class="Icons8Search11 2xl:w-10 xl:w-8 2xl:h-10 xl:h-8 relative"></div>
           <img src="{{ asset('images/search.svg') }}" alt="search">
-          <div class="SpanMkdVerticalSeparator w-px h-12 border-r border-gray-900"></div>
-          <div class="Icons8Menu11 w-10 h-[35px] relative"></div>
+          <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 xl:h-10 border-r border-gray-900"></div>
+          <div class="Icons8Menu11 2xl:w-10 xl:w-8 2xl:h-10 xl:h-8  relative"></div>
           <img src="{{ asset('images/menu.svg') }}" alt="menu">
           <div class="SpanMkdVerticalSeparator w-px h-12 border-r border-gray-900"></div>
           
@@ -83,6 +88,7 @@
         <div class="AngleLeft w-[60px] h-[60px] left-[60px] top-[60px] absolute origin-top-left -rotate-180 bg-zinc-300/opacity-50"></div>
         <div class="AngleRight w-[60px] h-[60px] left-[1860px] top-0 absolute bg-zinc-300/opacity-50"></div>
       </div>
+</div>
 </div>
    <!--sectiom-1 Main End-->
    <!--sectiom-2 Start-->
