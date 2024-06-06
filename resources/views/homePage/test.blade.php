@@ -32,7 +32,7 @@
 <div class="container-fluid ">
 <div class="Home w-screen h-screen relative">
       <img class="HeroBg w-screen h-screen left-0 top-0 bg-cover" src="{{ asset('images/homeHero.png') }}" />
-      <img class="HeroQuran w-[44.7vw] h-[43.6vh]  2xl:top-[20em] xl:top-[15em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
+      <img class="HeroQuran 2xl:w-[53em] xl:w-[37.1em] 2xl:h-[25.5em] xl:h-[17.9em] md:w-[20em] md:h-[8em]  2xl:top-[20em] xl:top-[15em] md:top-[8em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
       <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
         <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
       </div>
@@ -49,8 +49,8 @@
         </div>
         <!--quotes end-->
       </div>
-      <div class="HeaderHome 2xl:w-[1037.46px] xl:w-[45.39em] 2xl:h-[125.13px] xl:h-[5.5em] 2xl:left-[60.57px] xl:left-[2.7em] top-0 absolute">
-    <div class="Line 2xl:w-[1715px] xl:w-[79em] h-[0px] left-[8.72px] 2xl:top-[113px] xl:top-[4.9em] absolute border border-gray-900"></div>
+      <div class="HeaderHome 2xl:w-[1037.46px] xl:w-[45.39em] md:w-[20em] md:h-[2.5] 2xl:h-[125.13px] xl:h-[5.5em] 2xl:left-[60.57px] xl:left-[2.7em] top-0 absolute">
+    <div class="Line 2xl:w-[1715px] xl:w-[79em] md:w-[20em] h-[0px] left-[8.72px] 2xl:top-[113px] xl:top-[4.9em] absolute border border-gray-900"></div>
     <div class="Group20 2xl:w-[253px] xl:w-[11.1em] 2xl:h-[110px] xl:h-[4.8em] 2xl:left-[723.36px] xl:left-[31.7em] 2xl:top-[14px] xl:top-[0.6em] absolute">
       <img class=" 2xl:w-[253px] xl:w-[11.1em] 2xl:h-[110px] xl:h-[4.8em] left-0 top-0 absolute" src="{{ asset('images/bsm.svg') }}" />
       <div class="Rectangle446 w-[270px] h-[127px] 2xl:left-[-11px] xl:left-[-0.5em] top-[-19px] absolute "></div>
