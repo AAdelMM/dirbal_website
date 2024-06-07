@@ -23,6 +23,9 @@
       }
       body{
         width: -moz-available, -webkit-fill-available;
+        margin: 0;
+        padding: 0;
+
       }
      
     </style>
@@ -31,7 +34,7 @@
    <!--sectiom-1 Main Start--> 
 <div class="container-fluid ">
 <div class="Home w-screen h-screen relative">
-      <img class="HeroBg w-screen h-screen left-0 top-0 bg-cover" src="{{ asset('images/homeHero.png') }}" />
+      <img class="HeroBg md:w-screen md:h-screen sm:w-[100vw] sm:h-1/2 left-0 top-0 bg-cover" src="{{ asset('images/homeHero.png') }}" />
       <img class="HeroQuran 2xl:w-[53em] xl:w-[37.1em] 2xl:h-[25.5em] xl:h-[17.9em] md:w-[20em] md:h-[8em]  2xl:top-[20em] xl:top-[15em] md:top-[8em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
       <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
         <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
