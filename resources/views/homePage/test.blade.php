@@ -18,23 +18,67 @@
     
     
     <style>
-      html{
-        width: -moz-available, -webkit-fill-available;
-      }
-      body{
-        width: -moz-available, -webkit-fill-available;
-        margin: 0;
-        padding: 0;
-
-      }
      
+      <style>
+        html, body {
+          width: -moz-available, -webkit-fill-available;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .Home {
+            background-image: url('{{ asset('images/homeHero.png') }}');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            min-height: 100vh; /* Ensure it covers the full height of the viewport */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .HeroQuran {
+            width: 44.7%;
+            max-width: 100%; /* Ensure it doesn't overflow */
+            height: auto;
+        }
+        @media (max-width: 1536px) {
+            .HeroQuran {
+                width: 35%;
+            }
+        }
+        .HeaderHome, .ContentCarrousol {
+            width: 90%; /* Make the elements responsive */
+            max-width: 1200px; /* Limit the maximum width */
+            margin: 0 auto;
+            position: relative;
+        }
+        .quotes {
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        .HeaderHome {
+            top: 0;
+        }
+        .Frame43 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .Frame43 img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
     </style>
 </head>
 <body>
    <!--sectiom-1 Main Start--> 
 <div class="container-fluid ">
 <div class="Home w-screen h-screen relative">
-      <img class="HeroBg md:w-screen md:h-screen w-[100vw] sm:h-[60vh] left-0 top-0 bg-cover" src="{{ asset('images/homeHero.png') }}" />
+      
       <img class="HeroQuran w-[10em] h-[10em] 2xl:w-[53em] xl:w-[37.1em] 2xl:h-[25.5em] xl:h-[17.9em] md:w-[20em] md:h-[8em]  2xl:top-[20em] xl:top-[15em] md:top-[8em] absolute shadow" src="{{ asset('images/heroquran.png') }}" />
       <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
         <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
