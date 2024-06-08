@@ -150,7 +150,7 @@
                       <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 top-0 absolute bg-gray-700">
                         <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-[0.1vh] absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                       </div>
-                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[2.8em] absolute bg-orange-400">
+                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
                         <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
                       </div>
             </div>
@@ -167,7 +167,7 @@
                       <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 top-0 absolute bg-gray-700">
                         <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-[0.1vh] absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                       </div>
-                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[2.8em] absolute bg-orange-400">
+                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
                         <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
                       </div>
             </div>
@@ -181,10 +181,10 @@
                   </div>
               
             <div class="Group93 w-[3.1vw] h-[7.2vh] left-[-1.9em] top-[1.1em] absolute">
-                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 top-0 absolute bg-gray-700">
+                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh]  left-0 top-0 absolute bg-gray-700">
                         <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-[0.1vh] absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                       </div>
-                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[2.8em] absolute bg-orange-400">
+                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh]  absolute bg-orange-400">
                         <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
                       </div>
             </div>
