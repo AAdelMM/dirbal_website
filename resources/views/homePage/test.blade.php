@@ -191,7 +191,7 @@
          </div>
           
     </div>
-    <div class="Frame320 w-[31.5vw] left-[69.5vh] top-[2.2vh] absolute justify-end items-center gap-[1.3em] inline-flex">
+    <div class="Frame320 w-[31.5vw] 2xl:left-[69.5vh] xl:left-[70.5vh] top-[2.2vh] absolute justify-end items-center gap-[1.3em] inline-flex">
       <div class=" w-[27.5vw] text-right text-orange-400  2xl:text-[1.5em] xl:text-[1.2em] font-bold font-['EL Meesiri'] ">69 م د: فسخ عقد مبرم بين الغير ( عدم قبول لعدم المصلحة )‎</div>
       <div class="Frame309 w-[2.9vw] h-[5.1vh] flex-col justify-start items-center inline-flex">
         <div class="Group49 w-[2.9vw] h-[5.1vh] relative">
