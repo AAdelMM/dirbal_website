@@ -141,14 +141,14 @@
     <div class="Group94 w-[31.5vw] h-[34.8vh] left-[1.8vw] top-[0.25em] absolute">
           <div class="DivMkdItemTextHolder w-[31.5vw] h-[12.6vh] left-0 top-0 absolute bg-white border border-zinc-300">
                   <div class=" w-[26.5vw] left-[4.2vw] top-[0.8em] absolute text-justify text-gray-700 2xl:text-[1.6em] xl:text-[1.2em] font-normal font-['Amiri'] ">69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎</div>
-                  <div class="Frame275 left-[25.6vw] top-[5.2em] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1.2 inline-flex">
+                  <div class="Frame275 w-[10vw] left-[23vw] top-[7.8vh] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1 inline-flex">
                         <div class=" text-orange-400 2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
-                        <div class="Frame w-[0.7vw] h-[1.3] relative"></div>
+                        <div class="Frame w-[0.7vw] h-[1.3vh] relative"></div>
                   </div>
               
             <div class="Group93 w-[3.1vw] h-[7.2vh] left-[-1.9em] top-[1.1em] absolute">
-                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 top-0 absolute bg-gray-700">
-                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-[0.1vh] absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
+                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
+                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                       </div>
                       <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
                         <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
@@ -158,14 +158,14 @@
          <!--topic2-->
          <div class="DivMkdItemTextHolder w-[31.5vw] h-[12.6vh] left-0 top-[13vh] absolute bg-white border border-zinc-300">
                   <div class=" w-[26.5vw] left-[4.2vw] top-[0.8em] absolute text-justify text-gray-700 2xl:text-[1.6em] xl:text-[1.2em] font-normal font-['Amiri'] ">69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎</div>
-                  <div class="Frame275 left-[25.6vw] top-[5.2em] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1.2 inline-flex">
+                  <div class="Frame275 w-[10vw] left-[23vw] top-[7.8vh] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1.2 inline-flex">
                         <div class=" text-orange-400 2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
                         <div class="Frame w-[0.7vw] h-[1.3] relative"></div>
                   </div>
               
             <div class="Group93 w-[3.1vw] h-[7.2vh] left-[-1.9em] top-[1.1em] absolute">
-                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 top-0 absolute bg-gray-700">
-                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-[0.1vh] absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
+                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
+                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                       </div>
                       <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
                         <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
@@ -175,14 +175,14 @@
         <!--topic3-->
          <div class="DivMkdItemTextHolder w-[31.5vw] h-[12.6vh] left-0 top-[25.9vh] absolute bg-white border border-zinc-300">
                   <div class=" w-[26.5vw] left-[4.2vw] top-[0.8em] absolute text-justify text-gray-700 2xl:text-[1.6em] xl:text-[1.2em] font-normal font-['Amiri'] ">69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎</div>
-                  <div class="Frame275 left-[25.6vw] top-[5.2em] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1.2 inline-flex">
+                  <div class="Frame275 w-[10vw] left-[23vw] top-[7.8vh] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1.2 inline-flex">
                         <div class=" text-orange-400 2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
                         <div class="Frame w-[0.7vw] h-[1.3] relative"></div>
                   </div>
               
             <div class="Group93 w-[3.1vw] h-[7.2vh] left-[-1.9em] top-[1.1em] absolute">
-                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh]  left-0 top-0 absolute bg-gray-700">
-                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-[0.1vh] absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
+                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh]  left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
+                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                       </div>
                       <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh]  absolute bg-orange-400">
                         <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
