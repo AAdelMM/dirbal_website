@@ -129,7 +129,7 @@
    <div id="section-2"  class="LastTopics flex justify-center relative bg-gray-800">
       <div class="subtitle-container flex justify-center w-[72vw] h-[6.4vh] mt-[1.4em] ">
          
-          <div id="subtitle" class="   text-right text-white 2xl:text-[1em] xl:text-[0.7em] font-normal font-['El Messiri'] ">آخر الموضوعات </div>  
+          <div id="subtitle" class="   text-right text-white 2xl:text-[1em] xl:text-[0.7em] text-[0.5em] font-normal font-['El Messiri'] ">آخر الموضوعات </div>  
                   <img class="w-[2em] h-auto left-[15vw] absolute" src="{{ asset('images/IocndecorL.svg') }}" alt="icon">
                   <img class="w-[2em] h-auto right-[15vw] absolute " src="{{ asset('images/IocndecorR.svg') }}" alt="icon">   
           </div>
