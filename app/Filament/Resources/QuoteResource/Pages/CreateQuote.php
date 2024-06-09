@@ -11,6 +11,6 @@ class CreateQuote extends CreateRecord
     protected static string $resource = QuoteResource::class;
     protected function getRedirectUrl(): string
     {
-        return '/admin/quote'; // Redirect to the specified URL
+        return '/admin/quotes'; // Redirect to the specified URL
     }
 }

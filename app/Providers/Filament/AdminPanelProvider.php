@@ -30,7 +30,7 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->brandLogo(asset('images/logo test1.png'))
+            ->brandLogo(asset('images/logo test2.png'))
             ->brandLogoHeight('3rem')
             ->font('Noto Kufi Arabic')
             ->favicon(asset('images/favicon.png'))
