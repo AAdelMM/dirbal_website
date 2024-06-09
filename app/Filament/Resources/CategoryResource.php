@@ -50,7 +50,7 @@ class CategoryResource extends Resource
                 TextColumn::make('id')
                 ->label('تسلسل')
                 ->sortable(),
-            TextColumn::make('category.name')
+            TextColumn::make('name')
                 ->label('اسم التصنيف')
                 ->sortable()
                 ->searchable(),
