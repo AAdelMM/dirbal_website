@@ -18,13 +18,21 @@
       body,html{
         padding:0;
         margin: 0;
+        overflow-x:hidden;
+      }
+      section{
+        max-width:100%;
+        overflow:hidden;
       }
       @tailwind base;
       @tailwind components;
       @tailwind utilities;
       body {
         @apply leading-[normal] m-0;
+        
+        
       }
+
       *,
       ::before,
       ::after {
@@ -863,105 +871,105 @@
                 </div>
               </div>
               <div
-                class="flex flex-row items-start justify-end pt-[0rem] pb-[0.5rem] pr-[0.375rem] pl-[0rem] box-border max-w-full"
+                class="flex flex-row items-start justify-end pt-[0rem] pb-[0.5rem]  pl-[0rem] box-border max-w-full"
               >
                 <div
-                  class="2xl:w-[31.25rem] w-[21.9rem] overflow-hidden shrink-0 flex flex-row items-start justify-start pt-[0.625rem] pb-[0.562rem] pr-[3.875rem] pl-[12.187rem] box-border gap-[1.437rem] max-w-full z-[1] mq850:flex-wrap mq850:justify-center mq850:pl-[6.063rem] mq850:pr-[1.938rem] mq850:box-border mq450:pl-[1.25rem] mq450:box-border"
+                  class="2xl:w-[31.25rem] w-[21.9rem] overflow-hidden shrink-0 flex flex-row items-start justify-end pt-[0.625rem] pb-[0.562rem] box-border gap-[1.437rem] max-w-full z-[1] mq850:flex-wrap mq850:justify-center mq850:pl-[6.063rem] mq850:pr-[1.938rem] mq850:box-border mq450:pl-[1.25rem] mq450:box-border"
                 >
                   <div
                     class="flex flex-col items-start justify-start pt-[0.093rem] px-[0rem] pb-[0rem]"
                   >
                     <img
-                      class="w-[2.813rem] h-[2.813rem] relative overflow-hidden shrink-0"
+                      class="2xl:w-[3.5rem] 2xl:h-[3.5rem] w-[2.5rem] h-[2.5rem] pb-[0.5rem]  relative overflow-hidden shrink-0"
                       loading="lazy"
                       alt=""
-                      src="{{ asset('images/whatsapp.svg') }}"
+                      src="{{ asset('images/whatsapp.png') }}"
                     />
                   </div>
                   <div
-                    class="h-[3rem] w-[0.063rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
+                    class="2xl:h-[3rem] h-[2.1rem] 2xl:w-[0.063rem] w-[0.0441rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
                   ></div>
                   <div
                     class="flex flex-col items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]"
                   >
                     <img
-                      class="w-[2.5rem] h-[2.5rem] relative overflow-hidden shrink-0"
+                      class="2xl:w-[2.8rem] 2xl:h-[2.8rem] w-[1.96rem] h-[1.96rem]relative overflow-hidden shrink-0"
                       loading="lazy"
                       alt=""
-                      src="/public/viber.svg"
+                      src="{{ asset('images/viber.png') }}"
                     />
                   </div>
                   <div
-                    class="h-[3rem] w-[0.063rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
+                  class="2xl:h-[3rem] h-[2.1rem] 2xl:w-[0.063rem] w-[0.0441rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
                   ></div>
                   <div
                     class="flex flex-col items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]"
                   >
                     <img
-                      class="w-[2.5rem] h-[2.5rem] relative overflow-hidden shrink-0"
+                      class="2xl:w-[2.8rem] 2xl:h-[2.8rem] w-[1.96rem] h-[1.96rem] relative overflow-hidden shrink-0"
                       loading="lazy"
                       alt=""
-                      src="/public/frame.svg"
+                      src="{{ asset('images/facebook.svg') }}"
                     />
                   </div>
                   <div
-                    class="h-[3rem] w-[0.063rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
+                  class="2xl:h-[3rem] h-[2.1rem] 2xl:w-[0.063rem] w-[0.0441rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
                   ></div>
                   <div
                     class="flex flex-col items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]"
                   >
-                    <img
-                      class="w-[2.5rem] h-[2.5rem] relative overflow-hidden shrink-0"
+                  <img
+                      class="2xl:w-[2.8rem] 2xl:h-[2.8rem] w-[1.96rem] h-[1.96rem] relative overflow-hidden shrink-0"
                       loading="lazy"
                       alt=""
-                      src="/public/facebookmessenger.svg"
+                      src="{{ asset('images/messenger.png') }}"
                     />
                   </div>
                 </div>
               </div>
               <div
-                class="w-[25.5rem] h-[0.75rem] flex flex-row items-start justify-end pt-[0rem] px-[0.375rem] pb-[0.5rem] box-border max-w-full"
+                class="2xl:w-[25.5rem] 2xl:h-[0.75rem] w-[17.85rem] h-[0.525rem] flex flex-row items-start justify-end pt-[0rem] px-[0.375rem] pb-[0.5rem] box-border max-w-full"
               >
                 <div
                   class="h-[24.75rem] w-[0.25rem] relative bg-silver [transform:_rotate(-90deg)] z-[1]"
                 ></div>
               </div>
               <div
-                class="w-[20.313rem] flex flex-row items-start justify-end py-[0rem] px-[0.375rem] box-border max-w-full text-[2rem]"
+                class="2xl:w-[30.313rem] w-[21.22rem] flex flex-row items-start justify-end py-[0rem]  box-border max-w-full text-[2rem]"
               >
                 <div
-                  class="flex-1 relative leading-[1.188rem] uppercase z-[1] mq850:text-[1.625rem] mq850:leading-[1.188rem] mq450:text-[1.188rem] mq450:leading-[0.875rem]"
-                >
+                  class="flex-1 relative leading-[3rem] uppercase z-[1] 2xl:text-[2rem] text-[1.4rem]"
+                style="font-family:'Noto Kufi Arabic';">
                   اشترك في نشرة أخبار الموقع
                 </div>
               </div>
               <div
-                class="w-[29.063rem] flex flex-col items-end justify-start gap-[0.437rem] max-w-full text-justify text-[1.5rem] text-lightgray font-sakkal-majalla"
+                class="2xl:w-[30.063rem] w-[21rem] flex flex-col items-end justify-start  max-w-full text-justify  text-lightgray "
               >
                 <div
-                  class="w-[22.313rem] flex flex-row items-start justify-end py-[0rem] px-[0.312rem] box-border max-w-full"
+                  class="2xl:w-[38rem] w-[22rem] flex flex-row items-start justify-end py-[0rem]  box-border max-w-full"
                 >
                   <div
-                    class="h-[2.125rem] flex-1 relative leading-[140%] flex items-center max-w-full z-[1] mq450:text-[1.188rem] mq450:leading-[1.688rem]"
-                  >
+                    class="2xl:h-[2.125rem] h-[1.48rem] flex-1 relative  flex items-center max-w-full z-[1] 2xl:text-[1.3rem] text-[0.9rem]"
+                    style="font-family:'Noto Kufi Arabic'; direction:rtl;">
                     لاستقبال إشعارات المواضيع الجديدة، يرجى الاشتراك
                   </div>
                 </div>
                 <div
-                  class="self-stretch h-[4rem] overflow-hidden shrink-0 flex flex-row items-start justify-end pt-[1.625rem] px-[0rem] pb-[0rem] box-border max-w-full z-[1] text-right text-[1.563rem] text-whitesmoke font-zahra-arabic"
+                  class="self-stretch 2xl:h-[4rem] h-[2.8rem] overflow-hidden shrink-0 flex flex-row items-start justify-end pt-[1.625rem] px-[0rem] pb-[0rem] box-border max-w-full z-[1] text-right text-[1.563rem] text-whitesmoke font-zahra-arabic"
                 >
                   <div
-                    class="w-[24.781rem] bg-silver box-border flex flex-row items-end justify-start pt-[0.125rem] px-[0.375rem] pb-[0.437rem] max-w-[calc(100%_-_0px)] shrink-0 border-[1px] border-solid border-darkslategray"
+                    class="2xl:w-[24.781rem] w-[17.3rem] bg-silver box-border flex flex-row items-end justify-start pt-[0.125rem] px-[0.375rem] pb-[0.437rem] max-w-[calc(100%_-_0px)] shrink-0 border-[1px] border-solid border-darkslategray"
                   >
                     <img
                       class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0"
                       loading="lazy"
                       alt=""
-                      src="/public/paperplaneregular-1.svg"
+                      src="{{ asset('images/messenger.png') }}"
                     />
 
                     <div
-                      class="w-[21.844rem] flex flex-col items-start justify-start py-[0rem] px-[0rem] box-border max-w-[calc(100%_-_24px)]"
+                      class="2xl:w-[21.844rem] w-[15.3rem] flex flex-col items-start justify-start py-[0rem] px-[0rem] box-border max-w-[calc(100%_-_24px)]"
                     >
                       <div
                         class="ml-[-0.719rem] w-[22.563rem] relative whitespace-pre-wrap flex items-end max-w-[104%] shrink-0 mq450:text-[1.25rem]"
@@ -975,7 +983,7 @@
             </div>
           </div>
           <div
-            class="h-[33.8rem] flex flex-col items-start justify-start pt-[4.187rem] px-[0rem] pb-[0rem] box-border mq850:pt-[2.75rem] mq850:box-border"
+            class="2xl:h-[33.8rem] h:[] flex flex-col items-start justify-start pt-[4.187rem] px-[0rem] pb-[0rem] box-border mq850:pt-[2.75rem] mq850:box-border"
           >
             <div class="w-[0.25rem] flex-1 relative bg-silver z-[1]"></div>
           </div>
