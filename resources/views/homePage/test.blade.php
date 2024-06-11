@@ -761,7 +761,7 @@
       <!--Footer start-->
       
       <div
-      class="w-full relative bg-black box-border overflow-hidden flex flex-row items-start justify-start py-[1.625rem] pr-[3.375rem] pl-[6.75rem] gap-[1.375rem] leading-[normal] tracking-[normal] text-right text-[1.875rem] text-white font-['Noto Kufi Arabic'] border-[1px] border-solid border-darkgoldenrod mq850:pl-[1.688rem] mq850:box-border mq1225:pl-[3.375rem] mq1225:pr-[1.688rem] mq1225:box-border mq1550:flex-wrap"
+      class="w-full relative h-[44.25rem] bg-black box-border overflow-hidden flex flex-row items-start justify-start py-[1.625rem] pr-[3.375rem] pl-[6.75rem] gap-[1.375rem] leading-[normal] tracking-[normal] text-right text-[1.875rem] text-white font-['Noto Kufi Arabic'] border-[1px] border-solid border-darkgoldenrod mq850:pl-[1.688rem] mq850:box-border mq1225:pl-[3.375rem] mq1225:pr-[1.688rem] mq1225:box-border mq1550:flex-wrap"
     >
       <footer
         class="2xl:h-[44.25rem] h-[31rem] w-[84.3rem] 2xl:w-[120.375rem] relative bg-gray-100 box-border hidden max-w-full border-t-[1px] border-solid border-darkgoldenrod"
@@ -797,7 +797,7 @@
               class="self-stretch flex flex-row items-start justify-start py-[0rem] pr-[0.062rem] pl-[0rem] box-border max-w-full  text-whitesmoke"
             >
               <div
-                class="flex-1 bg-silver box-border flex flex-row items-start justify-end pt-[0rem] pr-[0.3rem] pb-[0.5rem] whitespace-nowrap max-w-full z-[1] border-[1px] border-solid border-darkslategray"
+                class="flex-1 bg-[#21262C] box-border flex flex-row items-start justify-end pt-[0rem] pr-[0.3rem] pb-[0.5rem] whitespace-nowrap max-w-full z-[1] border-[1px] border-solid border-[#474747]"
               >
                 <div
                   class="2xl:h-[1.875rem] h-[1.3rem] 2xl:text-[1.2rem] text-[1rem]  relative pr-[0.125rem] flex items-center max-w-full"
@@ -808,11 +808,11 @@
             </div>
           </div>
           <div
-            class="self-stretch 2xl:h-[19.438rem] h-[13.6] flex flex-row items-start justify-end py-[0rem] pr-[0.062rem] pl-[0rem] box-border text-[1.563rem] text-whitesmoke"
+            class="self-stretch 2xl:h-[19.438rem]  flex flex-row items-start justify-end py-[0rem] pr-[0.062rem] pl-[0rem] box-border text-[1.563rem] text-whitesmoke"
           >
             <label class="cursor-pointer" for="file-loco-0032-s8a-96:783">
               <div
-                class="2xl:h-[19.438rem] h-[13.6rem] w-[19rem] 2xl:w-[27.688rem] bg-silver box-border flex flex-row items-start justify-start pt-[0.125rem] px-[1.062rem] pb-[17.437rem] relative z-[1] border-[1px] border-solid border-darkslategray"
+                class="2xl:h-[19.438rem] h-[13.6rem] w-[19rem] 2xl:w-[27.688rem] bg-[#21262C] box-border flex flex-row items-start justify-start pt-[0.125rem] px-[1.062rem] pb-[17.437rem] relative z-[1] border-[1px] border-solid border-[#474747]"
               >
                 <div
                   class="2xl:h-[1.875rem] 2xl:w-[25.188rem] h-[1.33rem] w-[17.4rem] 2xl:text-[1.2rem] text-[1rem] relative flex items-center shrink-0 mq450:text-[1.25rem]"
@@ -856,7 +856,7 @@
           class="self-stretch flex flex-row items-start justify-start gap-[0.793rem] max-w-full mq1225:flex-wrap"
         >
           <div
-            class="flex flex-col items-start justify-start pt-[6.437rem] pb-[0rem] pr-[2rem] pl-[0rem] box-border max-w-full mq450:pt-[4.188rem] mq450:box-border"
+            class="flex flex-col items-start justify-start pt-[4rem] pb-[0rem] pr-[2rem] pl-[0rem] box-border max-w-full mq450:pt-[4.188rem] mq450:box-border"
           >
             <div
               class="flex flex-col items-end justify-start gap-[1.437rem] max-w-full"
@@ -938,7 +938,7 @@
                 class="2xl:w-[30.313rem] w-[21.22rem] flex flex-row items-start justify-end py-[0rem]  box-border max-w-full text-[2rem]"
               >
                 <div
-                  class="flex-1 relative leading-[3rem] uppercase z-[1] 2xl:text-[2rem] text-[1.4rem]"
+                  class="flex-1 relative leading-[3rem] uppercase z-[1] 2xl:text-[1.5rem] text-[1rem]"
                 style="font-family:'Noto Kufi Arabic';">
                   اشترك في نشرة أخبار الموقع
                 </div>
@@ -950,30 +950,30 @@
                   class="2xl:w-[38rem] w-[22rem] flex flex-row items-start justify-end py-[0rem]  box-border max-w-full"
                 >
                   <div
-                    class="2xl:h-[2.125rem] h-[1.48rem] flex-1 relative  flex items-center max-w-full z-[1] 2xl:text-[1.3rem] text-[0.9rem]"
+                    class="2xl:h-[2.125rem] h-[1.48rem] flex-1 relative  flex items-center max-w-full z-[1] 2xl:text-[1.1rem] text-[0.9rem]"
                     style="font-family:'Noto Kufi Arabic'; direction:rtl;">
                     لاستقبال إشعارات المواضيع الجديدة، يرجى الاشتراك
                   </div>
                 </div>
                 <div
-                  class="self-stretch 2xl:h-[4rem] h-[2.8rem] overflow-hidden shrink-0 flex flex-row items-start justify-end pt-[1.625rem] px-[0rem] pb-[0rem] box-border max-w-full z-[1] text-right text-[1.563rem] text-whitesmoke font-zahra-arabic"
+                  class="self-stretch 2xl:h-[4.8rem] h-[4.8rem] overflow-hidden shrink-0 flex flex-row items-start justify-end pt-[1.625rem] px-[0rem] pb-[0rem] box-border max-w-full z-[1] text-right text-[1.563rem] text-whitesmoke font-zahra-arabic"
                 >
                   <div
-                    class="2xl:w-[24.781rem] w-[17.3rem] bg-silver box-border flex flex-row items-end justify-start pt-[0.125rem] px-[0.375rem] pb-[0.437rem] max-w-[calc(100%_-_0px)] shrink-0 border-[1px] border-solid border-darkslategray"
+                    class="2xl:w-[24.781rem] w-[17.3rem] bg-[#21262C] box-border flex flex-row items-center justify-start pt-[0.125rem] px-[0.375rem] pb-[0.437rem] max-w-[calc(100%_-_0px)] shrink-0 border-[1px] border-solid border-[#474747]"
                   >
                     <img
-                      class="h-[1.5rem] w-[1.5rem] relative overflow-hidden shrink-0"
+                      class="2xl:h-[1.5rem] 2xl:w-[1.5rem] w-[1.2rem] h-[1.2rem] relative overflow-hidden shrink-0"
                       loading="lazy"
                       alt=""
                       src="{{ asset('images/messenger.png') }}"
                     />
 
                     <div
-                      class="2xl:w-[21.844rem] w-[15.3rem] flex flex-col items-start justify-start py-[0rem] px-[0rem] box-border max-w-[calc(100%_-_24px)]"
+                      class="2xl:w-[21.844rem] w-[15.3rem]  flex flex-col items-start justify-start py-[0rem] px-[0rem] box-border max-w-[calc(100%_-_24px)]"
                     >
                       <div
-                        class="ml-[-0.719rem] w-[22.563rem] relative whitespace-pre-wrap flex items-end max-w-[104%] shrink-0 mq450:text-[1.25rem]"
-                      >
+                        class="ml-[-0.719rem] w-[22.563rem]  relative flex items-start max-w-[104%] text-[1rem] 2xl:text-[1.3rem] shrink-0 mq450:text-[1.25rem]"
+                      style="font-family:'Noto Kufi Arabic'; direction:rtl;">
                         بريدك الإلكتروني*
                       </div>
                     </div>
@@ -994,12 +994,12 @@
               class="w-[5.025rem] h-[7.5rem] relative object-cover"
               loading="lazy"
               alt=""
-              src="/public/logo@2x.png"
+              src="{{ asset('images/footerLogo.png') }}"
             />
 
             <div class="self-stretch flex flex-col items-end justify-start">
               <div
-                class="self-stretch h-[37vh] relative leading-[140%] flex items-center shrink-0 z-[1] mq450:text-[0.8rem] mq450:leading-[0.8rem]"
+                class="self-stretch 2xl:h-[37vh] h-[25.9vh] 2xl:pt-[0rem] 2xl:top-[-2rem] pt-[8rem] relative leading-[120%] flex items-center shrink-0 z-[1] mq450:text-[0.8rem] mq450:leading-[0.8rem]"
               >
                 <span>
                   <p class="m-0 lg:text-[0.9rem] 2xl:text-[1.25rem] " style="font-family:'Noto Kufi Arabic'; direction:rtl;">
@@ -1018,23 +1018,23 @@
                 </span>
               </div>
               <div
-                class="flex flex-row items-start justify-end py-[0rem] px-[0.25rem] mt-[-0.938rem]"
+                class="flex flex-row items-start justify-end py-[0rem] px-[0.25rem] 2xl:mt-[-0.938rem] mt-[10rem]"
               >
                 <button
-                  class="cursor-pointer pt-[0rem] px-[0.687rem] pb-[0.25rem] bg-peru-100 rounded-10xs flex flex-row items-end justify-start gap-[1.412rem] border-[1px] border-solid border-peru-200"
+                  class="cursor-pointer pt-[0rem] px-[0.687rem] pb-[0.25rem] bg-yellow-500 rounded-10xs flex flex-row items-center justify-start gap-[1.412rem] border-[1px] border-solid border-yellow-700"
                 >
                   <div
-                    class="flex flex-col items-start justify-end pt-[0rem] px-[0rem] pb-[0.5rem]"
+                    class="flex flex-col items-center justify-start pt-[0.5rem] px-[0rem] pb-[0.5rem]"
                   >
                     <img
                       class="w-[0.469rem] h-[0.938rem] relative object-contain"
                       alt=""
-                      src="/public/vector.svg"
+                      src="{{ asset('images/arrowleft.png') }}"
                     />
                   </div>
                   <div
-                    class="w-[4.75rem] relative text-[1.5rem] leading-[2.563rem] uppercase font-zahra-arabic text-white text-right flex items-end shrink-0 [text-shadow:0.3px_0_0_#fff,_0_0.3px_0_#fff,_-0.3px_0_0_#fff,_0_-0.3px_0_#fff] whitespace-nowrap mq450:text-[1.188rem] mq450:leading-[2.063rem]"
-                  >
+                    class="w-[4.75rem] relative 2xl:text-[1.2rem] text-[1rem] leading-[2.563rem] uppercase  text-white text-right flex items-center shrink-0 [text-shadow:0.3px_0_0_#fff,_0_0.3px_0_#fff,_-0.3px_0_0_#fff,_0_-0.3px_0_#fff] whitespace-nowrap mq450:text-[1.188rem] mq450:leading-[2.063rem]"
+                 style="font-family:'Noto Kufi Arabic'; direction:rtl;" >
                     سيرة ذاتية‎
                   </div>
                 </button>
@@ -1043,11 +1043,11 @@
           </div>
         </div>
         <div
-          class="w-[31.7vw] flex flex-row items-start justify-start py-[0rem] px-[4.187rem] box-border max-w-full text-[1.563rem] mq850:pl-[2.063rem] mq850:pr-[2.063rem] mq850:box-border"
+          class="w-[31.7vw]  flex flex-row items-start justify- py-[0rem] 2xl:px-[4.187rem] box-border max-w-full text-[1.563rem] mq850:pl-[2.063rem] mq850:pr-[2.063rem] mq850:box-border"
         >
           <div
             class="h-[1.5rem] flex-1 relative leading-[1.5rem] flex items-center max-w-full z-[1] text-[1rem] mq450:leading-[1.188rem]"
-          >
+          style="direction:rtl;">
             © دربال، جميع الحقوق محفوظة، 2024 ، ضد الاستعمال التجاري.
           </div>
         </div>
