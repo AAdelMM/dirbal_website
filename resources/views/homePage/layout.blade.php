@@ -999,7 +999,7 @@
 
             <div class="self-stretch flex flex-col items-end justify-start">
               <div
-                class="self-stretch 2xl:h-[37vh] h-[25.9vh] 2xl:pt-[0rem] 2xl:top-[-2rem] pt-[8rem] relative leading-[120%] flex items-center shrink-0 z-[1] mq450:text-[0.8rem] mq450:leading-[0.8rem]"
+                class="self-stretch 2xl:h-[37vh] h-[25.9vh] 2xl:pt-[0rem] 2xl:top-[-2rem]  pt-[8rem] relative 2xl:leading-[120%] flex items-center shrink-0 z-[1] mq450:text-[0.8rem] mq450:leading-[0.8rem]"
               >
                 <span>
                   <p class="m-0 lg:text-[0.9rem] 2xl:text-[1.25rem] " style="font-family:'Noto Kufi Arabic'; direction:rtl;">
