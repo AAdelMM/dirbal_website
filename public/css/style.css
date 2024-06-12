@@ -4,10 +4,35 @@
         margin: 0;
         overflow-x:hidden;
       }
+      html{
+        box-sizing: border-box;
+      }
+      body{
+        height:200vh;
+        padding-bottom: 44.25rem;
+        box-sizing: inherit;
+      }
       section{
         max-width:100%;
         overflow:hidden;
       }
+      /* CSS for Footer */
+#foter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+   
+  opacity: 1;
+ 
+  z-index:-1; 
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
       @tailwind base;
       @tailwind components;
       @tailwind utilities;

@@ -1,7 +1,7 @@
-<section>
+<section >
 
     <div
-      class="w-full relative bg-gray overflow-hidden flex flex-row flex-wrap items-start justify-start pt-[1.25rem] px-[2.25rem] pb-[2.937rem] box-border leading-[normal] tracking-[normal]"
+      class="section-container z[100]  w-full relative bg-gray overflow-hidden flex flex-row flex-wrap items-start justify-start pt-[1.25rem] px-[2.25rem] pb-[2.937rem] box-border leading-[normal] tracking-[normal]"
     >
       <img
         class="h-[59.063rem] w-[120.188rem] absolute  max-w-full z-[1]"

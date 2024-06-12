@@ -3,13 +3,14 @@ import preset from './vendor/filament/support/tailwind.config.preset'
 export default {
     presets: [preset],
     content: [
+      "./src/**/*.{js,jsx,ts,tsx}",
         "./app/Filament/**/*.php",
         "./resources/views/**/*.blade.php",
         "./vendor/filament/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
-        "./public/**/*.js",
-        "./public/**/*.css",
+        "./public/js/*.js",
+        "./public/css/*.css",
     ],
     theme: {
         extend: {
@@ -24,6 +25,3 @@ export default {
         '5xl': '3840px'
      }
 }
-module.exports = {
-   
-  };

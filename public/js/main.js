@@ -59,3 +59,22 @@ window.addEventListener("scroll", handleScroll);
 // Initial check in case elements are already in view on load
 handleScroll();
 });
+
+//footer
+document.addEventListener('DOMContentLoaded', () => {
+  const footer = document.querySelector('#footer');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        footer.classList.add('visible');
+        // Optionally, stop observing after it's visible to improve performance
+        observer.unobserve(footer);
+      }
+    });
+  }, {
+    threshold: 0.1 // Adjust this value to control when the footer becomes visible
+  });
+
+  observer.observe(footer);
+});
