@@ -1019,7 +1019,7 @@
                 class="flex flex-row items-start justify-end py-[0rem] px-[0.25rem] 2xl:mt-[-0.938rem] mt-[10rem]"
               >
                 <button
-                  class="cursor-pointer pt-[0rem] px-[0.687rem] pb-[0.25rem] bg-yellow-500 rounded-10xs flex flex-row items-center justify-start gap-[1.412rem] border-[1px] border-solid border-yellow-700"
+                  class="cursor-pointer pt-[0rem] px-[0.687rem] pb-[0.25rem] bg-[#C18F59] rounded-10xs flex flex-row items-center justify-start gap-[1.412rem] border-[1px] border-solid border-yellow-700"
                 >
                   <div
                     class="flex flex-col items-center justify-start pt-[0.5rem] px-[0rem] pb-[0.5rem]"

@@ -15,7 +15,9 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('homePage.test');
 });
-
+Route::get('/f', function () {
+    return view('homePage.footer');
+});
 
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::post('/likes', [LikeController::class, 'store'])->name('likes.store');

@@ -8,6 +8,8 @@ export default {
         "./vendor/filament/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
+        "./public/**/*.js",
+        "./public/**/*.css",
     ],
     theme: {
         extend: {
