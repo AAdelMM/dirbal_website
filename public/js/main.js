@@ -78,3 +78,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(footer);
 });
+
+//search
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  const searchIcon = document.querySelector('.searchIcon');
+  const searchSection = document.getElementById('searchSection');
+  const searchInput = document.getElementById('searchInput');
+  const closeIcon = searchSection.querySelector('.Close');
+
+  // Show the search section and focus the input when the search icon is clicked
+  searchIcon.addEventListener('click', function () {
+    searchSection.classList.add('show');
+    setTimeout(() => {
+      searchInput.focus();
+    }, 300); // Delay focus to ensure smooth transition
+  });
+
+  // Hide the search section when the close icon is clicked
+  closeIcon.addEventListener('click', function () {
+    searchSection.classList.remove('show');
+  });
+
+  // Optionally, close the search section when clicking outside of it
+  document.addEventListener('click', function (event) {
+    if (!searchSection.contains(event.target) && !searchIcon.contains(event.target)) {
+      searchSection.classList.remove('show');
+    }
+  });
+
+  // Handle placeholder visibility when input is focused or blurred
+  searchInput.addEventListener('focus', function () {
+    this.placeholder = '';
+  });
+
+  searchInput.addEventListener('blur', function () {
+    if (this.value.trim() === '') {
+      this.placeholder = 'كلمة/كلمات البحث...';
+    }
+  });
+});

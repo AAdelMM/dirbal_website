@@ -107,4 +107,44 @@
           opacity: 1;
           transform: translateY(0);
         }
+  
+  
+        /*menu styling*/
+       
+     /*search*/
+
+     #searchSection {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
     
+    #searchSection.show {
+      display: block;
+      opacity: 1;
+    }
+    
+    .searchInput {
+      background: transparent; /* Make the input background transparent */
+      border: none; /* Remove border */
+      color: white; /* Set text color to white */
+      text-align: right; /* Text aligned to the right */
+      direction: rtl; /* Ensure the direction is RTL */
+    }
+    
+    /* Focus state without outline */
+    .searchInput:focus {
+      outline: none; /* Remove default focus outline */
+    }
+    
+    /* Ensure input placeholder is also styled appropriately */
+    .searchInput::placeholder {
+      color: rgba(255, 255, 255, 0.6); /* Slightly transparent white */
+    }

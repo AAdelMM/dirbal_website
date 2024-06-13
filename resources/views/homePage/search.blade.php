@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-
 <div class="Search w-full lg:h-[100vh] h-[50vh] overflow-hidden relative bg-gray-900">
   <img class="searchbg w-full lg:h-[100vh] h-[50vh] top-0 absolute" src="{{ asset('images/searchbg.png')}}" />
   <div class="searchInput 2xl:w-[41.813rem] w-[20rem] 2xl:h-[9rem] h-[4.5rem] 2xl:left-[56rem] lg:left-[63vw] left-[50vw] 2xl:top-[20.5rem] lg:top-[40vh] top-[20vh] absolute text-right text-white opacity-30 2xl:text-[4rem] text-[2rem] font-normal font-['Noto Kufi Arabic'] " style="direction:rtl;">كلمة/كلمات البحث...</div>
@@ -19,8 +9,3 @@
     <img src="{{ asset('images/close.png')}}" alt="">
   </div>
 </div>
-
-
-
-</body>
-</html>
