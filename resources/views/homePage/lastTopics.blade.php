@@ -1,6 +1,10 @@
-<section>
+<section id="section-2"  class="relative">
+      <div class="ocean">
+           <div class="wave"></div>
+      <div class="wave wave2"></div>
+    </div>
       <!--title-->
-   <div id="section-2"  class="LastTopics flex justify-center relative bg-gray-800">
+   <div  class="LastTopics flex justify-center relative bg-gray-800">
       <div class="subtitle-container flex justify-center w-[72vw] h-[6.4vh] mt-[1.4em] ">
          
           <div id="subtitle" class="   text-right text-white 2xl:text-[1em] xl:text-[0.7em] font-normal font-['El Messiri'] ">آخر الموضوعات </div>  
@@ -10,7 +14,7 @@
       <!--content-->
       <div class="content absolute">
       <div class="container flex justify-center w-[67.6vw] h-[70vh]  relative">
-  <div class="Lastframecontent flex justify-center absolute left-0 top-[25vh] ">
+  <div class="z-10 Lastframecontent flex justify-center absolute left-0 top-[25vh] ">
       <!--topics-->
     <div class="Group94 w-[31.5vw] h-[34.8vh] left-[1.8vw] top-[0.25em] absolute">
           <div class="DivMkdItemTextHolder w-[31.5vw] h-[12.6vh] left-0 top-0 absolute bg-white border border-zinc-300">

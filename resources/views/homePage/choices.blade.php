@@ -1,4 +1,4 @@
-<section >
+<section id="section-3">
 
     <div
       class="section-container z[100]  w-full relative bg-gray overflow-hidden flex flex-row flex-wrap items-start justify-start pt-[1.25rem] px-[2.25rem] pb-[2.937rem] box-border leading-[normal] tracking-[normal]"
@@ -28,7 +28,7 @@
               class=" flex flex-col items-end justify-start gap-[2rem] max-w-full"
             >
               <h1
-                class="m-0 self-stretch relative text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3rem] leading-[114.6%] font-normal font-['El Messiri'] shrink-0 [debug_commit:bf4bc93] mq850:text-[2.5rem] mq850:leading-[2.875rem] mq450:text-[1.2rem] xl:text-[1.4rem] 2xl:text-[1.6rem] mq450:leading-[2.125rem]"
+                class="m-0 self-stretch relative text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3rem] 2xl:pt-0 pt-8 leading-[114.6%] font-normal font-['El Messiri'] shrink-0 [debug_commit:bf4bc93] mq850:text-[2.5rem] mq850:leading-[2.875rem] mq450:text-[1.2rem] xl:text-[1.4rem] 2xl:text-[1.6rem] mq450:leading-[2.125rem]"
               style="font-family:'El Messiri';">
                 مختارات‎
               </h1>

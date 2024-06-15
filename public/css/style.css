@@ -8,7 +8,8 @@
         box-sizing: border-box;
       }
       body{
-        height:200vh;
+        height:100%;
+        /* padding-bottom: 44.25rem; */
         padding-bottom: 44.25rem;
         box-sizing: inherit;
       }
@@ -16,6 +17,20 @@
         max-width:100%;
         overflow:hidden;
       }
+/*mokhtart*/
+      .mokhtarat {
+        width: 120.313rem;
+        position: relative;
+        height: 59.063rem;
+        margin-top: -0.063rem;
+        text-align: center;
+        font-size: var(--font-size-31xl);
+        /* Background */
+        background: #1F2732;
+      
+      }
+
+
       /* CSS for Footer */
 #foter {
   position: fixed;
@@ -24,8 +39,10 @@
   width: 100%;
    
   opacity: 1;
- 
+ padding-bottom: 0;
   z-index:-1; 
+  
+  
 }
 .visible {
   opacity: 1;
@@ -47,9 +64,51 @@
       ::after {
         border-width: 0;
       }
+      .ocean {
+  
+        height: 5%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #CF9455;
+        z-index: 1;
+        opacity: 50%;
+      }
+      
+      .wave {
+        background: url('../images/wave.svg') repeat-x;
+        position: absolute;
+        width: 6400px;
+        top: -198px;
+        left: 0;
+        height: 198px;
+        transform: translate(0, 0, 0);
+        animation: wave 7s ease infinite;
+        
+      }
+      
+      .wave:nth-of-type(2) {
+        top: -168px;
+        animation: swell 4s ease infinite;
+        opacity: 1;
+      }
+      
+      @keyframes wave {
+        0% { margin-left: 0; }
+        100% { margin-left: -1600px;}
+      }
+      @keyframes swell {
+        0%, 100% {
+          transform: translate(0, -30px);
+        }
+        50% {
+          transform: translate(0, 5px);
+        }
+      }
        /* Looping GIF Background */
        .LastTopics {
-            background-image: url('../images/section2bg.gif'); /* Path to your GIF */
+            /* background-image: url('../images/section2bg.gif'); Path to your GIF */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
