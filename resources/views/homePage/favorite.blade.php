@@ -58,7 +58,7 @@
         
           <div class="Ellipse3 2xl:w-[1.4rem] 2xl:h-[1.4rem] w-[1rem] h-[1rem]  left-[0.85rem] top-0 absolute bg-red-600 rounded-full"></div>
           <div class=" 2xl:w-2 w-1 2xl:h-[1.2rem] h-[0.6rem] 2xl:left-[1.4rem] left-[1.1rem] top-[-0.2rem] 2xl:top-[-0.2]  absolute text-white 2xl:text-[1rem] text-[0.8rem] font-normal">3</div>
-          <img class="w-[1.1rem] 2xl:w-[1.6rem] h-[1.4rem] 2xl:h-[2.6rem] 2xl:mt-[0.5rem] m-[0.3rem]" src="{{ asset('images/vector.png') }}" alt="fav icon">
+          <img class="w-[1.1rem] 2xl:w-[1.6rem] h-[1.4rem] 2xl:h-[2.6rem] 2xl:mt-[0.5rem] m-[0.3rem]" src="{{ asset('images/vector1.png') }}" alt="fav icon">
         </div>
         <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 h-6 border-r border-white/opacity-50"></div>
         <div class="Icons8Search11 2xl:w-10 w-5 2xl:h-10 h-5 relative"><img src="{{ asset('images/magni.png') }}" alt="search"></div>
