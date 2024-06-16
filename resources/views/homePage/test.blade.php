@@ -3,166 +3,397 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
+  <title>Favorite</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=font:wght@400&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&family=Marhey:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
   <style>
  
- html, body { height: 100%; }
-body {
-  
-}
 
-.ocean {
-  
-  height: 5%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: #015871;
-}
-
-.wave {
-  background: url({{asset('images/wave.svg')}}) repeat-x;
-  position: absolute;
-  width: 6400px;
-  top: -198px;
-  left: 0;
-  height: 198px;
-  transform: translate(0, 0, 0);
-  animation: wave 7s ease infinite;
-  
-}
-
-.wave:nth-of-type(2) {
-  top: -168px;
-  animation: swell 4s ease infinite;
-  opacity: 1;
-}
-
-@keyframes wave {
-  0% { margin-left: 0; }
-  100% { margin-left: -1600px;}
-}
-@keyframes swell {
-  0%, 100% {
-    transform: translate(0, -30px);
-  }
-  50% {
-    transform: translate(0, 5px);
-  }
-}
 
   </style>
 </head>
 <body>
+  <section>
 
-<section>
-    <div class="ocean">
-      <div class="wave"></div>
-      <div class="wave wave2"></div>
+<div class="Frame343 z-[1000] w-full h-[257vh] flex-col justify-start items-center inline-flex overflow-hidden bg-[#161D27] ">
+  <div class="Body w-full h-[191.6vh] relative ">
+    <img class="2 w-[100vw] overflow-hidden h-[181vh] left-0 2xl:top-[10.5vh] top-[4.8rem] absolute" src="{{ asset('images/favbg.png') }}" />
+    <div class="Heading1Legal 2xl:w-[5.4vw] w-[2.5vw] h-[4vh] 2xl:h-[4vh] 2xl:left-[47vw] left-[45vw] 2xl:top-[22vh] lg:top-[20vh] top-[8vh] absolute text-center text-white 2xl:text-[2.5rem] text-[2rem] font-bold 2xl:leading-[48.10px]" style="font-family:'El Messiri';">المفضلة</div>
+    <div class="Bars 2xl:w-[16.9vw] w-[13vw] 2xl:h-[7.2vh] h-[7.6vh] 2xl:left-[41.6vw] lg:left-[42.6vw] left-[42vw] 2xl:top-[12.9vh] lg:top-[15vh] top-[3.5vh] absolute justify-center items-center 2xl:gap-5 gap-1 inline-flex">
+      <div class="DivMkdSeparator w-[5rem] h-px border-b border-[#775C1C]"></div>
+      <div class="Group86  w-[5rem]  h-[4.8rem] relative">
+        <img class="D  w-[5rem] 2xl:h-[4.8rem] h-[3.2rem] left-0 top-0 absolute" src="{{ asset('images/BARSfav.png') }}"/>
+        
+      </div>
+      <div class="DivMkdSeparator  w-[5rem] h-px border-b border-[#775C1C]"></div>
     </div>
-      <!--title-->
-   <div id="section-2"  class="wavy-background LastTopics flex justify-center relative0  bg-gray-800">
-      <div class="  subtitle-container flex justify-center w-[72vw] h-[6.4vh] mt-[1.4em] ">
-         
-          <div id="subtitle" class="   text-right text-white 2xl:text-[1em] xl:text-[0.7em] font-normal font-['El Messiri'] ">آخر الموضوعات </div>  
-                  <img class="w-[2em] h-auto left-[15vw] absolute" src="{{ asset('images/IocndecorL.svg') }}" alt="icon">
-                  <img class="w-[2em] h-auto right-[15vw] absolute " src="{{ asset('images/IocndecorR.svg') }}" alt="icon">   
-          </div>
-      <!--content-->
-      <div class=" z-[50] content absolute wavy-background">
-      <div class="container flex justify-center w-[67.6vw] h-[70vh]  relative">
-  <div class="z-10 Lastframecontent flex justify-center absolute left-0 top-[25vh] ">
-      <!--topics-->
-    <div class=" z-10 Group94 w-[31.5vw] h-[34.8vh] left-[1.8vw] top-[0.25em] absolute">
-          <div class="DivMkdItemTextHolder w-[31.5vw] h-[12.6vh] left-0 top-0 absolute bg-white border border-zinc-300">
-                  <div class=" w-[26.5vw] left-[4.2vw] top-[0.8em] absolute text-justify text-gray-700 2xl:text-[1.6em] xl:text-[1.2em] font-normal font-['Amiri'] ">69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎</div>
-                  <div class="Frame275 w-[10vw] left-[23vw] top-[7.8vh] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1 inline-flex">
-                        <div class=" text-orange-400 2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
-                        <div class="Frame w-[0.7vw] h-[1.3vh] relative"></div>
-                  </div>
-              
-            <div class="Group93 w-[3.1vw] h-[7.2vh] left-[-1.9em] top-[1.1em] absolute">
-                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
-                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
-                      </div>
-                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
-                        <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
-                      </div>
-            </div>
-         </div>
-         <!--topic2-->
-         <div class="DivMkdItemTextHolder w-[31.5vw] h-[12.6vh] left-0 top-[13vh] absolute bg-white border border-zinc-300">
-                  <div class=" w-[26.5vw] left-[4.2vw] top-[0.8em] absolute text-justify text-gray-700 2xl:text-[1.6em] xl:text-[1.2em] font-normal font-['Amiri'] ">69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎</div>
-                  <div class="Frame275 w-[10vw] left-[23vw] top-[7.8vh] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1.2 inline-flex">
-                        <div class=" text-orange-400 2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
-                        <div class="Frame w-[0.7vw] h-[1.3] relative"></div>
-                  </div>
-              
-            <div class="Group93 w-[3.1vw] h-[7.2vh] left-[-1.9em] top-[1.1em] absolute">
-                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
-                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
-                      </div>
-                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
-                        <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
-                      </div>
-            </div>
-         </div>
-        <!--topic3-->
-         <div class="DivMkdItemTextHolder w-[31.5vw] h-[12.6vh] left-0 top-[25.9vh] absolute bg-white border border-zinc-300">
-                  <div class=" w-[26.5vw] left-[4.2vw] top-[0.8em] absolute text-justify text-gray-700 2xl:text-[1.6em] xl:text-[1.2em] font-normal font-['Amiri'] ">69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎</div>
-                  <div class="Frame275 w-[10vw] left-[23vw] top-[7.8vh] absolute justify-center items-center 2xl:gap-1.5 xl:gap-1.2 inline-flex">
-                        <div class=" text-orange-400 2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
-                        <div class="Frame w-[0.7vw] h-[1.3] relative"></div>
-                  </div>
-              
-            <div class="Group93 w-[3.1vw] h-[7.2vh] left-[-1.9em] top-[1.1em] absolute">
-                      <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh]  left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
-                        <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
-                      </div>
-                      <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh]  absolute bg-orange-400">
-                        <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
-                      </div>
-            </div>
-         </div>
+
+
+    <div class="Icon 2xl:w-[4.69rem] w-[2.3rem] 2xl:h-[1.9rem] h-[0.5rem] 2xl:left-[62rem] left-[51vw] 2xl:top-[16.6rem] top-[11.3rem] absolute">
+      <div class="Rectangle238 2xl:w-[0.35rem] w-[0.15rem] 2xl:h-[0.3rem] h-[0.15] 2xl:left-[3.2rem] left-[1.6rem] 2xl:top-[0.78rem] top-[0.39] absolute bg-orange-300"></div>
+      <div class="Line6 2xl:w-[4.69rem] w-[2.3rem] 2xl:h-[0px] left-0 2xl:top-[1.2rem] top-[0.5rem] absolute border border-orange-300"></div>
+      <div class="Line5 2xl:w-[4.69rem] w-[2.3rem] 2xl:h-[0px] left-0 2xl:top-[0.74rem] top-[0.2rem] absolute border border-orange-300"></div>
+      <div class="Line7 2xl:w-[1.9rem] w-[1rem] 2xl:h-[0px] 2xl:left-[3.65rem] left-[1.825rem] 2xl:top-[1.9rem] top-[0.9rem] absolute origin-top-left -rotate-90 border border-orange-300"></div>
+      <div class="Line8 2xl:w-[1.9rem] w-[1rem] 2xl:h-[0px] 2xl:left-[3rem] left-[1.5rem] 2xl:top-[1.9rem] top-[0.9rem] absolute origin-top-left -rotate-90 border border-orange-300"></div>
+    </div>
+
+    <div class="Header w-[89.8vw] h-[10vh] left-[5.1vw] top-[0.4rem] absolute">
+      <div class="Line w-[89vw]  h-[0px] 2xl:left-[8.72px]  left-[1rem] lg:top-[10.5vh] top-[4rem] absolute border border-white"></div>
+      <div class="Logo 2xl:left-0 left-[0.6rem] 2xl:top-[0.87rem] top-[0.5rem] absolute justify-center items-center gap-2.5 inline-flex">
+        <div class="Group48 w-[15vw] 2xl:h-[5.3rem] h-[2.8rem] relative">
+         <img class="Logo w-[15vw] 2xl:h-[5.3rem] lg:h-[3.2rem] h-[2.8rem]" src="{{ asset('images/48.png')}}" alt="">
           
-    </div>
-    <div class="Frame320 w-[31.5vw] 2xl:left-[69.5vh] xl:left-[70.5vh] top-[2.2vh] absolute justify-end items-center gap-[1.3em] inline-flex">
-      <div class=" w-[27.5vw] text-right text-orange-400  2xl:text-[1.5em] xl:text-[1.2em] font-bold font-['EL Meesiri'] ">69 م د: فسخ عقد مبرم بين الغير ( عدم قبول لعدم المصلحة )‎</div>
-      <div class="Frame309 w-[2.9vw] h-[5.1vh] flex-col justify-start items-center inline-flex">
-        <div class="Group49 w-[2.9vw] h-[5.1vh] relative">
-          <img class="Regulation w-[2.9vw] h-[5.1vh] left-0 top-0 absolute" src="https://via.placeholder.com/55x55" />
-          <div class="Regulation w-[2.9vw] h-[5.1vh] left-0 top-0 absolute bg-orange-400"></div>
         </div>
-        <div class=" w-[3.9vw] h-[2.1vh] left-[27.8vw] top-[8vh] absolute text-center text-white 2xl:text-sm xl:text-[0.65em] font-normal font-['Arial'] capitalize">القضاء المدني</div>
+      </div>
+
+      <div class="Frame44 2xl:left-[92.7rem] lg:left-[77vw] left-[70vw] 2xl:top-[1.7rem] top-[1.5rem]  absolute justify-center items-center gap-[23px] inline-flex">
+        <div class="Icons8Bookmark1 2xl:w-[2.4rem] 2xl:h-[3.4rem] w-[1.2rem] h-[1.7rem] relative">
+        
+          <div class="Ellipse3 2xl:w-[1.4rem] 2xl:h-[1.4rem] w-[1rem] h-[1rem]  left-[0.85rem] top-0 absolute bg-red-600 rounded-full"></div>
+          <div class=" 2xl:w-2 w-1 2xl:h-[1.2rem] h-[0.6rem] 2xl:left-[1.4rem] left-[1.1rem] top-[-0.2rem] 2xl:top-[-0.2]  absolute text-white 2xl:text-[1rem] text-[0.8rem] font-normal">3</div>
+          <img class="w-[1.1rem] 2xl:w-[1.6rem] h-[1.4rem] 2xl:h-[2.6rem] 2xl:mt-[0.5rem] m-[0.3rem]" src="{{ asset('images/vector.png') }}" alt="fav icon">
+        </div>
+        <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 h-6 border-r border-white/opacity-50"></div>
+        <div class="Icons8Search11 2xl:w-10 w-5 2xl:h-10 h-5 relative"><img src="{{ asset('images/magni.png') }}" alt="search"></div>
+        <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 h-6 border-r border-white/opacity-50"></div>
+        <div class="Icons8Menu11 2xl:w-10 w-5 2xl:h-[2.2rem] h-[1.1rem] relative"><img src="{{ asset('images/menu1.png') }}" alt="menu"></div>
+        <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 h-6 border-r border-white/opacity-50"></div>
       </div>
     </div>
-    <div class="Line43 w-[30.9vw] h-[0px] left-[66.6vw] top-[14vh] absolute origin-top-left rotate-[180deg] shadow border border-stone-400/opacity-50"></div>
-    <div class="BtnKeepRead w-11 h-[13.8vh] left-[58.2vw] top-[32.8vh] absolute origin-top-left -rotate-90 bg-orange-400 rounded-[3px]">
-      <div class="Frame273 left-[1.7vw] 2xl:top-[3.5vh] xl:top-[2.5vh] absolute flex-col justify-center items-center gap-2 inline-flex">
-        <div class=" w-[5.2vw] h-[2.4vh] xl:ml-[0.9em]  origin-top-left rotate-90 text-center text-white 2xl:text-[0.9em] xl:text-[0.75em] font-bold font-['El Messiri'] ">واصل القراءة</div>
-      </div>
-      <div class="Btndarken w-[2.2vw] h-11 2xl:left-[2.3vw] xl:left-[3.2vw] top-0 absolute origin-top-left rotate-90 opacity-50 bg-orange-400 rounded-tl-[3px] rounded-bl-[3px]"></div>
-    </div>
-    <div class="Menu w-[13.2vw] h-[7.9vh] left-[35.1vw] top-[25.3vh] absolute justify-start items-start inline-flex">
-      <div class="DivMkdPostInfoDate w-[4.4vw] h-[7.9vh] relative border border-white">
-        <div class="Copy left-[1.2vw] top-[1.8vh] absolute justify-start items-start gap-2.5 inline-flex"></div>
-      </div>
-      <div class="DivMkdPostInfoCommentsHolder w-[4.4vw] h-[7.9vh] relative border border-gray-200">
-        <div class="Comment py-0.5 left-[0.9vw] top-[1.6vh] absolute bg-black/opacity-0 flex-col justify-start items-start gap-2.5 inline-flex"></div>
-      </div>
-      <div class="AMkdSocialShareDropdownOpener w-[4.4vw] h-[7.9vh] relative border border-white">
-        <div class="Share left-[1vw] top-[6vh] absolute justify-start items-start gap-2.5 inline-flex"></div>
-      </div>
-    </div>
-    <div class=" w-[31.3vw] h-[10.6vh] left-[35.1vw] top-[15vh] absolute text-right text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['El Messiri'] uppercase leading-normal">المصلحة الشخصية المشروعة المباشرة شرط لقبول الدعوى. مِلاكها أن يكون للمدعي من وراء التجائه إلى القضاء منفعةٌ حقيقة،</div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[19.4rem] top-[15rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
     
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
   </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[29.4rem] top-[22rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
   </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[39.4rem] top-[29rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
   </div>
-</div>
-</section>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[49.4rem] top-[36rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[59.4rem] top-[43rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[69.4rem] top-[50rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[79.4rem] top-[57rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[89.4rem] top-[64rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[99.4rem] top-[71rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[109.4rem] top-[78rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  <!--first row -->
+    <div class="Frame265 2xl:w-[107.6rem] w-[80rem] 2xl:h-[95.3rem] h-[47.5rem] 2xl:left-[5.6rem] lg:left-[2.8rem] left-[] 2xl:top-[119.4rem] top-[85rem] absolute">
+
+      <div class="ArticlePost75 2xl:w-[107.6rem] w-[80rem] 2xl:h-40 h-20 2xl:px-[2.13rem] px-[0.4rem] 2xl:py-[4.4rem] py-[1rem] left-0 top-0 absolute border-b border-gray-200 justify-center items-center 2xl:gap-[6.25rem] gap-[1.12rem] inline-flex">
+   
+      
+    
+      <div class="Frame264 justify-center lg:ml-[12rem] items-center gap-[0.7rem] flex">
+       
+      <img class="w-[1rem] 2xl:w-[1.2rem] 2xl:h-[1.2rem] h-[1rem] left-[2rem] absolute " src="{{ asset('images/delete.png') }}" alt="delete">
+
+          <div class=" 2xl:w-[75.875rem] w-[50rem]  text-right" style="direction:rtl;" >
+              <span class="text-amber-100 2xl:text-[2rem] text-[1rem]  font-bold 2xl:leading-[2.8rem] leading-[1.4rem]" >86 م د: </span>
+              <span class="text-white 2xl:text-[1.5rem] text-[0.9rem] font-normal  2xl:leading-[2.8rem] leading-[1.4rem]" style="font-family:'Noto Kufi Arabic'">دعوى تعويض عن نزع ملكية لمنفعة الشركة العامة للكهرباء ملكية (إجابة – عدم جدوى قرار النزع)</span></div>
+              
+              <div class="Line40 2xl:w-[6.25rem] w-[3.12rem] h-[0px]    -rotate-90 border border-gray-200"></div>
+             
+          <div class="Frame296 flex-col justify-start items-center inline-flex">
+            <div class="Group49 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] relative">
+              <img class="Regulation 2xl:w-[3.75rem] w-[1.8rem] 2xl:h-[3.75rem] h-[1.8rem] left-0 top-0 absolute" src="{{ asset('images/favPicon.png')}}" />
+             
+            </div>
+            <div class=" text-white 2xl:w-[6rem] w-[3rem] 2xl:text-[0.91rem] text-[0.45rem] font-normal capitalize" style="font-family:'Noto Kufi Arabic';">القضاء المدني</div>
+          </div>
+          
+        </div>
+      </div>
+
+  </div>
+  </section>
+  <section class="z-[-10]">
+  @yield('content')
+  @include('homePage.footer')
+  </section>
+ 
 
 </body>
 </html>
+
+

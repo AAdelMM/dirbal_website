@@ -37,10 +37,13 @@
         </div>
         <div class="Frame43 2xl:left-[147.7vh] xl:left-[64.9em] 2xl:top-[27px] xl:top-[1.2em] absolute justify-center items-center 2xl:gap-[15px] xl:gap-[1em] inline-flex">
           <div class="Icons8Bookmark1 2xl:w-[38.64px] xl:w-[1.6em] 2xl:h-[54.21px] xl:h-[2.3em] relative">
+          
             <div class="Ellipse3 2xl:w-[25px] xl:w-[1.1em] 2xl:h-[25px] xl:h-[1.1em] 2xl:left-[13.64px] xl:left-[0.6em] 2xl:top-0 xl:top-[-0.4em] absolute bg-red-600 rounded-full"></div>
             <div class=" 2xl:w-2 xl:w-1 h-[19px] 2xl:left-[20.5px] xl:left-[1em] 2xl:top-[-3px] xl:top-[-0.6em] absolute  text-white 2xl:text-[1.25em] xl:text-[0.9em] font-normal " style="font-family:'Arial';">3</div>  
           </div>
-          <img class="favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav">
+          
+          <!-- <img class=" favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav"> -->
+          <img class="favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav" onclick="redirectToFavorite()">
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 xl:h-10 border-r border-gray-900"></div>
           <div class="Icons8Search11 2xl:w-10 xl:w-8 2xl:h-10 xl:h-8 relative"></div>
           <img class="searchIcon cursor-pointer" src="{{ asset('images/search.svg') }}" alt="search">

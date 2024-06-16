@@ -112,3 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+function redirectToFavorite() {
+  // Example additional logic before redirecting
+  console.log("Redirecting to the favorite page...");
+  window.location.href = "favorite";
+}
