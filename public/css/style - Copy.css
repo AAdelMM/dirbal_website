@@ -1,0 +1,236 @@
+
+      body,html{
+        padding:0;
+        margin: 0;
+        overflow-x:hidden;
+      }
+      html{
+        box-sizing: border-box;
+      }
+      body{
+        height:100%;
+        /* padding-bottom: 44.25rem; */
+        padding-bottom: 44.25rem;
+        box-sizing: inherit;
+      }
+      section{
+        max-width:100%;
+        overflow:hidden;
+      }
+/*mokhtart*/
+      .mokhtarat {
+        width: 120.313rem;
+        position: relative;
+        height: 59.063rem;
+        margin-top: -0.063rem;
+        text-align: center;
+        font-size: var(--font-size-31xl);
+        /* Background */
+        background: #1F2732;
+      
+      }
+
+
+      /* CSS for Footer */
+#foter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+   
+  opacity: 1;
+ padding-bottom: 0;
+  z-index:-1; 
+  
+  
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+      body {
+        @apply leading-[normal] m-0;
+        
+        
+      }
+
+      *,
+      ::before,
+      ::after {
+        border-width: 0;
+      }
+      .ocean {
+  
+        height: 5%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #CF9455;
+        z-index: 1;
+        opacity: 50%;
+      }
+      
+      .wave {
+        background: url('../images/wave.svg') repeat-x;
+        position: absolute;
+        width: 6400px;
+        top: -198px;
+        left: 0;
+        height: 198px;
+        transform: translate(0, 0, 0);
+        animation: wave 7s ease infinite;
+        
+      }
+      
+      .wave:nth-of-type(2) {
+        top: -168px;
+        animation: swell 4s ease infinite;
+        opacity: 1;
+      }
+      
+      @keyframes wave {
+        0% { margin-left: 0; }
+        100% { margin-left: -1600px;}
+      }
+      @keyframes swell {
+        0%, 100% {
+          transform: translate(0, -30px);
+        }
+        50% {
+          transform: translate(0, 5px);
+        }
+      }
+       /* Looping GIF Background */
+       .LastTopics {
+            /* background-image: url('../images/section2bg.gif'); Path to your GIF */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            max-width: 100%vw;
+            height: 73vh; /* Full viewport height */
+            position: relative;
+            overflow: hidden; /* To ensure content doesn't overflow */
+        }
+        .LastTopics::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(22, 29, 39, 0.5); /* Change the color and opacity as needed */
+          }
+        /* Animation for Subtitle */
+        .subtitle-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            color: white;
+            font-family: 'El Messiri', sans-serif;
+            text-align: center;
+        }
+
+        .subtitle {
+            animation: fadeInOut 10s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            10%, 30% {
+                opacity: 1;
+            }
+            40%, 90% {
+                opacity: 0;
+            }
+        }
+
+        .row1, .row2, .row3 {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+          }
+
+        /* Fade-in animation class */
+        .animate {
+          opacity: 1;
+          transform: translateY(0);
+        }
+  
+  
+        /*menu styling*/
+       
+     /*search*/
+
+     #searchSection {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    #searchSection.show {
+      display: block;
+      opacity: 1;
+    }
+    
+    .searchInput {
+      background: transparent; /* Make the input background transparent */
+      border: none; /* Remove border */
+      color: white; /* Set text color to white */
+      text-align: right; /* Text aligned to the right */
+      direction: rtl; /* Ensure the direction is RTL */
+    }
+    
+    /* Focus state without outline */
+    .searchInput:focus {
+      outline: none; /* Remove default focus outline */
+    }
+    
+    /* Ensure input placeholder is also styled appropriately */
+    .searchInput::placeholder {
+      color: rgba(255, 255, 255, 0.6); /* Slightly transparent white */
+    }
+
+    /*for main menu*/
+
+    /* Hide the submenu initially */
+    .submenu {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 1s ease-in-out, opacity 1s ease-in-out ;
+    }
+  
+    /* Shown state: visible */
+    .submenu.show {
+      max-height: 18rem;/* Adjust based on your submenu's expected height */
+      
+      margin-right: 5rem;
+      opacity: 1;
+    }
+     /* Rotate the arrow */
+     .arrow {
+      transition: transform 1.3s ease-in-out;
+    }
+    /* Rotate the arrow */
+    .arrow.rotate {
+      transform: rotate(-90deg);
+      
+    }

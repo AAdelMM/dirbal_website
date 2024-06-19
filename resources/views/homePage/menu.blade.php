@@ -5,13 +5,13 @@
     <div class="Principal flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] inline-flex">
         <div class=" w-[233px] text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';">الرئيسية</div>
-        <img class="pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowLeft.png') }}" alt="arrow">
+        <img class="pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
     </div>
     <div class="Judge flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] inline-flex">
         <div class=" w-[233px] cursor-pointer text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';">القضاء</div>
-        <img class="arrow  pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowLeft.png') }}" alt="arrow">
+        <img class="arrow  pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
       <div class="submenu hidden flex-col text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
           <div class="submenu-item inline-flex items-center "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>المحكمة</span></div>
@@ -23,7 +23,7 @@
     <div class="Tribunal overflow-hidden flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] inline-flex">
         <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';">المحكمة العليا</div>
-        <img class=" arrow pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowLeft.png') }}" alt="arrow">
+        <img class=" arrow pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
       <div class="submenu hidden  flex-col text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
           <div class="submenu-item inline-flex items-center "> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>أحكام</span></div>
@@ -35,7 +35,7 @@
     <div class="Lecture flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] inline-flex">
         <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem]" style="font-family:'Noto Kufi Arabic';">مدونة</div>
-        <img class="arrow pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowLeft.png') }}" alt="arrow">
+        <img class="arrow pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
       <div class="submenu hidden flex-col  text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
           <div class="submenu-item inline-flex items-center "style="::after" ><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>إسلاميات</span></div>
