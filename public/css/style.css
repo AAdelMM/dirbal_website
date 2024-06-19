@@ -207,3 +207,30 @@
     .searchInput::placeholder {
       color: rgba(255, 255, 255, 0.6); /* Slightly transparent white */
     }
+
+    /*for main menu*/
+
+    /* Hide the submenu initially */
+    .submenu {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 1s ease-in-out, opacity 1s ease-in-out ;
+    }
+  
+    /* Shown state: visible */
+    .submenu.show {
+      max-height: 18rem;/* Adjust based on your submenu's expected height */
+      
+      margin-right: 5rem;
+      opacity: 1;
+    }
+     /* Rotate the arrow */
+     .arrow {
+      transition: transform 1.3s ease-in-out;
+    }
+    /* Rotate the arrow */
+    .arrow.rotate {
+      transform: rotate(-90deg);
+      
+    }

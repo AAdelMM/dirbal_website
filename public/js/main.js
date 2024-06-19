@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //search
 
-// script.js
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const searchIcon = document.querySelector('.searchIcon');
@@ -118,3 +118,53 @@ function redirectToFavorite() {
   console.log("Redirecting to the favorite page...");
   window.location.href = "favorite";
 }
+
+//for menu
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuItems = document.querySelectorAll('.Head');
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Toggle the submenu
+      const submenu = item.nextElementSibling;
+      const arrow = item.querySelector('.arrow');
+
+      if (submenu.classList.contains('show')) {
+        submenu.classList.remove('show');
+        arrow.classList.remove('rotate');
+        // Optional: Delay hiding the submenu until the animation ends
+        setTimeout(() => {
+          submenu.style.display = 'none';
+        }, 1000);
+      } else {
+        submenu.style.display = 'flex';
+        setTimeout(() => {
+          submenu.classList.add('show');
+          arrow.classList.add('rotate');
+        }, 10); // Slight delay to ensure the display change takes effect before animating
+      }
+    });
+  });
+});
+
+//toggle menu
+document.addEventListener('DOMContentLoaded', function() {
+  // Get references to menu icon and menu container
+  const menuIcon = document.getElementById('menuIcon');
+  const menuContainer = document.getElementById('menuContainer');
+  const menuCloseIcon = document.getElementById('menuCloseIcon'); // Assuming you add an ID to your close icon
+
+  // Function to toggle menu visibility
+  function toggleMenu() {
+    menuContainer.classList.toggle('hidden'); // Toggle the 'hidden' class
+  }
+
+  // Event listener for menu icon on main page
+  menuIcon.addEventListener('click', toggleMenu);
+
+  // Event listener for close icon within menu itself
+  menuCloseIcon.addEventListener('click', toggleMenu);
+});
+
+

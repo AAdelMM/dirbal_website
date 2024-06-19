@@ -1,6 +1,10 @@
 
+
 <section>
 <div class="container-fluid ">
+  <!--Menu-->
+@yield('content')
+@include('homePage.menu')
 <div class="Home w-screen lg:h-screen h-[auto] relative">
       <img class="HeroBg w-screen lg:h-screen h-[auto] left-0 top-0 bg-cover" src="{{ asset('images/homeHero.png') }}" />
       <img class="HeroQuran w-[44.17vw]  2xl:h-[25.5em] lg:h-[17.9em]  h-[auto]  2xl:top-[20em] lg:top-[15em] top-[8em] absolute " src="{{ asset('images/heroquran.png') }}" />
@@ -50,7 +54,7 @@
           <img class="searchIcon cursor-pointer" src="{{ asset('images/search.svg') }}" alt="search">
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
           <div class="Icons8Menu11 2xl:w-10 lg:w-8 w-6 2xl:h-10 lg:h-8 h-6  relative"></div>
-          <img class="menuIcon cursor-pointer" src="{{ asset('images/menu.svg') }}" alt="menu">
+          <img id="menuIcon" class="menuIcon cursor-pointer" src="{{ asset('images/menu.svg') }}" alt="menu">
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
           
         </div>
