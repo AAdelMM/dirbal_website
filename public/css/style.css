@@ -221,8 +221,7 @@
     /* Shown state: visible */
     .submenu.show {
       max-height: 18rem;/* Adjust based on your submenu's expected height */
-      
-      margin-right: 5rem;
+      margin-right: 5rem !important;
       opacity: 1;
     }
      /* Rotate the arrow */
