@@ -21,9 +21,23 @@
 <!--importing content-->
     @yield('content')
 
-    <!--sectiom-1 Main Start--> 
-    @include('homePage.mainHero')
-   <!--sectiom-1 Main End-->
+    <!--section-1 Main Start--> 
+    <!--carousel container -->
+    <div class="carousel-container">
+        <div class="carousel-wrapper" id="carouselWrapper">
+            <!-- Sections to scroll through -->
+            <section class="carousel-section" >@include('homePage.mainHero')</section>
+            <section class="carousel-section" >@include('sections.judgment')</section>
+            <section class="carousel-section" >@include('sections.highCourt')</section>
+            <section class="carousel-section" >@include('sections.blog')</section>
+        </div>
+        <div class="carousel-nav w-[100vw] h-[3.75rem] flex justify-between left-0 top-[50vh]  absolute">
+        <img id="prevArrow" class="cursor-pointer carousel-arrow left-arrow" src="{{ asset('images/carosel-left.png') }}" alt="switch">
+        <img id="nextArrow" class="cursor-pointer carousel-arrow right-arrow" src="{{ asset('images/carosel-right.png') }}" alt="switch">
+      </div>
+    </div>
+   
+   <!--section-1 Main End-->
 
    <!--lastTopics Start-->
     @include('homePage.lastTopics')

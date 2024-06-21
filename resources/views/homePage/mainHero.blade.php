@@ -59,10 +59,10 @@
           
         </div>
       </div>
-      <div class="SwitchRtf w-[1918px] h-[60.06px] left-[-0px] top-[440.45px] absolute">
-        <div class="AngleLeft w-[60px] h-[60px] left-[60px] top-[60px] absolute origin-top-left -rotate-180 bg-zinc-300/opacity-50"></div>
-        <div class="AngleRight w-[60px] h-[60px] left-[1860px] top-0 absolute bg-zinc-300/opacity-50"></div>
-      </div>
+      <!-- <div class="SwitchRtf w-[100vw] h-[3.75rem] flex justify-between left-0 top-[50vh]  absolute">
+        <img class="cursor-pointer" src="{{ asset('images/carosel-left.png') }}" alt="switch">
+        <img class="cursor-pointer" src="{{ asset('images/carosel-right.png') }}" alt="switch">
+      </div> -->
 </div>
 </div>
 </section>

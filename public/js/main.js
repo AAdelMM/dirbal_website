@@ -167,4 +167,36 @@ document.addEventListener('DOMContentLoaded', function() {
   menuCloseIcon.addEventListener('click', toggleMenu);
 });
 
+//carousel
+
+// carousel.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carouselWrapper = document.getElementById('carouselWrapper');
+  const prevArrow = document.getElementById('prevArrow');
+  const nextArrow = document.getElementById('nextArrow');
+  const sections = document.querySelectorAll('.carousel-section');
+  let currentIndex = 0;
+
+  function updateCarousel() {
+      const offset = -currentIndex * 100; // Calculate the offset in percentage
+      carouselWrapper.style.transform = `translateX(${offset}vw)`;
+  }
+
+  // Event listeners for arrow buttons
+  nextArrow.addEventListener('click', () => {
+      if (currentIndex < sections.length - 1) {
+          currentIndex++;
+          updateCarousel();
+      }
+  });
+
+  prevArrow.addEventListener('click', () => {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+      }
+  });
+});
+
 

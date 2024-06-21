@@ -233,3 +233,47 @@
       transform: rotate(-90deg);
       
     }
+
+    /*carousel*/
+    
+    
+  .carousel-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%; /* Full width of the container */
+      height: 100%; /* Full height of the container */
+  }
+  
+  .carousel-section {
+      flex: 0 0 100vw; /* Each section takes full viewport width */
+      height: 100vh; /* Each section takes full viewport height */
+      display: flex;
+      
+      color: white;
+      
+  }
+  
+  .carousel-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      z-index: 10;
+  }
+  
+  .carousel-arrow {
+     
+      border: none;
+      color: white;
+      font-size: 4rem;
+      
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+  }
+  
+  .carousel-arrow:hover {
+      opacity: 1;
+  }

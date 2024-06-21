@@ -1,9 +1,9 @@
 
 <div class="Home w-full lg:h-[100vh] h-[80vh] relative">
-  <img class="sectionBg w-full lg:h-[100vh] h-[80vh] left-0 top-[1px] absolute" src="{{ asset('images/judgbg.png') }}" />
+  <img class="sectionBg w-full lg:h-[100vh] h-[80vh] left-0 top-[1px] absolute" src="{{ asset('images/blogbg.png') }}" />
   <div class="Frame285 w-[68.4vw] h-[39.8vh] left-[23.9vw] 2xl:top-[7.5rem] top-[5rem] absolute " style="direction:rtl;">
-    <div class=" w-[68.4vw] 2xl:h-[13vh] lg:h-[10vh] h-[10vh] text-right text-white 2xl:text-[8rem] lg:text-[5rem] text-[4rem] font-normal " style="font-family:'Noto Kufi Arabic';">القضاء</div>
-    <div class=" w-[74vw]  h-[24vh] 2xl:mt-[5rem] lg:mt-[3.5rem]  text-white 2xl:text-[2rem] text-[1.5rem]  font-normal 2xl:leading-[4rem] leading-[3rem]" style="font-family:'El Messiri';">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه، قدمت له بعرض موجز لأهم القواعد التي يتضمنها ولتلك التي بني عليها. كما أضفت تسجيلاً صوتياً لذلك لمن يؤثر الاستماع على القراءة.</div>
+    <div class=" w-[68.4vw] 2xl:h-[13vh] lg:h-[10vh] h-[10vh] text-right text-[#161D27] 2xl:text-[8rem] lg:text-[5rem] text-[4rem] font-normal " style="font-family:'Noto Kufi Arabic';">مدونة</div>
+    <div class=" w-[74vw]  h-[24vh] 2xl:mt-[5rem] lg:mt-[3.5rem]  text-[#161D27] 2xl:text-[2rem] text-[1.5rem]  font-normal 2xl:leading-[4rem] leading-[3rem]" style="font-family:'El Messiri';">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه، قدمت له بعرض موجز لأهم القواعد التي يتضمنها ولتلك التي بني عليها. كما أضفت تسجيلاً صوتياً لذلك لمن يؤثر الاستماع على القراءة.</div>
   </div>
 
   <div class="SubSection w-full 2xl:h-[21.25rem] h-[12rem] left-0 2xl:top-[38rem] lg:top-[25rem] top-[35rem] flex justify-center absolute bg-gray-700/opacity-20 border-t-2 border-orange-400">
@@ -11,26 +11,26 @@
 
       <div class="Frame258   flex-col justify-center items-center inline-flex pt-[2rem] 2xl:pt-[4rem]">
         <div class="Group54 w-[7.3vw] lg:h-[8.75rem] h-[6rem] flex justify-center">
-        <img class="Evidence 2xl:w-[7rem] 2xl:h-[7rem] lg:w-[6rem] lg:h-[6rem] w-[4rem] h-[4rem] " src="{{asset('images/jicon1.png')}}" />
+        <img class="Evidence 2xl:w-[7rem] 2xl:h-[7rem] lg:w-[6rem] lg:h-[6rem] w-[4rem] h-[4rem] " src="{{asset('images/ktab.png')}}" />
         </div>
-        <div class=" text-gray-200 lg:text-[2rem] text-[1.5rem] font-bold text-center " style="font-family:'Noto Kufi Arabic">معهد القضاء</div>
+        <div class=" text-[#161D27] lg:text-[2rem] text-[1.5rem] font-bold text-center " style="font-family:'Noto Kufi Arabic">كتاب</div>
         
       </div>
       <img src="{{asset('images/vline.png')}}" alt="">
 
       <div class="Frame260   flex-col justify-center items-center  pt-[2rem] 2xl:pt-[4rem] ">
       <div class="Group54 w-[7.3vw] lg:h-[8.75rem] h-[6rem] flex justify-center">
-        <img class="Evidence 2xl:w-[7rem] 2xl:h-[7rem] lg:w-[6rem] lg:h-[6rem] w-[4rem] h-[4rem]  " src="{{asset('images/jicon2.png')}}" />
+        <img class="Evidence 2xl:w-[7rem] 2xl:h-[7rem] lg:w-[6rem] lg:h-[6rem] w-[4rem] h-[4rem]  " src="{{asset('images/mabahth.png')}}" />
         </div>
-        <div class="text-gray-200 lg:text-[2rem]  text-[1.5rem] font-bold text-center " style="font-family:'Noto Kufi Arabic">المحكمة</div>
+        <div class="text-[#161D27] lg:text-[2rem]  text-[1.5rem] font-bold text-center " style="font-family:'Noto Kufi Arabic">مباحث</div>
       </div>
       <img src="{{asset('images/vline.png')}}" alt="">
 
       <div class="Frame259  flex-col justify-center items-center inline-flex pt-[2rem] 2xl:pt-[4rem]">
         <div class="Group63 w-[7.3vw] lg:h-[8.75rem] h-[6rem] flex justify-center">
-          <img class="Evidence 2xl:w-[7rem] 2xl:h-[7rem] lg:w-[6rem] lg:h-[6rem] w-[4rem] h-[4rem]  " src="{{asset('images/jicon3.png')}}" />
+          <img class="Evidence 2xl:w-[7rem] 2xl:h-[7rem] lg:w-[6rem] lg:h-[6rem] w-[4rem] h-[4rem]  " src="{{asset('images/islamiat.png')}}" />
         </div>
-        <div class=" text-gray-200 lg:text-[2rem] text-[1.5rem] font-bold  text-center" style="font-family:'Noto Kufi Arabic">النيابة العامة</div>
+        <div class=" text-[#161D27] lg:text-[2rem] text-[1.5rem] font-bold  text-center" style="font-family:'Noto Kufi Arabic">إسلاميات</div>
       </div>
     </div>
   </div>
@@ -65,11 +65,10 @@
           
         </div>
       </div>
-
-      <!-- <div class="SwitchRtf w-[100vw] h-[3.75rem] flex justify-between left-0 top-[50vh]  absolute">
+      
+     <!--  <div class="SwitchRtf w-[100vw] h-[3.75rem] flex justify-between left-0 top-[50vh]  absolute">
         <img class="cursor-pointer" src="{{ asset('images/carosel-left.png') }}" alt="switch">
         <img class="cursor-pointer" src="{{ asset('images/carosel-right.png') }}" alt="switch">
       </div> -->
-
 </div>
 
