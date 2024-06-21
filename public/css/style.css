@@ -240,7 +240,7 @@
   .carousel-wrapper {
       display: flex;
       transition: transform 0.5s ease-in-out;
-      width: 100%; /* Full width of the container */
+      width: 100vw; /* Full width of the container */
       height: 100%; /* Full height of the container */
   }
   
