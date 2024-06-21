@@ -59,10 +59,7 @@
           
         </div>
       </div>
-      <!-- <div class="SwitchRtf w-[100vw] h-[3.75rem] flex justify-between left-0 top-[50vh]  absolute">
-        <img class="cursor-pointer" src="{{ asset('images/carosel-left.png') }}" alt="switch">
-        <img class="cursor-pointer" src="{{ asset('images/carosel-right.png') }}" alt="switch">
-      </div> -->
+     
 </div>
 </div>
 </section>

@@ -16,7 +16,7 @@
         <div class=" text-gray-200 lg:text-[2rem] text-[1.5rem] font-bold text-center " style="font-family:'Noto Kufi Arabic">منتقى</div>
         
       </div>
-      <img src="{{asset('images/vline.png')}}" alt="">
+      <img src="{{asset('images/Vline.png')}}" alt="">
 
       <div class="Frame260   flex-col flex justify-center items-center  pt-[2rem] 2xl:pt-[4rem] ">
       <div class="Group54 w-[7.3vw] lg:h-[8.75rem] h-[6rem] flex justify-center">
@@ -24,7 +24,7 @@
         </div>
         <div class="text-gray-200 lg:text-[2rem]  text-[1.5rem] font-bold text-center " style="font-family:'Noto Kufi Arabic">شؤون فنية</div>
       </div>
-      <img src="{{asset('images/vline.png')}}" alt="">
+      <img src="{{asset('images/Vline.png')}}" alt="">
 
       <div class="Frame259  flex-col flex justify-center items-center  pt-[2rem] 2xl:pt-[4rem]">
         <div class="Group63 w-[7.3vw] lg:h-[8.75rem] h-[6rem] flex justify-center">
@@ -65,9 +65,6 @@
           
         </div>
       </div>
-     <!--  <div class="SwitchRtf w-[100vw] h-[3.75rem] flex justify-between left-0 top-[50vh]  absolute">
-        <img class="cursor-pointer" src="{{ asset('images/carosel-left.png') }}" alt="switch">
-        <img class="cursor-pointer" src="{{ asset('images/carosel-right.png') }}" alt="switch">
-      </div> -->
+    
 </div>
 
