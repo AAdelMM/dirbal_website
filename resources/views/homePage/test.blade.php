@@ -19,10 +19,8 @@
   </head>
   <body>
    @yield('content')
-   @include('sections.judgment')
+  
 
-   @include('sections.highCourt')
    
-   @include('sections.blog')
   </body>
 </html>
