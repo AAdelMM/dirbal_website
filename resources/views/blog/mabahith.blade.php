@@ -6,20 +6,23 @@
 
 <div class="SubMaba7ith w-[100vw] h-[220rem] overflow-hidden relative">
   <div class="Frame333 left-0 top-0 absolute flex-col justify-start items-center inline-flex">
-    <div class="Home w-[100vw] h-[32.8rem] relative">
-      <img class="Ist w-[100vw] h-[32.8rem] left-0 top-0 absolute" src="{{ asset('images/mabahithHome.png') }}" />
-      <div class="Frame288 w-[72.8vw] h-[17.6rem] left-[390.43px] top-[145px] absolute flex-col justify-start items-end gap-[69px] inline-flex">
-        <div class=" w-[46.6vw] h-[101px] text-right text-[#BB941A] text-[6rem] font-normal leading-relaxed" style="font-family:'Noto Kufi Arabic';">مباحث</div>
-        <div class=" w-[74.8vw] text-justify text-gray-900 text-[40px] font-normal " style="font-family:'El Messiri'; direction:rtl;">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه،</div>
+    <div class="Home w-[100vw] 2xl:h-[32.8rem] h-[25rem] relative">
+      <img class="Ist w-[100vw] 2xl:h-[32.8rem] h-[25rem] left-0 top-0 absolute" src="{{ asset('images/mabahithHome.png') }}" />
+      <div class="Frame288 2ءxl:w-[72.8vw] lg:w-[65vw] w-[48vw] 2xl:h-[17.6rem] h-[15rem] left-[390.43px] 2xl:top-[145px] top-[115px] absolute flex-col justify-start items-end gap-[69px] inline-flex">
+        <div class=" w-[46.6vw]  2xl:h-[101px] h-[50px] text-right text-[#BB941A] 2xl:text-[6rem] lg:text-[4rem] text-[3rem] font-normal leading-relaxed" style="font-family:'Noto Kufi Arabic';">مباحث</div>
+        <div class=" w-[74.8vw]  text-justify text-gray-900 2xl:text-[40px] lg:text-[2rem] text-[1.5rem] font-normal " style="font-family:'El Messiri'; direction:rtl;">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه،</div>
       </div>
+
+
 <!--header black-->
+
       <div class="HeaderHome w-[54vw] 2xl:h-[7.8rem] lg:h-[5.5em] h-[4rem] 2xl:left-[60.57px] lg:left-[2.7em] left-[1.5rem] top-0 absolute">
     <div class="Line w-[89.3vw]  h-[0px] left-[8.72px] 2xl:top-[113px] lg:top-[4.9em] top-[3.2rem] absolute border border-gray-900"></div>
    
         
         <div class="Logo left-0 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute justify-center items-center 2xl:gap-2.5 lg:gap-1.5 gap-1 inline-flex">
           <div class="Group47 2xl:w-[17rem] lg:w-[9.3rem] w-[5.3rem] 2xl:h-[76px] xl:h-[3.3em] relative">
-<!----><a href="{{ url('/') }}">
+<a href="{{ url('/') }}">
  <img class="A1 2xl:w-[17rem] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 lg:top-0 top-[-1.4rem] absolute" src="{{ asset('images/48.png') }}" />
  </a>
           </div>
@@ -47,9 +50,10 @@
 </div>
 <!--end of header-->
 
+
     <div class="Body w-[100vw] h-[195rem] relative">
       <img class="25 w-[100vw] h-[195rem] left-0 top-0 absolute bg-[#161D27]" src="{{ asset('images/24.png') }}" />
-      <div class="NextPrevious w-[25.3rem] h-[3.8rem] left-[742.77px] top-[182.8rem] absolute justify-start items-start gap-2.5 inline-flex">
+      <div class="NextPrevious w-[25.3rem] h-[3.8rem] left-[38.7vw] top-[172.8rem] absolute justify-start items-start gap-2.5 inline-flex">
         <div class="ButtonLeft w-[3.75rem] h-[3.75rem] p-4 bg-orange-400 rounded-[3px] border border-orange-400 justify-center items-center gap-2 flex">
           <div class="IconsAddLine origin-top-left -rotate-180 justify-start items-start gap-2.5 flex"></div>
         </div>
@@ -74,27 +78,27 @@
           </div>
         </div>
       </div>
-      <div class="Group15 w-[1901.98px] h-[107.03px] left-[10.01px] top-[13px] absolute">
-        <div class="RsLayer w-[1901.98px] h-[3px] left-0 top-0 absolute bg-orange-400"></div>
-        <div class="RsLayer w-[1901.98px] h-[3px] left-0 top-[104.03px] absolute bg-orange-400"></div>
-        <div class="Frame16 w-[1157px] h-[98.03px] left-[407.42px] top-[4px] absolute justify-center items-center gap-[75px] inline-flex" style="font-family:'Noto Kufi Arabic';">
-          <div class=" w-[19.6rem] h-[3.7rem] text-center text-[#BD8E55] text-[50px] font-bold  leading-relaxed" >متنوعة</div>
-          <div class=" w-[19.6rem] h-[3.7rem] text-center text-[#BD8E55] text-[50px] font-bold  leading-relaxed">قانونية</div>
-          <div class=" w-[23.8rem] h-[3.7rem] text-center text-white text-[50px] font-bold  leading-relaxed">حقوق الإنسان</div>
+      <div class="Group15 w-[99.1vw] h-[107.03px] left-[10.01px] top-[13px] absolute">
+        <div class="RsLayer w-[99.1vw] h-[3px] left-0 top-0 absolute bg-orange-400"></div>
+        <div class="RsLayer w-[99.1vw] h-[3px] left-0 top-[104.03px] absolute bg-orange-400"></div>
+        <div class="Frame16 w-[60.1vw] h-[98.03px] left-[21.2vw] top-[4px] absolute justify-center items-center gap-[75px] inline-flex" style="font-family:'Noto Kufi Arabic';">
+          <div class=" w-[25rem] h-[3.7rem] text-center text-[#BD8E55] 2xl:text-[40px] lg:text-[2rem] text-[1.5rem] font-bold  leading-relaxed" >متنوعة</div>
+          <div class=" w-[25rem] h-[3.7rem] text-center text-[#BD8E55] 2xl:text-[40px] lg:text-[2rem] text-[1.5rem] font-bold  leading-relaxed">قانونية</div>
+          <div class=" w-[25rem] h-[3.7rem] text-center text-white 2xl:text-[40px] lg:text-[2rem] text-[1.3rem] font-bold  leading-relaxed">حقوق الإنسان</div>
         </div>
       </div>
 
 
-      <div class="Line41 w-[23.75rem] h-[0px] left-[74rem] top-[7.5rem] absolute shadow border-2 border-[#BD8E55]"></div>
-      <div class="Line42 w-[23.75rem] h-[0px] left-[74rem] top-[1rem] absolute shadow border-2 border-[#BD8E55]"></div>
+      <div class="Line41 2xl:w-[23.75rem] lg:w-[19rem] w-[15rem] h-[0px] left-[61.7vw]  top-[7.5rem] absolute shadow border-2 border-[#BD8E55]"></div>
+      <div class="Line42 2xl:w-[23.75rem] lg:w-[19rem] w-[15rem] h-[0px] left-[61.7vw]  top-[1rem] absolute shadow border-2 border-[#BD8E55]"></div>
       <div class="Frame321 w-[108.9rem] h-[156.9rem] left-[5.6rem] top-[220px] absolute flex-col justify-start items-start gap-5 inline-flex">
        
 <!--rows start-->
-<div class="flex flex-col justify-center">
+<div class="flex flex-col justify-center ">
 
     <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[5rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -121,7 +125,7 @@
       <!--end of content row-->
        <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[15rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -148,7 +152,7 @@
       <!--end of content row-->
           <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[15rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -175,7 +179,7 @@
       <!--end of content row-->
           <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[15rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -202,7 +206,7 @@
       <!--end of content row-->
           <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[15rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -229,7 +233,7 @@
       <!--end of content row-->
           <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[15rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -256,7 +260,7 @@
       <!--end of content row-->
           <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[15rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -283,7 +287,7 @@
       <!--end of content row-->
           <!--row start-->
     <div class="Frame324 w-[90.7vw] h-[156.9rem]  top-[15rem] absolute flex-col justify-start items-start gap-5 inline-flex">
-      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] relative">
+      <div class="ArticlePost75 w-[90.7vw] h-[13.125rem] 2xl:left-[0rem] left-[-3rem] 2xl:top-[0rem] top-[-3rem] relative">
         <div class="Menu w-[6.75rem] h-[12rem] left-[85.1vw]  absolute">
           <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
             <div class="Frame33   absolute flex-col justify-center items-center  inline-flex" style="font-family:'Noto Kufi Arabic';">
