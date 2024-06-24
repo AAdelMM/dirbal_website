@@ -10,38 +10,38 @@
     </div>
     <div class="Judge flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] inline-flex">
-        <div class=" w-[233px] cursor-pointer text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';">القضاء</div>
+        <div class=" w-[233px] cursor-pointer text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] z-[200]" style="font-family:'Noto Kufi Arabic';">القضاء</div>
         <img class="arrow  pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
       <div class="submenu hidden flex-col text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
-          <div class="submenu-item inline-flex items-center "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/court') }}"><span>المحكمة</span></a></div>
+          <div class="submenu-item inline-flex items-center z-[200] "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/court') }}"><span>المحكمة</span></a></div>
           
-          <div class="submenu-item inline-flex items-center "> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/niaba') }}"><span>النيابة العامة</span></a></div>
-          <div class="submenu-item inline-flex items-center "> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/inst') }}"><span>معهد القضاء</span></a></div>
+          <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/niaba') }}"><span>النيابة العامة</span></a></div>
+          <div class="submenu-item inline-flex items-center z-[200] "> <span><img class="pl-[1rem]  " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/inst') }}"><span>معهد القضاء</span></a></div>
        </div>
     </div>
     <div class="Tribunal overflow-hidden flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] inline-flex">
-        <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';">المحكمة العليا</div>
+        <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] z-[200]" style="font-family:'Noto Kufi Arabic';">المحكمة العليا</div>
         <img class=" arrow pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
       <div class="submenu hidden  flex-col text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
-          <div class="submenu-item inline-flex items-center "> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>أحكام</span></div>
+          <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/a7kam') }}"><span>أحكام</span></a></div>
           
-          <div class="submenu-item inline-flex items-center "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>منتقى</span></div>
-          <div class="submenu-item inline-flex items-center "> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>شؤؤون فنية</span></div>
+          <div class="submenu-item inline-flex items-center z-[200]"><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/montaqa') }}"><span>منتقى</span></a></div>
+          <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/shoon') }}"><span>شؤؤون فنية</span></a></div>
        </div>
     </div>
     <div class="Lecture flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] inline-flex">
-        <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem]" style="font-family:'Noto Kufi Arabic';">مدونة</div>
+        <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] z-[200]" style="font-family:'Noto Kufi Arabic';">مدونة</div>
         <img class="arrow pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
       <div class="submenu hidden flex-col  text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
-          <div class="submenu-item inline-flex items-center "style="::after" ><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>إسلاميات</span></div>
+          <div class="submenu-item inline-flex items-center z-[200]"style="::after" ><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/islamyat') }}"><span>إسلاميات</span></a></div>
           
-          <div class="submenu-item inline-flex items-center "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>كتاب</span></div>
-          <div class="submenu-item inline-flex items-center "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><span>مباحث</span></div>
+          <div class="submenu-item inline-flex items-center z-[200]"><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/kitab') }}"><span>كتاب</span></a></div>
+          <div class="submenu-item inline-flex items-center z-[200]"><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/mabahith') }}"><span>مباحث</span></a></div>
        </div>
     </div>
   </div>

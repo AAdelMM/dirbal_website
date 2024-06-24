@@ -24,6 +24,7 @@
         </div>
         <!--quotes end-->
       </div>
+<!--header black-->
       <div class="HeaderHome w-[54vw] 2xl:h-[7.8rem] lg:h-[5.5em] h-[4rem] 2xl:left-[60.57px] lg:left-[2.7em] left-[1.5rem] top-0 absolute">
     <div class="Line w-[89.3vw]  h-[0px] left-[8.72px] 2xl:top-[113px] lg:top-[4.9em] top-[3.2rem] absolute border border-gray-900"></div>
     <div class="Group20 w-[13.7vw] 2xl:h-[110px] lg:h-[4.8em] h-[3.2rem] 2xl:left-[45.2rem] lg:left-[31.7em] left-[18.08rem] 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute">

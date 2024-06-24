@@ -215,12 +215,12 @@
       max-height: 0;
       opacity: 0;
       overflow: hidden;
-      transition: max-height 1s ease-in-out, opacity 1s ease-in-out ;
+      transition: max-height 2s ease-in-out, opacity 2.5s ease-in-out ;
     }
   
     /* Shown state: visible */
     .submenu.show {
-      max-height: 18rem;/* Adjust based on your submenu's expected height */
+      max-height: 20rem;/* Adjust based on your submenu's expected height */
       margin-right: 5rem !important;
       opacity: 1;
     }
