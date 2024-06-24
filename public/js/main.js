@@ -199,4 +199,50 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+//preload message
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Function to check if the user has visited before
+  function isFirstVisit() {
+    return !localStorage.getItem('hasVisited');
+  }
+
+  // Function to set the visit flag in localStorage
+  function setVisitFlag() {
+    localStorage.setItem('hasVisited', 'true');
+  }
+
+  // Execute only on first visit
+  if (isFirstVisit()) {
+    const loadingMessage = document.getElementById('loadingMessage');
+    console.log('User is visiting for the first time, showing loading message.');
+
+    // Hide the loading message after 4 seconds
+    setTimeout(function () {
+      loadingMessage.classList.add('hidden-message');
+      console.log('Hiding the loading message after 4 seconds.');
+
+      // Optionally remove the element from the DOM after the transition ends
+      loadingMessage.addEventListener('transitionend', () => {
+        console.log('Removing the loading message from DOM.');
+        loadingMessage.remove();
+      });
+    }, 4000);
+
+    // Set the visit flag
+    setVisitFlag();
+  } else {
+    // Immediately hide the loading message on subsequent visits
+    console.log('User has visited before, hiding loading message.');
+    const loadingMessage = document.getElementById('loadingMessage');
+    if (loadingMessage) {
+      loadingMessage.style.display = 'none';
+    } else {
+      console.error('Element with ID loadingMessage not found.');
+    }
+  }
+});
+/////////
+
+
 

@@ -18,6 +18,10 @@
     <script src="{{ asset('js/main.js') }}"></script>
   </head>
   <body>
+
+  <div class="skeleton-card" id="loadingMessage">
+  <div class="loading-message">اهلا بكم  جارى التحميل</div>
+  </div>
 <!--importing content-->
     @yield('content')
 
