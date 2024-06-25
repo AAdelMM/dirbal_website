@@ -77,8 +77,8 @@
         <div class="IconsAddLine justify-start items-start gap-2.5 flex"></div>
       </div>
     </div>
+
   </div>
-  
   
   <div class="Group15 w-[99vw] h-[115px] left-[10.01px] top-[8px] absolute">
     <div class="RsLayer w-[99vw] h-[3px] left-0 top-[6px] absolute bg-orange-400"></div>
