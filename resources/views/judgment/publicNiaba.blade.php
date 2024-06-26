@@ -10,7 +10,9 @@
 
 <div class="Frame338 w-[100vw] h-[268.6rem] flex-col justify-start items-center inline-flex">
 <!--main content-->
+@yield('content')
   <div class="Home w-[100vw] h-[32.8rem] relative">
+  @include('homePage.menu')
     <img class=" w-[100vw] h-[32.8rem] left-0 top-0 absolute" src="{{ asset('images/niabahbg.png') }}" />
     <div class="Frame294 w-[74.8vw] h-[17.6rem] left-[19.8vw] top-[13.4vh] absolute flex-col justify-start items-end gap-[69px] inline-flex">
       <div class=" w-[55.9rem] h-[101px] text-right text-yellow-600 text-[6rem] font-normal " style="font-family:'Noto Kufi Arabic'">النيابة العامة</div>
