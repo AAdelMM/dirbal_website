@@ -8,10 +8,15 @@ use App\Filament\Resources\ContentResource;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\MainHeroController;
 
 Route::get('/', function () {
     return view('homePage.layout');
 });
+
+Route::get('/mainHero/quotes', [MainHeroController::class, 'getQuotes']);
+
+
 Route::get('/test', function () {
     return view('homePage.test');
 });

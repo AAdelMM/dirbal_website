@@ -242,6 +242,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   }
 });
+
+//for quotes
+
+
 /////////
 
 

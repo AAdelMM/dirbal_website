@@ -13,14 +13,14 @@
       </div>
       <div class="ContentCarrousol w-[99vw] 2xl:h-[816px] lg:h-[35.7em] h-[25em] 2xl:left-[2px] lg:left-[1.4px] left-[0.8px] 2xl:top-[118.98px] lg:top-[5.2em] top-[3em] absolute">
         <!--quotes start-->
-        <div class="quotes 2xl:w-[894px] lg:w-[39.9rem] w-[22.35rem] 2xl:px-[52px] lg:px-[2.3em] px-[1.5em] 2xl:py-[60px] lg:py-[2.7em] py-[1.5em] 2xl:left-[919px] lg:left-[41em] left-[25em] 2xl:top-[120px] lg:top-[5.3em] top-[3em] absolute bg-white/opacity-40 rounded-xl shadow border border-gray-700/opacity-50 flex-col lg:justify-center lg:items-end 2xl:gap-8 lg:gap-4 gap-2 inline-flex">
+        <div class="quotes 2xl:w-[894px] lg:w-[39.9rem] w-[22.35rem] 2xl:px-[52px] lg:px-[2.3em] px-[1.5em] 2xl:py-[60px] lg:py-[2.7em] py-[1.5em] 2xl:left-[919px] lg:left-[41em] left-[25em] 2xl:top-[120px] lg:top-[5.3em] top-[3em] absolute   rounded-xl shadow border border-gray-700/opacity-50 flex-col lg:justify-center lg:items-end 2xl:gap-8 lg:gap-4 gap-2 inline-flex"style="background-color: rgba(231, 241, 147, 0.2);">
           <div class="Frame280 2xl:w-[790px] lg:w-[35.3em] w-[25em] 2xl:h-[170px] lg:h-[7.4em] h-[5em] relative">
             <img class="Rectangle452 2xl:w-[309px] lg:w-[13.5em] w-[9em] 2xl:h-[170px] lg:h-[7.4em] h-[5em] left-0 top-0 absolute rounded-md" src="{{ asset('images/judge.jpg') }}" />
-            <div class=" 2xl:w-[49.4rem] lg:w-[35.25rem] w-[19.8rem] left-0 2xl:top-[104px] lg:top-[2em] top-[1rem] absolute text-right text-yellow-700 2xl:text-[55px] lg:text-[2.4em] text-[1.2rem] font-bold " style="font-family:'El Messiri';">قبسات</div>
+            <div id="quote-title" class=" 2xl:w-[49.4rem] lg:w-[35.25rem] w-[19.8rem] left-0 2xl:top-[104px] lg:top-[2em] top-[1rem] absolute text-right text-yellow-700 2xl:text-[55px] lg:text-[2.4em] text-[1.2rem] font-bold " style="font-family:'El Messiri';">قبسات</div>
           </div>
           <div class="Divider 2xl:w-[48.9rem] lg:w-[34.9rem] w-[19.6rem] h-px bg-gray-700/opacity-50"></div>
-          <div class=" 2xl:w-[48.9rem] lg:w-[34.9rem] w-[19.6rem] text-justify text-gray-900 2xl:text-[40px] lg:text-[20px] text-[15px] font-normal " style="font-family:'El Messiri';direction:rtl;">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً .     </div>
-          <div class=" 2xl:w-[49.4rem] lg:w-[35.3rem] w-[19.8rem]  text-yellow-700 2xl:text-[25px] lg:text-[20px] text-[15px] font-bold "style="font-family:'Marhey'; ">المصدر : كتاب القانون المدني</div>
+          <div id="quote-text" class=" 2xl:w-[48.9rem] lg:w-[34.9rem] w-[19.6rem] text-justify text-gray-900 2xl:text-[40px] lg:text-[20px] text-[15px] font-normal " style="font-family:'El Messiri';direction:rtl;">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً .     </div>
+          <div  class=" 2xl:w-[49.4rem] lg:w-[35.3rem] w-[19.8rem]  text-yellow-700 2xl:text-[25px] lg:text-[20px] text-[15px] font-bold "style="font-family:'Marhey'; ">المصدر : <span id="quote-source">مدير الموقع</span></div>
         </div>
         <!--quotes end-->
       </div>
@@ -81,4 +81,48 @@
   </div>
 </div>
 <!--end of search page-->
+
+<!-- JavaScript to rotate quotes -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    let quotes = [];
+    let currentQuoteIndex = 0;
+
+    // Fetch quotes from the Laravel endpoint
+    $.getJSON('/mainHero/quotes', function(data) {
+        quotes = data;
+        if (quotes.length > 0) {
+            showNextQuote();
+            setInterval(showNextQuote, 7000); // Change quote every 5 seconds
+        }
+    });
+
+    function stripHtmlTags(html) {
+        let doc = new DOMParser().parseFromString(html, 'text/html');
+        return doc.body.textContent || "";
+    }
+
+    function showNextQuote() {
+        if (quotes.length == 0) return;
+
+        // Update the quote elements with fade animation
+        $('#quote-title').fadeOut(function() {
+            $(this).text(stripHtmlTags(quotes[currentQuoteIndex].title)).fadeIn();
+        });
+        $('#quote-text').fadeOut(function() {
+            $(this).text(stripHtmlTags(quotes[currentQuoteIndex].body)).fadeIn();
+        });
+
+        // Optional: If you have a source field
+         $('#quote-source').fadeOut(function() {
+             $(this).text(stripHtmlTags(quotes[currentQuoteIndex].source || "Unknown Source")).fadeIn();
+         });
+
+        // Update the index for the next quote
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+    }
+});
+
+</script>
 
