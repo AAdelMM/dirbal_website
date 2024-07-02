@@ -6,8 +6,8 @@
 @yield('content')
 @include('homePage.menu')
 <div class="Home w-screen lg:h-screen h-[auto] relative">
-      <img class="HeroBg w-screen lg:h-screen h-[auto] left-0 top-0 bg-cover" src="{{ asset('images/homeHero.png') }}" />
-      <img class="HeroQuran w-[44.17vw]  2xl:h-[25.5em] lg:h-[17.9em]  h-[auto]  2xl:top-[20em] lg:top-[15em] top-[8em] absolute " src="{{ asset('images/heroquran.png') }}" />
+      <img class="HeroBg w-screen lg:h-screen h-[auto] left-0 top-0 bg-contain" src="{{ asset('images/homeHero.png') }}" />
+      <img class="HeroQuran w-[44.17vw]  2xl:h-[25.5em] lg:h-[17.9em]  h-[auto]  2xl:top-[18em] lg:top-[13em] top-[7em] absolute " src="{{ asset('images/heroquran.png') }}" />
       <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
         <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
       </div>
@@ -27,12 +27,12 @@
 <!--header black-->
       <div class="HeaderHome w-[54vw] 2xl:h-[7.8rem] lg:h-[5.5em] h-[4rem] 2xl:left-[60.57px] lg:left-[2.7em] left-[1.5rem] top-0 absolute">
     <div class="Line w-[89.3vw]  h-[0px] left-[8.72px] 2xl:top-[105px] lg:top-[4.6em] top-[3.2rem] absolute border border-gray-900"></div>
-    <div class="Group20 w-[13.7vw] 2xl:h-[110px] lg:h-[4.8em] h-[3.2rem] 2xl:left-[45.2rem] lg:left-[31.7em] left-[18.08rem] 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute">
-      <img class=" w-[13.17vw]  2xl:h-[6.9rem] lg:h-[4.9rem] h-[2.75rem] left-0 top-0 absolute" src="{{ asset('images/bsm3.png') }}" />
+    <div class="Group20 w-[13.7vw] 2xl:h-[110px] lg:h-[4.8em] h-[3.2rem] 2xl:left-[45.2rem]    lg:left-[31.7em] left-[18.08rem] 2xl:top-[14px] lg:top-[0.4em] top-[0.4rem] absolute">
+      <img class=" w-[13.17vw]  2xl:h-[6.9rem] lg:h-[5.2rem] h-[2.75rem] left-0 top-0 absolute " src="{{ asset('images/bsm3.png') }}" />
       
     </div>
         
-        <div class="Logo left-0 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute justify-center items-center 2xl:gap-2.5 lg:gap-1.5 gap-1 inline-flex">
+        <div class="Logo left-2 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute justify-center items-center 2xl:gap-2.5 lg:gap-1.5 gap-1 inline-flex">
           <div class="Group47 2xl:w-[13.12rem] lg:w-[9.3rem] w-[5.3rem] 2xl:h-[76px] xl:h-[3.3em] relative">
 <!---->
             <div class="Aaaaaa2 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 top-0 absolute "><img class="Aaaaaa1 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 lg:top-0 top-[-1.4rem] absolute" src="{{ asset('images/LOGO3.png') }}" /></div>
@@ -40,8 +40,8 @@
           <div class="Line38 2xl:w-[70px] lg:w-[3.1em] w-[2.5rem] h-[0px] 2xl:mt-[80px] lg:mt-[3em] mt-[2.5rem] origin-top-left -rotate-90 border border-gray-700"></div>
           <img class="Aa1 2xl:w-[67px] lg:w-[2.9em] w-[2.2rem] 2xl:h-[85px] lg:h-[3.7em] h-[2.5rem] ml-[-3rem]" src="{{ asset('images/LOGO2.png') }}" />
         </div>
-        <div class="Frame43 2xl:left-[79vw] lg:left-[77vw] left-[79vw]  2xl:top-[27px] lg:top-[1.2em] top-[0.6rem] absolute justify-center items-center 2xl:gap-[15px] xl:gap-[1em] inline-flex">
-          <div class="Icons8Bookmark1 2xl:w-[38.64px] lg:w-[1.6em] w-[1.2rem] 2xl:h-[54.21px] lg:h-[2.3em] h-[1.8rem] flex items-center relative">
+        <div class="Frame43 2xl:left-[79.5vw] lg:left-[78.3vw] left-[79vw]  2xl:top-[27px] lg:top-[1.2em] top-[0.6rem] absolute justify-center items-center 2xl:gap-[15px] xl:gap-[1em] inline-flex">
+          <div class="Icons8Bookmark1 2xl:w-[38.64px] lg:w-[1.2em] w-[1.2rem] 2xl:h-[54.21px] lg:h-[2em] h-[1.8rem] flex items-center relative">
           <img class="favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav" onclick="redirectToFavorite()">
 
             <div class="Ellipse3 2xl:w-[25px] lg:w-[1.1em] w-[0.8rem] 2xl:h-[25px] lg:h-[1.1em] h-[0.8rem] 2xl:left-[13.64px] lg:left-[0.6em] left-[0.4rem] 2xl:top-0 lg:top-[-0.4em] top-[-0.2rem] absolute bg-red-600 rounded-full"></div>
@@ -50,10 +50,10 @@
           
           <!-- <img class=" favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav"> -->
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
-          <div class="Icons8Search11 2xl:w-10 lg:w-8 w-6 2xl:h-10 lg:h-8 h-6 relative"><img class="searchIcon cursor-pointer" src="{{ asset('images/search.svg') }}" alt="search"></div>
+          <div class="Icons8Search11 2xl:w-10 lg:w-7 w-6 2xl:h-10 lg:h-8 h-6 relative"><img class="searchIcon cursor-pointer" src="{{ asset('images/search.svg') }}" alt="search"></div>
           
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
-          <div class="Icons8Menu11 2xl:w-10 lg:w-8 w-6 2xl:h-10 lg:h-8 h-6  relative"><img id="menuIcon" class="menuIcon cursor-pointer" src="{{ asset('images/menu.svg') }}" alt="menu"></div>
+          <div class="Icons8Menu11 2xl:w-10 lg:w-7 w-6 2xl:h-10 lg:h-8 h-6  relative"><img id="menuIcon" class="menuIcon cursor-pointer" src="{{ asset('images/menu.svg') }}" alt="menu"></div>
           
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
           
