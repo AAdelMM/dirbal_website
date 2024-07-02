@@ -26,36 +26,35 @@
       </div>
 <!--header black-->
       <div class="HeaderHome w-[54vw] 2xl:h-[7.8rem] lg:h-[5.5em] h-[4rem] 2xl:left-[60.57px] lg:left-[2.7em] left-[1.5rem] top-0 absolute">
-    <div class="Line w-[89.3vw]  h-[0px] left-[8.72px] 2xl:top-[113px] lg:top-[4.9em] top-[3.2rem] absolute border border-gray-900"></div>
+    <div class="Line w-[89.3vw]  h-[0px] left-[8.72px] 2xl:top-[105px] lg:top-[4.6em] top-[3.2rem] absolute border border-gray-900"></div>
     <div class="Group20 w-[13.7vw] 2xl:h-[110px] lg:h-[4.8em] h-[3.2rem] 2xl:left-[45.2rem] lg:left-[31.7em] left-[18.08rem] 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute">
-      <img class=" w-[13.17vw]  2xl:h-[6.9rem] lg:h-[4.9rem] h-[2.75rem] left-0 top-0 absolute" src="{{ asset('images/bsm1.svg') }}" />
+      <img class=" w-[13.17vw]  2xl:h-[6.9rem] lg:h-[4.9rem] h-[2.75rem] left-0 top-0 absolute" src="{{ asset('images/bsm3.png') }}" />
       
     </div>
         
         <div class="Logo left-0 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute justify-center items-center 2xl:gap-2.5 lg:gap-1.5 gap-1 inline-flex">
           <div class="Group47 2xl:w-[13.12rem] lg:w-[9.3rem] w-[5.3rem] 2xl:h-[76px] xl:h-[3.3em] relative">
 <!---->
-            <img class="Aaaaaa1 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 lg:top-0 top-[-1.4rem] absolute" src="{{ asset('images/LOGO.png') }}" />
-            <div class="Aaaaaa2 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 top-0 absolute "></div>
+            <div class="Aaaaaa2 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 top-0 absolute "><img class="Aaaaaa1 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 lg:top-0 top-[-1.4rem] absolute" src="{{ asset('images/LOGO3.png') }}" /></div>
           </div>
           <div class="Line38 2xl:w-[70px] lg:w-[3.1em] w-[2.5rem] h-[0px] 2xl:mt-[80px] lg:mt-[3em] mt-[2.5rem] origin-top-left -rotate-90 border border-gray-700"></div>
-          <img class="Aa1 2xl:w-[67px] lg:w-[2.9em] w-[2.2rem] 2xl:h-[85px] lg:h-[3.7em] h-[2.5rem]" src="{{ asset('images/favicon.png') }}" />
+          <img class="Aa1 2xl:w-[67px] lg:w-[2.9em] w-[2.2rem] 2xl:h-[85px] lg:h-[3.7em] h-[2.5rem] ml-[-3rem]" src="{{ asset('images/LOGO2.png') }}" />
         </div>
-        <div class="Frame43 2xl:left-[77vw] lg:left-[73vw] left-[79vw]  2xl:top-[27px] lg:top-[1.2em] top-[0.6rem] absolute justify-center items-center 2xl:gap-[15px] xl:gap-[1em] inline-flex">
-          <div class="Icons8Bookmark1 2xl:w-[38.64px] lg:w-[1.6em] w-[1.2rem] 2xl:h-[54.21px] lg:h-[2.3em] h-[1.8rem] relative">
-          
+        <div class="Frame43 2xl:left-[79vw] lg:left-[77vw] left-[79vw]  2xl:top-[27px] lg:top-[1.2em] top-[0.6rem] absolute justify-center items-center 2xl:gap-[15px] xl:gap-[1em] inline-flex">
+          <div class="Icons8Bookmark1 2xl:w-[38.64px] lg:w-[1.6em] w-[1.2rem] 2xl:h-[54.21px] lg:h-[2.3em] h-[1.8rem] flex items-center relative">
+          <img class="favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav" onclick="redirectToFavorite()">
+
             <div class="Ellipse3 2xl:w-[25px] lg:w-[1.1em] w-[0.8rem] 2xl:h-[25px] lg:h-[1.1em] h-[0.8rem] 2xl:left-[13.64px] lg:left-[0.6em] left-[0.4rem] 2xl:top-0 lg:top-[-0.4em] top-[-0.2rem] absolute bg-red-600 rounded-full"></div>
             <div class=" 2xl:w-2 lg:w-1 w-0.5 lg:h-[19px] h-[15px] 2xl:left-[20.5px] lg:left-[1em] left-[0.5rem] 2xl:top-[-3px] lg:top-[-0.6em] top-[-0.4rem] absolute  text-white 2xl:text-[1.25em] lg:text-[0.9em] text-[0.6rem] font-normal " style="font-family:'Arial';">3</div>  
           </div>
           
           <!-- <img class=" favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav"> -->
-          <img class="favorite cursor-pointer" src="{{ asset('images/fav.png') }}" alt="fav" onclick="redirectToFavorite()">
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
-          <div class="Icons8Search11 2xl:w-10 lg:w-8 w-6 2xl:h-10 lg:h-8 h-6 relative"></div>
-          <img class="searchIcon cursor-pointer" src="{{ asset('images/search.svg') }}" alt="search">
+          <div class="Icons8Search11 2xl:w-10 lg:w-8 w-6 2xl:h-10 lg:h-8 h-6 relative"><img class="searchIcon cursor-pointer" src="{{ asset('images/search.svg') }}" alt="search"></div>
+          
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
-          <div class="Icons8Menu11 2xl:w-10 lg:w-8 w-6 2xl:h-10 lg:h-8 h-6  relative"></div>
-          <img id="menuIcon" class="menuIcon cursor-pointer" src="{{ asset('images/menu.svg') }}" alt="menu">
+          <div class="Icons8Menu11 2xl:w-10 lg:w-8 w-6 2xl:h-10 lg:h-8 h-6  relative"><img id="menuIcon" class="menuIcon cursor-pointer" src="{{ asset('images/menu.svg') }}" alt="menu"></div>
+          
           <div class="SpanMkdVerticalSeparator w-px 2xl:h-12 lg:h-10 h-8 border-r border-gray-900"></div>
           
         </div>
@@ -94,7 +93,7 @@ $(document).ready(function() {
         quotes = data;
         if (quotes.length > 0) {
             showNextQuote();
-            setInterval(showNextQuote, 7000); // Change quote every 5 seconds
+            setInterval(showNextQuote, 7000); // Change quote every 7 seconds
         }
     });
 
@@ -106,23 +105,53 @@ $(document).ready(function() {
     function showNextQuote() {
         if (quotes.length == 0) return;
 
-        // Update the quote elements with fade animation
-        $('#quote-title').fadeOut(function() {
-            $(this).text(stripHtmlTags(quotes[currentQuoteIndex].title)).fadeIn();
-        });
-        $('#quote-text').fadeOut(function() {
-            $(this).text(stripHtmlTags(quotes[currentQuoteIndex].body)).fadeIn();
-        });
-
+        // Update the quote elements with smooth transition
+        updateTextWithTransition('#quote-title', stripHtmlTags(quotes[currentQuoteIndex].title));
+        updateTextWithTransition('#quote-text', stripHtmlTags(quotes[currentQuoteIndex].body));
+        
         // Optional: If you have a source field
-         $('#quote-source').fadeOut(function() {
-             $(this).text(stripHtmlTags(quotes[currentQuoteIndex].source || "Unknown Source")).fadeIn();
-         });
+        updateTextWithTransition('#quote-source', stripHtmlTags(quotes[currentQuoteIndex].source || "Unknown Source"));
 
         // Update the index for the next quote
         currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
     }
-});
 
+    function updateTextWithTransition(selector, newText) {
+        let $element = $(selector);
+
+        // First fade out the element by setting opacity to 0
+        $element.css('opacity', '0');
+
+        // Use setTimeout to wait for the fade-out effect to complete before changing text
+        setTimeout(function() {
+            // Change the text
+            $element.text(newText);
+
+            // Set new height dynamically
+            $element.css('max-height', 'none');
+            let newHeight = $element[0].scrollHeight + 'px';
+
+            // Reset max-height to zero for smooth expansion
+            $element.css({
+                'max-height': '0',
+                'transition': 'none' // Temporarily disable transition to reset height
+            });
+
+            // Force reflow to apply the reset styles immediately
+            $element[0].offsetHeight;
+
+            // Apply new height and fade in
+            $element.css({
+                'max-height': newHeight,
+                'opacity': '1',
+                'transition': 'max-height 1.5s ease, opacity 1.5s ease' // Re-enable transition
+            });
+        }, 600); // Duration matches the CSS transition time
+    }
+});
 </script>
+
+
+
+
 
