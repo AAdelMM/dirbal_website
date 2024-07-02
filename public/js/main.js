@@ -185,17 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Event listeners for arrow buttons
   nextArrow.addEventListener('click', () => {
-      if (currentIndex < sections.length - 1) {
-          currentIndex++;
-          updateCarousel();
-      }
+      currentIndex = (currentIndex + 1) % sections.length; // Move to the next section, wrap around if at the end
+      updateCarousel();
   });
 
   prevArrow.addEventListener('click', () => {
-      if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-      }
+      currentIndex = (currentIndex - 1 + sections.length) % sections.length; // Move to the previous section, wrap around if at the beginning
+      updateCarousel();
   });
 });
 
