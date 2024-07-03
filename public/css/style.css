@@ -107,6 +107,49 @@
           transform: translate(0, 5px);
         }
       }
+      /*last topics title animation*/
+
+      @keyframes fallFromAbove {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes disappear {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    #subtitle-row1, #subtitle-row2 {
+      opacity: 0; /* Start hidden */
+  }
+  
+  #subtitle-row1.fall {
+      animation: fallFromAbove 2s ease forwards;
+  }
+  
+  #subtitle-row2.fall {
+      animation: fallFromAbove 2s ease forwards;
+  }
+  
+  #subtitle-row1.disappear, #subtitle-row2.disappear {
+      animation: disappear 2s ease forwards;
+  }
+      
+
+      /*end last topics title animation*/
        /* Looping GIF Background */
        .LastTopics {
             /* background-image: url('../images/section2bg.gif'); Path to your GIF */
@@ -114,7 +157,7 @@
             background-position: center;
             background-repeat: no-repeat;
             max-width: 100%vw;
-            height: 73vh; /* Full viewport height */
+           
             position: relative;
             overflow: hidden; /* To ensure content doesn't overflow */
         }

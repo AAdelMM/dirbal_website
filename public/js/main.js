@@ -18,6 +18,44 @@
     // JavaScript for looping GIF background
  
 });
+//last topics new animation
+
+document.addEventListener('DOMContentLoaded', () => {
+    const row1 = document.getElementById('subtitle-row1');
+    const row2 = document.getElementById('subtitle-row2');
+
+    function startAnimation() {
+        // Reset all classes
+        row1.classList.remove('fall', 'disappear');
+        row2.classList.remove('fall', 'disappear');
+
+        // Start the sequence
+        setTimeout(() => {
+            row2.classList.add('fall'); // Row 2 falls from above
+        }, 500); // Delay to stagger the start of row 2's fall
+
+        setTimeout(() => {
+            row1.classList.add('fall'); // Row 1 falls from above
+        }, 1500); // Row 1 starts falling after row 2 is visible
+
+        setTimeout(() => {
+            row2.classList.add('disappear'); // Row 2 starts disappearing
+        }, 4000); // Row 2 starts disappearing after it's fully visible for 2 seconds
+
+        setTimeout(() => {
+            row1.classList.add('disappear'); // Row 1 starts disappearing
+        }, 5000); // Row 1 starts disappearing after it's fully visible for 2 seconds
+
+        // Loop the animation
+        setTimeout(startAnimation, 7000); // Restart the entire sequence after it's complete
+    }
+
+    // Start the animation for the first time
+    startAnimation();
+});
+
+
+//end last topics new animation
 //rows animation
 document.addEventListener("DOMContentLoaded", () => {
 
