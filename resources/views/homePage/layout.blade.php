@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <title>@yield('title','Dirbal')</title>  
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/footerlogo.png') }}">
+
     <link rel="stylesheet" href="{{ asset('css/global.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=font:wght@400&display=swap"/>
