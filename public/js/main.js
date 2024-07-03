@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //footer
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
   const footer = document.querySelector('#footer');
   
   const observer = new IntersectionObserver((entries) => {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   observer.observe(footer);
-});
+}); */
 
 //search
 
