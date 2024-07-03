@@ -1,5 +1,5 @@
    // JavaScript for changing subtitle text
-   document.addEventListener('DOMContentLoaded', function () {
+  /*  document.addEventListener('DOMContentLoaded', function () {
     const subtitles = [
         "آخر الموضوعات", // Initial text
        " و أهم الإضافات الاخيرة",
@@ -17,7 +17,7 @@
 
     // JavaScript for looping GIF background
  
-});
+}); */
 //last topics new animation
 
 document.addEventListener('DOMContentLoaded', () => {
