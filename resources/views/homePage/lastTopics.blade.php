@@ -24,7 +24,7 @@
               <div class="DivMkdItemTextHolder 2xl:w-[31.5vw] w-[37vw] h-[12.6vh] flex justify-center items-center left-0 top-0 absolute bg-white border border-zinc-300">
                       <div class=" 2xl:w-[26.5vw] w-[30vw]  left-[4.2vw] top-[0.8em] absolute text-justify text-gray-700 2xl:text-[1.6em] xl:text-[1.2em] font-normal  " style="font-family:'El Messiri'; direction:rtl;">69 م د: فسخ عقد مبرم بين الغير (عدم قبول لعدم المصلحة)‎</div>
                       <div class="Frame275 w-[30vw] 2xl:w-[25vw] top-[7.8vh] absolute justify-start items-end 2xl:gap-1.5 xl:gap-1 inline-flex">
-                            <div class=" text-[#CF9455]2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
+                            <div class=" text-[#CF9455] 2xl:text-xl xl:text-lg font-bold font-['Amiri'] ">القضاء المدني‎</div>
                             <div class="Frame w-[0.7vw] h-[1.3vh] relative"></div>
                       </div>
                   
