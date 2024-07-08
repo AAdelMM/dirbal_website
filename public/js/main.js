@@ -20,7 +20,7 @@
 }); */
 //last topics new animation
 
-document.addEventListener('DOMContentLoaded', () => {
+/* document.addEventListener('DOMContentLoaded', () => {
     const row1 = document.getElementById('subtitle-row1');
     const row2 = document.getElementById('subtitle-row2');
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start the animation for the first time
     startAnimation();
-});
+}); */
 
 
 //end last topics new animation

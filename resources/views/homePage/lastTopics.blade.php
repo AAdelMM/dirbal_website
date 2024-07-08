@@ -1,18 +1,28 @@
 <section id="section-2"  class="relative">
+        <div class="container-fluid w-[100vw] flex justify-center mt-3  absolute">
+                <div class="lasttopicsIcon inline-flex justify-center items-center top-0  z-20">
+                      <img src="{{asset('images/hline.png')}}" alt="decoration line">
+                      <img class="w-[2rem] h-[2rem] mx-6 " src="{{asset('images/lasttopicsIcon.png')}}" alt="main icon">
+                      <img src="{{asset('images/hline.png')}}" alt="decoration line">
+                </div>
+        </div>
+
       <div class="ocean">
            <div class="wave"></div>
       <div class="wave wave2"></div>
     </div>
+   
       <!--title-->
    <div  class="LastTopics 2xl:h-[75.8vh] h-[90vh]  flex justify-center items-center relative bg-gray-800">
+    
       <div class="subtitle-container flex justify-center w-[72vw] h-[6.4vh] mt-[1em] ">
          
-          <div class="flex flex-col items-center justify-center">
-              <div id="subtitle-row1" class="   text-right text-white 2xl:text-[1em] xl:text-[0.7em] font-normal font-['El Messiri'] ">آخر الموضوعات </div>  
-              <div id="subtitle-row2" class=" text-right text-white 2xl:text-[1em] xl:text-[0.7em] font-normal font-['El Messiri'] ">وأهم الاضافات الاخيرة</div> 
+          <div class="flex flex-col items-center justify-center 2xl:mt-[1.7vw] mt-[2.5vw]">
+              <div id="title-row1" class="   text-right text-white 2xl:text-[1em] xl:text-[0.7em] font-normal pb-5 font-['El Messiri'] ">آخر الموضوعات </div>  
+              <div id="title-row2" class=" text-right text-[#CF9455] 2xl:text-[0.6em] xl:text-[0.4em] font-normal font-['El Messiri'] ">إبدأ فى رحلة إكتشاف أهم الإضافات الاخيرة والتى قد تثري تجربتك على موقعنا</div> 
           </div> 
-                  <img class="w-[2em] h-auto left-[15vw] absolute" src="{{ asset('images/IocndecorL.svg') }}" alt="icon">
-                  <img class="w-[2em] h-auto right-[15vw] absolute " src="{{ asset('images/IocndecorR.svg') }}" alt="icon">   
+                  <img class="w-[1em] h-auto left-[15vw] absolute" src="{{ asset('images/IocndecorL.svg') }}" alt="icon">
+                  <img class="w-[1em] h-auto right-[15vw] absolute " src="{{ asset('images/IocndecorR.svg') }}" alt="icon">   
       </div>
       <!--content-->
       <div class="content  flex items-center z-[10] ">
@@ -102,15 +112,15 @@
 
                 <div class="Menu w-[13.2vw] h-[7.9vh] top-[27vh] absolute justify-start items-start inline-flex">
                     <div class="DivMkdPostInfoDate w-[4.4vw] h-[7.9vh] relative border border-white">
-                    <div class="Copy  left-[1.2vw] top-[1.8vh] h-[7.9vh] justify-center items-center flex "><img class="w-[2.5vw]  h-[5vh]" src="{{asset('images/COPY.png')}}" alt=""></div>
+                    <div class="Copy  left-[1.2vw] top-[1.8vh] h-[7.9vh] justify-center items-center flex "><img class="w-[1.2vw]  h-[auto]" src="{{asset('images/favw.png')}}" alt="fav"></div>
                 </div>
 
             <div class="DivMkdPostInfoCommentsHolder w-[4.4vw] h-[7.9vh] relative border border-gray-200">
-              <div class="Comment  left-[0.9vw] top-[1.6vh] h-[7.9vh]   justify-center items-center  flex"><img class="w-[2.5vw]  h-[5vh]" src="{{asset('images/comment.png')}}" alt=""></div>
+              <div class="Comment  left-[0.9vw] top-[1.6vh] h-[7.9vh]   justify-center items-center  flex"><img class="w-[1.5vw]  h-[auto]" src="{{asset('images/like.png')}}" alt="like"></div>
             </div>
 
             <div class="AMkdSocialShareDropdownOpener w-[4.4vw] h-[7.9vh] relative border border-white">
-              <div class="Share left-[1vw] top-[6vh] h-[7.9vh] justify-center items-center flex"><img class="w-[2.5vw]  h-[5vh]" src="{{asset('images/SHARE.png')}}" alt=""></div>
+              <div class="Share left-[1vw] top-[6vh] h-[7.9vh] justify-center items-center flex"><img class="w-[1.5vw]  h-[auto]" src="{{asset('images/SHARE.png')}}" alt="share"></div>
             </div>
 
           </div>

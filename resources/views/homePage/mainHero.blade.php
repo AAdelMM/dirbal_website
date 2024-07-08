@@ -34,7 +34,7 @@
         <div class="Logo left-2 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute justify-center items-center 2xl:gap-2.5 lg:gap-1.5 gap-1 inline-flex">
           <div class="Group47 2xl:w-[13.12rem] lg:w-[9.3rem] w-[5.3rem] 2xl:h-[76px] xl:h-[3.3em] relative">
 <!---->
-            <div class="Aaaaaa2 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 top-0 absolute "><img class="Aaaaaa1 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 lg:top-0 top-[-1.4rem] absolute" src="{{ asset('images/LOGO3.png') }}" /></div>
+            <div class="Aaaaaa2 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0 top-0 absolute "><img class="Aaaaaa1 2xl:w-[206.88px] lg:w-[9em] w-[7rem] 2xl:h-[4em] lg:h-[3em] h-[2.6rem] left-0 lg:top-0 top-[-1.4rem] absolute" src="{{ asset('images/logo4.png') }}" /></div>
           </div>
           <div class="Line38 2xl:w-[70px] lg:w-[3.1em] w-[2.5rem] h-[0px] 2xl:mt-[80px] lg:mt-[3em] mt-[2.5rem] origin-top-left -rotate-90 border border-gray-700"></div>
           <img class="Aa1 2xl:w-[67px] lg:w-[2.9em] w-[2.2rem] 2xl:h-[85px] lg:h-[3.7em] h-[2.5rem] ml-[-3rem]" src="{{ asset('images/LOGO2.png') }}" />
