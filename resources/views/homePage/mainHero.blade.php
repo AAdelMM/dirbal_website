@@ -9,18 +9,17 @@
       <img class="HeroBg w-screen lg:h-screen h-[auto] left-0 top-0 bg-contain" src="{{ asset('images/homeHero.png') }}" />
       <img class="HeroQuran w-[44.17vw]  2xl:h-[25.5em] lg:h-[17.9em]  h-[auto]  2xl:top-[18em] lg:top-[13em] top-[7em] absolute " src="{{ asset('images/heroquran.png') }}" />
       <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
-        <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-600 rounded-full border-2 border-white"></div>
+        <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-100 rounded-full border-2 border-white"><img class="w-[3.75em] h-[3.75em] mt-[-0.18em]" src="{{asset('images/access.png')}}" alt=""></div>
       </div>
       <div class="ContentCarrousol w-[99vw] 2xl:h-[816px] lg:h-[35.7em] h-[25em] 2xl:left-[2px] lg:left-[1.4px] left-[0.8px] 2xl:top-[118.98px] lg:top-[5.2em] top-[3em] absolute">
         <!--quotes start-->
-        <div class="quotes 2xl:w-[894px] lg:w-[39.9rem] w-[22.35rem] 2xl:px-[52px] lg:px-[2.3em] px-[1.5em] 2xl:py-[60px] lg:py-[2.7em] py-[1.5em] 2xl:left-[919px] lg:left-[41em] left-[25em] 2xl:top-[120px] lg:top-[5.3em] top-[3em] absolute   rounded-xl shadow border border-gray-700/opacity-50 flex-col lg:justify-center lg:items-end 2xl:gap-8 lg:gap-4 gap-2 inline-flex"style="background-color: rgba(231, 241, 147, 0.2);">
-          <div class="Frame280 2xl:w-[790px] lg:w-[35.3em] w-[25em] 2xl:h-[170px] lg:h-[7.4em] h-[5em] relative">
-            <img class="Rectangle452 2xl:w-[309px] lg:w-[13.5em] w-[9em] 2xl:h-[170px] lg:h-[7.4em] h-[5em] left-0 top-0 absolute rounded-md" src="{{ asset('images/judge.jpg') }}" />
-            <div id="quote-title" class=" 2xl:w-[49.4rem] lg:w-[35.25rem] w-[19.8rem] left-0 2xl:top-[104px] lg:top-[2em] top-[1rem] absolute text-right text-yellow-700 2xl:text-[55px] lg:text-[2.4em] text-[1.2rem] font-bold " style="font-family:'El Messiri';">قبسات</div>
+        <div class="quotes 2xl:w-[894px] lg:w-[39.9rem] w-[22.35rem] 2xl:px-[52px]  lg:px-[2.3em] px-[1.5em] 2xl:py-[60px] lg:py-[2.7em] py-[1.5em] 2xl:left-[919px] lg:left-[41em] left-[25em]   top-[6em] absolute   rounded-xl shadow border border-gray-700/opacity-50 flex-col lg:justify-center lg:items-end 2xl:gap-8 lg:gap-4 gap-2 inline-flex"style="background-color: rgba(231, 241, 147, 0.2);">
+          <div class="Frame280 2xl:w-[790px] lg:w-[35.3em] w-[25em]  lg:h-[5em] h-[5em] relative">
+          <div id="quote-title" class=" 2xl:w-[49.4rem] lg:w-[35.25rem] w-[19.8rem] left-0  absolute text-right text-yellow-700 2xl:text-[55px] lg:text-[2.4em] text-[1.2rem] font-bold " style="font-family:'El Messiri';">قبسات</div>
           </div>
           <div class="Divider 2xl:w-[48.9rem] lg:w-[34.9rem] w-[19.6rem] h-px bg-gray-700/opacity-50"></div>
-          <div id="quote-text" class=" 2xl:w-[48.9rem] lg:w-[34.9rem] w-[19.6rem] text-justify text-gray-900 2xl:text-[40px] lg:text-[20px] text-[15px] font-normal " style="font-family:'El Messiri';direction:rtl;">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً .     </div>
-          <div  class=" 2xl:w-[49.4rem] lg:w-[35.3rem] w-[19.8rem]  text-yellow-700 2xl:text-[25px] lg:text-[20px] text-[15px] font-bold "style="font-family:'Marhey'; ">المصدر : <span id="quote-source">مدير الموقع</span></div>
+          <div id="quote-text" class=" 2xl:w-[48.9rem] lg:w-[34.9rem] w-[19.6rem] text-justify text-gray-900 2xl:text-[30px] lg:text-[20px] text-[15px] font-normal " style="font-family:'El Messiri';direction:rtl;">    إنه لمن سوء الحظ ألا ندرك ما يراد بنا، فيصرفوننا عما ينبغي أن نفكر فيه من مصير مجتمعنا أو أفكر فيه أنا من مصيري كإنسان، إلى أن نفكر في أشياء نحسبها راقية جداً .     </div>
+          <div  class=" 2xl:w-[49.4rem] lg:w-[35.3rem] w-[19.8rem]  text-yellow-700 2xl:text-[25px] lg:text-[20px] text-[15px] font-bold "style="font-family:'Marhey'; "><span id="quote-source">مدير الموقع</span></div>
         </div>
         <!--quotes end-->
       </div>
@@ -28,7 +27,7 @@
       <div class="HeaderHome w-[54vw] 2xl:h-[7.8rem] lg:h-[5.5em] h-[4rem] 2xl:left-[60.57px] lg:left-[2.7em] left-[1.5rem] top-0 absolute">
     <div class="Line w-[89.3vw]  h-[0px] left-[8.72px] 2xl:top-[105px] lg:top-[4.6em] top-[3.2rem] absolute border border-gray-900"></div>
     <div class="Group20 w-[13.7vw] 2xl:h-[110px] lg:h-[4.8em] h-[3.2rem] 2xl:left-[45.2rem]    lg:left-[31.7em] left-[18.08rem] 2xl:top-[14px] lg:top-[0.4em] top-[0.4rem] absolute">
-      <img class=" w-[13.17vw]  2xl:h-[6.9rem] lg:h-[5.2rem] h-[2.75rem] left-0 top-0 absolute " src="{{ asset('images/bsm3.png') }}" />
+      <img class=" w-[13.17vw]  2xl:h-[6.9rem] lg:h-[5.2rem] h-[2.75rem] left-5 top-0 absolute " src="{{ asset('images/bsm3.png') }}" />
       
     </div>
         
@@ -107,6 +106,7 @@ $(document).ready(function() {
 
         // Update the quote elements with smooth transition
         updateTextWithTransition('#quote-title', stripHtmlTags(quotes[currentQuoteIndex].title));
+        updateTextWithTransition('#quote-cat', stripHtmlTags(quotes[currentQuoteIndex].title));
         updateTextWithTransition('#quote-text', stripHtmlTags(quotes[currentQuoteIndex].body));
         
         // Optional: If you have a source field
