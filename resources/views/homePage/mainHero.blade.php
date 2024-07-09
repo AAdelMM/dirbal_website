@@ -9,7 +9,7 @@
       <img class="HeroBg w-screen lg:h-screen h-[auto] left-0 top-0 bg-contain" src="{{ asset('images/homeHero.png') }}" />
       <img class="HeroQuran w-[44.17vw]  2xl:h-[25.5em] lg:h-[17.9em]  h-[auto]  2xl:top-[18em] lg:top-[13em] top-[7em] absolute " src="{{ asset('images/heroquran.png') }}" />
       <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
-        <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-100 rounded-full border-2 border-white"><img class="w-[3.75em] h-[3.75em] mt-[-0.18em]" src="{{asset('images/access.png')}}" alt=""></div>
+        <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-700 rounded-full border-2 border-white flex justify-center items-center"><img class="w-[2rem] h-[auto] " src="{{asset('images/access.svg')}}" alt=""></div>
       </div>
       <div class="ContentCarrousol w-[99vw] 2xl:h-[816px] lg:h-[35.7em] h-[25em] 2xl:left-[2px] lg:left-[1.4px] left-[0.8px] 2xl:top-[118.98px] lg:top-[5.2em] top-[3em] absolute">
         <!--quotes start-->

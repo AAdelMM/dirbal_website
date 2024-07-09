@@ -369,5 +369,52 @@
 .quotes {
   overflow: hidden;         /* Ensure container handles dynamic content smoothly */
   position: relative;       /* Ensure proper positioning */
-  transition: all 1.5s ease; /* Smooth transition for all properties */
+  transition: all 3s ease; /* Smooth transition for all properties */
 }
+
+/*text preview last topics*/
+.text-container {
+  position: relative;
+}
+
+.text-preview {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Show 2 lines */
+  white-space: normal; /* Allow text to wrap */
+  text-overflow: ellipsis;
+  max-height: 3.6em; /* Adjust as needed to show 2 lines */
+  transition: all 2.3s ease;
+}
+
+.text-full {
+  background-color: rgba(207, 148, 85, 0.7); /* Transparent background */
+  color: white; /* Text color */
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  max-height: 2.6em; /* Adjust as needed to show 2 lines */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0; /* Start hidden */
+  transition: all 1.3s ease; /* Smooth transition */
+}
+
+.text-container:hover .text-preview {
+  display: none;
+}
+
+.text-container:hover .text-full {
+  max-height: none; /* Remove the max-height on hover */
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Show all text */
+  opacity: 1; /* Ensure full text is visible */
+  transition: all 1.3s ease; /* Smooth transition */
+}
+

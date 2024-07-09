@@ -15,14 +15,13 @@
       <!--title-->
    <div  class="LastTopics 2xl:h-[75.8vh] h-[90vh]  flex justify-center items-center relative bg-gray-800">
     
-      <div class="subtitle-container flex justify-center w-[72vw] h-[6.4vh] mt-[1em] ">
-         
-          <div class="flex flex-col items-center justify-center 2xl:mt-[1.7vw] mt-[2.5vw]">
-              <div id="title-row1" class="   text-right text-white 2xl:text-[1em] xl:text-[0.7em] font-normal pb-5 font-['El Messiri'] ">آخر الموضوعات </div>  
-              <div id="title-row2" class=" text-right text-[#CF9455] 2xl:text-[0.6em] xl:text-[0.4em] font-normal font-['El Messiri'] ">إبدأ فى رحلة إكتشاف أهم الإضافات الاخيرة والتى قد تثري تجربتك على موقعنا</div> 
-          </div> 
-                  <img class="w-[1em] h-auto left-[15vw] absolute" src="{{ asset('images/IocndecorL.svg') }}" alt="icon">
-                  <img class="w-[1em] h-auto right-[15vw] absolute " src="{{ asset('images/IocndecorR.svg') }}" alt="icon">   
+      <div class="subtitle-container inline-flex items-center justify-between w-[62vw] h-[6.4vh] mt-[1em] ">
+                  <img class="w-[1em] h-auto " src="{{ asset('images/IocndecorL.svg') }}" alt="icon">
+                  <div class="flex flex-col items-center justify-center 2xl:mt-[1.7vw] mt-[2.5vw]">
+                      <div id="title-row1" class="   text-right text-[#CF9455] 2xl:text-[1em] xl:text-[0.7em] font-normal pb-5 font-['El Messiri'] "> آخرُ الموضوعات المرفوعة<span class="text-white"><span>  </span>إلى مختلف الفروع</span> </div>  
+                      <div id="title-row2" class=" text-right text-white 2xl:text-[0.55em] xl:text-[0.35em] font-normal font-['El Messiri'] ">هذه عناوين الموضوعات الأخيرة. تشمل أيضاً تحديثات الملفات القديمة. انقر في الصندوق للمعاينة</div> 
+                  </div> 
+                  <img class="w-[1em] h-auto   " src="{{ asset('images/IocndecorR.svg') }}" alt="icon">   
       </div>
       <!--content-->
       <div class="content  flex items-center z-[10] ">
@@ -42,7 +41,7 @@
                           <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
                             <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                           </div>
-                          <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
+                          <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-[#CF9455]">
                             <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
                           </div>
                 </div>
@@ -59,7 +58,7 @@
                           <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh] left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
                             <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                           </div>
-                          <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-orange-400">
+                          <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh] absolute bg-[#CF9455]">
                             <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
                           </div>
                 </div>
@@ -76,7 +75,7 @@
                           <div class="SpanMkdPostInfoDateDay w-[3.1vw] h-[5.7vh]  left-0 2xl:top-0 xl:top-[-0.5vh] absolute bg-gray-700">
                             <div class=" w-[1.5vw] h-[2.7vh] left-[0.8vw] top-0 absolute text-center text-white 2xl:text-[1.5em] xl:text-[1.1em] font-black font-['Roboto'] leading-[50px]">18</div>
                           </div>
-                          <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh]  absolute bg-orange-400">
+                          <div class="SpanMkdPostInfoDateMonth w-[3.1vw] h-[3.8vh] left-0 top-[5vh]  absolute bg-[#CF9455]">
                             <div class=" left-[0.9vw] top-[-0.25em] absolute text-center text-white 2xl:text-[1.4em] xl:text-[1em] font-normal font-['Arial'] leading-loose">08</div>
                           </div>
                 </div>
@@ -88,11 +87,11 @@
     <div class="  flex 2xl:w-[33vw] w-[40vw] h-[34.8vh] justify-between items-center ">
             <!--col title -->
             <div class="Frame320 2xl:w-[33vw] w-[40vw]  top-[2.2vh] 2xl:left-0  absolute justify-end items-center gap-[1.3em] inline-flex">
-            <div class=" w-[30vw] text-right text-[#CF9455]  2xl:text-[1.6em] text-[1.3em] font-bold  " style="font-family:'Noto Kufi Arabic';">69 م د: فسخ عقد مبرم بين الغير ( عدم قبول لعدم المصلحة )‎</div>
+            <div class=" w-[31vw] text-right text-[#CF9455]  2xl:text-[1.5em] text-[1.2em] font-bold  " style="font-family:'Noto Kufi Arabic';direction:rtl;">69 م د: فسخ عقد مبرم بين الغير ( عدم قبول لعدم المصلحة )‎</div>
               <div class="Frame309 w-[2.9vw] h-[5.1vh] flex-col justify-start items-center inline-flex">
-                      <div class="Group49 w-[2.9vw] h-[5.1vh] flex flex-col justify-center relative">
-                        <img class="Regulation w-[2.9vw] h-[5.1vh] left-0 top-0 absolute" src="https://via.placeholder.com/55x55" />
-                        <div class="Regulation w-[2.9vw] h-[5.1vh] left-0 top-0 absolute bg-[#CF9455]"></div>
+                      <div class="Group49 w-[2.9vw] h-[auto] flex flex-col justify-center relative">
+                        <img class="Regulation w-[2.9vw] h-[auto] left-0 top-0 absolute" src="{{asset('images/mokhIcon3.png')}}" />
+                       
                         <div class=" w-[4vw] h-[2.1vh] left-[-0.5vw] top-[8vh] absolute text-center text-white 2xl:text-sm xl:text-[0.65em] font-normal font-['Arial'] capitalize">القضاء المدني</div>
 
                       </div>
@@ -124,8 +123,16 @@
             </div>
 
           </div>
-          <div class=" 2xl:w-[33vw] w-[40vw] h-[10.6vh]  top-[16vh] absolute text-right text-white 2xl:text-[1.4em] xl:text-[1em] font-normal uppercase leading-normal" style="direction:rtl; font-family:'El Messiri';">المصلحة الشخصية المشروعة المباشرة شرط لقبول الدعوى. مِلاكها أن يكون للمدعي من وراء التجائه إلى القضاء منفعةٌ حقيقة،</div>
-          </div>
+          <div class="text-container 2xl:w-[33vw] w-[40vw] h-[10.6vh] top-[16vh] absolute text-right text-white 2xl:text-[1.4em] xl:text-[1em] font-normal uppercase leading-normal" style="direction:rtl; font-family:'El Messiri';">
+  <div class="text-preview">
+    المصلحة الشخصية المشروعة المباشرة شرط لقبول الدعوى. مِلاكها أن يكون للمدعي من وراء التجائه إلى القضاء منفعةٌ حقيقة، منفعةٌ لا تقوم بالضرورة بل قضاء. فلا تكون المصلحة قائمة إذا كان ما يسعى إليه قضاءً لن يعود عليه بفائدة حقيقة، بحيث لا يكون في وسعه القانوني أن يضيف إليه حقاً يدعيه، ولا هو بالحتمي لدفع ضرر يتوقع أن يصيبه.
+  </div>
+  <div class="text-full">
+    المصلحة الشخصية المشروعة المباشرة شرط لقبول الدعوى. مِلاكها أن يكون للمدعي من وراء التجائه إلى القضاء منفعةٌ حقيقة، منفعةٌ لا تقوم بالضرورة بل قضاء. فلا تكون المصلحة قائمة إذا كان ما يسعى إليه قضاءً لن يعود عليه بفائدة حقيقة، بحيث لا يكون في وسعه القانوني أن يضيف إليه حقاً يدعيه، ولا هو بالحتمي لدفع ضرر يتوقع أن يصيبه.
+العقد شريعة المتعاقدِين، وقوته الملزمة تنبع من إرادتهم ترتيبَ أثار محددة عليه، وإذن فمن الطبيعي أن يكون نسبي الآثار، بحيث لا تتعدى الالتزامات والحقوق التي يولدها غيرَ أطرافه.
+  </div>
+</div>
+
         </div>
         </div>
     </div>
