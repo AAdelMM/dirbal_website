@@ -281,6 +281,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 /////////
+//fade last words in last topics sections
 
+document.addEventListener('DOMContentLoaded', function () {
+  const textPreview = document.getElementById('text-preview');
+  const words = textPreview.textContent.trim().split(' ');
 
+  // Get the last 6 words
+  const fadeCount = 6;
+  const totalWords = words.length;
+  const fadingWords = words.slice(totalWords - fadeCount);
+
+  // Remove the last 6 words from the original text
+  const remainingText = words.slice(0, totalWords - fadeCount).join(' ');
+
+  // Create spans for the fading words with different opacities
+  const fadingSpans = fadingWords.map((word, index) => {
+    const className = `fading-word-${index + 1}`;
+    return `<span class="${className}">${word}</span>`;
+  }).join(' ');
+
+  // Update the content of text-preview
+  textPreview.innerHTML = `${remainingText} ${fadingSpans}`;
+});
 
