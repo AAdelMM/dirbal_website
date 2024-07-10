@@ -373,6 +373,7 @@
 }
 
 /*text preview last topics*/
+/*
 .text-container {
   position: relative;
 }
@@ -382,16 +383,16 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* Show 2 lines */
-  white-space: normal; /* Allow text to wrap */
-  text-overflow: ellipsis;
+/*  white-space: normal; /* Allow text to wrap */
+/*  text-overflow: ellipsis;
   max-height: 3.6em; /* Adjust as needed to show 2 lines */
-  transition: all 2.3s ease;
+ /* transition: all 2.3s ease;
 }
-
-.text-full {
+*/
+/*.text-full {
   background-color: rgba(207, 148, 85, 0.7); /* Transparent background */
-  color: white; /* Text color */
-  padding: 10px;
+/*  color: white; /* Text color */
+/*  padding: 10px;
   position: absolute;
   top: 0;
   left: 0;
@@ -399,12 +400,12 @@
   height: auto;
   z-index: 10;
   max-height: 2.6em; /* Adjust as needed to show 2 lines */
-  overflow: hidden;
+/*  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   opacity: 0; /* Start hidden */
-  transition: all 1.3s ease; /* Smooth transition */
-}
+ /* transition: all 1.3s ease; /* Smooth transition */
+/*}
 
 .text-container:hover .text-preview {
   display: none;
@@ -412,9 +413,9 @@
 
 .text-container:hover .text-full {
   max-height: none; /* Remove the max-height on hover */
-  white-space: normal; /* Allow text to wrap */
-  overflow: visible; /* Show all text */
-  opacity: 1; /* Ensure full text is visible */
-  transition: all 1.3s ease; /* Smooth transition */
-}
-
+ /* white-space: normal; /* Allow text to wrap */
+ /* overflow: visible; /* Show all text */
+ /* opacity: 1; /* Ensure full text is visible */
+ /* transition: all 1.3s ease; /* Smooth transition */
+/*}
+*/
