@@ -263,21 +263,26 @@
     }
   
     /* Shown state: visible */
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 2.3s ease, margin-right 2.3s ease, opacity 1.3s ease;
+    }
+    
     .submenu.show {
-      max-height: 20rem;/* Adjust based on your submenu's expected height */
+      max-height: 20rem; /* Adjust based on your submenu's expected height */
       margin-right: 5rem !important;
       opacity: 1;
     }
-     /* Rotate the arrow */
-     .arrow {
+    
+    /* Rotate the arrow */
+    .arrow {
       transition: transform 1.3s ease-in-out;
     }
-    /* Rotate the arrow */
+    
     .arrow.rotate {
-      transform: rotate(-90deg);
-      
+      transform: rotate(180deg);
     }
-
     /*carousel*/
     
     
