@@ -305,3 +305,43 @@ document.addEventListener('DOMContentLoaded', function () {
   textPreview.innerHTML = `${remainingText} ${fadingSpans}`;
 });
 
+//pagination indicator dots
+
+document.addEventListener('DOMContentLoaded', function () {
+  const carouselWrapper = document.getElementById('carouselWrapper');
+  const sections = document.querySelectorAll('.carousel-section');
+  const prevArrow = document.getElementById('prevArrow');
+  const nextArrow = document.getElementById('nextArrow');
+  const dots = document.querySelectorAll('.carousel-dot');
+  let currentIndex = 0;
+
+  function updateCarousel(index) {
+      // Ensure the index is within bounds
+      if (index < 0) index = sections.length - 1;
+      if (index >= sections.length) index = 0;
+
+      // Update the position of the carousel
+      carouselWrapper.style.transform = `translateX(-${index * 100}%)`;
+
+      // Update the active dot
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+
+      currentIndex = index;
+  }
+
+  // Event listeners for arrows
+  prevArrow.addEventListener('click', () => updateCarousel(currentIndex - 1));
+  nextArrow.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+  // Event listeners for dots
+  dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+          const index = parseInt(dot.getAttribute('data-index'));
+          updateCarousel(index);
+      });
+  });
+
+  // Initialize the carousel
+  updateCarousel(currentIndex);
+});

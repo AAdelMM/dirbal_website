@@ -43,6 +43,14 @@
         <img id="nextArrow" class="cursor-pointer carousel-arrow right-arrow" src="{{ asset('images/carosel-right.png') }}" alt="switch">
       </div>
     </div>
+
+      <!-- Dots Container -->
+      <div class="carousel-dots" id="carouselDots">
+        <span class="carousel-dot" data-index="0"></span>
+        <span class="carousel-dot" data-index="1"></span>
+        <span class="carousel-dot" data-index="2"></span>
+        <span class="carousel-dot" data-index="3"></span>
+    </div>
    
    <!--section-1 Main End-->
 
