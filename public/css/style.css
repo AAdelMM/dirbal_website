@@ -18,6 +18,10 @@
         max-width:100%;
         overflow:hidden;
       }
+      @font-face {
+        font-family: 'Sakkal Majalla';
+        src: url('{{ public_path('fonts/Sakkal Majalla Regular.tff') }}');
+    }
 /*mokhtart*/
       .mokhtarat {
         width: 120.313rem;

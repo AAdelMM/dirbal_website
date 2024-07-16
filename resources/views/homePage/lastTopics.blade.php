@@ -18,8 +18,8 @@
       <div class="subtitle-container inline-flex items-center justify-between w-[64vw] h-[6.4vh] 2xl:mt-[3em] mt-[2em] ">
                   <img class="w-[1em] h-auto " src="{{ asset('images/IocndecorL.svg') }}" alt="icon">
                   <div class="flex flex-col items-center justify-center 2xl:mt-[1.7vw] mt-[2.5vw]">
-                      <div id="title-row1" class="   text-right text-[#CF9455] 2xl:text-[1em] xl:text-[0.7em] font-normal pb-5 font-['El Messiri'] "> آخرُ الموضوعات المرفوعة<span class="text-white"><span>  </span>إلى مختلف الفروع</span> </div>  
-                      <div id="title-row2" class=" text-right text-white 2xl:text-[0.5em] xl:text-[0.3em] text-[0.1em] font-normal font-['El Messiri'] ">هذه عناوين الموضوعات الأخيرة. تشمل أيضاً تحديثات الملفات القديمة. انقر في الصندوق للتصفح والمعاينة</div> 
+                      <div id="title-row1" class="   text-right text-[#8B6A01] 2xl:text-[0.8em] xl:text-[0.8em] text-[0.4em] font-normal pb-5 font-['El Messiri'] "> آخرُ الموضوعات المرفوعة<span class="text-white text-[0.9em]"><span>  </span>إلى مختلف الفروع</span> </div>  
+                      <div id="title-row2" class=" text-right  2xl:text-[0.7em] xl:text-[0.5em] text-[0.2em] text-gray-400 " style="font-family: 'Sakkal Majalla';">هذه عناوين الموضوعات الأخيرة. تشمل أيضاً تحديثات الملفات القديمة. انقر في الصندوق للتصفح والمعاينة</div> 
                   </div> 
                   <img class="w-[1em] h-auto   " src="{{ asset('images/IocndecorR.svg') }}" alt="icon">   
       </div>

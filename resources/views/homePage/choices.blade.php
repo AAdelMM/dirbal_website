@@ -31,11 +31,11 @@
                
           <div class="self-stretch flex flex-row items-start justify-center  box-border max-w-full">
             <div class=" flex flex-col items-center justify-center gap-[2rem] w-full">
-              <h1 class="m-0 self-stretch h-[auto] relative text-[1.5rem] xl:text-[2.5rem] 2xl:text-[3rem] 2xl:pt-0 pt-8 leading-[114.6%] font-normal font-['El Messiri'] shrink-0 [debug_commit:bf4bc93] mq850:text-[2.5rem] mq850:leading-[2.875rem] mq450:text-[1.2rem] xl:text-[1.4rem] 2xl:text-[1.6rem] mq450:leading-[2.125rem]"
-                  style="font-family:'El Messiri';font-size:3rem;">
-              <span class="text-[#8B6A01]">مختاراتٌ منتقاةٌ </span>من شتّى فروع الموقع
+              <h1 class="m-0 self-stretch h-[auto] relative text-[1.5em] lg:text-[2.5em]  2xl:pt-0 pt-8 leading-[114.6%] font-normal  shrink-0 [debug_commit:bf4bc93] mq850:text-[2.5rem] mq850:leading-[2.875rem] mq450:text-[1.2rem]  mq450:leading-[2.125rem]"
+                  style="font-family:'El Messiri';">
+              <span class="text-[#8B6A01]">مختاراتٌ منتقاةٌ </span><span class="text-[0.9em]">من شتّى فروع الموقع</span>
               </h1>
-              <h2 style="font-family:'El Messiri';font-size:1.5rem;">يقترحها مدير الموقع بالنظر إلى ما تنطوي عليه من مسائل مهمة أو موضوعات جدلية أو جديدة</h2>
+              <h2 class="text-[0.2em] xl:text-[1.5em] 2xl:text-[1.7em] text-gray-300" style="font-family: 'Sakkal Majalla';">يقترحها مدير الموقع بالنظر إلى ما تنطوي عليه من مسائل مهمة أو موضوعات جدلية أو جديدة</h2>
               <div
                 class="self-stretch flex flex-row items-center justify-center "
               >
