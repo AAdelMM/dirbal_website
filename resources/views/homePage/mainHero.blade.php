@@ -6,7 +6,7 @@
 @yield('content')
 @include('homePage.menu')
 <div class="Home w-screen lg:h-screen h-[auto] relative">
-      <img class="HeroBg w-screen lg:h-screen h-[auto] left-0 top-0 bg-contain" src="{{ asset('images/homeHero.png') }}" />
+      <img class="HeroBg w-screen lg:h-screen h-[auto] left-0 top-0 bg-contain data-twe-lazy-animation " src="{{ asset('images/homeHero.png') }}" />
       <img class="HeroQuran w-[44.17vw]  2xl:h-[25.5em] lg:h-[17.9em]  h-[auto]  2xl:top-[18em] lg:top-[13em] top-[7em] absolute " src="{{ asset('images/heroquran.png') }}" />
       <div class="w-[31vw] h-[5.5vh]  left-[3.7vw] top-[85vh] absolute">
         <div class="Ellipse4 w-[3.75em] h-[3.75em] left-0 top-0 absolute bg-cyan-700 rounded-full border-2 border-white flex justify-center items-center"><img class="w-[2rem] h-[auto] " src="{{asset('images/access.svg')}}" alt=""></div>
