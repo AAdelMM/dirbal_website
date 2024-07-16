@@ -13,8 +13,8 @@
       </div>
       <div class="ContentCarrousol w-[99vw] 2xl:h-[816px] lg:h-[35.7em] h-[25em] 2xl:left-[2px] lg:left-[1.4px] left-[0.8px] 2xl:top-[118.98px] lg:top-[5.2em] top-[3em] absolute">
         <!--quotes start-->
-        <div class="quotes 2xl:w-[894px] lg:w-[39.9rem] w-[22.35rem] 2xl:px-[52px]  lg:px-[2.3em] px-[1.5em] 2xl:py-[60px] lg:py-[2.7em] py-[1.5em] 2xl:left-[919px] lg:left-[41em] left-[25em]   top-[6em] absolute   rounded-xl shadow border border-gray-700/opacity-50 flex-col lg:justify-center lg:items-end 2xl:gap-8 lg:gap-4 gap-2 inline-flex"style="background-color: rgba(231, 241, 147, 0.2);">
-          <div class="Frame280 2xl:w-[790px] lg:w-[35.3em] w-[25em]  lg:h-[5em] h-[5em] relative">
+        <div class="quotes 2xl:w-[894px] lg:w-[39.9rem] w-[22.35rem] 2xl:px-[52px]  lg:px-[2.3em] px-[1.5em] 2xl:py-[60px] lg:py-[2.7em] py-[1.5em] 2xl:left-[919px] lg:left-[41em] left-[25em]   top-[6em] absolute   rounded-xl shadow border border-gray-700 flex-col lg:justify-center lg:items-end 2xl:gap-8 lg:gap-4 gap-2 inline-flex"style="background-color: rgba(255, 255, 230, 0.5);">
+          <div class="Frame280 2xl:w-[790px] lg:w-[35.3em] w-[25em]  2xl:h-[6.2rem] lg:h-[5.5em] h-[5em] border-b-2 border-[#2E3947] relative">
           <div id="quote-title" class=" 2xl:w-[49.4rem] lg:w-[35.25rem] w-[19.8rem] left-0  absolute text-right text-yellow-700 2xl:text-[55px] lg:text-[2.4em] text-[1.2rem] font-bold " style="font-family:'El Messiri';">قبسات</div>
           </div>
           <div class="Divider 2xl:w-[48.9rem] lg:w-[34.9rem] w-[19.6rem] h-px bg-gray-700/opacity-50"></div>
