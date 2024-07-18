@@ -225,7 +225,7 @@
           >
           <div class="w-[35vw] h-[7.5rem] inline-flex justify-end items-center my-[1rem]">
                 <div class="w-[20vw] text-[#cf9455] text-[2rem] mx-5" style="direction:rtl; font-family: 'Sakkal Majalla';">
-                  <h1 class="">مدونة ثقافية </h1>
+                  <h1 class="">مدونة قانونية ثقافية </h1>
                   <h2 class="">د.عياد علي دربال</h2>
                 </div>
               <img class="w-[5.025rem] h-[7.5rem]  object-cover" loading="lazy" alt="footer logo" src="{{ asset('images/footerLogo.png') }}" />
