@@ -56,9 +56,7 @@
 
 
 //end last topics new animation
-//rows animation
 document.addEventListener("DOMContentLoaded", () => {
-
   // Helper function to check if an element is in the viewport
   const isInViewport = (element) => {
     const rect = element.getBoundingClientRect();
@@ -72,23 +70,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to add animation class when elements come into view
   const handleScroll = () => {
-    const rows = document.querySelectorAll(".row1, .row2, .row3");
+    const columns = Array.from(document.querySelectorAll(".column")).reverse();
+    
+    columns.forEach((column, colIndex) => {
+      const rows = column.querySelectorAll(".row1, .row2, .row3");
 
-    rows.forEach((row, index) => {
-      if (isInViewport(row)) {
-        setTimeout(() => {
-          row.classList.add("animate");
-        }, index * 300); // Delay each row's animation by 300ms
-      }
+      rows.forEach((row, rowIndex) => {
+        if (isInViewport(row)) {
+          setTimeout(() => {
+            row.classList.add("animate");
+          }, (colIndex * rows.length + rowIndex) * 600); // Delay each row's animation
+        }
+      });
     });
   };
 
-  // Listen to scroll events
-  window.addEventListener("scroll", handleScroll);
-
-  // Initial check in case elements are already in view on load
+  // Call handleScroll on load and on scroll
   handleScroll();
+  window.addEventListener("scroll", handleScroll);
 });
+
+
 
 //footer
 /* document.addEventListener('DOMContentLoaded', () => {

@@ -3,8 +3,7 @@
       <!--Footer start-->
       
       <div  id="foter"
-      class=" w-full relative 2xl:h-[44.25rem] lg:h-[40rem] bg-black box-border overflow-hidden flex flex-row items-start justify-start py-[1.625rem] pr-[3.375rem] pl-[6.75rem] gap-[1.375rem] leading-[normal] tracking-[normal] text-right text-[1.875rem] text-white font-['Noto Kufi Arabic'] border-[1px] border-solid border-darkgoldenrod mq850:pl-[1.688rem] mq850:box-border mq1225:pl-[3.375rem] mq1225:pr-[1.688rem] mq1225:box-border mq1550:flex-wrap"
-    >
+      class=" w-full relative 2xl:h-[44.25rem] lg:h-[44.25rem] bg-black box-border overflow-hidden flex flex-row items-start justify-start py-[1.625rem] pr-[3.375rem] pl-[6.75rem] gap-[1.375rem] leading-[normal] tracking-[normal] text-right text-[1.875rem] text-white font-['Noto Kufi Arabic'] border-t-4 border-[#a6743e] mq850:pl-[1.688rem] mq850:box-border mq1225:pl-[3.375rem] mq1225:pr-[1.688rem] mq1225:box-border mq1550:flex-wrap">
       <footer 
         class=" 2xl:h-[44.25rem] h-[31rem] w-[84.3rem] 2xl:w-[120.375rem] relative bg-gray-100 box-border hidden max-w-full border-t-[1px] border-solid border-darkgoldenrod"
       ></footer>
@@ -14,7 +13,7 @@
         <div
           class="self-stretch flex flex-col items-end justify-start gap-[0.656rem] max-w-full"
         >
-          <div
+          <div 
             class="self-stretch flex flex-col items-end justify-start gap-[0.937rem] max-w-full"
           >
             <div

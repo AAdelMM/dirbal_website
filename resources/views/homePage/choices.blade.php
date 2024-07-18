@@ -30,7 +30,7 @@
       <section class="self-stretch relative flex flex-col items-center justify-center   box-border gap-[3rem] max-w-full z-[2] text-center  text-white  mq850:gap-[1.75rem] mq850:pb-[2.125rem] mq850:box-border mq450:pb-[1.375rem] mq450:box-border">
                
           <div class="self-stretch flex flex-row items-start justify-center  box-border max-w-full">
-            <div class=" flex flex-col items-center justify-center gap-[2rem] w-full">
+            <div class=" flex flex-col items-center justify-center 2xl:my-[3rem] my-[0.2rem] gap-[2rem] w-full">
               <h1 class="m-0 self-stretch h-[auto] relative text-[1.5em] lg:text-[2.5em]  2xl:pt-0 pt-8 leading-[114.6%] font-normal  shrink-0 [debug_commit:bf4bc93] mq850:text-[2.5rem] mq850:leading-[2.875rem] mq450:text-[1.2rem]  mq450:leading-[2.125rem]"
                   style="font-family:'El Messiri';">
               <span class="text-[#8B6A01]">مختاراتٌ منتقاةٌ </span><span class="text-[0.9em]">من شتّى فروع الموقع</span>
@@ -55,9 +55,9 @@
               class=" col1 flex-1 flex flex-col items-center justify-center  box-border min-w-[18vw] max-w-full shrink-0 mq850:min-w-full"
             >
               <div
-                class=" self-stretch flex flex-col items-center justify-center  box-border gap-[6vh] max-w-full mq850:gap-[2.438rem] mq450:gap-[1.188rem]"
+                class="column self-stretch flex flex-col items-center justify-center  box-border gap-[6vh] max-w-full mq850:gap-[2.438rem] mq450:gap-[1.188rem]"
               >
-                <div class="row1 self-stretch flex flex-row items-start justify-between box-border gap-[2rem] max-w-full mq850:flex-wrap mq850:gap-[1.438rem] border-r-2 border-[#8B6A01]">
+                <div class="row1  self-stretch flex flex-row items-start justify-between box-border gap-[2rem] max-w-full mq850:flex-wrap mq850:gap-[1.438rem] border-r-2 border-[#8B6A01]">
                   <div class="w-[20.8vw] flex flex-col items-center justify-center gap-[2.95rem] shrink-0 [debug_commit:bf4bc93] max-w-full mq450:gap-[1.5rem]" >
                     <h1
                     class="left-[4vw] m-0 self-stretch h-[2vh] relative  font-bold flex items-center shrink-0 text-[0.8rem] 2xl:text-[2rem] lg:text-[1.5rem] lg:leading-[1.5rem]  sm:text-[1rem] sm:leading-[1.125rem]"
@@ -144,7 +144,7 @@
               class=" col2 flex-1 flex flex-col items-center justify-center  box-border min-w-[18vw] max-w-full shrink-0 mq850:min-w-full"
             >
               <div
-                class=" self-stretch flex flex-col items-center justify-center  box-border gap-[6vh] max-w-full mq850:gap-[2.438rem] mq450:gap-[1.188rem]"
+                class="column self-stretch flex flex-col items-center justify-center  box-border gap-[6vh] max-w-full mq850:gap-[2.438rem] mq450:gap-[1.188rem]"
               >
                 <div
                   class="row1 self-stretch flex flex-row items-start justify-between box-border gap-[2rem] max-w-full mq850:flex-wrap mq850:gap-[1.438rem] border-r-2 border-[#8B6A01]"
@@ -219,7 +219,7 @@
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
-                  <div class="flex flex-col h-[14vh] items-center justify-center pt-[0rem] px-[0rem] pb-[1.012rem]  text-[1.25rem]" >
+                  <div class="flex flex-col h-[14vh] items-center justify-center  pt-[0rem] px-[0rem] pb-[1.012rem]  text-[1.25rem]" >
                     <div class="flex flex-col  items-center justify-center shrink-0" >
                       <div class="flex flex-row w-[4rem] h-[auto] items-center justify-center ">
                         <img class="h-[auto] 2xl:w-[3vw]  lg:w-[2.5vw]  w-[1vw]  relative object-cover" loading="lazy" alt="" src="{{ asset('images/mokhIcon6.png') }}" />
@@ -237,7 +237,7 @@
               class=" col3 flex-1 flex flex-col items-center justify-center  box-border min-w-[18vw] max-w-full shrink-0 mq850:min-w-full"
             >
               <div
-                class=" self-stretch flex flex-col items-center justify-center  box-border gap-[6vh] max-w-full mq850:gap-[2.438rem] mq450:gap-[1.188rem]"
+                class="column self-stretch flex flex-col items-center justify-center  box-border gap-[6vh] max-w-full mq850:gap-[2.438rem] mq450:gap-[1.188rem]"
               >
                 <div
                   class="row1 self-stretch flex flex-row items-start justify-between box-border gap-[2rem] max-w-full mq850:flex-wrap mq850:gap-[1.438rem] border-r-2 border-[#8B6A01]"

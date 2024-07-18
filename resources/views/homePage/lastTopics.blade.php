@@ -123,7 +123,7 @@
             </div>
             </div>
           </div>
-          <div class="text-container 2xl:w-[33vw] w-[40vw] h-[10.6vh] top-[16vh] absolute text-right text-white 2xl:text-[1.4em] xl:text-[1em] font-normal uppercase leading-normal" style="direction:rtl; font-family:'El Messiri';">
+          <div class="text-container 2xl:w-[33vw] w-[40vw] h-[10.6vh] top-[16vh] absolute text-right text-white 2xl:text-[1.4em] xl:text-[1.2em] text-[0.8em] font-normal uppercase leading-normal" style="direction:rtl; font-family: 'Sakkal Majalla';">
  
   <div class="text-preview" id="text-preview">
     المصلحة الشخصية المشروعة المباشرة شرط لقبول الدعوى. مِلاكها أن يكون للمدعي من وراء التجائه إلى القضاء منفعةٌ حقيقة، منفعةٌ لا تقوم بالضرورة بل قضاء. فلا تكون المصلحة قائمة إذا كان ما يسعى إليه قضاءً لن يعود عليه بفائدة حقيقة، بحيث لا يكون في وسعه القانوني أن يضيف إليه حقاً يدعيه، ولا هو بالحتمي لدفع ضرر يتوقع أن يصيبه.
