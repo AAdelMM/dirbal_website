@@ -65,8 +65,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] pl-[1.5rem] text-wrap h-[4vh] relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] pl-[1.5rem] text-wrap h-[4vh] relative  font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem] "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -93,8 +93,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem]  "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -121,8 +121,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem]  "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -158,8 +158,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem]  "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -186,8 +186,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem]  "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -214,8 +214,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem]  "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -251,8 +251,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem]  "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -279,8 +279,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem] "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>
@@ -307,8 +307,8 @@
                       عدم تنفيذ عقد عمل
                     </h1>
                     <h3
-                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[0.8rem]  2xl:text-[1rem] sm:text-[0.6rem] "
-                    style="font-family:'El Messiri';direction:rtl;">
+                    class="m-0 w-[20.8vw] h-[4vh] pl-[1.5rem] text-wrap relative text-[0.5rem] font-normal text-justify flex items-center shrink-0 max-w-full  md:text-[1.2rem]  2xl:text-[1.3rem] sm:text-[0.8rem]  "
+                    style="font-family: 'Sakkal Majalla';direction:rtl;">
                       هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
                     </h3>
                   </div>

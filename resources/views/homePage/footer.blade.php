@@ -104,8 +104,7 @@
               class="flex flex-col items-end justify-start gap-[1.437rem]  max-w-full"
             >
               <div
-                class="2xl:w-[17.688rem] w-[12.4rem] flex flex-row items-start justify-end pt-[0rem] px-[0.187rem] pb-[0.5rem] box-border"
-              >
+                class="2xl:w-[17.688rem] w-[12.4rem] flex flex-row items-start justify-end pt-[0rem] px-[0.187rem] pb-[0.5rem] box-border">
                 <div
                   class="flex-1 relative leading-[1.188rem] uppercase z-[1] 2xl:text-[1.4rem] text-[1.2rem] mq450:leading-[0.875rem]"
                 style="font-family:'Noto Kufi Arabic'; direction:rtl;">
@@ -122,9 +121,9 @@
                     class="flex flex-col items-start justify-start pt-[0.093rem] px-[0rem] pb-[0rem]"
                   >
                     <img
-                      class="2xl:w-[3.5rem] 2xl:h-[3.5rem] w-[2.5rem] h-[2.5rem] pb-[0.5rem]  relative overflow-hidden shrink-0"
+                      class="2xl:w-[3rem]  w-[2rem] h-[auto] pb-[0.5rem]  relative overflow-hidden shrink-0"
                       loading="lazy"
-                      alt=""
+                      alt="whatsapp"
                       src="{{ asset('images/whatsapp.png') }}"
                     />
                   </div>
@@ -135,24 +134,18 @@
                     class="flex flex-col items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]"
                   >
                     <img
-                      class="2xl:w-[2.8rem] 2xl:h-[2.8rem] w-[1.96rem] h-[1.96rem]relative overflow-hidden shrink-0"
+                      class="2xl:w-[2.8rem]  w-[1.8rem] h-[auto] relative overflow-hidden shrink-0"
                       loading="lazy"
-                      alt=""
+                      alt="viber"
                       src="{{ asset('images/viber.png') }}"
                     />
                   </div>
                   <div
                   class="2xl:h-[3rem] h-[2.1rem] 2xl:w-[0.063rem] w-[0.0441rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
                   ></div>
-                  <div
-                    class="flex flex-col items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]"
-                  >
-                    <img
-                      class="2xl:w-[2.8rem] 2xl:h-[2.8rem] w-[1.96rem] h-[1.96rem] relative overflow-hidden shrink-0"
-                      loading="lazy"
-                      alt=""
-                      src="{{ asset('images/facebook.svg') }}"
-                    />
+                  <div  class="flex flex-col items-start justify-start pt-[0.25rem] px-[0rem] pb-[0rem]"  >
+                    <img class="2xl:w-[2.8rem]  w-[1.96rem] h-[auto relative overflow-hidden shrink-0"   loading="lazy" alt="facebook icon" src="{{ asset('images/facebook.svg') }}"/>
+                   
                   </div>
                   <div
                   class="2xl:h-[3rem] h-[2.1rem] 2xl:w-[0.063rem] w-[0.0441rem] relative box-border shrink-0 border-r-[1px] border-solid border-gray-200 mq850:w-full mq850:h-[0.063rem]"
@@ -202,9 +195,9 @@
                     class="2xl:w-[24.781rem] w-[17.3rem] bg-[#21262C] box-border flex flex-row items-center justify-start pt-[0.125rem] px-[0.375rem] pb-[0.437rem] max-w-[calc(100%_-_0px)] shrink-0 border-[1px] border-solid border-[#474747]"
                   >
                     <img
-                      class="2xl:h-[1.5rem] 2xl:w-[1.5rem] w-[1.2rem] h-[1.2rem] mt-[0.2rem] relative overflow-hidden shrink-0 "
+                      class=" 2xl:w-[1.2rem] w-[1rem] h-[auto] mt-[0.2rem] relative overflow-hidden shrink-0 "
                       loading="lazy"
-                      alt=""
+                      alt="messenger"
                       src="{{ asset('images/messenger.png') }}"
                     />
 
@@ -230,12 +223,13 @@
           <div
             class="flex-1 overflow-hidden flex flex-col items-end justify-start pt-[0rem] pb-[0.875rem] pr-[2.125rem] pl-[2.062rem] box-border gap-[0.312rem] opacity-[0.74] min-w-[27.438rem] max-w-full z-[1] text-justify text-[1.688rem] text-snow font-sakkal-majalla mq850:min-w-full"
           >
-            <img
-              class="w-[5.025rem] h-[7.5rem] relative object-cover"
-              loading="lazy"
-              alt=""
-              src="{{ asset('images/footerLogo.png') }}"
-            />
+          <div class="w-[35vw] h-[7.5rem] inline-flex justify-end items-center my-[1rem]">
+                <div class="w-[20vw] text-[#cf9455] text-[2rem] mx-5" style="direction:rtl; font-family: 'Sakkal Majalla';">
+                  <h1 class="">مدونة ثقافية </h1>
+                  <h2 class="">د.عياد علي دربال</h2>
+                </div>
+              <img class="w-[5.025rem] h-[7.5rem]  object-cover" loading="lazy" alt="footer logo" src="{{ asset('images/footerLogo.png') }}" />
+          </div>
 
             <div class="self-stretch flex flex-col items-end justify-start">
               <div
@@ -261,7 +255,7 @@
                 class="flex flex-row items-start justify-end py-[0rem] px-[0.25rem] 2xl:mt-[-0.938rem] mt-[10rem]"
               >
                 <button
-                  class="cursor-pointer pt-[0rem] px-[0.687rem] pb-[0.25rem] bg-yellow-500 rounded-10xs flex flex-row items-center justify-start gap-[1.412rem] border-[1px] border-solid border-yellow-700"
+                  class="cursor-pointer pt-[0rem] px-[0.687rem] pb-[0.25rem] bg-[#a6743e] rounded-10xs flex flex-row items-center justify-start gap-[1.412rem] border-[1px] border-solid border-yellow-700"
                 >
                   <div
                     class="flex flex-col items-center justify-start pt-[0.5rem] px-[0rem] pb-[0.5rem]"
