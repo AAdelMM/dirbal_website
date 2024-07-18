@@ -280,9 +280,9 @@
           class="w-[31.7vw]  flex flex-row items-start justify- py-[0rem] 2xl:px-[4.187rem] box-border max-w-full text-[1.563rem] mq850:pl-[2.063rem] mq850:pr-[2.063rem] mq850:box-border"
         >
           <div
-            class="h-[1.5rem] flex-1 relative leading-[1.5rem] flex items-center max-w-full z-[1] text-[1rem] mq450:leading-[1.188rem]"
-          style="direction:rtl;">
-            © دربال، جميع الحقوق محفوظة، 2024 ، ضد الاستعمال التجاري.
+            class="h-[1.5rem] w-[100%] flex-1 relative leading-[1.5rem] flex items-center max-w-full z-[1] text-[1.4rem] mq450:leading-[1.188rem]"
+          style="direction:rtl; font-family: 'Sakkal Majalla';">
+            © دربال، جميع الحقوق محفوظة ضد الاستعمال التجاري، 2024
           </div>
         </div>
       </section>
