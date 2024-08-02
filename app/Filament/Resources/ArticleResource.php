@@ -3,22 +3,20 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ArticleResource\Pages;
-use App\Filament\Resources\ArticleResource\RelationManagers;
 use App\Models\Article;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Filament\Tables\Actions\Action;
+use App\Forms\Components\TinyMceEditor;
 class ArticleResource extends Resource
 {
     protected static ?string $model = Article::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-    protected static ?string $navigationGroup = 'إضافة المقالات'; // إضافة هذه السطر لتحديد مجموعة التنقل
+    protected static ?string $navigationGroup = 'إضافة المقالات';
+
     public static function getModelLabel(): string
     {
         return 'مقالة';
@@ -26,42 +24,40 @@ class ArticleResource extends Resource
 
     public static function getPluralModelLabel(): string
     {
-        return 'مقالات'; // Plural label
+        return 'مقالات';
     }
-    protected static ?string $modelLabel ='  مقالة' ;
-    protected static ?string $navigationLabel = '  مقالة ';
+
+    protected static ?string $modelLabel = 'مقالة';
+    protected static ?string $navigationLabel = 'مقالة';
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                ->label('عنوان')
-                ->required()
-                ->maxLength(255),
-            Forms\Components\TextInput::make('sub_title')
-            ->label('عنوان فرعي')
-
-                ->required()
-                ->maxLength(255),
-            Forms\Components\Textarea::make('mogaz')
-            ->label('موجز')
-
-                ->required()
-                ->maxLength(65535),
-            Forms\Components\TextInput::make('mokadma_title')
-            ->label('عنوان المقدمة')
-
-                ->required()
-                ->maxLength(255),
-            Forms\Components\Textarea::make('mokadma')
-            ->label('مقدمة')
-
-                ->required()
-                ->maxLength(65535),
-            Forms\Components\RichEditor::make('article_text')
-            ->label('نص المقالة')
-
-                ->required(),//
+                    ->label('عنوان')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('sub_title')
+                    ->label('عنوان فرعي')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\Textarea::make('mogaz')
+                    ->label('موجز')
+                    ->required()
+                    ->maxLength(65535),
+                Forms\Components\TextInput::make('mokadma_title')
+                    ->label('عنوان المقدمة')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\Textarea::make('mokadma')
+                    ->label('مقدمة')
+                    ->required()
+                    ->maxLength(65535),
+                    TinyMceEditor::make('article_text')
+                    ->label('نص المقالة')
+                    ->required()
+                    
             ]);
     }
 
@@ -70,33 +66,35 @@ class ArticleResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                ->label('عنوان'),
+                    ->label('عنوان'),
                 Tables\Columns\TextColumn::make('sub_title')
-                ->label('عنوان فرعي'),
+                    ->label('عنوان فرعي'),
                 Tables\Columns\TextColumn::make('mogaz')->limit(50)
-                ->label('موجز'),
+                    ->label('موجز'),
                 Tables\Columns\TextColumn::make('mokadma_title')
-                ->label('عنوان المقدمة'),
+                    ->label('عنوان المقدمة'),
                 Tables\Columns\TextColumn::make('created_at')
-                ->label(' اضيفت فى') //
+                    ->label('أضيفت في'),
             ])
             ->filters([
-                //
+                // Add any necessary filters here
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Action::make('view')
+                    ->label('عرض')
+                    ->url(fn (Article $record): string => route('articles.view', $record))
+                    ->icon('heroicon-o-eye'),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
     public static function getRelations(): array
     {
         return [
-            //
+            // Define any relations here
         ];
     }
 
