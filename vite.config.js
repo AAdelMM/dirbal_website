@@ -16,4 +16,12 @@ export default defineConfig({
             ],
         }),
     ],
+    build: {
+        rollupOptions: {
+            input: {
+                app: 'resources/js/app.js',
+                tiptapExtensions: 'resources/js/tiptap-extensions.js',
+            },
+        },
+    },
 })

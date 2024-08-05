@@ -10,6 +10,8 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\MainHeroController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Ma7kamaOliaPreviewController;
+
 
 Route::get('/', function () {
     return view('homePage.layout');
@@ -56,8 +58,12 @@ Route::get('/shoon', function () {
     return view('highCourt.shoon');
 });
 
-
+//view buttons
 Route::get('/articles/{article}/view', [ArticleController::class, 'view'])->name('articles.view');
+
+
+Route::get('/ma7kama-olia/{ma7kamaOlia}/preview', [Ma7kamaOliaPreviewController::class, 'preview'])
+    ->name('ma7kama-olia.preview');
 
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::post('/likes', [LikeController::class, 'store'])->name('likes.store');

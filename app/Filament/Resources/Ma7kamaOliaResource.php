@@ -10,6 +10,8 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Forms\Components\RichEditor;
+use App\Filament\Forms\Components\CustomRichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -51,53 +53,207 @@ class Ma7kamaOliaResource extends Resource
                                     ->label('العنوان')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('mogaz')
+                                        CustomRichEditor::make('mogaz')
                                     ->label('موجز')
-                                    ->rows(10)
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'orderedList',
+                                        'unorderedList',
+                                        'h1',
+                                        'h2',
+                                        'h3',
+                                        'paragraph',
+                                        'blockquote',
+                                        'codeBlock',
+                                        'alignLeft',
+                                        'alignCenter',
+                                        'alignRight',
+                                        'alignJustify',
+                                        'undo',
+                                        'redo',
+                                        'textColor',
+                                        'fontSize',
+                                    ])
                                         ->required(),
                                     Forms\Components\TextInput::make('ka3da_title')
                                     ->label('عنوان القاعدة')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('ka3da_text')
+                                        CustomRichEditor::make('ka3da_text')
                                     ->label('نص القاعدة')
-                                    ->rows(10)
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'orderedList',
+                                        'unorderedList',
+                                        'h1',
+                                        'h2',
+                                        'h3',
+                                        'paragraph',
+                                        'blockquote',
+                                        'codeBlock',
+                                        'alignLeft',
+                                        'alignCenter',
+                                        'alignRight',
+                                        'alignJustify',
+                                        'undo',
+                                        'redo',
+                                        'textColor',
+                                        'fontSize',
+                                    ])
                                         ->required(),
-                                    Forms\Components\Textarea::make('dibaga')
+                                        CustomRichEditor::make('dibaga')
                                     ->label('الديباجة')
-                                    ->rows(10)
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'orderedList',
+                                        'unorderedList',
+                                        'h1',
+                                        'h2',
+                                        'h3',
+                                        'paragraph',
+                                        'blockquote',
+                                        'codeBlock',
+                                        'alignLeft',
+                                        'alignCenter',
+                                        'alignRight',
+                                        'alignJustify',
+                                        'undo',
+                                        'redo',
+                                        'textColor',
+                                        'fontSize',
+                                    ])
                                         ->required(),
                                     Forms\Components\TextInput::make('waka3_title')
                                     ->label('عنوان الواقعة')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('waka3_text')
+                                        CustomRichEditor::make('waka3_text')
                                     ->label('نص الواقعة')
-                                    ->rows(10)
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'orderedList',
+                                        'unorderedList',
+                                        'h1',
+                                        'h2',
+                                        'h3',
+                                        'paragraph',
+                                        'blockquote',
+                                        'codeBlock',
+                                        'alignLeft',
+                                        'alignCenter',
+                                        'alignRight',
+                                        'alignJustify',
+                                        'undo',
+                                        'redo',
+                                        'textColor',
+                                        'fontSize',
+                                    ])
                                         ->required(),
                                     Forms\Components\TextInput::make('egraa_title')
                                     ->label('عنوان الاجراء')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('egraa_text')
+                                        CustomRichEditor::make('egraa_text')
                                     ->label('نص الاجراء')
-                                    ->rows(10)
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'orderedList',
+                                        'unorderedList',
+                                        'h1',
+                                        'h2',
+                                        'h3',
+                                        'paragraph',
+                                        'blockquote',
+                                        'codeBlock',
+                                        'alignLeft',
+                                        'alignCenter',
+                                        'alignRight',
+                                        'alignJustify',
+                                        'undo',
+                                        'redo',
+                                        'textColor',
+                                        'fontSize',
+                                    ])
                                         ->required(),
                                     Forms\Components\TextInput::make('reason_title')
                                     ->label('عنوان السبب')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('reason_text')
+                                        CustomRichEditor::make('reason_text')
                                     ->label('السبب')
-                                    ->rows(10)
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'orderedList',
+                                        'unorderedList',
+                                        'h1',
+                                        'h2',
+                                        'h3',
+                                        'paragraph',
+                                        'blockquote',
+                                        'codeBlock',
+                                        'alignLeft',
+                                        'alignCenter',
+                                        'alignRight',
+                                        'alignJustify',
+                                        'undo',
+                                        'redo',
+                                        'textColor',
+                                        'fontSize',
+                                    ])
                                         ->required(),
                                     Forms\Components\TextInput::make('hokm_title')
                                     ->label('عنوان الحكم')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('hokm_text')
+                                    CustomRichEditor::make('hokm_text')
                                     ->label('نص الحكم')
-                                    ->rows(10)
+                                    ->toolbarButtons([
+                                        'bold',
+                                        'italic',
+                                        'underline',
+                                        'strike',
+                                        'link',
+                                        'orderedList',
+                                        'unorderedList',
+                                        'h1',
+                                        'h2',
+                                        'h3',
+                                        'paragraph',
+                                        'blockquote',
+                                        'codeBlock',
+                                        'alignLeft',
+                                        'alignCenter',
+                                        'alignRight',
+                                        'alignJustify',
+                                        'undo',
+                                        'redo',
+                                        'textColor',
+                                        'fontSize',
+                                    ])
                                         ->required(),
                                 ])
                         ])
@@ -125,6 +281,10 @@ class Ma7kamaOliaResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\Action::make('preview')
+                ->label('معاينة')
+                ->url(fn (Ma7kamaOlia $record): string => route('ma7kama-olia.preview', $record))
+                ->openUrlInNewTab(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -146,6 +306,7 @@ class Ma7kamaOliaResource extends Resource
         return [
             'index' => Pages\ListMa7kamaOlias::route('/'),
             'create' => Pages\CreateMa7kamaOlia::route('/create'),
+            'view' => Pages\ViewMa7kamaOlia::route('/{record}'),
             'edit' => Pages\EditMa7kamaOlia::route('/{record}/edit'),
         ];
     }
