@@ -14,6 +14,8 @@ use Filament\Forms\Components\RichEditor;
 use App\Filament\Forms\Components\CustomRichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use FilamentTiptapEditor\TiptapEditor;
+use FilamentTiptapEditor\Enums\TiptapOutput;
 
 class Ma7kamaOliaResource extends Resource
 {
@@ -53,208 +55,89 @@ class Ma7kamaOliaResource extends Resource
                                     ->label('العنوان')
                                         ->required()
                                         ->maxLength(255),
-                                        CustomRichEditor::make('mogaz')
+                                        TiptapEditor::make('mogaz')
                                     ->label('موجز')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'italic',
-                                        'underline',
-                                        'strike',
-                                        'link',
-                                        'orderedList',
-                                        'unorderedList',
-                                        'h1',
-                                        'h2',
-                                        'h3',
-                                        'paragraph',
-                                        'blockquote',
-                                        'codeBlock',
-                                        'alignLeft',
-                                        'alignCenter',
-                                        'alignRight',
-                                        'alignJustify',
-                                        'undo',
-                                        'redo',
-                                        'textColor',
-                                        'fontSize',
-                                    ])
+                                   // ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
+                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
+                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
+                                    ->output(TiptapOutput::Html)  // optional: specify output format
+                                    ->maxContentWidth('5xl')
                                         ->required(),
                                     Forms\Components\TextInput::make('ka3da_title')
                                     ->label('عنوان القاعدة')
                                         ->required()
                                         ->maxLength(255),
-                                        CustomRichEditor::make('ka3da_text')
+                                        TiptapEditor::make('ka3da_text')
                                     ->label('نص القاعدة')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'italic',
-                                        'underline',
-                                        'strike',
-                                        'link',
-                                        'orderedList',
-                                        'unorderedList',
-                                        'h1',
-                                        'h2',
-                                        'h3',
-                                        'paragraph',
-                                        'blockquote',
-                                        'codeBlock',
-                                        'alignLeft',
-                                        'alignCenter',
-                                        'alignRight',
-                                        'alignJustify',
-                                        'undo',
-                                        'redo',
-                                        'textColor',
-                                        'fontSize',
-                                    ])
+                               //     ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
+                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
+                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
+                                    ->output(TiptapOutput::Html)  // optional: specify output format
+                                    ->maxContentWidth('5xl')
                                         ->required(),
-                                        CustomRichEditor::make('dibaga')
+                                        TiptapEditor::make('dibaga')
                                     ->label('الديباجة')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'italic',
-                                        'underline',
-                                        'strike',
-                                        'link',
-                                        'orderedList',
-                                        'unorderedList',
-                                        'h1',
-                                        'h2',
-                                        'h3',
-                                        'paragraph',
-                                        'blockquote',
-                                        'codeBlock',
-                                        'alignLeft',
-                                        'alignCenter',
-                                        'alignRight',
-                                        'alignJustify',
-                                        'undo',
-                                        'redo',
-                                        'textColor',
-                                        'fontSize',
-                                    ])
+                                    ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
+                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
+                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
+                                    ->output(TiptapOutput::Html)  // optional: specify output format
+                                    ->maxContentWidth('5xl')
                                         ->required(),
                                     Forms\Components\TextInput::make('waka3_title')
                                     ->label('عنوان الواقعة')
                                         ->required()
                                         ->maxLength(255),
-                                        CustomRichEditor::make('waka3_text')
+                                        TiptapEditor::make('waka3_text')
                                     ->label('نص الواقعة')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'italic',
-                                        'underline',
-                                        'strike',
-                                        'link',
-                                        'orderedList',
-                                        'unorderedList',
-                                        'h1',
-                                        'h2',
-                                        'h3',
-                                        'paragraph',
-                                        'blockquote',
-                                        'codeBlock',
-                                        'alignLeft',
-                                        'alignCenter',
-                                        'alignRight',
-                                        'alignJustify',
-                                        'undo',
-                                        'redo',
-                                        'textColor',
-                                        'fontSize',
-                                    ])
+                                    ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
+                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
+                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
+                                    ->output(TiptapOutput::Html)  // optional: specify output format
+                                    ->maxContentWidth('5xl')
                                         ->required(),
                                     Forms\Components\TextInput::make('egraa_title')
                                     ->label('عنوان الاجراء')
                                         ->required()
                                         ->maxLength(255),
-                                        CustomRichEditor::make('egraa_text')
+                                        TiptapEditor::make('egraa_text')
                                     ->label('نص الاجراء')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'italic',
-                                        'underline',
-                                        'strike',
-                                        'link',
-                                        'orderedList',
-                                        'unorderedList',
-                                        'h1',
-                                        'h2',
-                                        'h3',
-                                        'paragraph',
-                                        'blockquote',
-                                        'codeBlock',
-                                        'alignLeft',
-                                        'alignCenter',
-                                        'alignRight',
-                                        'alignJustify',
-                                        'undo',
-                                        'redo',
-                                        'textColor',
-                                        'fontSize',
-                                    ])
+                                    ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
+                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
+                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
+                                    ->output(TiptapOutput::Html)  // optional: specify output format
+                                    ->maxContentWidth('5xl')
                                         ->required(),
                                     Forms\Components\TextInput::make('reason_title')
                                     ->label('عنوان السبب')
                                         ->required()
                                         ->maxLength(255),
-                                        CustomRichEditor::make('reason_text')
+                                        TiptapEditor::make('reason_text')
                                     ->label('السبب')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'italic',
-                                        'underline',
-                                        'strike',
-                                        'link',
-                                        'orderedList',
-                                        'unorderedList',
-                                        'h1',
-                                        'h2',
-                                        'h3',
-                                        'paragraph',
-                                        'blockquote',
-                                        'codeBlock',
-                                        'alignLeft',
-                                        'alignCenter',
-                                        'alignRight',
-                                        'alignJustify',
-                                        'undo',
-                                        'redo',
-                                        'textColor',
-                                        'fontSize',
-                                    ])
+                                    ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
+                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
+                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
+                                    ->output(TiptapOutput::Html)  // optional: specify output format
+                                    ->maxContentWidth('5xl')
                                         ->required(),
                                     Forms\Components\TextInput::make('hokm_title')
                                     ->label('عنوان الحكم')
                                         ->required()
                                         ->maxLength(255),
-                                    CustomRichEditor::make('hokm_text')
+                                        TiptapEditor::make('hokm_text')
                                     ->label('نص الحكم')
-                                    ->toolbarButtons([
-                                        'bold',
-                                        'italic',
-                                        'underline',
-                                        'strike',
-                                        'link',
-                                        'orderedList',
-                                        'unorderedList',
-                                        'h1',
-                                        'h2',
-                                        'h3',
-                                        'paragraph',
-                                        'blockquote',
-                                        'codeBlock',
-                                        'alignLeft',
-                                        'alignCenter',
-                                        'alignRight',
-                                        'alignJustify',
-                                        'undo',
-                                        'redo',
-                                        'textColor',
-                                        'fontSize',
-                                    ])
-                                        ->required(),
+                                    ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
+                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
+                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
+                                    ->output(TiptapOutput::Html)  // optional: specify output format
+                                    ->maxContentWidth('5xl')
+                                    ->required(),
                                 ])
                         ])
                 ])

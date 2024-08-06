@@ -7,6 +7,7 @@ export default {
         "./app/Filament/**/*.php",
         "./resources/views/**/*.blade.php",
         "./vendor/filament/**/*.blade.php",
+        "./vendor/awcodes/filament-tiptap-editor/resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./public/js/*.js",
