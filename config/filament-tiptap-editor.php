@@ -80,8 +80,8 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'disable_floating_menus' => false,
-    'disable_bubble_menus' => false,
+    'disable_floating_menus' => true,
+    'disable_bubble_menus' => true,
     'disable_toolbar_menus' => false,
 
     'bubble_menu_tools' => ['bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'link'],
@@ -93,7 +93,38 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'extensions_script' => null,
+    'extensions_script' => 'resources/js/tiptap/custom-extensions.js',
     'extensions_styles' => null,
-    'extensions' => [],
+    'extensions' => [  [
+        'id' => 'customFontFamily',
+        'name' => 'Custom Font Family',
+        'button' => 'tiptap-font-family',
+        'parser' => \App\TiptapExtensions\CustomFontFamily::class,
+    ],
+    [
+        'id' => 'customFontSize',
+        'name' => 'Custom Font Size',
+        'button' => 'tiptap-font-size',
+        'parser' => \App\TiptapExtensions\CustomFontSize::class,
+    ],
+    'textStyle' => [
+        'commands' => [
+            'fontFamily' => [
+                'Arial',
+                'Courier New',
+                'Georgia',
+                'Helvetica',
+                'Times New Roman',
+                'Verdana',
+            ],
+        ],
+    ],
+    'fontSize' => [
+        'commands' => [
+            'fontSize' => [
+                '12px', '14px', '16px', '18px', '20px', '24px', '28px'
+            ],
+        ],
+    ],
+],
 ];

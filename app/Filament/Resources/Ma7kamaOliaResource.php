@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use FilamentTiptapEditor\TiptapEditor;
 use FilamentTiptapEditor\Enums\TiptapOutput;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class Ma7kamaOliaResource extends Resource
 {
@@ -55,89 +56,63 @@ class Ma7kamaOliaResource extends Resource
                                     ->label('العنوان')
                                         ->required()
                                         ->maxLength(255),
-                                        TiptapEditor::make('mogaz')
+                                        TinyEditor::make('mogaz')
                                     ->label('موجز')
-                                   // ->profile('default')  // or 'simple', 'minimal', etc.
-                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
-                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
-                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
-                                    ->output(TiptapOutput::Html)  // optional: specify output format
-                                    ->maxContentWidth('5xl')
+                                   ->profile('default')  // or 'simple', 'minimal', etc.
+                                   ->showMenuBar()
                                         ->required(),
                                     Forms\Components\TextInput::make('ka3da_title')
                                     ->label('عنوان القاعدة')
                                         ->required()
                                         ->maxLength(255),
-                                        TiptapEditor::make('ka3da_text')
+                                        TinyEditor::make('ka3da_text')
                                     ->label('نص القاعدة')
-                               //     ->profile('default')  // or 'simple', 'minimal', etc.
-                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
-                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
-                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
-                                    ->output(TiptapOutput::Html)  // optional: specify output format
-                                    ->maxContentWidth('5xl')
-                                        ->required(),
-                                        TiptapEditor::make('dibaga')
+                                    ->profile('default')  // or 'simple', 'minimal', etc.
+                                    ->showMenuBar()
+                                    ->required(),
+                                        TinyEditor::make('dibaga')
                                     ->label('الديباجة')
                                     ->profile('default')  // or 'simple', 'minimal', etc.
-                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
-                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
-                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
-                                    ->output(TiptapOutput::Html)  // optional: specify output format
-                                    ->maxContentWidth('5xl')
-                                        ->required(),
+                                    ->showMenuBar()
+                                    ->required(),
                                     Forms\Components\TextInput::make('waka3_title')
                                     ->label('عنوان الواقعة')
                                         ->required()
                                         ->maxLength(255),
-                                        TiptapEditor::make('waka3_text')
+                                        TinyEditor::make('waka3_text')
                                     ->label('نص الواقعة')
                                     ->profile('default')  // or 'simple', 'minimal', etc.
-                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
-                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
-                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
-                                    ->output(TiptapOutput::Html)  // optional: specify output format
-                                    ->maxContentWidth('5xl')
-                                        ->required(),
+                                    ->showMenuBar()
+                                    ->required(),
                                     Forms\Components\TextInput::make('egraa_title')
                                     ->label('عنوان الاجراء')
                                         ->required()
                                         ->maxLength(255),
-                                        TiptapEditor::make('egraa_text')
+                                        TinyEditor::make('egraa_text')
                                     ->label('نص الاجراء')
                                     ->profile('default')  // or 'simple', 'minimal', etc.
-                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
-                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
-                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
-                                    ->output(TiptapOutput::Html)  // optional: specify output format
-                                    ->maxContentWidth('5xl')
-                                        ->required(),
+                                    ->showMenuBar()
+                                    ->required(),
                                     Forms\Components\TextInput::make('reason_title')
                                     ->label('عنوان السبب')
                                         ->required()
                                         ->maxLength(255),
-                                        TiptapEditor::make('reason_text')
+                                        TinyEditor::make('reason_text')
                                     ->label('السبب')
                                     ->profile('default')  // or 'simple', 'minimal', etc.
-                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
-                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
-                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
-                                    ->output(TiptapOutput::Html)  // optional: specify output format
-                                    ->maxContentWidth('5xl')
-                                        ->required(),
+                                    ->showMenuBar()
+                                    ->required(),
                                     Forms\Components\TextInput::make('hokm_title')
                                     ->label('عنوان الحكم')
                                         ->required()
                                         ->maxLength(255),
-                                        TiptapEditor::make('hokm_text')
+                                        TinyEditor::make('hokm_text')
                                     ->label('نص الحكم')
-                                    ->profile('default')  // or 'simple', 'minimal', etc.
-                                    ->tools(['heading', 'bullet-list', 'ordered-list', 'checked-list', 'blockquote', 'hr', '|',
-                                    'bold', 'italic', 'strike', 'underline', 'superscript', 'subscript', 'lead', 'small', 'color', 'highlight', 'align-left', 'align-center', 'align-right', '|',
-                                    'link', 'media', 'oembed', 'table', 'grid-builder', 'details', '|', 'code', 'code-block', 'source', 'blocks', ])  // optional: specify individual tools
-                                    ->output(TiptapOutput::Html)  // optional: specify output format
-                                    ->maxContentWidth('5xl')
-                                    ->required(),
+                                    ->profile('default')
+                                    ->required()
+                                    ->showMenuBar()
+                                  
+                                   
                                 ])
                         ])
                 ])
