@@ -93,7 +93,7 @@ return [
     |--------------------------------------------------------------------------
     |
     */
-    'extensions_script' => 'resources/js/tiptap/custom-extensions.js',
+   /* 'extensions_script' => 'resources/js/tiptap/custom-extensions.js',*/
     'extensions_styles' => null,
     'extensions' => [  [
         'id' => 'customFontFamily',
