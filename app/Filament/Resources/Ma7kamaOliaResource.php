@@ -10,12 +10,11 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Filament\Forms\Components\RichEditor;
+
 use App\Filament\Forms\Components\CustomRichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use FilamentTiptapEditor\TiptapEditor;
-use FilamentTiptapEditor\Enums\TiptapOutput;
+
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class Ma7kamaOliaResource extends Resource
