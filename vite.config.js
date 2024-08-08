@@ -13,7 +13,7 @@ export default defineConfig({
                 'app/Infolists/Components/**',
                 'app/Providers/Filament/**',
                 'app/Tables/Columns/**',
-                'resources/js/tiptap/custom-extensions.js',
+                
             ],
         }),
     ],
@@ -21,7 +21,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 app: 'resources/js/app.js',
-                tiptapExtensions: 'resources/js/tiptap-extensions.js',
+                
             },
         },
     },
