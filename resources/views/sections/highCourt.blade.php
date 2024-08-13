@@ -27,10 +27,10 @@
         
         <img src="{{asset('images/Vline.png')}}" alt="" class="hidden lg:block h-20 xl:h-24">
         
-        <div class="flex flex-col items-center">
+        <a href="/a7kam"><div class="flex flex-col items-center">
           <img class="w-16 h-16 lg:w-23 lg:h-23 2xl:w-28 2xl:h-28 mb-4" src="{{asset('images/a7kam.png')}}" alt="النيابة العامة" />
           <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'"> أحكام</h2>
-        </div>
+        </div></a>
       </div>
     </div>
   </div>
