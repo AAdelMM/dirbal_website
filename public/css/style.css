@@ -22,6 +22,9 @@
         font-family: 'Sakkal Majalla';
         src: url('{{ public_path('fonts/Sakkal Majalla Regular.tff') }}');
     }
+    .hidden{
+      display:none;
+    }
 /*mokhtart*/
       .mokhtarat {
         width: 120.313rem;
