@@ -146,7 +146,7 @@ $decisions = DB::table('ma7kama_olia')
         <!--ka3da start-->
         <div id="extend-{{ $decision->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem]  transition-all duration-300 ease-in-out">
             <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                <h1 class="text-[2rem] text-[#fdba74] w-[100%] text-center">{{ $decision->ka3da_title }}</h1> 
+                <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] lg:w-[80%] text-center">{{ $decision->ka3da_title }}</h1> 
             </div>
             <div class="w-full mt-8">{!! $decision->ka3da_text !!}</div>
             <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]"><button>واصل القراءة</button></div>
