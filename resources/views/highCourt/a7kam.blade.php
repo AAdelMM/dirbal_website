@@ -148,7 +148,7 @@ $decisions = DB::table('ma7kama_olia')
             <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
                 <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] lg:w-[80%] text-center">{{ $decision->ka3da_title }}</h1> 
             </div>
-            <div class="2xl:w-full lg:w-[80%] mt-8">{!! $decision->ka3da_text !!}</div>
+            <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $decision->ka3da_text !!}</div>
             <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]"><button>واصل القراءة</button></div>
         </div>
         <!--ka3da end-->
@@ -159,7 +159,14 @@ $decisions = DB::table('ma7kama_olia')
 
 <style>
 
+.text-default-white {
+    color: white; /* Default text color */
+}
 
+/* Optionally, include any other default styles you might need */
+.text-default-white * {
+    color: inherit; /* Ensure all child elements inherit the white color */
+}
 
 
 </style>
