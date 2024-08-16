@@ -144,7 +144,7 @@ $decisions = DB::table('ma7kama_olia')
         </div>
         
         <!--ka3da start-->
-        <div id="extend-{{ $decision->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem]  transition-all duration-300 ease-in-out">
+        <div id="extend-{{ $decision->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem]  transition-all duration-300 ease-in-out">
             <div class="border-y-2 border-[#fdba74] flex justify-center items-center w-full">
                 <h1 class="text-[2rem] text-[#fdba74] w-[100%] text-center">{{ $decision->ka3da_title }}</h1> 
             </div>
