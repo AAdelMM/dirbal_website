@@ -41,12 +41,12 @@ $parts = DB::table('ma7kama_olia')
       <div class="border-t border-white mt-4"></div>
     </header>
     <!--last updated white header end-->
-<div class="container mx-auto my-5 py-5">
+<div class="container mx-auto  py-[6rem]">
     
-    <div class="container mx-auto text-default-white">
+    <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-4xl text-default-white font-bold mb-4">{{ $decision->title }}</h1>
     <div> <span class="text-gray-600">الرقم المرجعي: {{ $decision->ref_number }}</div>
-    <div class="mb-4">
+    <div class="mb-6">
         <span class="text-gray-600">تاريخ: {{ $decision->month }} {{ $decision->year }}</span>
     </div>
 
@@ -66,9 +66,35 @@ $parts = DB::table('ma7kama_olia')
     <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->hokm_text !!}</div>
    
 </div>
+<div class="my-8 border-t-2 border-[#fdba74] pt-8">
+    <h2 class="text-3xl font-bold mb-4" style="color:#fdba74 !important; font-family:'El Messiri'; text-align: right;">اضف تعليق</h2>
+    
+        <form action=""></form>
+        @csrf
+        <input type="hidden" name="decision_id" value="{{ $decision->id }}">
+        <div>
+            <label for="name" class="block text-white my-3 text-right">الاسم</label>
+            <input type="text" id="name" name="name" required class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" style="direction: rtl;">
+        </div>
+        <div>
+            <label for="email" class="block text-white my-3 text-right">البريد الإلكتروني</label>
+            <input type="email" id="email" name="email" required class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" style="direction: rtl;">
+        </div>
+        <div>
+            <label for="comment" class="block text-white my-3 text-right">التعليق</label>
+            <textarea id="comment" name="comment" rows="4" required class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" style="direction: rtl;"></textarea>
+        </div>
+        <div class="text-right my-5">
+            <button type="submit" class="bg-[#fdba74] text-white font-bold py-2 px-4 rounded">
+                اضف تعليق
+            </button>
+        </div>
+    </form>
+</div>
 </div>    
-    </div>
 
+    </div>
+@include('homePage.footer')
 
     <style>
 
