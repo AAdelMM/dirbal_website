@@ -47,6 +47,15 @@ class Ma7kamaOliaResource extends Resource
                                     ->label('الشهر')
                                         ->integer()
                                         ->required(),
+                                        Forms\Components\TextInput::make('topic_number')
+                                        ->label('رقم الموضوع')
+                                        ->required(),
+                                    Forms\Components\TextInput::make('author')
+                                        ->label('كاتب الموضوع')
+                                        ->required(),
+                                    Forms\Components\TextInput::make('subtitle')
+                                        ->label('عنوان فرعى')
+                                        ->required(),
                                     Forms\Components\TextInput::make('ref_number')
                                     ->label('الرقم المرجعي')
                                         ->integer()
