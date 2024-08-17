@@ -24,8 +24,6 @@ $parts = DB::table('ma7kama_olia')
         
         <div class="flex items-center space-x-4">
           <div class="relative">
-            
-        
           </div>
          <div class="relative">
           <img class="w- h-auto lg:w-5  cursor-pointer" src="{{ asset('images/favw.png') }}" alt="fav" onclick="redirectToFavorite()">
@@ -54,7 +52,7 @@ $parts = DB::table('ma7kama_olia')
 
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
 
-    <div class="prose lg:prose-xl pb-4 border-b-2 border-[#fdba74]">
+    <div class="prose lg:prose-xl pb-8 border-b-2 border-[#fdba74]">
         {!! $decision->ka3da_text !!}
     </div>
     <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->dibaga !!}</div>
@@ -78,6 +76,7 @@ $parts = DB::table('ma7kama_olia')
     color: white; /* Default text color */
     direction: rtl;
     font-size: 1.5rem;
+    font-family:'Noto Kufi Arabic'
 }
 
 /* Optionally, include any other default styles you might need */
