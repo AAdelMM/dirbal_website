@@ -60,7 +60,13 @@ $parts = DB::table('ma7kama_olia')
     <div class="my-5 border-b-2 border-white pb-4">{!! $decision->dibaga !!}</div>
     <h2 class="text-2xl font-bold my-5">{{ $decision->waka3_title }}</h2>
     <div class="my-5 border-b-2 border-white pb-4">{!! $decision->waka3_text !!}</div>
-    <div></div>
+    <h2 class="text-2xl font-bold my-5">{{ $decision->egraa_title }}</h2>
+    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->egraa_text !!}</div>
+    <h2 class="text-2xl font-bold my-5">{{ $decision->reason_title }}</h2>
+    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->reason_text !!}</div>
+    <h2 class="text-2xl font-bold my-5">{{ $decision->hokm_title }}</h2>
+    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->hokm_text !!}</div>
+   
 </div>
 </div>    
     </div>
