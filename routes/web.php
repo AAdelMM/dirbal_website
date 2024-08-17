@@ -51,6 +51,23 @@ Route::get('/mabahith', function () {
 Route::get('/a7kam', function () {
     return view('highCourt.a7kam');
 });
+
+/* Route::get('/a7kam_preview', function () {
+    return view('highCourt.a7kam_preview');
+}); */
+
+use Illuminate\Support\Facades\DB;
+
+Route::get('/highCourt/a7kam/{id}/preview', function($id) {
+    $decision = DB::table('ma7kama_olia')->where('id', $id)->first();
+    
+    if (!$decision) {
+        abort(404);
+    }
+    
+    return view('highCourt.a7kam_preview', compact('decision'));
+})->name('highCourt.a7kam.preview');
+
 Route::get('/montaqa', function () {
     return view('highCourt.montaqa');
 });

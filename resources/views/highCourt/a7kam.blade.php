@@ -34,7 +34,8 @@ $decisions = DB::table('ma7kama_olia')
 
         <div class="Logo left-0 2xl:top-[14px] lg:top-[0.6em] top-[0.4rem] absolute justify-center items-center 2xl:gap-2.5 lg:gap-1.5 gap-1 inline-flex">
           <div class="Group47 2xl:w-[14rem] lg:w-[9.8rem] w-[8rem] 2xl:h-[76px] xl:h-[3.3em] relative">
-<!----> <a href="{{ url('/') }}">
+<!----> 
+          <a href="{{ url('/') }}">
 <img class="Aaaaaa1 2xl:w-[14rem] lg:w-[9.8rem] w-[8rem] 2xl:h-[76px] lg:h-[3.3em] h-[2.6rem] left-0  top-[0rem] absolute" src="{{ asset('images/48.png') }}" />
             </a> </div>
         </div>
@@ -149,7 +150,9 @@ $decisions = DB::table('ma7kama_olia')
                 <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] lg:w-[80%] text-center">{{ $decision->ka3da_title }}</h1> 
             </div>
             <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $decision->ka3da_text !!}</div>
-            <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]"><button>واصل القراءة</button></div>
+            <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                <a href="{{ route('highCourt.a7kam.preview', $decision->id) }}" class="block w-full h-full">واصل القراءة</a>
+            </div>
         </div>
         <!--ka3da end-->
     </div>
