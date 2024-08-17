@@ -46,26 +46,26 @@ $parts = DB::table('ma7kama_olia')
 <div class="container mx-auto my-5 py-5">
     
     <div class="container mx-auto text-default-white">
-    <h1 class="text-3xl text-default-white font-bold mb-4">{{ $decision->title }}</h1>
+    <h1 class="text-4xl text-default-white font-bold mb-4">{{ $decision->title }}</h1>
     <div> <span class="text-gray-600">الرقم المرجعي: {{ $decision->ref_number }}</div>
     <div class="mb-4">
         <span class="text-gray-600">تاريخ: {{ $decision->month }} {{ $decision->year }}</span>
     </div>
 
-    <h2 class="text-2xl font-bold my-5">{{ $decision->ka3da_title }}</h2>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
 
-    <div class="prose lg:prose-xl pb-4 border-b-2 border-white">
+    <div class="prose lg:prose-xl pb-4 border-b-2 border-[#fdba74]">
         {!! $decision->ka3da_text !!}
     </div>
-    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->dibaga !!}</div>
-    <h2 class="text-2xl font-bold my-5">{{ $decision->waka3_title }}</h2>
-    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->waka3_text !!}</div>
-    <h2 class="text-2xl font-bold my-5">{{ $decision->egraa_title }}</h2>
-    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->egraa_text !!}</div>
-    <h2 class="text-2xl font-bold my-5">{{ $decision->reason_title }}</h2>
-    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->reason_text !!}</div>
-    <h2 class="text-2xl font-bold my-5">{{ $decision->hokm_title }}</h2>
-    <div class="my-5 border-b-2 border-white pb-4">{!! $decision->hokm_text !!}</div>
+    <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->dibaga !!}</div>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->waka3_title }}</h2>
+    <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->waka3_text !!}</div>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->egraa_title }}</h2>
+    <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->egraa_text !!}</div>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->reason_title }}</h2>
+    <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->reason_text !!}</div>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->hokm_title }}</h2>
+    <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->hokm_text !!}</div>
    
 </div>
 </div>    
