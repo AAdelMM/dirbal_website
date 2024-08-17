@@ -52,19 +52,19 @@ $parts = DB::table('ma7kama_olia')
         <span class="text-gray-600">تاريخ: {{ $decision->month }} {{ $decision->year }}</span>
     </div>
 
-    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
 
     <div class="prose lg:prose-xl pb-4 border-b-2 border-[#fdba74]">
         {!! $decision->ka3da_text !!}
     </div>
     <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->dibaga !!}</div>
-    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->waka3_title }}</h2>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->waka3_title }}</h2>
     <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->waka3_text !!}</div>
-    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->egraa_title }}</h2>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->egraa_title }}</h2>
     <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->egraa_text !!}</div>
-    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->reason_title }}</h2>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->reason_title }}</h2>
     <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->reason_text !!}</div>
-    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'Elmessiri'; text-align: center;">{{ $decision->hokm_title }}</h2>
+    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->hokm_title }}</h2>
     <div class="my-5 border-b-2 border-[#fdba74] pb-4">{!! $decision->hokm_text !!}</div>
    
 </div>
