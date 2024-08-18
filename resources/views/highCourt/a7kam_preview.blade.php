@@ -2,7 +2,9 @@
 use Illuminate\Support\Facades\DB;
 
 $parts = DB::table('ma7kama_olia')
-    ->select('year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title', 'ka3da_text', 'dibaga', 'waka3_text', 'waka3_text', 'egraa_title', 'egraa_text', 'reason_title', 'reason_text', 'hokm_title', 'hokm_text')
+    ->select('year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title', 'ka3da_text', 'dibaga', 'waka3_text',
+     'waka3_text', 'egraa_title', 'egraa_text', 'reason_title', 'reason_text', 'hokm_title', 'hokm_text',
+     'topic_number','author','subtitle')
     ->get();
 @endphp
 
@@ -41,14 +43,35 @@ $parts = DB::table('ma7kama_olia')
       <div class="border-t border-white mt-4"></div>
     </header>
     <!--last updated white header end-->
-<div class="container mx-auto  py-[6rem]">
+    <div class="w-full h-[10rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover"  style="background-image: url('{{ asset('images/civil_law.png') }}');" >
+        <div>
+          <h1 class="text-6xl text-default-white font-bold mb-4" style="font-family:'El messiri';">{{ $decision->title }}</h1>
+        </div>
+        <div class="relative ">
+        <div class="relative text-5xl font-bold my-5 text-white w-[7rem] h-[7rem]" style="font-family:'El Messiri';">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('images/numberbg.png') }}');"></div>
+            <div class="absolute inset-0 bg-black opacity-70"></div>
+            <h2 class="relative z-10 flex items-center text-center justify-center w-full h-full">
+                {{ $decision->topic_number }}
+            </h2>
+        </div>            
+        </div>
+       
+    </div>
+<div class="container w-[70vw] mx-auto  py-[6rem]">
     
     <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-4xl text-default-white font-bold mb-4">{{ $decision->title }}</h1>
-    <div> <span class="text-gray-600">الرقم المرجعي: {{ $decision->ref_number }}</div>
-    <div class="mb-6">
-        <span class="text-gray-600">تاريخ: {{ $decision->month }} {{ $decision->year }}</span>
+    <div class="DivMkdPostInfo  justify-center items-end gap-[5px] inline-flex" style="font-family:'El messiri'; ">
+            <div class="Frame w-5 h-5 mx-2 relative"><img src="{{ asset('images/goldAvatar.png')}}" alt=""></div>
+            <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
+            <div class="text-orange-400 w-[6rem] text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">{{ $decision->author }} </div>
     </div>
+   
+    
+
+  
+    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#fdba74] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{{ $decision->subtitle }}</h2>
 
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
 
@@ -101,13 +124,16 @@ $parts = DB::table('ma7kama_olia')
 .text-default-white {
     color: white; /* Default text color */
     direction: rtl;
-    font-size: 1.5rem;
-    font-family:'Noto Kufi Arabic'
+    font-size: 1.8rem;
+    font-family:'sakkal majalla'
+    
+    
 }
 
 /* Optionally, include any other default styles you might need */
 .text-default-white * {
     color: inherit; /* Ensure all child elements inherit the white color */
+    text-align:justify;
 }
 
 
