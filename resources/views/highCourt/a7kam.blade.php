@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\DB;
 
 $decisions = DB::table('ma7kama_olia')
-    ->select('month', 'year', 'title', 'ka3da_title', 'ka3da_text','id')
+    ->select('month', 'year', 'title', 'ka3da_title', 'ka3da_text','id','author')
     ->get();
 @endphp
 
@@ -131,7 +131,7 @@ $decisions = DB::table('ma7kama_olia')
             <div class="Frame37 w-[84.9vw] relative justify-center items-center inline-flex ">
                 <div class="DivMkdPostContentColumn w-[84.9vw] relative">
                     <div class="DivMkdPostInfo 2xl:left-[73.8vw] lg:left-[70vw] left-[60vw] top-[129px] absolute justify-center items-end gap-[5px] inline-flex" style="font-family:'Elmessiri'; ">
-                        <div class="text-orange-400 w-[6rem] text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">مدير الموقع</div>
+                        <div class="text-orange-400 w-[6rem] text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">{{ $decision->author }}</div>
                         <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
                         <div class="Frame w-5 h-5 mx-2 relative"><img src="{{ asset('images/goldAvatar.png')}}" alt=""></div>
                     </div>
@@ -147,7 +147,7 @@ $decisions = DB::table('ma7kama_olia')
         <!--ka3da start-->
         <div id="extend-{{ $decision->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem]  transition-all duration-300 ease-in-out">
             <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] lg:w-[80%] text-center">{{ $decision->ka3da_title }}</h1> 
+                <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{{ $decision->ka3da_title }}</h1> 
             </div>
             <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $decision->ka3da_text !!}</div>
             <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
@@ -164,11 +164,15 @@ $decisions = DB::table('ma7kama_olia')
 
 .text-default-white {
     color: white; /* Default text color */
+     font-size: 1.8rem;
+    font-family:'sakkal majalla';
+    direction: rtl;
 }
 
 /* Optionally, include any other default styles you might need */
 .text-default-white * {
     color: inherit; /* Ensure all child elements inherit the white color */
+    text-align:justify;
 }
 
 
