@@ -58,7 +58,7 @@ $parts = DB::table('ma7kama_olia')
         </div>
        
     </div>
-<div class="container w-[70vw] mx-auto  py-[6rem]">
+<div class="container w-[70vw] mx-auto  py-[6rem] ">
     
     <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-4xl text-default-white font-bold mb-4">{{ $decision->title }}</h1>
@@ -113,9 +113,23 @@ $parts = DB::table('ma7kama_olia')
             </button>
         </div>
     </form>
+
 </div>
+
 </div>    
 
+    <!-- action buttons-->
+    <div class="action-buttons absolute lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[8rem]  lg:right-[4rem] right-[2rem]">
+    <div class="w-[5rem] h-auto border-2 border-white">
+        <div class="border-b-2 border-white h-[5rem]">1</div>
+        <div class="border-b-2 border-white h-[5rem]">2</div>
+        <div class="border-b-2 border-white h-[5rem]">3</div>
+        <div class="border-b-2 border-white h-[5rem]">4</div>
+        <div class="h-[5rem]">5</div>
+    </div>
+   
+</div>
+<!-- action buttons-->
     </div>
 @include('homePage.footer')
 
