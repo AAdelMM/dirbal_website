@@ -14,6 +14,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+
 
 class HokmKada2yResource extends Resource
 {
@@ -60,26 +62,26 @@ class HokmKada2yResource extends Resource
                                         ->label('عنوان القاعدة')
                                             ->required()
                                             ->maxLength(255),
-                                    Forms\Components\Textarea::make('ka3da')
+                                    TinyEditor::make('ka3da')
                                     ->label('القاعدة')
                                         ->required()
                                         ->maxLength(65535),
                                    
-                                    Forms\Components\Textarea::make('dibaga')
+                                    TinyEditor::make('dibaga')
                                     ->label('الديباجة')
                                         ->required(),
                                     Forms\Components\TextInput::make('wak3a_title')
                                     ->label('عنوان الواقعة')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('wak3a_summary')
+                                        TinyEditor::make('wak3a_summary')
                                     ->label('ملخص الواقعة')
                                         ->required(),
                                         Forms\Components\TextInput::make('reason_title')
                                         ->label('عنوان السبب')
                                             ->required()
                                             ->maxLength(255),
-                                    Forms\Components\Textarea::make('reason')
+                                            TinyEditor::make('reason')
                                     ->label('السبب')
                                         ->required(),
                                    
@@ -87,9 +89,9 @@ class HokmKada2yResource extends Resource
                                         ->label('عنوان الحكم')
                                         ->required()
                                         ->maxLength(255),
-                                    Forms\Components\Textarea::make('hokm')
+                                        TinyEditor::make('hokm')
                                     ->label('الحكم')
-                                    ->rows(10)
+                                    
                                     
                                      ->required(),
                                 ])

@@ -12,6 +12,10 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Filament\Forms\Components\Grid;
+
+
 
 class AudioBookResource extends Resource
 {
@@ -33,31 +37,49 @@ class AudioBookResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Forms\Components\TextInput::make('title')
-                ->label('العنوان')
-                ->required()
-                ->maxLength(255),
-            Forms\Components\Textarea::make('mogaz')
-            ->label('موجز')
-                ->required()
-                ->maxLength(65535),
-            Forms\Components\TextInput::make('mokadma_title')
-            ->label('مقدمة عنوان')
-                ->required()
-                ->maxLength(255),
-            Forms\Components\RichEditor::make('mokadma_text')
-            ->label('نص المقدمة')
-                ->required(),
-            Forms\Components\RichEditor::make('article_text')
-            ->label('نص المقال')
-                ->required(),
-            Forms\Components\FileUpload::make('file_upload')
-            ->label('رفع الملف الصوتي')
-                ->acceptedFileTypes(['audio/mpeg', 'audio/mp3', 'audio/wav'])
-                ->directory('audio-books')
-                ->maxSize(50 * 1024), // 50MB max size//
-            ]);
+        ->schema([
+            Grid::make(1)
+                ->schema([
+                    Forms\Components\TextInput::make('title')
+                        ->label('العنوان')
+                        ->required()
+                        ->maxLength(255),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('mogaz')
+                        ->label('موجز')
+                        ->required()
+                        ->maxLength(65535),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    Forms\Components\TextInput::make('mokadma_title')
+                        ->label('مقدمة عنوان')
+                        ->required()
+                        ->maxLength(255),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('mokadma_text')
+                        ->label('نص المقدمة')
+                        ->required(),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('article_text')
+                        ->label('نص المقال')
+                        ->required(),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    Forms\Components\FileUpload::make('file_upload')
+                        ->label('رفع الملف الصوتي')
+                        ->acceptedFileTypes(['audio/mpeg', 'audio/mp3', 'audio/wav'])
+                        ->directory('audio-books')
+                        ->maxSize(50 * 1024), // 50MB max size
+                ]),
+        ]);
     }
 
     public static function table(Table $table): Table

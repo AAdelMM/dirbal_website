@@ -12,7 +12,10 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\RichEditor;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Grid;
+
 
 class KararNiabahResource extends Resource
 {
@@ -35,18 +38,30 @@ class KararNiabahResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Forms\Components\TextInput::make('title')
-                ->label('العنوان')
-                ->required()
-                ->maxLength(255),
-                Forms\Components\RichEditor::make('mogaz_text')
-                ->label('الموجز')
-                    ->required(),
-                Forms\Components\RichEditor::make('article_text')
-                ->label('نص المقالة')
-                    ->required(),//
-                ]);
+        ->schema([
+            Grid::make(1)
+                ->schema([
+                    Forms\Components\TextInput::make('title')
+                        ->label('العنوان')
+                        ->required()
+                        ->maxLength(255),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('mogaz_text')
+                        ->label('الموجز')
+                        ->showMenuBar()
+                        ->required(),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('article_text')
+                        ->label('نص المقالة')
+                        ->showMenuBar()
+                        ->required(),
+                ]),
+        ]);
+
     }
 
     public static function table(Table $table): Table

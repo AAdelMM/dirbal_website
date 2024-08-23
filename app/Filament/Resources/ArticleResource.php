@@ -11,6 +11,10 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Tables\Actions\Action;
 use App\Forms\Components\TinyMceEditor;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Filament\Forms\Components\Grid;
+
+
 class ArticleResource extends Resource
 {
     protected static ?string $model = Article::class;
@@ -33,32 +37,49 @@ class ArticleResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->label('عنوان')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('sub_title')
-                    ->label('عنوان فرعي')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('mogaz')
-                    ->label('موجز')
-                    ->required()
-                    ->maxLength(65535),
-                Forms\Components\TextInput::make('mokadma_title')
-                    ->label('عنوان المقدمة')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('mokadma')
-                    ->label('مقدمة')
-                    ->required()
-                    ->maxLength(65535),
-                    TinyMceEditor::make('article_text')
-                    ->label('نص المقالة')
-                    ->required()
-                    
-            ]);
+        ->schema([
+            Grid::make(1)
+                ->schema([
+                    Forms\Components\TextInput::make('title')
+                        ->label('عنوان')
+                        ->required()
+                        ->maxLength(255),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    Forms\Components\TextInput::make('sub_title')
+                        ->label('عنوان فرعي')
+                        ->required()
+                        ->maxLength(255),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('mogaz')
+                        ->label('موجز')
+                        ->required()
+                        ->maxLength(65535),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    Forms\Components\TextInput::make('mokadma_title')
+                        ->label('عنوان المقدمة')
+                        ->required()
+                        ->maxLength(255),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('mokadma')
+                        ->label('مقدمة')
+                        ->required()
+                        ->maxLength(65535),
+                ]),
+            Grid::make(1)
+                ->schema([
+                    TinyEditor::make('article_text')
+                        ->label('نص المقالة')
+                        ->required(),
+                ]),
+        ]);
     }
 
     public static function table(Table $table): Table
