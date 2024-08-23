@@ -64,7 +64,7 @@ class Ma7kamaOliaResource extends Resource
                                     ->label('العنوان')
                                         ->required()
                                         ->maxLength(255),
-                                        TinyEditor::make('mogaz')
+                                        TinyEditor::make('mogaz')->profile('simple')
                                     ->label('موجز')
                                    ->profile('default')  // or 'simple', 'minimal', etc.
                                    ->showMenuBar()

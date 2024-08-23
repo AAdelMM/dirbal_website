@@ -14,13 +14,31 @@ return [
 
         'default' => [
             'plugins' => 'advlist autoresize codesample directionality emoticons fullscreen hr image imagetools link lists media table toc wordcount fontfamily',
-            'toolbar' => 'undo redo removeformat | formatselect fontsizeselect  fontfamily| bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | numlist bullist | forecolor backcolor | blockquote table toc hr | image link media codesample  | wordcount fullscreen ',
+            // 'toolbar' => 'undo redo removeformat | formatselect fontsizeselect  fontfamily| bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | numlist bullist | forecolor backcolor | blockquote table toc hr | image link media codesample  | wordcount fullscreen ',
+          'toolbar' => 'fontselect  formatselect fontsizeselect | bold italic | alignjustify alignright aligncenter alignleft | forecolor backcolor | rtl ltr | undo redo removeformat | wordcount fullscreen ',
             'upload_directory' => null,
+            'custom_configs' => [
+                'content_css' => [
+                    'https://fonts.googleapis.com/css2?family=Cairo:wght@400..700&display=swap',
+                    'https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap',
+                    'https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap',
+                    'https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap',
+                    'https://fonts.googleapis.com/css2?family=Amiri&display=swap', // Adding Amiri font
+                    'https://fonts.googleapis.com/css2?family=Changa:wght@200..700&display=swap', // Adding Changa font
+                ],
+                'font_formats' => 'Arial=arial,helvetica,sans-serif; Times New Roman=times new roman,times,serif; 
+                                   Courier New=courier new,courier,monospace;
+                                   Cairo=cairo, sans-serif; El Messiri=El Messiri, sans-serif; 
+                                   Marhey=Marhey, sans-serif; Noto Kufi Arabic=Noto Kufi Arabic, sans-serif;
+                                   Amiri=amiri, serif; Changa=changa, sans-serif;
+                                   Sakkal Majalla=sakkal majalla, sans-serif;',
+            ],
         ],
 
         'simple' => [
             'plugins' => 'autoresize directionality emoticons link wordcount',
-            'toolbar' => 'removeformat | bold italic | rtl ltr | link emoticons',
+            // 'toolbar' => 'removeformat | bold italic | rtl ltr |redo| link emoticons',
+            'toolbar' => 'fontselect',
             'upload_directory' => null,
         ],
 
