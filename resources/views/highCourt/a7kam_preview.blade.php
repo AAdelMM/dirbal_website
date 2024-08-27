@@ -56,7 +56,7 @@ $parts = DB::table('ma7kama_olia')
         <div class="relative text-5xl font-bold my-5 text-white w-[7rem] h-[7rem]" style="font-family:'El Messiri';">
     <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('images/numberbg.png') }}');"></div>
     <div class="absolute inset-0 bg-black opacity-70"></div>
-    <h2 class="relative z-10 flex flex-col items-center justify-center w-full h-full text-center border-2 border-red-500 p-1" style="direction:rtl;">
+    <h2 class="relative z-10 flex flex-col items-center justify-center w-full h-full text-center  p-1" style="direction:rtl;">
         @php
             $length = strlen($decision->topic_number);
             $fontSize = $length > 3 ? ($length > 4 ? '2rem' : '2.5rem') : '3rem';
