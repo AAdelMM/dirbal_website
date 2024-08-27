@@ -14,6 +14,11 @@ $parts = DB::table('ma7kama_olia')
 
 @section('content')
 
+<style>
+    p{
+        padding-bottom: 15px;
+    }
+</style>
 
 <div class="main bg-[#161D27] w-full h-auto relative ">
     <!--last updated white header-->
