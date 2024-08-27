@@ -54,7 +54,7 @@ class Ma7kamaOliaResource extends Resource
                                         ->label('كاتب الموضوع')
                                         ->required(),
                                     Forms\Components\TextInput::make('subtitle')
-                                        ->label('عنوان فرعى')
+                                        ->label('الموجز') //replaced with subtitle
                                         ->required(),
                                     Forms\Components\TextInput::make('ref_number')
                                     ->label('الرقم المرجعي')
@@ -64,11 +64,7 @@ class Ma7kamaOliaResource extends Resource
                                     ->label('العنوان')
                                         ->required()
                                         ->maxLength(255),
-                                        TinyEditor::make('mogaz')->profile('simple')
-                                    ->label('موجز')
-                                   ->profile('default')  // or 'simple', 'minimal', etc.
-                                   ->showMenuBar()
-                                        ->required(),
+                                   
                                     Forms\Components\TextInput::make('ka3da_title')
                                     ->label('عنوان القاعدة')
                                         ->required()
