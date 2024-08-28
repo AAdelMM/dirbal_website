@@ -61,7 +61,7 @@ $parts = DB::table('ma7kama_olia')
             $length = strlen($decision->topic_number);
             $fontSize = $length > 3 ? ($length > 4 ? '2rem' : '2.5rem') : '3rem';
         @endphp
-        <span style="font-size: {{ $fontSize }}; line-height: 1;">{{ $decision->topic_number }}</span>
+        <span style="font-size: {{ $fontSize }}; font-family:'sakkal majalla'; line-height: 1;">{{ $decision->topic_number }}</span>
     </h2>
 </div>
         </div>

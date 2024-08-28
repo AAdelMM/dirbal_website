@@ -136,7 +136,7 @@ $decisions = DB::table('ma7kama_olia')
                         <div class="Frame w-5 h-5 mx-2 relative"><img src="{{ asset('images/goldAvatar.png')}}" alt=""></div>
                     </div>
                     <div id="title" class="w-[80.9vw] left-[1.5vw] top-[42px] 2xl:text-[2rem] text-[1.2rem] absolute text-right text-white" style="font-family:'El Messiri'; direction:rtl;">
-                        <span class="text-[#FAE1C6] text-[2rem] text-bold leading-[55px]" style="font-family:'El Messiri';">{{ $decision->topic_number}}:</span>
+                        <span class="text-[#FAE1C6] text-[2.5rem] text-bold leading-[55px]" style="font-family:'sakkal majalla';">{{ $decision->topic_number}}:</span>
                         <span style="text-white text-6xl leading-[55px]"> </span>
                         <span>{{ $decision->title }}</span>
                     </div>
