@@ -15,7 +15,7 @@ return [
         'default' => [
             'plugins' => 'advlist autoresize codesample directionality emoticons fullscreen hr image imagetools link lists media table toc wordcount fontfamily',
             // 'toolbar' => 'undo redo removeformat | formatselect fontsizeselect  fontfamily| bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | numlist bullist | forecolor backcolor | blockquote table toc hr | image link media codesample  | wordcount fullscreen ',
-          'toolbar' => 'fontselect  formatselect fontsizeselect | bold italic | alignjustify alignright aligncenter alignleft | forecolor backcolor | rtl ltr | undo redo removeformat | wordcount fullscreen ',
+          'toolbar' => 'removeformat | fontselect fontsizeselect | bold italic | alignjustify alignright aligncenter alignleft | forecolor backcolor | rtl ltr | undo redo  | wordcount fullscreen formatselect',
             'upload_directory' => null,
             'custom_configs' => [
               'content_css' => [
@@ -48,7 +48,7 @@ return [
                   'block' => 'p',
                   'styles' => [
                       'text-indent' => '1em',
-                      'margin-bottom' => '1em',
+                      'margin-bottom' => '0.3em',
                   ],
                   'wrapper' => false,
               ],
@@ -57,7 +57,7 @@ return [
                   'block' => 'p',
                   'styles' => [
                       'text-indent' => '2em',
-                      'margin-bottom' => '1.5em',
+                      'margin-bottom' => '0.6em',
                   ],
                   'wrapper' => false,
               ],
@@ -66,7 +66,7 @@ return [
                   'block' => 'p',
                   'styles' => [
                       'text-indent' => '3em',
-                      'margin-bottom' => '2em',
+                      'margin-bottom' => '1em',
                   ],
                   'wrapper' => false,
               ],

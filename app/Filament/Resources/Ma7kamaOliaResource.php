@@ -46,22 +46,24 @@ class Ma7kamaOliaResource extends Resource
                                     Forms\Components\TextInput::make('month')
                                     ->label('الشهر')
                                         ->integer()
-                                        ->required(),
+                                        ,
                                         Forms\Components\TextInput::make('topic_number')
                                         ->label('رقم الموضوع')
                                         ->required(),
                                     Forms\Components\TextInput::make('author')
                                         ->label('كاتب الموضوع')
                                         ->required(),
-                                    Forms\Components\TextInput::make('subtitle')
+                                        TinyEditor::make('subtitle')
                                         ->label('الموجز') //replaced with subtitle
+                                        ->profile('default')  // or 'simple', 'minimal', etc.
+                                        ->showMenuBar()
                                         ->required(),
-                                    Forms\Components\TextInput::make('ref_number')
+                                  /*Forms\Components\TextInput::make('ref_number')
                                     ->label('الرقم المرجعي')
                                         ->integer()
-                                        ->required(),
+                                        ->required(), */
                                     Forms\Components\TextInput::make('title')
-                                    ->label('العنوان')
+                                        ->label('العنوان')
                                         ->required()
                                         ->maxLength(255),
                                    
