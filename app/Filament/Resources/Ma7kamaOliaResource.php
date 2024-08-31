@@ -113,10 +113,16 @@ class Ma7kamaOliaResource extends Resource
                                             ->showMenuBar(),
                                         Forms\Components\FileUpload::make('mp3_file')
                                             ->label('ملف MP3') // New field for MP3 file
-                                            ->acceptedFileTypes(['audio/mpeg', 'audio/mp3']),
+                                            ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
+                                            ->disk('public')
+                                            ->directory('mp3_files')
+                                            ->visibility('public'),
                                         Forms\Components\FileUpload::make('pdf_file')
                                             ->label('ملف PDF') // New field for PDF file
-                                            ->acceptedFileTypes(['application/pdf']),
+                                            ->acceptedFileTypes(['application/pdf'])
+                                            ->disk('public')
+                                            ->directory('pdf_files')
+                                            ->visibility('public'),,
                                         Forms\Components\Checkbox::make('is_updated')
                                             ->label('محدث') // New checkbox for "updated"
                                             ->default(false),
