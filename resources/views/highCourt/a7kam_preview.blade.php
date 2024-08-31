@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\DB;
 $parts = DB::table('ma7kama_olia')
     ->select('year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title', 'ka3da_text', 'dibaga', 'waka3_text',
      'waka3_text', 'egraa_title', 'egraa_text', 'reason_title', 'reason_text', 'hokm_title', 'hokm_text',
-     'topic_number','author','subtitle')
+     'topic_number','author','subtitle','mp3_file','pdf_file','topic_number_alpha','topic_number_numeric')
     ->get();
 @endphp
 
@@ -15,8 +15,46 @@ $parts = DB::table('ma7kama_olia')
 @section('content')
 
 <style>
-    p{
+      p{
         padding-bottom: 15px;
+    }
+    .audio-player {
+        width: 100%;
+        margin-bottom: 20px;
+        background: #161D27;
+        border: 2px solid #fdba74;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .audio-player audio {
+        width: 100%;
+    }
+    /* Custom audio player styling */
+    .audio-player audio::-webkit-media-controls-panel {
+        background: #161D27;
+    }
+    .audio-player audio::-webkit-media-controls-current-time-display,
+    .audio-player audio::-webkit-media-controls-time-remaining-display {
+        color: #fdba74;
+    }
+    .audio-player audio::-webkit-media-controls-play-button,
+    .audio-player audio::-webkit-media-controls-mute-button {
+        background-color: #fdba74;
+        border-radius: 50%;
+    }
+    .audio-player audio::-webkit-media-controls-volume-slider,
+    .audio-player audio::-webkit-media-controls-timeline {
+        background-color: #fdba74;
+        border-radius: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    /* Firefox */
+    .audio-player audio::-moz-range-thumb {
+        background: #fdba74;
+    }
+    .audio-player audio::-moz-range-track {
+        background: #fdba74;
     }
 </style>
 
@@ -81,8 +119,19 @@ $parts = DB::table('ma7kama_olia')
 
   
     <h2 class="text-3xl font-bold my-5 border-b-2 border-[#fdba74] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{{ $decision->subtitle }}</h2>
+<!--audio player-->
 
-    <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
+    @if($decision->mp3_file)
+        <div class="audio-player">
+            <audio controls>
+                <source src="{{ asset('storage/' . $decision->mp3_file) }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    @endif
+
+<!--audio player end-->
+    <h2 id="ka3da" class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
 
     <div class="prose lg:prose-xl pb-8 border-b-2 border-[#fdba74]">
         {!! $decision->ka3da_text !!}

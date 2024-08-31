@@ -13,7 +13,7 @@ class Ma7kamaOlia extends Model
         'year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title',
         'ka3da_text', 'dibaga', 'waka3_title', 'waka3_text', 'egraa_title',
         'egraa_text', 'reason_title', 'reason_text', 'hokm_title', 'hokm_text',  'topic_number',
-        'author',
+        'author','mp3_file', 'pdf_file', 'is_updated', 'day', 'topic_number_numeric', 'topic_number_alpha',
         'subtitle',
     ];
 }
