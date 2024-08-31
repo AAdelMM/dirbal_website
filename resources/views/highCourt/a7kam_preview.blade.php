@@ -118,7 +118,7 @@ $parts = DB::table('ma7kama_olia')
     
 
   
-    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#fdba74] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{{ $decision->subtitle }}</h2>
+    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#fdba74] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{{!! $decision->subtitle !!}}</h2>
 <!--audio player-->
 
     @if($decision->mp3_file)
