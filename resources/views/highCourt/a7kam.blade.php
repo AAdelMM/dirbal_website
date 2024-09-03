@@ -128,21 +128,21 @@ $decisions = DB::table('ma7kama_olia')
                     </div>
                 </div>
                 <!--share icon -->
-                <div class="share w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
+                <div id="share-{{ $decision->id }}" class="share w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
                     <div class="Frame34 flex justify-center  gap-[3px] ">
                         <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                     </div>
                 </div>
                 <!--share icon -->
                 <!--comment icon -->
-                <div class="comment w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
+                <div id="comment-{{ $decision->id }}" class="comment w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
                     <div class="Frame34 flex justify-center  gap-[3px] ">
                         <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
                     </div>
                 </div>
                 <!--comment icon -->
                 <!--pdf icon -->
-                <div class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
+                <div id="pdf-{{ $decision->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
                     <div class="Frame34 flex justify-center  gap-[3px] ">
                         <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
                     </div>
@@ -236,9 +236,9 @@ $decisions = DB::table('ma7kama_olia')
 
 function toggleExtend(id) {
     var element = document.getElementById('extend-' + id);
-    var share = document.querySelector('.share');
-    var comment = document.querySelector('.comment');
-    var pdf = document.querySelector('.pdf');
+    var share = document.getElementById('share-' + id);
+    var comment = document.getElementById('comment-' + id);
+    var pdf = document.getElementById('pdf-' + id);
 
     if (element.classList.contains('show')) {
         element.classList.remove('show');
@@ -264,6 +264,7 @@ function toggleExtend(id) {
         }, 10);  // Slight delay to allow display change to take effect
     }
 }
+
 
 
 
