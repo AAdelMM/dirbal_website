@@ -122,7 +122,7 @@ class Ma7kamaOliaResource extends Resource
                                             ->acceptedFileTypes(['application/pdf'])
                                             ->disk('public')
                                             ->directory('pdf_files')
-                                            ->visibility('public'),,
+                                            ->visibility('public'),
                                         Forms\Components\Checkbox::make('is_updated')
                                             ->label('محدث') // New checkbox for "updated"
                                             ->default(false),

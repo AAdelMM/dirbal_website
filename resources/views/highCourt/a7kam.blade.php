@@ -110,51 +110,76 @@ $decisions = DB::table('ma7kama_olia')
       </div>
     </div>
 
-    <div class="content-rows flex flex-col">
+    <div class="content-rows flex flex-col mt-[10rem]">
     @foreach($decisions as $decision)
     <!--row start-->
-    <div class="decision-row w-[90.7vw] relative flex flex-col justify-start items-start gap-5 mb-8 mt-[10rem]">
-        <div class="ArticlePost75 w-[90.7vw] relative cursor-pointer" onclick="toggleExtend({{ $decision->id }})">
-            <div class="Menu w-[6.75rem] h-[12rem] absolute right-0 top-0">
-                <div class="PostInfoDate w-[5.6rem] h-[5.6rem] left-[1px] top-[2px] flex items-center absolute border border-white">
-                    <div class="Frame33 absolute flex-col justify-center items-center inline-flex" style="font-family:'Noto Kufi Arabic';">
+    <div class="decision-row w-[90.7vw] relative inline-flex  justify-start items-start gap-4 my-2 " style="direction:rtl;">
+        <div class="ArticlePost75 w-[90.7vw] relative cursor-pointer inline-flex items-center gap-5" onclick="toggleExtend({{ $decision->id }})">
+            <div class="Menu w-[6.75rem] h-[auto] ">
+                <div class="PostInfoDate w-[5.6rem] h-[5.6rem]  flex items-center  border border-white">
+                    <div class="Frame33  flex-col justify-center items-center inline-flex" style="font-family:'Noto Kufi Arabic';">
                         <div id="day" class="w-[5.6rem] h-[2rem] text-center text-[#C18F59] text-[2.15rem] font-bold leading-[34px]">{{ $decision->month }}</div>
                         <div id="year" class="w-[5.6rem] h-[2rem] text-center text-gray-200 text-[2.125rem] font-normal leading-tight">{{ $decision->year }}</div>
                     </div>
                 </div>
-                <div class="DivMkdPostInfoCommentsHolder w-[5.6rem] h-24 left-[1px] top-[91px] absolute border border-gray-200">
-                    <div class="Frame34 left-[30.44px] top-[25.50px] absolute flex-col justify-start items-center gap-[3px] inline-flex">
+                <div class="DivMkdPostInfoCommentsHolder w-[5.6rem] h-24 flex items-center justify-center border border-gray-200">
+                    <div class="Frame34 flex justify-center  gap-[3px] ">
                         <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
                     </div>
                 </div>
-            </div>
-            <div class="Frame37 w-[84.9vw] relative justify-center items-center inline-flex ">
-                <div class="DivMkdPostContentColumn w-[84.9vw] relative">
-                    <div class="DivMkdPostInfo 2xl:left-[73.8vw] lg:left-[70vw] left-[60vw] top-[129px] absolute justify-center items-end gap-[5px] inline-flex" style="font-family:'Elmessiri'; ">
-                        <div class="text-orange-400 w-[6rem] text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">{{ $decision->author }}</div>
-                        <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
-                        <div class="Frame w-5 h-5 mx-2 relative"><img src="{{ asset('images/goldAvatar.png')}}" alt=""></div>
-                    </div>
-                    <div id="title" class="w-[80.9vw] left-[1.5vw] top-[42px] 2xl:text-[2rem] text-[1.2rem] absolute text-right text-white" style="font-family:'El Messiri'; direction:rtl;">
-                        <span class="text-[#FAE1C6] text-[2.5rem] text-bold leading-[55px]" style="font-family:'sakkal majalla';">{{ $decision->topic_number}}:</span>
-                        <span style="text-white text-6xl leading-[55px]"> </span>
-                        <span>{{ $decision->title }}</span>
+                <!--share icon -->
+                <div class="share w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
+                    <div class="Frame34 flex justify-center  gap-[3px] ">
+                        <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                     </div>
                 </div>
+                <!--share icon -->
+                <!--comment icon -->
+                <div class="comment w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
+                    <div class="Frame34 flex justify-center  gap-[3px] ">
+                        <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+                    </div>
+                </div>
+                <!--comment icon -->
+                <!--pdf icon -->
+                <div class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center border border-gray-200">
+                    <div class="Frame34 flex justify-center  gap-[3px] ">
+                        <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+                    </div>
+                </div>
+                <!--pdf icon -->
             </div>
+            <div class="Frame37 w-[90%] justify-center items-center inline-flex " >
+                <div class="DivMkdPostContentColumn w-[84.9vw] relative ">
+                    <div id="title" class="w-[80.9vw] left-[1.5vw] top-[42px] 2xl:text-[2rem] text-[1.2rem]  text-right text-white" style="font-family:'El Messiri'; direction:rtl;">
+                            <span class="text-[#FAE1C6] text-[2.5rem] text-bold leading-[55px]" style="font-family:'sakkal majalla';">{{ $decision->topic_number}}:</span>
+                            <span style="text-white text-6xl leading-[55px]"> </span>
+                            <span>{{ $decision->title }}</span>
+                        </div> 
+                    <div class="DivMkdPostInfo 2xl:left-[73.8vw] lg:left-[70vw] left-[60vw] top-[129px]  justify-center items-end gap-[5px] inline-flex " style="font-family:'Elmessiri'; ">
+                            <div class="Frame w-5 h-5 mx-2 relative"><img src="{{ asset('images/goldAvatar.png')}}" alt="author-avatar"></div>
+                            <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
+                            <div class="text-orange-400 w-[6rem] text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">{{ $decision->author }}</div>   
+                    </div>
+                    <!--ka3da start-->
+                    <div id="extend-{{ $decision->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out" >
+                        <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
+                            <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{{ $decision->ka3da_title }}</h1> 
+                        </div>
+                        <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $decision->ka3da_text !!}</div>
+                        <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                            <a href="{{ route('highCourt.a7kam.preview', $decision->id) }}" class="block w-full h-full">واصل القراءة</a>
+                        </div>
+                    </div>
+                    <!--ka3da end-->
+                    
+                </div>
+        
+            </div>
+           
         </div>
         
-        <!--ka3da start-->
-        <div id="extend-{{ $decision->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem]  transition-all duration-300 ease-in-out">
-            <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{{ $decision->ka3da_title }}</h1> 
-            </div>
-            <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $decision->ka3da_text !!}</div>
-            <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                <a href="{{ route('highCourt.a7kam.preview', $decision->id) }}" class="block w-full h-full">واصل القراءة</a>
-            </div>
-        </div>
-        <!--ka3da end-->
+       
     </div>
     <!--end of content row-->
     @endforeach
@@ -175,18 +200,73 @@ $decisions = DB::table('ma7kama_olia')
     text-align:justify;
 }
 
+/* Initial hidden state */
+.hidden {
+    display: none;
+}
+
+.extend {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 2s ease-in-out !important;
+}
+.share, .comment, .pdf {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+.show-share, .show-comment, .show-pdf {
+    opacity: 1;
+}
+.extend.hidden {
+    display: none;
+}
+
+.extend.show {
+    opacity: 1;
+    max-height: 1000px; /* Set it to a value large enough to fit the content */
+    
+}
+
+
 
 </style>
 
 <script>
+
 function toggleExtend(id) {
-    const extendDiv = document.getElementById(`extend-${id}`);
-    if (extendDiv.classList.contains('hidden')) {
-        extendDiv.classList.remove('hidden',);
+    var element = document.getElementById('extend-' + id);
+    var share = document.querySelector('.share');
+    var comment = document.querySelector('.comment');
+    var pdf = document.querySelector('.pdf');
+
+    if (element.classList.contains('show')) {
+        element.classList.remove('show');
+        share.classList.remove('show-share');
+        comment.classList.remove('show-comment');
+        pdf.classList.remove('show-pdf');
+        setTimeout(function() {
+            element.classList.add('hidden');
+            share.classList.add('hidden');
+            comment.classList.add('hidden');
+            pdf.classList.add('hidden');
+        }, 500);  // Time matches the transition duration
     } else {
-        extendDiv.classList.add('hidden');
+        element.classList.remove('hidden');
+        share.classList.remove('hidden');
+        comment.classList.remove('hidden');
+        pdf.classList.remove('hidden');
+        setTimeout(function() {
+            element.classList.add('show');
+            share.classList.add('show-share');
+            comment.classList.add('show-comment');
+            pdf.classList.add('show-pdf');
+        }, 10);  // Slight delay to allow display change to take effect
     }
 }
+
+
+
 </script>
    
     @yield('content')
