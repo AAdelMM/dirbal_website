@@ -52,15 +52,15 @@ class Ma7kamaOliaResource extends Resource
                                         Forms\Components\TextInput::make('author')
                                             ->label('كاتب الموضوع')
                                             ->required(),
-                                        TinyEditor::make('subtitle')
-                                            ->label('الموجز')
-                                            ->profile('default')
-                                            ->showMenuBar()
-                                            ->required(),
                                         Forms\Components\TextInput::make('title')
                                             ->label('العنوان')
                                             ->required()
                                             ->maxLength(255),
+                                        TinyEditor::make('subtitle')
+                                            ->label('الموجز')
+                                            ->profile('default')
+                                            ->showMenuBar()
+                                            ->required(),                        
                                         Forms\Components\TextInput::make('ka3da_title')
                                             ->label('عنوان القاعدة')
                                             ->required()
