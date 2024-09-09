@@ -151,7 +151,7 @@ class Ma7kamaOliaResource extends Resource
             ->actions([
                 Tables\Actions\Action::make('preview')
                     ->label('معاينة')
-                    ->url(fn(Ma7kamaOlia $record): string => route('ma7kama-olia.preview', $record))
+                    ->url(fn(Ma7kamaOlia $record): string => route('highCourt.a7kam.preview', $record))
                     ->openUrlInNewTab(),
                 Tables\Actions\EditAction::make(),
             ])
