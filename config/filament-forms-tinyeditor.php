@@ -91,6 +91,17 @@ return [
                             'margin-bottom' => '0.5em',
                         ],
                     ],
+                    [
+                        'title' => 'أفتراضي4',
+                        'block' => 'p',
+                        'styles' => [
+                            'font-family'=>'Sakkal Majalla',
+                            'font-size' => '18pt',
+                            'text-align'=>'justify',
+                            'text-indent' => '1.5em',
+                            
+                        ],
+                    ],
                 ],
                 //add setup
               

@@ -16,7 +16,7 @@ $parts = DB::table('ma7kama_olia')
 
 <style>
       p{
-        padding-bottom: 15px;
+        padding-bottom: 2px;
     }
     .audio-player {
         width: 100%;
