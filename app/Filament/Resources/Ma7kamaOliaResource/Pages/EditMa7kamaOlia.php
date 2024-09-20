@@ -14,6 +14,13 @@ class EditMa7kamaOlia extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\Action::make('save')
+            ->label('حفظ')
+            ->action('save')
+            ->color('primary')
+            ->extraAttributes(['class' => 'filament-page-save-button']),
         ];
     }
+
+    
 }
