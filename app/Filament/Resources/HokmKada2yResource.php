@@ -64,11 +64,13 @@ class HokmKada2yResource extends Resource
                                             ->maxLength(255),
                                     TinyEditor::make('ka3da')
                                     ->label('القاعدة')
+                                    ->showMenuBar()
                                         ->required()
                                         ->maxLength(65535),
                                    
                                     TinyEditor::make('dibaga')
                                     ->label('الديباجة')
+                                    ->showMenuBar()
                                         ->required(),
                                     Forms\Components\TextInput::make('wak3a_title')
                                     ->label('عنوان الواقعة')
@@ -76,6 +78,7 @@ class HokmKada2yResource extends Resource
                                         ->maxLength(255),
                                         TinyEditor::make('wak3a_summary')
                                     ->label('ملخص الواقعة')
+                                    ->showMenuBar()
                                         ->required(),
                                         Forms\Components\TextInput::make('reason_title')
                                         ->label('عنوان السبب')
@@ -83,6 +86,7 @@ class HokmKada2yResource extends Resource
                                             ->maxLength(255),
                                             TinyEditor::make('reason')
                                     ->label('السبب')
+                                    ->showMenuBar()
                                         ->required(),
                                    
                                         Forms\Components\TextInput::make('hokm_title')
@@ -91,8 +95,7 @@ class HokmKada2yResource extends Resource
                                         ->maxLength(255),
                                         TinyEditor::make('hokm')
                                     ->label('الحكم')
-                                    
-                                    
+                                    ->showMenuBar()   
                                      ->required(),
                                 ])
                         ])

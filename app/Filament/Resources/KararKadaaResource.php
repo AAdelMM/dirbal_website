@@ -10,6 +10,8 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -38,16 +40,10 @@ class KararKadaaResource extends Resource
                 ->label('العنوان')
                 ->required()
                 ->maxLength(255),
-            Forms\Components\RichEditor::make('text')
+                TinyEditor::make('text')
             ->label('النص')
-                ->required(),
-            Forms\Components\ColorPicker::make('text_color')
-            ->label('لون النص'),
-            Forms\Components\TextInput::make('font_size')
-            ->label('حجم النص')
-                ->numeric()
-                ->minValue(1)
-                ->maxValue(100),//
+            ->showMenuBar() 
+                ->required(),       
             ]);
     }
 

@@ -10,7 +10,6 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Filament\Tables\Actions\Action;
-use App\Forms\Components\TinyMceEditor;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 use Filament\Forms\Components\Grid;
 
@@ -56,6 +55,7 @@ class ArticleResource extends Resource
                 ->schema([
                     TinyEditor::make('mogaz')
                         ->label('موجز')
+                        ->showMenuBar()
                         ->required()
                         ->maxLength(65535),
                 ]),
@@ -70,6 +70,7 @@ class ArticleResource extends Resource
                 ->schema([
                     TinyEditor::make('mokadma')
                         ->label('مقدمة')
+                        ->showMenuBar()
                         ->required()
                         ->maxLength(65535),
                 ]),
@@ -77,6 +78,7 @@ class ArticleResource extends Resource
                 ->schema([
                     TinyEditor::make('article_text')
                         ->label('نص المقالة')
+                        ->showMenuBar()
                         ->required(),
                 ]),
         ]);

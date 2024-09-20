@@ -49,6 +49,7 @@ class AudioBookResource extends Resource
                 ->schema([
                     TinyEditor::make('mogaz')
                         ->label('موجز')
+                        ->showMenuBar()
                         ->required()
                         ->maxLength(65535),
                 ]),
@@ -63,12 +64,14 @@ class AudioBookResource extends Resource
                 ->schema([
                     TinyEditor::make('mokadma_text')
                         ->label('نص المقدمة')
+                        ->showMenuBar()
                         ->required(),
                 ]),
             Grid::make(1)
                 ->schema([
                     TinyEditor::make('article_text')
                         ->label('نص المقال')
+                        ->showMenuBar()
                         ->required(),
                 ]),
             Grid::make(1)
