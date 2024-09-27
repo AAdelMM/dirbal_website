@@ -99,6 +99,7 @@ class Makalat3amaResource extends Resource
                 ->afterStateUpdated(fn (callable $set) => $set('item_id', null)),
             Select::make('item_id')
                 ->label('العنصر')
+                ->nullable() 
 //->relationship('item', 'name')
                 ->options(function (callable $get) {
                     $branchId = $get('branch_id');
