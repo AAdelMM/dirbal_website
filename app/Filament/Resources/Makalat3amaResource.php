@@ -61,7 +61,7 @@ class Makalat3amaResource extends Resource
                 
                 ->required(),
             Toggle::make('updated')
-                ->label('Updated'),
+                ->label('محدث'),
             TextInput::make('day')
                 ->label('اليوم')
                 ->numeric()
