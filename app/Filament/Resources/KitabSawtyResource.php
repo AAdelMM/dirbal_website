@@ -20,6 +20,8 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\DatePicker;
 use App\Models\Branch;
 use App\Models\Item;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\DateTimeColumn;
 
@@ -52,8 +54,9 @@ class KitabSawtyResource extends Resource
                 ->label('رقم مسلسل')
                 ->required(),
 
-            Forms\Components\Textarea::make('text')
+                TinyEditor::make('text')
                 ->label('النص')
+                ->showMenuBar()
                 ->required(),
 
             Forms\Components\FileUpload::make('audio_file')

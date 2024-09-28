@@ -21,6 +21,8 @@ use Filament\Forms\Components\DatePicker;
 use App\Models\Branch;
 use App\Models\Item;
 use Filament\Tables\Columns\TextColumn;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+
 use Filament\Tables\Columns\DateTimeColumn; 
 
 
@@ -112,8 +114,9 @@ class Makalat3amaResource extends Resource
                         ->pluck('name', 'id');  // Fetch items based on branch
                 })
                 ->nullable(),  // Allow this field to be optional if no items are available
-            Textarea::make('article_text')
+                TinyEditor::make('article_text')
                 ->label('نص المقال')
+                ->showMenuBar()
                 ->required(),
             
             ]);
