@@ -30,7 +30,7 @@ class Makalat3amaResource extends Resource
 {
     protected static ?string $model = Makalat3ama::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
     protected static ?string $navigationLabel = 'مقالات';
     protected static ?string $modelLabel = 'المقالات';
     protected static ?string $navigationGroup = 'إضافة محتوى';

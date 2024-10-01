@@ -27,7 +27,7 @@ class KitabSawtyResource extends Resource
 {
     protected static ?string $model = KitabSawty::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
     protected static ?string $navigationLabel = 'كتب صوتية';
     protected static ?string $modelLabel = 'الكتب';
     protected static ?string $navigationGroup = 'إضافة محتوى';
