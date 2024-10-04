@@ -40,36 +40,36 @@ class Mashro3A7kamResource extends Resource
             Forms\Components\Textarea::make('title')->label('العنوان')->required(),
             Forms\Components\Section::make('الموجز')
                 ->schema([
-                    TinyEditor::make('mogaz')->label('الموجز')->required(),
+                    TinyEditor::make('mogaz')->showMenuBar()->label('الموجز'),
                 ]),
             Forms\Components\Textarea::make('ka3da_title')->label('عنوان القاعدة')->required(),
             Forms\Components\Section::make('نص القاعدة')
                 ->schema([
-                    TinyEditor::make('ka3da_text')->label('نص القاعدة')->required(),
+                    TinyEditor::make('ka3da_text')->showMenuBar()->label('نص القاعدة')->required(),
                 ]),
             Forms\Components\Section::make('الديباجة')
                 ->schema([
-                    TinyEditor::make('dibaga')->label('الديباجة')->required(),
+                    TinyEditor::make('dibaga')->showMenuBar()->label('الديباجة')->required(),
                 ]),
             Forms\Components\Textarea::make('wak3a_title')->label('عنوان الواقعة')->required(),
             Forms\Components\Section::make('نص الواقعة')
                 ->schema([
-                    TinyEditor::make('wak3a_text')->label('نص الواقعة')->required(),
+                    TinyEditor::make('wak3a_text')->showMenuBar()->label('نص الواقعة')->required(),
                 ]),
-            Forms\Components\Textarea::make('egraa_title')->label('عنوان الاجراء')->required(),
+            Forms\Components\Textarea::make('egraa_title')->label('عنوان الاجراء'),
             Forms\Components\Section::make('نص الاجراء')
                 ->schema([
-                    TinyEditor::make('egraa_text')->label('نص الاجراء')->required(),
+                    TinyEditor::make('egraa_text')->showMenuBar()->label('نص الاجراء'),
                 ]),
             Forms\Components\Textarea::make('reason_title')->label('عنوان السبب')->required(),
             Forms\Components\Section::make('نص السبب')
                 ->schema([
-                    TinyEditor::make('reason_text')->label('نص السبب')->required(),
+                    TinyEditor::make('reason_text')->label('نص السبب')->showMenuBar()->required(),
                 ]),
             Forms\Components\Textarea::make('7okm_title')->label('عنوان الحكم')->required(),
             Forms\Components\Section::make('نص الحكم')
                 ->schema([
-                    TinyEditor::make('7okm_text')->label('نص الحكم')->required(),
+                    TinyEditor::make('7okm_text')->label('نص الحكم')->showMenuBar()->required(),
                 ]),
             Forms\Components\FileUpload::make('audio_files')
                 ->label('ملفات صوتية')
