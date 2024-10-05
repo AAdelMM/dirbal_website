@@ -40,7 +40,7 @@ class Mashro3A7kamResource extends Resource
             Forms\Components\Textarea::make('title')->label('العنوان')->required(),
             Forms\Components\Section::make('الموجز')
                 ->schema([
-                    TinyEditor::make('mogaz')->showMenuBar()->label('الموجز'),
+                    TinyEditor::make('mogaz')->showMenuBar()->label('الموجز')->nullable(),
                 ]),
             Forms\Components\Textarea::make('ka3da_title')->label('عنوان القاعدة')->required(),
             Forms\Components\Section::make('نص القاعدة')
@@ -56,10 +56,10 @@ class Mashro3A7kamResource extends Resource
                 ->schema([
                     TinyEditor::make('wak3a_text')->showMenuBar()->label('نص الواقعة')->required(),
                 ]),
-            Forms\Components\Textarea::make('egraa_title')->label('عنوان الاجراء'),
+            Forms\Components\Textarea::make('egraa_title')->label('عنوان الاجراء')->nullable(),
             Forms\Components\Section::make('نص الاجراء')
                 ->schema([
-                    TinyEditor::make('egraa_text')->showMenuBar()->label('نص الاجراء'),
+                    TinyEditor::make('egraa_text')->showMenuBar()->label('نص الاجراء')->nullable(),
                 ]),
             Forms\Components\Textarea::make('reason_title')->label('عنوان السبب')->required(),
             Forms\Components\Section::make('نص السبب')
