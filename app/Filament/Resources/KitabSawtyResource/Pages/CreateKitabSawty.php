@@ -9,4 +9,15 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateKitabSawty extends CreateRecord
 {
     protected static string $resource = KitabSawtyResource::class;
+    protected function getHeaderActions(): array
+    {
+        return [
+           
+            Actions\Action::make('save')
+            ->label('حفظ')
+            ->action('save')
+            ->color('primary')
+            ->extraAttributes(['class' => 'filament-page-save-button']),
+        ];
+    }
 }

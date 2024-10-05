@@ -9,4 +9,15 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateMakalat3ama extends CreateRecord
 {
     protected static string $resource = Makalat3amaResource::class;
+    protected function getHeaderActions(): array
+    {
+        return [
+           
+            Actions\Action::make('save')
+            ->label('حفظ')
+            ->action('save')
+            ->color('primary')
+            ->extraAttributes(['class' => 'filament-page-save-button']),
+        ];
+    }
 }
