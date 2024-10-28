@@ -85,7 +85,8 @@ class Makalat3amaResource extends Resource
                         ->reactive()
                         ->required()
                         ->afterStateUpdated(fn (callable $set) => $set('branch_id', null)),
-                    Select::make('branch_id')
+                    
+                        Select::make('branch_id')
                         ->label('الفرع')
                         ->relationship('branch', 'name')
                         ->options(function (callable $get) {
@@ -101,7 +102,8 @@ class Makalat3amaResource extends Resource
                         ->reactive()
                         ->required()
                         ->afterStateUpdated(fn (callable $set) => $set('item_id', null)),
-                    Select::make('item_id')
+                   
+                        Select::make('item_id')
                         ->label('العنصر')
                         ->nullable()
                         ->options(function (callable $get) {

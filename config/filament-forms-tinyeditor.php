@@ -104,8 +104,13 @@ return [
                     ],
                 ],
                 //add setup
-              
-              
+                'autoresize_bottom_margin' => 0,
+                'autoresize_min_height' => 100,
+                'autoresize_max_height' => 500,
+                'resize' => true,
+                'statusbar' => false,
+                'content_style' => 'body { margin-bottom: 0 !important; }',
+               
             ],
         ],
     

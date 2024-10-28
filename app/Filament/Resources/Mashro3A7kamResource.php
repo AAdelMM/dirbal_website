@@ -12,6 +12,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Models\Branch;
+use App\Models\Item;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class Mashro3A7kamResource extends Resource
@@ -83,17 +85,43 @@ class Mashro3A7kamResource extends Resource
                 ->nullable(),
             Forms\Components\Toggle::make('updated')->label('محدث'),
             Forms\Components\Select::make('section_id')
-                ->label('القسم')
-                ->relationship('section', 'name')
-                ->required(),
+            ->label('القسم')
+            ->relationship('section', 'name')
+            ->reactive()
+            ->required()
+            ->afterStateUpdated(fn (callable $set) => $set('branch_id', null)),
+        
             Forms\Components\Select::make('branch_id')
-                ->label('الفرع')
-                ->relationship('branch', 'name')
-                ->required(),
-            Forms\Components\Select::make('item_id')
-                ->label('العنصر')
-                ->relationship('item', 'name')
-                ->nullable(),
+            ->label('الفرع')
+            ->relationship('branch', 'name')
+            ->options(function (callable $get) {
+                $sectionId = $get('section_id');
+
+                if (!$sectionId) {
+                    return [];  // Return empty array if no section is selected
+                }
+
+                return Branch::where('section_id', $sectionId)
+                    ->pluck('name', 'id');  // Fetch branches based on section
+            })
+            ->reactive()
+            ->required()
+            ->afterStateUpdated(fn (callable $set) => $set('item_id', null)),
+       
+                Forms\Components\Select::make('item_id')
+                        ->label('العنصر')
+                        ->nullable()
+                        ->options(function (callable $get) {
+                            $branchId = $get('branch_id');
+
+                            if (!$branchId) {
+                                return [];  // Return empty array if no branch is selected
+                            }
+
+                            return Item::where('branch_id', $branchId)
+                                ->pluck('name', 'id');  // Fetch items based on branch
+                        })
+                        ->nullable(),
         ]);
     }
 
