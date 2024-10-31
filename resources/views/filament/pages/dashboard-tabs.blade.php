@@ -1,7 +1,8 @@
 <x-filament::page>
     <div x-data="{ 
         activeMainTab: @entangle('activeTab'),
-        activeSubTab: @entangle('activeSubTab')
+        activeSubTab: @entangle('activeSubTab'),
+        activeSubSubTab: @entangle('activeSubSubTab')
     }">
         <x-filament::tabs>
             <x-filament::tabs.item 
@@ -39,18 +40,9 @@
                     :active="$activeSubTab === 'subtab1'"
                     wire:click="setActiveSubTab('subtab1')">
                     <x-slot name="label">
-                       المحكمة
+                       المحاكم الدنيا
                     </x-slot>
-                    المحكمة
-                </x-filament::tabs.item>
-
-                <x-filament::tabs.item 
-                    :active="$activeSubTab === 'subtab2'"
-                    wire:click="setActiveSubTab('subtab2')">
-                    <x-slot name="label">
-                        النيابة العامة
-                    </x-slot>
-                    النيابة العامة
+                    المحاكم الدنيا
                 </x-filament::tabs.item>
 
                 <x-filament::tabs.item 
@@ -63,105 +55,231 @@
                 </x-filament::tabs.item>
             </x-filament::tabs>
 
-            <div class="mt-4" style="margin-top:10rem;">
-                <div x-show="activeSubTab === 'subtab1'">
-                    محتوى المحكمة
+            <!-- Sub-sub-tabs for المحاكم الدنيا -->
+            <div x-show="activeSubTab === 'subtab1'" class="mt-4" style="margin-top:3rem;">
+                <x-filament::tabs>
+                    <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab1'"
+                        wire:click="setActiveSubSubTab('subsubtab1')">
+                        <x-slot name="label">
+                           القضاء المدني 
+                        </x-slot>
+                        القضاء المدني
+                    </x-filament::tabs.item>
+
+                   <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab2'"
+                        wire:click="setActiveSubSubTab('subsubtab2')">
+                        <x-slot name="label">
+                            القضاء الجنائى
+                        </x-slot>
+                        القضاء الجنائى
+                    </x-filament::tabs.item> 
+
+                    <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab3'"
+                        wire:click="setActiveSubSubTab('subsubtab3')">
+                        <x-slot name="label">
+                            القضاء الشرعى
+                        </x-slot>
+                        القضاء الشرعى
+                    </x-filament::tabs.item>
+                    <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab4'"
+                        wire:click="setActiveSubSubTab('subsubtab4')">
+                        <x-slot name="label">
+                            قرارات قضائية
+                        </x-slot>
+                        قرارات قضائية
+                    </x-filament::tabs.item>
+                    <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab5'"
+                        wire:click="setActiveSubSubTab('subsubtab5')">
+                        <x-slot name="label">
+                            النيابة العامة
+                        </x-slot>
+                        النيابة العامة
+                    </x-filament::tabs.item>
+                </x-filament::tabs>
+
+                <div class="mt-4" style="margin-top:3rem;">
+                    <div x-show="activeSubSubTab === 'subsubtab1'">
+                        محتوى القضاء المدنى
+                    </div>
+                    <div x-show="activeSubSubTab === 'subsubtab2'">
+                        محتوى القضاء الجنائى
+                    </div>
+                    <div x-show="activeSubSubTab === 'subsubtab3'">
+                        محتوى القضاء الشرعى
+                    </div>
+                    <div x-show="activeSubSubTab === 'subsubtab4'">
+                        محتوى قرارات قضائية 
+                    </div>
+                    <div x-show="activeSubSubTab === 'subsubtab5'">
+                        محتوى النيابة العامة 
+                    </div>
                 </div>
-                <div x-show="activeSubTab === 'subtab2'">
-                    محتوى النيابة العامة
-                </div>
-                <div x-show="activeSubTab === 'subtab3'">
-                    محتوى معهد القضاء
+            </div>
+
+            <!-- Sub-sub-tabs for معهد القضاء -->
+            <div x-show="activeSubTab === 'subtab3'" class="mt-4" style="margin-top:3rem;">
+                <x-filament::tabs>
+                    <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab4'"
+                        wire:click="setActiveSubSubTab('subsubtab4')">
+                        <x-slot name="label">
+                            محاضرات
+                        </x-slot>
+                        محاضرات
+                    </x-filament::tabs.item>
+
+                    <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab5'"
+                        wire:click="setActiveSubSubTab('subsubtab5')">
+                        <x-slot name="label">
+                            امتحانات
+                        </x-slot>
+                        امتحانات
+                    </x-filament::tabs.item>
+
+                    <x-filament::tabs.item 
+                        :active="$activeSubSubTab === 'subsubtab6'"
+                        wire:click="setActiveSubSubTab('subsubtab6')">
+                        <x-slot name="label">
+                            شؤون فنية
+                        </x-slot>
+                        شؤون فنية
+                    </x-filament::tabs.item>
+                </x-filament::tabs>
+
+                <div class="mt-4" style="margin-top:3rem;">
+                    <div x-show="activeSubSubTab === 'subsubtab4'">
+                        محتوى المحاضرات
+                    </div>
+                    <div x-show="activeSubSubTab === 'subsubtab5'">
+                        محتوى الامتحانات
+                    </div>
+                    <div x-show="activeSubSubTab === 'subsubtab6'">
+                        محتوى الشؤون الفنية
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Sub-tabs for المحكمة العليا -->
+        <!-- section2 ma7kama olia -->
         <div x-show="activeMainTab === 'tab2'" class="mt-4" style="margin-top:3rem;">
             <x-filament::tabs>
                 <x-filament::tabs.item 
                     :active="$activeSubTab === 'subtab1'"
                     wire:click="setActiveSubTab('subtab1')">
                     <x-slot name="label">
-                        احكام
+                        مشروعات الاحكام
                     </x-slot>
-                    احكام
+                    مشروعات الاحكام
                 </x-filament::tabs.item>
 
                 <x-filament::tabs.item 
                     :active="$activeSubTab === 'subtab2'"
                     wire:click="setActiveSubTab('subtab2')">
                     <x-slot name="label">
-                        منتقى
+                       من قضاء المحكمة العليا 
                     </x-slot>
-                    منتقى
+                    من قضاء المحكمة العليا 
                 </x-filament::tabs.item>
 
                 <x-filament::tabs.item 
                     :active="$activeSubTab === 'subtab3'"
                     wire:click="setActiveSubTab('subtab3')">
                     <x-slot name="label">
-                      شؤون فنية
+                        شؤون فنية  
                     </x-slot>
-                    شؤون فنية
+                    شؤون فنية                
                 </x-filament::tabs.item>
             </x-filament::tabs>
-
-            <div class="mt-8" style="margin-top:10rem;">
-                <div x-show="activeSubTab === 'subtab1'">
-                    محتوى الاحكام 
-                </div>
-                <div x-show="activeSubTab === 'subtab2'">
-                    محتوى المنتقى
-                </div>
-                <div x-show="activeSubTab === 'subtab3'">
-                    محتوى شؤون فنية
-                </div>
-            </div>
         </div>
+        <!-- section3 modawana-->
 
-        <!-- Sub-tabs for مدونة -->
         <div x-show="activeMainTab === 'tab3'" class="mt-4" style="margin-top:3rem;">
             <x-filament::tabs>
                 <x-filament::tabs.item 
                     :active="$activeSubTab === 'subtab1'"
                     wire:click="setActiveSubTab('subtab1')">
                     <x-slot name="label">
-                       اسلاميات
+                         مباحث
                     </x-slot>
-                    اسلاميات
+                     مباحث
                 </x-filament::tabs.item>
 
                 <x-filament::tabs.item 
                     :active="$activeSubTab === 'subtab2'"
                     wire:click="setActiveSubTab('subtab2')">
                     <x-slot name="label">
-                       كتاب
+                       كتاب    
                     </x-slot>
-                    كتاب
+                    كتاب    
                 </x-filament::tabs.item>
 
                 <x-filament::tabs.item 
                     :active="$activeSubTab === 'subtab3'"
                     wire:click="setActiveSubTab('subtab3')">
                     <x-slot name="label">
-                        مباحث
+                         اسلاميات  
                     </x-slot>
-                    مباحث
+                     اسلاميات                
                 </x-filament::tabs.item>
             </x-filament::tabs>
+       
+<!--third menu for modawana-->
+    <div x-show="activeSubTab === 'subtab1'" class="mt-4" style="margin-top:3rem;">
+                    <x-filament::tabs>
+                        <x-filament::tabs.item 
+                            :active="$activeSubSubTab === 'subsubtab1'"
+                            wire:click="setActiveSubSubTab('subsubtab1')">
+                            <x-slot name="label">
+                             حقوق الانسان 
+                            </x-slot>
+                             حقوق الانسان
+                        </x-filament::tabs.item>
 
-            <div class="mt-4" style="margin-top:10rem;">
-                <div x-show="activeSubTab === 'subtab1'">
-                    محتوى الاسلاميات 
-                </div>
-                <div x-show="activeSubTab === 'subtab2'">
-                    محتوى الكتب
-                </div>
-                <div x-show="activeSubTab === 'subtab3'">
-                    محتوى المباحث
-                </div>
-            </div>
-        </div>
+                    <x-filament::tabs.item 
+                            :active="$activeSubSubTab === 'subsubtab2'"
+                            wire:click="setActiveSubSubTab('subsubtab2')">
+                            <x-slot name="label">
+                                 قانونية
+                            </x-slot>
+                             قانونية
+                        </x-filament::tabs.item> 
+                        <x-filament::tabs.item 
+                            :active="$activeSubSubTab === 'subsubtab3'"
+                            wire:click="setActiveSubSubTab('subsubtab3')">
+                            <x-slot name="label">
+                                 متنوعة
+                            </x-slot>
+                             متنوعة
+                        </x-filament::tabs.item> 
+                    </x-filament::tabs>
+                    </div>
+                    <div x-show="activeSubTab === 'subtab2'" class="mt-4" style="margin-top:3rem;">
+                    <x-filament::tabs>
+                        <x-filament::tabs.item 
+                            :active="$activeSubSubTab === 'subsubtab1'"
+                            wire:click="setActiveSubSubTab('subsubtab1')">
+                            <x-slot name="label">
+                              سلسلة دربال للكتب الصوتية 
+                            </x-slot>
+                             سلسلة دربال للكتب الصوتية
+                        </x-filament::tabs.item>
+
+                    <x-filament::tabs.item 
+                            :active="$activeSubSubTab === 'subsubtab2'"
+                            wire:click="setActiveSubSubTab('subsubtab2')">
+                            <x-slot name="label">
+                                 قبس من كتاب
+                            </x-slot>
+                             قبس من كتاب
+                        </x-filament::tabs.item> 
+                       
+                    </x-filament::tabs>
+                    </div>
     </div>
 </x-filament::page>
