@@ -1,4 +1,6 @@
+
 <x-filament::page>
+
     <div x-data="{ 
         activeMainTab: @entangle('activeTab'),
         activeSubTab: @entangle('activeSubTab'),
@@ -102,16 +104,83 @@
                     </x-filament::tabs.item>
                 </x-filament::tabs>
 
-                <div class="mt-4" style="margin-top:3rem;">
-                    <div x-show="activeSubSubTab === 'subsubtab1'">
-                        محتوى القضاء المدنى
-                    </div>
+                <div class="mt-4 font-default" style="margin-top:3rem; font-family:unset;">
+                    
+              <!-- Tab for القضاء المدني -->
+                <div x-show="activeSubSubTab === 'subsubtab1'">
+                    <h2 style="margin-bottom:20px;">محتوى القضاء المدني</h2>
+                    @if($contentCivilJudiciary->isNotEmpty())
+                        <table class="w-full bg-black border border-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                    <th class="py-2 px-4 border-b">التصنيف</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($contentCivilJudiciary as $item)
+                                    <tr>
+                                        <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @else
+                        <p>لايوجد محتوى حاليا للقضاء المدني.</p>
+                    @endif
+                </div>
+
+                    <!-- Tab for القضاء الجنائى -->
                     <div x-show="activeSubSubTab === 'subsubtab2'">
-                        محتوى القضاء الجنائى
+                        <h2 style="margin-bottom:20px;">محتوى القضاء الجنائى</h2>
+                        @if($contentCriminalJudiciary->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentCriminalJudiciary as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى القضاء الجنائى.</p>
+                        @endif
                     </div>
+
                     <div x-show="activeSubSubTab === 'subsubtab3'">
-                        محتوى القضاء الشرعى
+
+                    <h2 style="margin-bottom:20px;">محتوى القضاء الشرعى</h2>
+                        @if($contentShar3y ->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentShar3y  as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى القضاء الشرعى.</p>
+                        @endif
                     </div>
+
                     <div x-show="activeSubSubTab === 'subsubtab4'">
                         محتوى قرارات قضائية 
                     </div>
