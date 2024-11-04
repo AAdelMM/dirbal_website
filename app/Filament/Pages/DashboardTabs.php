@@ -33,8 +33,8 @@ class DashboardTabs extends Page
         $this->contentCivilJudiciary = $this->getContentByIds(1, 2, 14); // القضاء المدني
         $this->contentCriminalJudiciary = $this->getContentByIds(1, 2, 15); // القضاء الجنائى
         $this->contentShar3y = $this->getContentByIds(1, 2, 16); // القضاء الشرعى
-        $this->contentKada2y = $this->getContentByIds(1, 2, 20); //  قرارات قضاءية
-        $this->contentNiabh = $this->getContentByIds(1, 2, 19); // النيابة العامة
+        $this->contentKada2y = $this->getContentByIds(1, 2, 19); //  قرارات قضاءية
+        $this->contentNiabh = $this->getContentByIds(1, 2, 20); // النيابة العامة
     }
 
     protected function getContentByIds($sectionId, $branchId, $itemId)
