@@ -382,7 +382,7 @@
             <div x-show="activeSubTab === 'subtab1'" class="mt-4" style="margin-top:3rem;">
                 
              <h2 style="margin-bottom:20px;">محتوى مشروعات الاحكام</h2>
-                        @if($contentsh2oon->isNotEmpty())
+                        @if($contentA7kam->isNotEmpty())
                             <table class="w-full bg-black border border-gray-200">
                                 <thead>
                                     <tr>
@@ -391,7 +391,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($contentsh2oon as $item)
+                                    @foreach ($contentA7kam as $item)
                                         <tr>
                                             <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
                                             <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
@@ -409,7 +409,7 @@
         <div x-show="activeSubTab === 'subtab2'" class="mt-4" style="margin-top:3rem;">
                 
          <h2 style="margin-bottom:20px;">محتوى قضاء ابمحكمة العليا</h2>
-                        @if($contentsh2oon->isNotEmpty())
+                        @if($contentOlia->isNotEmpty())
                             <table class="w-full bg-black border border-gray-200">
                                 <thead>
                                     <tr>
@@ -418,7 +418,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($contentsh2oon as $item)
+                                    @foreach ($contentOlia as $item)
                                         <tr>
                                             <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
                                             <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
@@ -436,7 +436,7 @@
         <div x-show="activeSubTab === 'subtab3'" class="mt-4" style="margin-top:3rem;">
                 
          <h2 style="margin-bottom:20px;">محتوى الشؤون الفنية</h2>
-                        @if($contentsh2oon->isNotEmpty())
+                        @if($contentsh2oon1->isNotEmpty())
                             <table class="w-full bg-black border border-gray-200">
                                 <thead>
                                     <tr>
@@ -445,7 +445,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($contentsh2oon as $item)
+                                    @foreach ($contentsh2oon1 as $item)
                                         <tr>
                                             <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
                                             <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
