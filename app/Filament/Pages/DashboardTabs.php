@@ -35,6 +35,14 @@ class DashboardTabs extends Page
     public $contentOlia = [];
     public $contentsh2oon1 = [];
 
+    public $contentIslamyat = [];
+
+    public $contentKanony = [];
+    public $contentMtnw3 = [];
+    public $contentSelsela = [];
+    public $contentKabas = [];
+    public $contentInsan = [];
+
     public function mount()
     {
         // Fetch content for each specific tab with its unique identifiers
@@ -51,6 +59,14 @@ class DashboardTabs extends Page
         $this->contentA7kam = $this->getContentByIds(2, 4, Null); //  مشروعات احكام
         $this->contentOlia = $this->getContentByIds(2, 5, Null); //  من قضاء المحكمة العليا
         $this->contentsh2oon1 = $this->getContentByIds(2, 6, Null); //  شؤون فنية
+    
+        $this->contentIslamyat = $this->getContentByIds(3, 9, Null); //   اسلاميات
+
+        $this->contentInsan = $this->getContentByIds(3, 7, 7); //  حقوق الانسان
+        $this->contentKanony = $this->getContentByIds(3, 7, 8); //  قانونىة
+        $this->contentMtnw3 = $this->getContentByIds(3, 7, 9); //  متنوعة
+        $this->contentSelsela = $this->getContentByIds(3, 8, 10); //   سلسلة دربال الصوتية
+        $this->contentKabas = $this->getContentByIds(3, 8, 11); //  قبس من كتاب
     }
 
     protected function getContentByIds($sectionId, $branchId, $itemId)

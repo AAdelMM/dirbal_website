@@ -490,7 +490,32 @@
                      اسلاميات                
                 </x-filament::tabs.item>
             </x-filament::tabs>
-       
+<!--محتوى الاسلاميات-->
+            <div x-show="activeSubTab === 'subtab3'" class="mt-4" style="margin-top:3rem;">
+                
+                <h2 style="margin-bottom:20px;">محتوى الاسلاميات</h2>
+                               @if($contentsh2oon1->isNotEmpty())
+                                   <table class="w-full bg-black border border-gray-200">
+                                       <thead>
+                                           <tr>
+                                               <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                               <th class="py-2 px-4 border-b">التصنيف</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody>
+                                           @foreach ($contentsh2oon1 as $item)
+                                               <tr>
+                                                   <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                                   <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                               </tr>
+                                           @endforeach
+                                       </tbody>
+                                   </table>
+                               @else
+                                   <p>لايوجد  محتوى فى الوقت الحالى للاسلاميات.</p>
+                               @endif
+                           </div>
+
 <!--third menu for modawana-->
     <div x-show="activeSubTab === 'subtab1'" class="mt-4" style="margin-top:3rem;">
                     <x-filament::tabs>
@@ -520,6 +545,84 @@
                              متنوعة
                         </x-filament::tabs.item> 
                     </x-filament::tabs>
+<!--محتوى حقوق الانسان-->
+                    <div x-show="activeSubSubTab === 'subsubtab1'" >
+                      
+                      <h2 style="margin-bottom:20px; ">محتوى حقوق الانسان</h2>
+                          @if($contentInsan->isNotEmpty())
+                              <table class="w-full bg-black border border-gray-200">
+                                  <thead>
+                                      <tr>
+                                          <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                          <th class="py-2 px-4 border-b">التصنيف</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      @foreach ($contentInsan as $item)
+                                          <tr>
+                                              <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                              <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                          </tr>
+                                      @endforeach
+                                  </tbody>
+                              </table>
+                          @else
+                              <p>لايوجد  محتوى فى الوقت الحالى  لحقوق الانسان.</p>
+                          @endif
+                      </div>
+
+                      <!--محتوى  قانونية-->
+                    <div x-show="activeSubSubTab === 'subsubtab2'" >
+                      
+                      <h2 style="margin-bottom:20px; ">محتوى  قانونية</h2>
+                          @if($contentKanony->isNotEmpty())
+                              <table class="w-full bg-black border border-gray-200">
+                                  <thead>
+                                      <tr>
+                                          <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                          <th class="py-2 px-4 border-b">التصنيف</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      @foreach ($contentKanony as $item)
+                                          <tr>
+                                              <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                              <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                          </tr>
+                                      @endforeach
+                                  </tbody>
+                              </table>
+                          @else
+                              <p>لايوجد  محتوى فى الوقت الحالى   قانونية.</p>
+                          @endif
+                      </div>
+
+                        <!--محتوى  قانونية-->
+                    <div x-show="activeSubSubTab === 'subsubtab3'" >
+                      
+                      <h2 style="margin-bottom:20px; ">محتوى  متنوعة</h2>
+                          @if($contentMtnw3->isNotEmpty())
+                              <table class="w-full bg-black border border-gray-200">
+                                  <thead>
+                                      <tr>
+                                          <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                          <th class="py-2 px-4 border-b">التصنيف</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      @foreach ($contentMtnw3 as $item)
+                                          <tr>
+                                              <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                              <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                          </tr>
+                                      @endforeach
+                                  </tbody>
+                              </table>
+                          @else
+                              <p>لايوجد  محتوى فى الوقت الحالى   متنوعة.</p>
+                          @endif
+                      </div>
+
                     </div>
                     <div x-show="activeSubTab === 'subtab2'" class="mt-4" style="margin-top:3rem;">
                     <x-filament::tabs>
@@ -542,6 +645,59 @@
                         </x-filament::tabs.item> 
                        
                     </x-filament::tabs>
+
+                    <!--محتوى سلسلة دربال -->
+                    <div x-show="activeSubSubTab === 'subsubtab1'" >
+                      
+                      <h2 style="margin-bottom:20px; ">محتوى سلسلة دربال</h2>
+                          @if($contentSelsela->isNotEmpty())
+                              <table class="w-full bg-black border border-gray-200">
+                                  <thead>
+                                      <tr>
+                                          <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                          <th class="py-2 px-4 border-b">التصنيف</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      @foreach ($contentSelsela as $item)
+                                          <tr>
+                                              <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                              <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                          </tr>
+                                      @endforeach
+                                  </tbody>
+                              </table>
+                          @else
+                              <p>لايوجد  محتوى فى الوقت الحالى  لسلسلة دربال.</p>
+                          @endif
+                      </div>
+
+                        <!--محتوى قبس من كتاب  -->
+                    <div x-show="activeSubSubTab === 'subsubtab2'" >
+                      
+                      <h2 style="margin-bottom:20px; ">محتوى قبس من كتاب </h2>
+                          @if($contentKabas ->isNotEmpty())
+                              <table class="w-full bg-black border border-gray-200">
+                                  <thead>
+                                      <tr>
+                                          <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                          <th class="py-2 px-4 border-b">التصنيف</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      @foreach ($contentKabas  as $item)
+                                          <tr>
+                                              <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                              <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                          </tr>
+                                      @endforeach
+                                  </tbody>
+                              </table>
+                          @else
+                              <p>لايوجد  محتوى فى الوقت الحالى  قبس من كتاب .</p>
+                          @endif
+                      </div>
+
                     </div>
     </div>
 </x-filament::page>
