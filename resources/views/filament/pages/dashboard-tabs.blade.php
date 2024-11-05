@@ -357,6 +357,7 @@
                         مشروعات الاحكام
                     </x-slot>
                     مشروعات الاحكام
+  
                 </x-filament::tabs.item>
 
                 <x-filament::tabs.item 
@@ -377,6 +378,86 @@
                     شؤون فنية                
                 </x-filament::tabs.item>
             </x-filament::tabs>
+<!--مشروعات الاحكام-->
+            <div x-show="activeSubTab === 'subtab1'" class="mt-4" style="margin-top:3rem;">
+                
+             <h2 style="margin-bottom:20px;">محتوى مشروعات الاحكام</h2>
+                        @if($contentsh2oon->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentsh2oon as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى لمشروعات الاحكام.</p>
+                        @endif
+                    </div>
+
+       
+        <!--من قضاء المحكمة العليا-->
+        <div x-show="activeSubTab === 'subtab2'" class="mt-4" style="margin-top:3rem;">
+                
+         <h2 style="margin-bottom:20px;">محتوى قضاء ابمحكمة العليا</h2>
+                        @if($contentsh2oon->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentsh2oon as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى لقضاء المحكمة العليا.</p>
+                        @endif
+                    </div>
+
+        
+        <!-- شؤون فنية-->
+        <div x-show="activeSubTab === 'subtab3'" class="mt-4" style="margin-top:3rem;">
+                
+         <h2 style="margin-bottom:20px;">محتوى الشؤون الفنية</h2>
+                        @if($contentsh2oon->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentsh2oon as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى للشؤون الفنية.</p>
+                        @endif
+                    </div>
+
         </div>
         <!-- section3 modawana-->
 
