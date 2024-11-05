@@ -208,8 +208,30 @@
 
                    
                     <div x-show="activeSubSubTab === 'subsubtab5'">
-                        محتوى النيابة العامة 
+                    
+                    <h2 style="margin-bottom:20px;">محتوى القضاء الجنائى</h2>
+                        @if($contentNiabh->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentNiabh as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى القضاء الجنائى.</p>
+                        @endif
                     </div>
+
                 </div>
             </div>
 
@@ -246,14 +268,81 @@
 
                 <div class="mt-4" style="margin-top:3rem;">
                     <div x-show="activeSubSubTab === 'subsubtab4'">
-                        محتوى المحاضرات
+                   
+                    <h2 style="margin-bottom:20px;">محتوى المحاضرات</h2>
+                        @if($contentm7adrat->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentm7adrat as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى للمحاضرات.</p>
+                        @endif
                     </div>
+
                     <div x-show="activeSubSubTab === 'subsubtab5'">
-                        محتوى الامتحانات
+
+                        <h2 style="margin-bottom:20px;">محتوى الامتحانات</h2>
+                        @if($contenemt7anat->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contenemt7anat as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى للامتحانات.</p>
+                        @endif
                     </div>
+
                     <div x-show="activeSubSubTab === 'subsubtab6'">
-                        محتوى الشؤون الفنية
+                      
+                    <h2 style="margin-bottom:20px;">محتوى الشؤون الفنية</h2>
+                        @if($contentsh2oon->isNotEmpty())
+                            <table class="w-full bg-black border border-gray-200">
+                                <thead>
+                                    <tr>
+                                        <th class="py-2 px-4 border-b" style="border-left: 2px solid grey;">عنوان مختصر</th>
+                                        <th class="py-2 px-4 border-b">التصنيف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($contentsh2oon as $item)
+                                        <tr>
+                                            <td class="py-2 px-4 border-b" style="border-left: 2px solid grey;">{{ $item['title'] ?? 'No Title' }}</td>
+                                            <td class="py-2 px-4 border-b">{{ $item['table'] ?? 'No Table' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>لايوجد  محتوى فى الوقت الحالى للشؤون الفنية.</p>
+                        @endif
                     </div>
+
+
                 </div>
             </div>
         </div>

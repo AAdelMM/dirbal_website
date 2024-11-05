@@ -27,6 +27,10 @@ class DashboardTabs extends Page
     public $contentKada2y = [];
     public $contentNiabh = [];
 
+    public $contentm7adrat = [];
+    public $contenemt7anat = [];
+    public $contentsh2oon = [];
+
     public function mount()
     {
         // Fetch content for each specific tab with its unique identifiers
@@ -35,6 +39,11 @@ class DashboardTabs extends Page
         $this->contentShar3y = $this->getContentByIds(1, 2, 16); // القضاء الشرعى
         $this->contentKada2y = $this->getContentByIds(1, 2, 19); //  قرارات قضاءية
         $this->contentNiabh = $this->getContentByIds(1, 2, 20); // النيابة العامة
+
+        $this->contentm7adrat = $this->getContentByIds(1, 3, 4); //  محاضرات
+        $this->contenemt7anat = $this->getContentByIds(1, 3, 5); //  امتحانات
+        $this->contentsh2oon = $this->getContentByIds(1, 3, 6); //  شؤون فنية
+
     }
 
     protected function getContentByIds($sectionId, $branchId, $itemId)
