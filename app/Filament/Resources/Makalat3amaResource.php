@@ -57,7 +57,8 @@ class Makalat3amaResource extends Resource
                         ->required(),
                     FileUpload::make('image')
                         ->label('صورة')
-                        ->image(),
+                        ->directory('images')
+                        ->nullable(),
                     TextInput::make('video')
                         ->label('رابط الفيديو'),
                     TextInput::make('author')

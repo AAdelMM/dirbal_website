@@ -76,7 +76,7 @@ class Mashro3A7kamResource extends Resource
             Forms\Components\FileUpload::make('audio_files')
                 ->label('ملفات صوتية')
                 ->directory('audio_files')
-                ->acceptedFileTypes(['audio/mp3'])
+                ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
                 ->nullable(),
             Forms\Components\FileUpload::make('pdf_files')
                 ->label('ملف نصى')
