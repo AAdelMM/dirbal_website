@@ -9,12 +9,14 @@
 <div class="Frame338 w-[100vw] h-[268.6rem] flex-col justify-start items-center inline-flex">
 <!--main content-->
 @yield('content')
-  <div class="Home w-[100vw] h-[32.8rem] relative">
+  <div class="Home w-[100vw] h-[38rem] relative">
   @include('homePage.menu')
-    <img class=" w-[100vw] h-[32.8rem] left-0 top-0 absolute" src="{{ asset('images/courtPagebg.png') }}" />
+    <img class=" w-[100vw] h-[38rem] left-0 top-0 absolute" src="{{ asset('images/courtPagebg.png') }}" />
     <div class="Frame294 w-[74.8vw] h-[17.6rem] left-[19.8vw] top-[13.4vh] absolute flex-col justify-start items-end gap-[69px] inline-flex">
-      <div class=" w-[55.9rem] h-[101px] text-right text-yellow-600 text-[6rem] font-normal " style="font-family:'Noto Kufi Arabic'">المحكمة</div>
-      <div class=" w-[84.8vw]  text-white text-[2rem] font-normal  " style="font-family:'El Messiri'; direction:rtl;">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه،</div>
+      <div class=" w-[55.9rem] h-[101px] text-right text-yellow-600 2xl:text-[6rem] lg:text-[4.5rem] text-[3rem] font-normal " style="font-family:'Noto Kufi Arabic'">المحاكم الدنيا</div>
+      <div class=" w-[84.8vw] mt-[-2rem] 2xl:mt-0 text-white 2xl:text-[2rem] text-[1rem] lg:text-[1.8rem] font-normal  h-[38rem]" style="font-family:'El Messiri'; direction:rtl;">فهذه مكتبة متواضعة التأمت أجزاؤها من بعض عملي بالمحاكم الدنيا وبالمعهد العالي للقضاء. رجَّحت فائدتها فهأنذا أنشرها.
+القانون الليبي مرجع الأحكام، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصرية، المصدر التاريخي لجلّ القوانين العربية.
+وإذ أضعها بين يدي القارئ الكريم، احتسبها عند الله من الأعمال النافعة التي لا أرتجي من ورائها غير الأجر والثواب. ولْيعلم القارئُ الكريم أن الأحكام القضائية نتاج خبرة قصيرة، وثمرة اجتهاد متواضع يحتمل الصوابَ والخطأ. فإن كان صواباً، فمنَ الله تعالى وبتوفيقه، وإلا فبسبب غفلة أو تقصير. ولئن يمتنع عليَّ إصلاحُ قضاء قضيته أمسِ بَنيتُه على اجتهاد غير سديد، إلا أنه لن يمنع من رجوعي إلى الحقّ وإيثاره مستقبلاً إذا ما هُديت فيه لرشدي. فاللهَ أسألُ المغفرةَ والسداد.</div>
     </div>
 <!--main content end-->
 

@@ -1,7 +1,7 @@
 <div class="container-fluid main-menu flex justify-end w-full  h-auto absolute z-[3500]">
   <div id="menuContainer" class="Menu hidden lg:w-[31.8vw] h-[120vh] w-[45vw]  relative">
   <div class="Rectangle438 lg:w-[31.8vw] w-[45vw] lg:h-[130vh] h-[100vh] left-0 top-0 absolute bg-gray-800"></div>
-  <div class="Frame9 2xl:left-[11.6rem] lg:left-[8rem] left-[4.6rem] 2xl:top-[11.25rem] lg:top-[8rem] top-[4.6rem] absolute flex-col justify-start items-end gap-5 inline-flex">
+  <div class="Frame9 w-[100%] right-5 2xl:top-[11.25rem] lg:top-[8rem] top-[4.6rem] absolute flex-col justify-start items-end gap-5 inline-flex">
     <div class="Principal flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px]  inline-flex">
         <div class=" w-[233px] text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';">الرئيسية</div>
@@ -13,10 +13,10 @@
         <div class=" w-[233px] cursor-pointer text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem]  z-[200]" style="font-family:'Noto Kufi Arabic';">القضاء</div>
         <img class="arrow plus-icon pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/mplus.png') }}" alt="plus">
       </div>
-      <div class="submenu hidden flex-col text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
-          <div class="submenu-item inline-flex items-center z-[200] "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/court') }}"><span>المحكمة</span></a></div>
+      <div class="submenu hidden flex-col w-[120%] text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
+          <div class="submenu-item inline-flex items-center z-[200] "><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/court') }}"><span>المحاكم الدنيا</span></a></div>
           
-          <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/niaba') }}"><span>النيابة العامة</span></a></div>
+         <!--  <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/niaba') }}"><span>النيابة العامة</span></a></div> -->
           <div class="submenu-item inline-flex items-center z-[200] "> <span><img class="pl-[1rem]  " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/inst') }}"><span>معهد القضاء</span></a></div>
        </div>
     </div>
@@ -26,15 +26,15 @@
         <img class=" arrow plus-icon pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/mplus.png') }}" alt="plus">
       </div>
       <div class="submenu hidden  flex-col text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
-          <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/a7kam') }}"><span>أحكام</span></a></div>
+          <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/a7kam') }}"><span>مشروعات الأحكام</span></a></div>
           
-          <div class="submenu-item inline-flex items-center z-[200]"><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/montaqa') }}"><span>منتقى</span></a></div>
+          <div class="submenu-item inline-flex items-center z-[200] w-[150%]"><span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/montaqa') }}"><span> قضاء المحكمة العليا</span></a></div>
           <div class="submenu-item inline-flex items-center z-[200]"> <span><img class="pl-[1rem] " src="{{asset('images/arroleft-gold.png')}}" alt=""></span><a href="{{ url('/shoon') }}"><span>شؤون فنية</span></a></div>
        </div>
     </div>
     <div class="Lecture flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px] mt-[1.5rem] inline-flex">
-        <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] z-[200]" style="font-family:'Noto Kufi Arabic';">مدونة</div>
+        <div class=" text-center cursor-pointer text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] z-[500]" style="font-family:'Noto Kufi Arabic';">مدونة</div>
         <img class="arrow plus-icon pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/mplus.png') }}" alt="plus">
       </div>
       <div class="submenu hidden flex-col  text-[#E1C478] 2xl:text-[2.5rem] lg:text-[1.5rem] text-[1rem] 2xl:gap-[20px] gap-[10px] my-[5px] "  style="font-family:'Noto Kufi Arabic';direction:rtl;">
@@ -70,9 +70,9 @@
     $icon.toggleClass('rotate-icon'); // Toggle the rotation class for the icon
 
     if($submenu.hasClass('hidden')) {
-      $icon.attr('src', '{{ asset('images/mplus.png') }}'); // Change to plus icon
+      $icon.attr("src", "{{ asset('images/mplus.png') }}"); // Change to plus icon
     } else {
-      $icon.attr('src', '{{ asset('images/minus.png') }}'); // Change to minus icon
+      $icon.attr("src", "{{ asset('images/minus.png') }}"); // Change to minus icon
     }
   });
 });

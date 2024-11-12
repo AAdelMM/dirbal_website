@@ -25,9 +25,9 @@
       </div>
 <!--header black-->
 
-      <div class="HeaderHome w-[90vw] 2xl:h-[7.8rem] lg:h-[5.5em] h-[4rem] mx-[4.85vw] top-0 absolute">
+    <div class="HeaderHome w-[90vw] 2xl:h-[7.8rem] lg:h-[5.5em] h-[4rem] mx-[4.85vw] top-0 absolute">
     <div class="Line w-[89.3vw]  h-[0px] left-[8.72px] 2xl:top-[105px] lg:top-[4.6em] top-[3.2rem] absolute border border-gray-900"></div>
-    <div class="Group20 w-[13.7vw] 2xl:h-[110px] lg:h-[4.8em] h-[3.2rem] 2xl:left-[45.2rem]    lg:left-[31.7em] left-[18.08rem] 2xl:top-[12px] lg:top-[0.25em] top-[0.25rem] absolute">
+    <div class="Group20 w-[13.7vw] 2xl:h-[110px] lg:h-[4.8em] h-[3.2rem] 2xl:left-[45.2rem] lg:left-[31.7em] left-[18.08rem] 2xl:top-[12px] lg:top-[0.25em] top-[0.25rem] absolute">
       <img class=" w-[13.17vw]  2xl:h-[6.9rem] lg:h-[5.2rem] h-[2.75rem] left-5 top-0 absolute " src="{{ asset('images/bsm3.png') }}" />
       
     </div>

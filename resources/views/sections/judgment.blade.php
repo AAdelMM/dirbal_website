@@ -3,9 +3,11 @@
   
   <div class="container mx-auto px-4">
     <div class="Frame285 w-full lg:w-3/4 xl:w-2/3  absolute right-20 top-20 lg:top-28 xl:top-35" style="direction:rtl;">
-      <h1 class="text-white text-[2.25rem] lg:text-[3.75rem] xl:text-[5rem] 2xl:text-[6.5rem] font-normal mb-8 2xl:mb-12" style="font-family:'Noto Kufi Arabic';">القضاء</h1>
-        <p class="text-white text-[1.25rem] lg:text-[1.5rem] 2xl:text-[1.75rem] font-normal leading-relaxed lg:leading-loose" style="font-family:'El Messiri';">
-          القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه، قدمت له بعرض موجز لأهم القواعد التي يتضمنها ولتلك التي بني عليها. كما أضفت تسجيلاً صوتياً لذلك لمن يؤثر الاستماع على القراءة.
+      <h1 class="text-white text-[2.25rem] lg:text-[3.75rem] xl:text-[4rem] 2xl:text-[6.5rem] font-normal mb-8 2xl:mb-12" style="font-family:'Noto Kufi Arabic';">القضاء</h1>
+        <p class="text-white 2xl:w-[100rem] lg:w-[75rem] mt-[-2rem] text-[1.25rem] lg:text-[1.5rem] 2xl:text-[1.75rem] font-normal leading-relaxed lg:leading-loose" style="font-family:'El Messiri';">
+        فهذه مكتبة متواضعة التأمت أجزاؤها من بعض عملي بالمحاكم الدنيا وبالمعهد العالي للقضاء. رجَّحت فائدتها فهأنذا أنشرها.
+القانون الليبي مرجع الأحكام، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصرية، المصدر التاريخي لجلّ القوانين العربية.
+وإذ أضعها بين يدي القارئ الكريم، احتسبها عند الله من الأعمال النافعة التي لا أرتجي من ورائها غير الأجر والثواب. ولْيعلم القارئُ الكريم أن الأحكام القضائية نتاج خبرة قصيرة، وثمرة اجتهاد متواضع يحتمل الصوابَ والخطأ. فإن كان صواباً، فمنَ الله تعالى وبتوفيقه، وإلا فبسبب غفلة أو تقصير. ولئن يمتنع عليَّ إصلاحُ قضاء قضيته أمسِ بَنيتُه على اجتهاد غير سديد، إلا أنه لن يمنع من رجوعي إلى الحقّ وإيثاره مستقبلاً إذا ما هُديت فيه لرشدي. فاللهَ أسألُ المغفرةَ والسداد.
         </p>
     </div>
   </div>
@@ -18,18 +20,18 @@
           <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'">معهد القضاء</h2>
         </div>
         
-        <img src="{{asset('images/Vline.png')}}" alt="" class="hidden lg:block h-20 xl:h-24">
+        <!-- <img src="{{asset('images/Vline.png')}}" alt="" class="hidden lg:block h-20 xl:h-24"> -->
         
-        <div class="flex flex-col items-center">
+        <!-- <div class="flex flex-col items-center">
           <img class="w-16 h-16 lg:w-23 lg:h-23 2xl:w-28 2xl:h-28 mb-4" src="{{asset('images/jicon2.png')}}" alt="المحكمة" />
           <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'">المحكمة</h2>
-        </div>
+        </div> -->
         
         <img src="{{asset('images/Vline.png')}}" alt="" class="hidden lg:block h-20 xl:h-24">
         
         <div class="flex flex-col items-center">
           <img class="w-16 h-16 lg:w-23 lg:h-23 2xl:w-28 2xl:h-28 mb-4" src="{{asset('images/jicon3.png')}}" alt="النيابة العامة" />
-          <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'">النيابة العامة</h2>
+          <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'">المحاكم الدنيا</h2>
         </div>
       </div>
     </div>
