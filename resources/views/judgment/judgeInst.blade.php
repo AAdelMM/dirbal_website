@@ -13,7 +13,7 @@
     <img class=" w-[100vw] h-[32.8rem] left-0 top-0 absolute" src="{{ asset('images/judgeInstbg.png') }}" />
     <div class="Frame294 w-[74.8vw] h-[17.6rem] left-[19.8vw] top-[13.4vh] absolute flex-col justify-start items-end gap-[69px] inline-flex">
       <div class=" w-[55.9rem] h-[101px] text-right text-yellow-600 text-[6rem] font-normal " style="font-family:'Noto Kufi Arabic'">معهد القضاء</div>
-      <div class=" w-[84.8vw]  text-white text-[2rem] font-normal  " style="font-family:'El Messiri'; direction:rtl;">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه،</div>
+      <div class=" w-[84.8vw]  text-white text-[2rem] font-normal  " style="font-family:'El Messiri'; direction:rtl;">سيأتى النص لاحقا</div>
     </div>
 <!--main content end-->
 
