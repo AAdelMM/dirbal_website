@@ -13,7 +13,7 @@
       <img class="Ist w-[100vw] 2xl:h-[32.8rem] h-[25rem] left-0 top-0 absolute overflow-hidden" src="{{ asset('images/mabahithhome.png') }}" />
       <div class="Frame288 2ءxl:w-[72.8vw] lg:w-[65vw] w-[48vw] 2xl:h-[17.6rem] h-[15rem] left-[390.43px] 2xl:top-[145px] top-[115px] absolute flex-col justify-start items-end gap-[69px] inline-flex">
         <div class=" w-[46.6vw]  2xl:h-[101px] h-[50px] text-right text-[#BB941A] 2xl:text-[6rem] lg:text-[4rem] text-[3rem] font-normal leading-relaxed" style="font-family:'Noto Kufi Arabic';">مباحث</div>
-        <div class=" w-[74.8vw]  text-justify text-gray-900 2xl:text-[40px] lg:text-[2rem] text-[1.5rem] font-normal " style="font-family:'El Messiri'; direction:rtl;">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه،</div>
+        <div class=" w-[74.8vw]  text-justify text-gray-900 2xl:text-[40px] lg:text-[2rem] text-[1.5rem] font-normal " style="font-family:'El Messiri'; direction:rtl;">تضم جملة من الأوراق البحثية في مجال حقوق الإنسان وفروع القانون مع قبسات من شتى الكتب وحفنة من الملخصات التي دفعتني أهمية موضوع الكتاب إلى تلخيصه وإنتاجه صوتياً بسطاً له أمام من يستثقل الكتاب الورقي أو لا يجد له الوقت.</div>
       </div>
 
 

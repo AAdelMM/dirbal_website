@@ -23,7 +23,7 @@ $decisions = DB::table('ma7kama_olia')
     <img class=" w-[100vw] h-[32.8rem] left-0 top-0 absolute" src="{{ asset('images/50.png') }}" />
     <div class="Frame294 w-[74.8vw] h-[17.6rem] left-[19.8vw] top-[13.4vh] absolute flex-col justify-start items-end gap-[69px] inline-flex">
       <div class=" w-[55.9rem] h-[101px] text-right text-yellow-600 text-[6rem] font-normal " style="font-family:'Noto Kufi Arabic'"> المحكمة العليا</div>
-      <div class=" w-[84.8vw]  text-white text-[2rem] font-normal  " style="font-family:'El Messiri'; direction:rtl;">القانون الليبي هو المرجع في الأعمال، لكن قدراً غير يسير منها يتوافق مع قوانين دول عربية لاسيما المصري، المصدر التاريخي للقانون الليبي ولكثير من القوانين العربية. تيسيراً للزائر في معرفة مدى تعلق العمل باهتمامه،</div>
+      <div class=" w-[84.8vw]  text-white text-[2rem] font-normal  " style="font-family:'El Messiri'; direction:rtl;">يطوي القسم أعمالاً لصاحب الموقع بمناسبة وظيفته مستشاراً بالمحكمة العليا الليبية. معظمها نسخٌ محرَّرة من مشاريع أحكام تعكس الرأي الشخصي فحسب. وهي وإن شكلت في أغلبها بذرة الحكم، إلا أنها لا تطابق بالضرورة نسخته النهائية بل ولا حتى نسخة المشروع الأصلية. لهذا يجدر الانتباه إلى أنها لا تعبِّر عن مذهب المحكمة العليا، ولا تصح نسبتها إليها، ولا تصلح مصدراً لاستنباط مبادئها القانونية. نشرها هنا إنما لمشاركتها مع رجال القضاء وفقهاء القانون والمهتمين، إسهاماً في إثراء الفكر القانوني وفي الرفع من كفاءة العمل القضائي. والله الموفق.</div>
     </div>
 <!--main content end-->
 
