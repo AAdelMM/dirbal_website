@@ -30,6 +30,7 @@
 
     <!--section-1 Main Start--> 
     <!--carousel container -->
+    @include('homePage.menu')
     <div class="carousel-container">
         <div class="carousel-wrapper" id="carouselWrapper">
             <!-- Sections to scroll through -->

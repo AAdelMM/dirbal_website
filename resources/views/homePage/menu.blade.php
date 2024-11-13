@@ -1,5 +1,5 @@
-<div class="container-fluid main-menu flex justify-end w-full  h-auto absolute z-[3500]">
-  <div id="menuContainer" class="Menu hidden lg:w-[31.8vw] h-[120vh] w-[45vw]  relative">
+<div class="container-fluid main-menu flex justify-end w-full  h-auto absolute z-[9000]">
+  <div id="menuContainer" class="Menu hidden lg:w-[31.8vw] h-[120vh] w-[45vw]  fixed z-[5000]">
   <div class="Rectangle438 lg:w-[31.8vw] w-[45vw] lg:h-[130vh] h-[100vh] left-0 top-0 absolute bg-gray-800"></div>
   <div class="Frame9 w-[100%] right-5 2xl:top-[11.25rem] lg:top-[8rem] top-[4.6rem] absolute flex-col justify-start items-end gap-5 inline-flex">
     <div class="Principal flex-col justify-start items-end gap-[30px] flex">

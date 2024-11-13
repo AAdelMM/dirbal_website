@@ -1,4 +1,8 @@
+
+
 <div class="Home w-full min-h-screen relative">
+@yield('content')
+@include('homePage.menu')
   <img class="sectionBg w-full h-full object-cover absolute left-0 top-0" src="{{ asset('images/blogbg.png') }}" />
   
   <div class="container mx-auto px-4">
@@ -57,9 +61,29 @@
           <div class="h-8 border-r border-white"></div>
           <img class="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" src="{{ asset('images/magniw.png') }}" alt="search">
           <div class="h-8 border-r border-white"></div>
-          <img id="menuIcon" class="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" src="{{ asset('images/menuw.png') }}" alt="menu">
+          <div class="Icons8Menu11 2xl:w-10 lg:w-7 w-6 2xl:h-10 lg:h-8 h-6  relative"><img id="menuIcon2" class="w-6 h-6 lg:w-8 lg:h-8 cursor-pointer" src="{{ asset('images/menuw.png') }}" alt="menu"></div>
         </div>
       </div>
       <div class="border-t border-white mt-4"></div>
     </header>
 </div>
+<script>
+  //toggle menu
+document.addEventListener('DOMContentLoaded', function() {
+  // Get references to menu icon and menu container
+  const menuIcon = document.getElementById('menuIcon2');
+  const menuContainer = document.getElementById('menuContainer');
+  const menuCloseIcon = document.getElementById('menuCloseIcon'); // Assuming you add an ID to your close icon
+
+  // Function to toggle menu visibility
+  function toggleMenu() {
+    menuContainer.classList.toggle('hidden'); // Toggle the 'hidden' class
+  }
+
+  // Event listener for menu icon on main page
+  menuIcon.addEventListener('click', toggleMenu);
+
+  // Event listener for close icon within menu itself
+  menuCloseIcon.addEventListener('click', toggleMenu);
+});
+</script>
