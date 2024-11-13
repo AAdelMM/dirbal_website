@@ -4,7 +4,7 @@
   <div class="Frame9 w-[100%] right-5 2xl:top-[11.25rem] lg:top-[8rem] top-[4.6rem] absolute flex-col justify-start items-end gap-5 inline-flex">
     <div class="Principal flex-col justify-start items-end gap-[30px] flex">
       <div class="Head justify-start items-center gap-[30px]  inline-flex">
-        <div class=" w-[233px] text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';">الرئيسية</div>
+        <div class=" w-[233px] text-right text-white text-6xl font-normal 2xl:text-[3rem] lg:text-[2rem] text-[1.5rem] " style="font-family:'Noto Kufi Arabic';"><a href="{{ url('/')}}">الرئيسية</a></div>
         <img class="pr-[1rem] lg:pr-[0rem]" src="{{ asset('images/arrowleft2.png') }}" alt="arrow">
       </div>
     </div>

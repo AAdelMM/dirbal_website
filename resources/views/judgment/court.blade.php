@@ -97,6 +97,7 @@
       <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-0 absolute bg-[#C18F59]"></div>
       <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-[6.5rem] absolute bg-[#C18F59]"></div>
       <div class="Frame16 w-[98.9vw] h-[6.125rem] left-0 top-[0.25rem] 2xl:text-[2rem] text-[1.5rem] absolute justify-center items-center gap-[125px] inline-flex" style="font-family:'Noto Kufi Arabic';">
+      <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">النيابة العامة</div>
         <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">قرارات قضائية</div>
         <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">القضاء الشرعي</div>
         <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">القضاء الجنائي</div>

@@ -21,9 +21,9 @@ $decisions = DB::table('ma7kama_olia')
   <div class="Home w-[100vw] h-[32.8rem] relative">
   @include('homePage.menu')
     <img class=" w-[100vw] h-[32.8rem] left-0 top-0 absolute" src="{{ asset('images/50.png') }}" />
-    <div class="Frame294 w-[74.8vw] h-[17.6rem] left-[19.8vw] top-[13.4vh] absolute flex-col justify-start items-end gap-[69px] inline-flex">
-      <div class=" w-[55.9rem] h-[101px] text-right text-yellow-600 text-[6rem] font-normal " style="font-family:'Noto Kufi Arabic'"> المحكمة العليا</div>
-      <div class=" w-[84.8vw]  text-white text-[2rem] font-normal  " style="font-family:'El Messiri'; direction:rtl;">يطوي القسم أعمالاً لصاحب الموقع بمناسبة وظيفته مستشاراً بالمحكمة العليا الليبية. معظمها نسخٌ محرَّرة من مشاريع أحكام تعكس الرأي الشخصي فحسب. وهي وإن شكلت في أغلبها بذرة الحكم، إلا أنها لا تطابق بالضرورة نسخته النهائية بل ولا حتى نسخة المشروع الأصلية. لهذا يجدر الانتباه إلى أنها لا تعبِّر عن مذهب المحكمة العليا، ولا تصح نسبتها إليها، ولا تصلح مصدراً لاستنباط مبادئها القانونية. نشرها هنا إنما لمشاركتها مع رجال القضاء وفقهاء القانون والمهتمين، إسهاماً في إثراء الفكر القانوني وفي الرفع من كفاءة العمل القضائي. والله الموفق.</div>
+    <div class="Frame294 w-[74.8vw] h-[17.6rem] left-[19.8vw] top-[13.4vh] absolute flex-col justify-start items-end gap-[20px] 2xl:gap-[30px] inline-flex">
+      <div class=" w-[55.9rem] h-[101px] text-right text-yellow-600 2xl:text-[5.5rem] lg:text-[4rem] text-[2rem] font-normal " style="font-family:'Noto Kufi Arabic'"> المحكمة العليا</div>
+      <div class=" w-[84.8vw]  text-white 2xl:text-[2rem] lg:text-[1.7rem] text-[1.2rem] font-normal  " style="font-family:'El Messiri'; direction:rtl;">يطوي القسم أعمالاً لصاحب الموقع بمناسبة وظيفته مستشاراً بالمحكمة العليا الليبية. معظمها نسخٌ محرَّرة من مشاريع أحكام تعكس الرأي الشخصي فحسب. وهي وإن شكلت في أغلبها بذرة الحكم، إلا أنها لا تطابق بالضرورة نسخته النهائية بل ولا حتى نسخة المشروع الأصلية. لهذا يجدر الانتباه إلى أنها لا تعبِّر عن مذهب المحكمة العليا، ولا تصح نسبتها إليها، ولا تصلح مصدراً لاستنباط مبادئها القانونية. نشرها هنا إنما لمشاركتها مع رجال القضاء وفقهاء القانون والمهتمين، إسهاماً في إثراء الفكر القانوني وفي الرفع من كفاءة العمل القضائي. والله الموفق.</div>
     </div>
 <!--main content end-->
 
@@ -105,8 +105,8 @@ $decisions = DB::table('ma7kama_olia')
       <div class="Frame16 w-[98.9vw] h-[6.125rem] left-0 top-[0.25rem] 2xl:text-[2rem] text-[1.5rem] absolute justify-center items-center gap-[125px] inline-flex" style="font-family:'Noto Kufi Arabic';">
 
         <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">شؤون فنية</div>
-        <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">منتقى</div>
-        <div class=" text-center text-white cursor-pointer items-center flex font-bold border-y-4  border-orange-200 h-[6.6rem] leading-relaxed">أحكام</div>
+        <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">من قضاء المحكمة العليا</div>
+        <div class=" text-center text-white cursor-pointer items-center flex font-bold border-y-4  border-orange-200 h-[6.6rem] leading-relaxed">مشروعات الأحكام</div>
       </div>
     </div>
 

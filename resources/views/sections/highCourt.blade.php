@@ -17,7 +17,7 @@
       <div class="flex flex-col lg:flex-row justify-around items-center space-y-8 lg:space-y-0 lg:space-x-8 xl:space-x-16">
         <div class="flex flex-col items-center">
           <img class="w-16 h-16 lg:w-23 lg:h-23 2xl:w-28 2xl:h-28 mb-4" src="{{asset('images/montaqa.png')}}" alt="معهد القضاء" />
-          <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'">منتقى</h2>
+          <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'">من قضاء المحكمة العليا</h2>
         </div>
         
         <img src="{{asset('images/Vline.png')}}" alt="" class="hidden lg:block h-20 xl:h-24">
@@ -31,7 +31,7 @@
         
         <a href="/a7kam"><div class="flex flex-col items-center">
           <img class="w-16 h-16 lg:w-23 lg:h-23 2xl:w-28 2xl:h-28 mb-4" src="{{asset('images/a7kam.png')}}" alt="النيابة العامة" />
-          <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'"> أحكام</h2>
+          <h2 class="text-gray-200 text-xl lg:text-2xl xl:text-3xl font-bold text-center" style="font-family:'Noto Kufi Arabic'">مشروعات الأحكام</h2>
         </div></a>
       </div>
     </div>
