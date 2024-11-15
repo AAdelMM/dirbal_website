@@ -105,9 +105,9 @@ $decisions = DB::table('ma7kama_olia')
             <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-[6.5rem] absolute bg-[#C18F59]"></div>
             <div class="Frame16 w-[98.9vw] h-[6.125rem] left-0 top-[0.25rem] 2xl:text-[2rem] text-[1.5rem] absolute justify-center items-center gap-[125px] inline-flex" style="font-family:'Noto Kufi Arabic';">
 
-                <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">شؤون فنية</div>
-                <div class=" text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed">من قضاء المحكمة العليا</div>
-                <div class=" text-center text-white cursor-pointer items-center flex font-bold border-y-4  border-orange-200 h-[6.6rem] leading-relaxed">مشروعات الأحكام</div>
+                <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'شؤون فنية ')">شؤون فنية</div>
+                <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'من قضاء المحكمة العليا ')">من قضاء المحكمة العليا</div>
+                <div class="tab active-tab text-center text-white cursor-pointer items-center flex font-bold border-y-4  border-orange-200 h-[6.6rem] leading-relaxed" onclick="switchTab(this, 'مشروعات الاحكام ')">مشروعات الأحكام</div>
             </div>
         </div>
 
@@ -115,7 +115,7 @@ $decisions = DB::table('ma7kama_olia')
             @foreach($decisions as $decision)
             <!--row start-->
             <div class="decision-row w-[90.7vw] relative inline-flex  justify-start items-start gap-4 my-2 " style="direction:rtl;">
-                <div class="ArticlePost75 w-[90.7vw] relative cursor-pointer inline-flex items-center gap-5" onclick="toggleExtend({{ $decision->id }})">
+                <div class="ArticlePost75 w-[90.7vw] relative cursor-pointer inline-flex items-center gap-5" onclick="toggleExtend('{{ $decision->id }}')">
                     <div class="Menu w-[6.75rem] h-[auto] ">
                         <div class="PostInfoDate w-[5.6rem] h-[5.6rem]  flex items-center  border border-white">
                             <div class="Frame33  flex-col justify-center items-center inline-flex" style="font-family:'Noto Kufi Arabic';">
@@ -154,7 +154,7 @@ $decisions = DB::table('ma7kama_olia')
                         <div class="DivMkdPostContentColumn w-[84.9vw] relative ">
                             <div id="title" class="w-[80.9vw] left-[1.5vw] top-[42px] 2xl:text-[2rem] text-[1.2rem]  text-right text-white" style="font-family:'El Messiri'; direction:rtl;">
                                 <span class="text-[#FAE1C6] text-[2.5rem] text-bold leading-[55px]" style="font-family:'sakkal majalla';">{{ $decision->topic_number}}:</span>
-                                <span style="text-white text-6xl leading-[55px]"> </span>
+                                <span class="text-white text-6xl leading-[55px]"> </span>
                                 <span>{{ $decision->title }}</span>
                             </div>
                             <div class="DivMkdPostInfo 2xl:left-[73.8vw] lg:left-[70vw] left-[60vw] top-[129px]  justify-center items-end gap-[5px] inline-flex " style="font-family:'Elmessiri'; ">
@@ -237,9 +237,37 @@ $decisions = DB::table('ma7kama_olia')
                 /* Set it to a value large enough to fit the content */
 
             }
+            .active-tab {
+                transition: all 1.3s ease;
+            }
         </style>
 
         <script>
+            //tab change
+function switchTab(element, tabName) {
+    // Remove active styling from all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active-tab');
+        tab.classList.remove('text-white');
+        tab.classList.remove('border-y-4');
+        tab.classList.remove('border-orange-200');
+        tab.classList.remove('h-[6.6rem]');
+        tab.classList.add('text-orange-300');
+    });
+
+    // Add active styling to clicked tab
+    element.classList.add('active-tab');
+    element.classList.add('text-white');
+    element.classList.add('border-y-4');
+    element.classList.add('border-orange-200');
+    element.classList.add('h-[6.6rem]');
+    element.classList.remove('text-orange-300');
+
+    // Update the content
+   /*  document.getElementById('content-title').textContent = contentMap[tabName].title;
+    document.getElementById('content-body').textContent = contentMap[tabName].body; */
+}
+            //content
             function toggleExtend(id) {
                 var element = document.getElementById('extend-' + id);
                 var share = document.getElementById('share-' + id);
