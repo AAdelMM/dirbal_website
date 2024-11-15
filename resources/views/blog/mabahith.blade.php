@@ -4,6 +4,12 @@
 
 @section('content')
 
+<style>
+  .active-tab {
+                transition: all 1.3s ease;
+            }
+</style>
+
 <div class="SubMaba7ith w-[100vw] h-[220rem] overflow-hidden relative">
   
 @yield('content')
@@ -81,19 +87,20 @@
           </div>
         </div>
       </div>
-      <div class="Group15 w-[99.1vw] h-[107.03px] left-[10.01px] top-[13px] absolute">
-        <div class="RsLayer w-[99.1vw] h-[3px] left-0 top-0 absolute bg-orange-400"></div>
-        <div class="RsLayer w-[99.1vw] h-[3px] left-0 top-[104.03px] absolute bg-orange-400"></div>
-        <div class="Frame16 w-[60.1vw] h-[98.03px] left-[21.2vw] top-[4px] absolute justify-center items-center gap-[75px] inline-flex" style="font-family:'Noto Kufi Arabic';">
-          <div class=" w-[25rem] h-[3.7rem] text-center text-[#BD8E55] 2xl:text-[40px] lg:text-[2rem] text-[1.5rem] font-bold  leading-relaxed" >متنوعة</div>
-          <div class=" w-[25rem] h-[3.7rem] text-center text-[#BD8E55] 2xl:text-[40px] lg:text-[2rem] text-[1.5rem] font-bold  leading-relaxed">قانونية</div>
-          <div class=" w-[25rem] h-[3.7rem] text-center text-white 2xl:text-[40px] lg:text-[2rem] text-[1.3rem] font-bold  leading-relaxed">حقوق الإنسان</div>
+      <!--tabs start-->
+      <div class="Group15 w-[98.9vw] h-[6.7rem] left-[9px] top-[13px] absolute">
+      <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-0 absolute bg-[#C18F59]"></div>
+      <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-[6.5rem] absolute bg-[#C18F59]"></div>  
+            <div class="Frame16 w-[98.9vw] h-[6.125rem] left-0 top-[0.25rem] 2xl:text-[2rem] text-[1.5rem] absolute justify-center items-center gap-[125px] inline-flex" style="font-family:'Noto Kufi Arabic';">
+
+                <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'متنوعة')">متنوعة</div>
+                <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'قانونية')">قانونية</div>
+                <div class="tab active-tab text-center text-white cursor-pointer items-center flex font-bold border-y-4  border-orange-200 h-[6.6rem] leading-relaxed" onclick="switchTab(this, 'حقوق الانسان')">حقوق الانسان</div>
+            </div>
         </div>
-      </div>
+<!--tabs end-->
 
-
-      <div class="Line41 2xl:w-[23.75rem] lg:w-[19rem] w-[15rem] h-[0px] left-[61.7vw]  top-[7.5rem] absolute shadow border-2 border-[#BD8E55]"></div>
-      <div class="Line42 2xl:w-[23.75rem] lg:w-[19rem] w-[15rem] h-[0px] left-[61.7vw]  top-[1rem] absolute shadow border-2 border-[#BD8E55]"></div>
+     
       <div class="Frame321 w-[108.9rem] h-[156.9rem] left-[5.6rem] top-[220px] absolute flex-col justify-start items-start gap-5 inline-flex">
        
 <!--rows start-->
@@ -316,6 +323,30 @@
       </div>
       <!--end of content row-->
 </div>
+
+<script>
+       //tab change
+function switchTab(element, tabName) {
+    // Remove active styling from all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active-tab');
+        tab.classList.remove('text-white');
+        tab.classList.remove('border-y-4');
+        tab.classList.remove('border-orange-200');
+        tab.classList.remove('h-[6.6rem]');
+        tab.classList.add('text-orange-300');
+    });
+
+    // Add active styling to clicked tab
+    element.classList.add('active-tab');
+    element.classList.add('text-white');
+    element.classList.add('border-y-4');
+    element.classList.add('border-orange-200');
+    element.classList.add('h-[6.6rem]');
+    element.classList.remove('text-orange-300');
+  }
+</script>
+
 @yield('content')
 @include('homePage.footer')
     
