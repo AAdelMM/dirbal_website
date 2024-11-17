@@ -100,7 +100,7 @@
         </div>
 <!--tabs end-->
 
-     
+    
       <div class="Frame321 w-[108.9rem] h-[156.9rem] left-[5.6rem] top-[220px] absolute flex-col justify-start items-start gap-5 inline-flex">
        
 <!--rows start-->

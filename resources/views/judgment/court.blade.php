@@ -9,6 +9,19 @@
  .active-tab {
     transition: all 1.3s ease;
 }
+.hidden {
+    display: none;
+}
+
+.content-tab {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+}
+
+#content-sections {
+    direction:rtl;
+}
 </style>
 
 <div class="Frame338 w-[100vw] h-[268.6rem] flex-col justify-start items-center inline-flex">
@@ -97,77 +110,73 @@
         </div>
     </div>
     
-
-    <div class="Group15 w-[98.9vw] h-[6.7rem] left-[9px] top-[13px] absolute">
+<!-- Tabs start -->
+<div class="Group15 w-[98.9vw] h-[6.7rem] left-[9px] top-[13px] absolute">
     <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-0 absolute bg-[#C18F59]"></div>
     <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-[6.5rem] absolute bg-[#C18F59]"></div>
     <div class="Frame16 w-[98.9vw] h-[6.125rem] left-0 top-[0.25rem] 2xl:text-[2rem] text-[1.5rem] absolute justify-center items-center gap-[125px] inline-flex" style="font-family:'Noto Kufi Arabic';">
-        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'النيابة العامة')">النيابة العامة</div>
-        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'قرارات قضائية')">قرارات قضائية</div>
-        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'القضاء الشرعي')">القضاء الشرعي</div>
-        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'القضاء الجنائي')">القضاء الجنائي</div>
-        <div class="tab active-tab text-center text-white items-center flex font-bold cursor-pointer border-y-4 border-orange-200 h-[6.6rem] leading-relaxed" onclick="switchTab(this, 'القضاء المدني')">القضاء المدني</div>
+        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'tab1')">النيابة العامة</div>
+        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'tab2')">قرارات قضائية</div>
+        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'tab3')">القضاء الشرعي</div>
+        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'tab4')">القضاء الجنائي</div>
+        <div class="tab active-tab text-center text-white items-center flex font-bold cursor-pointer border-y-4 border-orange-200 h-[6.6rem] leading-relaxed" onclick="switchTab(this, 'tab5')">القضاء المدني</div>
     </div>
 </div>
+<!-- Tabs end -->
 
-<div class="content-rows flex-col">
-    <!--row start-->
-    <div id="content-container" class="Frame324 w-[90.7vw] h-[156.9rem] top-[15rem] absolute flex-col justify-start items-center gap-5 inline-flex">
-        <h1 id="content-title" class="text-white text-[1.5rem]">سوف يكون محتوى القضاء المدني</h1>
-        <div id="content-body" class="text-white text-[1.5rem]">
-            سوف يكون عناصر المحتوى
+<!-- Content sections -->
+<div id="content-sections" class="content-rows flex-col absolute border-2 border-red-300 w-full top-[10rem] px-10">
+    <!--start النيابة العامة-->
+    <div id="tab1" class="content-tab hidden">Custom design for النيابة العامة</div>
+    <!--end-->
+
+    <!--start قرارات قضائية-->
+    <div id="tab2" class="content-tab hidden">Custom design for قرارات قضائية</div>
+    <!--end-->
+
+    <!--start القضاء الشرعى-->
+    <div id="tab3" class="content-tab hidden">Custom design for القضاء الشرعي</div>
+    <!--end-->
+
+    <!--start القضاء الجنائى-->
+    <div id="tab4" class="content-tab hidden">Custom design for القضاء الجنائي</div>
+    <!--end-->
+
+    <!--start القضاء المدنى-->
+    <div id="tab5" class="content-tab   flex gap-4 border-b-2 border-gray-400">
+        <div class="date-div border-2 border-orange-300 w-[5%] h-[8vw] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex justify-center items-center">20</div>
+            <div class="year w-[100%] h-[50%] flex justify-center items-center">2003</div>
+        </div>
+        <div class="border-2 border-orange-300 w-[90%] flex flex-col justify-center">
+            <div class="topic-title">here will be topic title</div>
+            <div class="author-name text-orange-300">author name</div>
         </div>
     </div>
-    <!--end of content row-->
+    <!--end-->
 </div>
 
 <script>
-const contentMap = {
-    'النيابة العامة': {
-        title: ' النيابة العامة',
-        body: 'هنا موضوعات النيابة العامة'
-    },
-    'قرارات قضائية': {
-        title: 'قرارات قضائية',
-        body: 'محتوى وموضوعات قرارات قضائية'
-    },
-    'القضاء الشرعي': {
-        title: 'القضاء الشرعي',
-        body: 'محتوى وموضوعات القضاء الشرعى'
-    },
-    'القضاء الجنائي': {
-        title: ' القضاء الجنائي',
-        body: 'محتوى وموضوعات القضاء الجنائى'
-    },
-    'القضاء المدني': {
-        title: 'القضاء المدنى',
-        body: 'محتوى وموضوعات القضاء المدنى'
-    }
-};
-
-function switchTab(element, tabName) {
+function switchTab(element, tabId) {
     // Remove active styling from all tabs
     document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active-tab');
-        tab.classList.remove('text-white');
-        tab.classList.remove('border-y-4');
-        tab.classList.remove('border-orange-200');
-        tab.classList.remove('h-[6.6rem]');
+        tab.classList.remove('active-tab', 'text-white', 'border-y-4', 'border-orange-200', 'h-[6.6rem]');
         tab.classList.add('text-orange-300');
     });
 
-    // Add active styling to clicked tab
-    element.classList.add('active-tab');
-    element.classList.add('text-white');
-    element.classList.add('border-y-4');
-    element.classList.add('border-orange-200');
-    element.classList.add('h-[6.6rem]');
+    // Add active styling to the clicked tab
+    element.classList.add('active-tab', 'text-white', 'border-y-4', 'border-orange-200', 'h-[6.6rem]');
     element.classList.remove('text-orange-300');
 
-    // Update the content
-    document.getElementById('content-title').textContent = contentMap[tabName].title;
-    document.getElementById('content-body').textContent = contentMap[tabName].body;
+    // Hide all content sections
+    document.querySelectorAll('.content-tab').forEach(tabContent => {
+        tabContent.classList.add('hidden');
+    });
+
+    // Show the content for the active tab
+    document.getElementById(tabId).classList.remove('hidden');
 }
+
 </script>
     @yield('content')
     @include('homePage.footer')
