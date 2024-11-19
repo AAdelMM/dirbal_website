@@ -41,6 +41,22 @@ class KitabSawtyResource extends Resource
     {
         return $form
             ->schema([
+
+                Forms\Components\TextInput::make('day')
+                ->numeric()
+                ->minValue(1)
+                ->maxValue(31)
+                ->label('اليوم'),
+                Forms\Components\TextInput::make('month')
+                ->numeric()
+                ->minValue(1)
+                ->maxValue(12)
+                ->label('الشهر'),
+                Forms\Components\TextInput::make('year')
+                ->numeric()
+                ->minValue(1900)
+                ->maxValue(date('Y'))
+                ->label('السنة'),
                 // Group ref_number and 3nwan fields on the same line
                 Forms\Components\Grid::make(1)->schema([  // 2 means two columns
                     Forms\Components\TextInput::make('3nwan')

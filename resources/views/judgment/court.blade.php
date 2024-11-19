@@ -182,3 +182,5 @@ function switchTab(element, tabId) {
     @include('homePage.footer')
 
    @endsection
+
+   
