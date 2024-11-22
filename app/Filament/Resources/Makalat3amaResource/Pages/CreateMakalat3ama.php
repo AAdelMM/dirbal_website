@@ -15,7 +15,7 @@ class CreateMakalat3ama extends CreateRecord
            
             Actions\Action::make('save')
             ->label('حفظ')
-            ->action('save')
+            ->action('create')
             ->color('primary')
             ->extraAttributes(['class' => 'filament-page-save-button']),
         ];

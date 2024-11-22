@@ -74,7 +74,7 @@ class DashboardTabs extends Page
         $makalat = Makalat3ama::where('section_id', $sectionId)
             ->where('branch_id', $branchId)
             ->where('item_id', $itemId)
-            ->get(['3nwan as title'])->map(function ($item) {
+            ->get(['title'])->map(function ($item) {
                 return ['title' => $item->title, 'table' => 'مقالات'];
             });
 
@@ -88,7 +88,7 @@ class DashboardTabs extends Page
         $kitab = KitabSawty::where('section_id', $sectionId)
             ->where('branch_id', $branchId)
             ->where('item_id', $itemId)
-            ->get(['3nwan as title'])->map(function ($item) {
+            ->get(['title'])->map(function ($item) {
                 return ['title' => $item->title, 'table' => 'كتاب صوتى'];
             });
 

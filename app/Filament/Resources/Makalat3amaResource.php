@@ -45,7 +45,7 @@ class Makalat3amaResource extends Resource
         return $form
             ->schema([
                 Grid::make(2)->schema([  // Two-column layout for most fields
-                    TextInput::make('3nwan')
+                    TextInput::make('title')
                         ->label('عنوان')
                         ->required(),
                     Textarea::make('mola5s')

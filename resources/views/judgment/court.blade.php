@@ -4,6 +4,30 @@
 
 @section('content')
 
+<!--fetch data-->
+@php
+    $data = DB::table('makalat_3ama')
+        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->where('section_id', 1)
+        ->where('branch_id', 2)
+        ->where('item_id', 14)
+        ->union(
+            DB::table('mashro3_a7kam')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 2)
+                ->where('item_id', 14)
+        )
+        ->union(
+            DB::table('kitab_sawty')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 2)
+                ->where('item_id', 14)
+        )
+        ->get();
+@endphp
+<!--end-->
 <style>
  
  .active-tab {
@@ -125,7 +149,7 @@
 <!-- Tabs end -->
 
 <!-- Content sections -->
-<div id="content-sections" class="content-rows flex-col absolute border-2 border-red-300 w-full top-[10rem] px-10">
+<div id="content-sections" class="content-rows flex-col absolute  w-full top-[10rem] px-10" style="font-family:'Noto Kufi Arabic';">
     <!--start النيابة العامة-->
     <div id="tab1" class="content-tab hidden">Custom design for النيابة العامة</div>
     <!--end-->
@@ -143,16 +167,44 @@
     <!--end-->
 
     <!--start القضاء المدنى-->
-    <div id="tab5" class="content-tab   flex gap-4 border-b-2 border-gray-400">
-        <div class="date-div border-2 border-orange-300 w-[5%] h-[8vw] flex flex-col items-center justify-center">
-            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex justify-center items-center">20</div>
-            <div class="year w-[100%] h-[50%] flex justify-center items-center">2003</div>
+   <div id="tab5" class="content-tab flex flex-col gap-4">
+@if($data->isEmpty())
+    <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
+@else
+    @foreach($data as $item)
+    <!--start القضاء المدنى-->
+    <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+                <div class="flex text-[1.5rem] text-[#C18F59]">
+                    <div class="day">{{ $item->day }}</div>
+                    <div>-</div>
+                    <div class="month">{{ $item->month }}</div>
+                </div>
+                <div class="year text-[1rem]">{{ $item->year }}</div>
+            </div>
+            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+                <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
+            </div>
         </div>
-        <div class="border-2 border-orange-300 w-[90%] flex flex-col justify-center">
-            <div class="topic-title">here will be topic title</div>
-            <div class="author-name text-orange-300">author name</div>
+        <div class=" w-[90%] flex flex-col justify-center gap-3">
+            <div class="topic-title">{{ $item->title }}</div>
+            
+                <div class="author-name flex gap-2 items-center justify-between ">
+                    <div class="flex items-center gap-3 ">
+                        <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                    </div>
+                    @if($item->updated == 1)
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                    @endif
+                </div>
         </div>
     </div>
+    <!--end-->
+    @endforeach
+@endif
+</div>
     <!--end-->
 </div>
 

@@ -59,8 +59,9 @@ class KitabSawtyResource extends Resource
                 ->label('السنة'),
                 // Group ref_number and 3nwan fields on the same line
                 Forms\Components\Grid::make(1)->schema([  // 2 means two columns
-                    Forms\Components\TextInput::make('3nwan')
+                    Forms\Components\TextInput::make('title')
                         ->label('العنوان')
+                        ->nullable() // Allow null values
                         ->required(),
                     
                     Forms\Components\TextInput::make('ref_number')
