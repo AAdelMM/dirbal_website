@@ -4,10 +4,91 @@
 
 @section('content')
 
+<!--fetch data-->
+@php
+    $moha = DB::table('makalat_3ama')
+        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->where('section_id', 1)
+        ->where('branch_id', 3)
+        ->where('item_id', 4)
+        ->union(
+            DB::table('mashro3_a7kam')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 3)
+                ->where('item_id', 4)
+        )
+        ->union(
+            DB::table('kitab_sawty')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 3)
+                ->where('item_id', 4)
+        )
+        ->get();
+
+    $tests = DB::table('makalat_3ama')
+        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->where('section_id', 1)
+        ->where('branch_id', 3)
+        ->where('item_id', 5)
+        ->union(
+            DB::table('mashro3_a7kam')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 3)
+                ->where('item_id', 5)
+        )
+        ->union(
+            DB::table('kitab_sawty')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 3)
+                ->where('item_id', 5)
+        )
+        ->get();
+
+    $shoon = DB::table('makalat_3ama')
+        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->where('section_id', 1)
+        ->where('branch_id', 3)
+        ->where('item_id', 6)
+        ->union(
+            DB::table('mashro3_a7kam')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 3)
+                ->where('item_id', 6)
+        )
+        ->union(
+            DB::table('kitab_sawty')
+                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->where('section_id', 1)
+                ->where('branch_id', 3)
+                ->where('item_id', 6)
+        )
+        ->get();
+
+@endphp
+<!--end-->
 <style>
  
  .active-tab {
     transition: all 1.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.content-tab {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+}
+
+#content-sections {
+    direction:rtl;
 }
 </style>
 
@@ -93,70 +174,165 @@
         </div>
     </div>
     
-
+<!-- Tabs start -->
     <div class="Group15 w-[98.9vw] h-[6.7rem] left-[9px] top-[13px] absolute">
       <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-0 absolute bg-[#C18F59]"></div>
       <div class="RsLayer w-[98.9vw] h-[0.19rem] left-0 top-[6.5rem] absolute bg-[#C18F59]"></div>
       <div class="Frame16 w-[98.9vw] h-[6.125rem] left-0 top-[0.25rem] 2xl:text-[2rem] text-[1.5rem] absolute justify-center items-center gap-[125px] inline-flex" style="font-family:'Noto Kufi Arabic';">
        
-        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'شؤون فنية')">شؤون فنية</div>
-        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'إمتحانات')">إمتحانات</div>
-        <div class="tab active-tab text-center text-white cursor-pointer items-center flex font-bold border-y-4  border-orange-200 h-[6.6rem] leading-relaxed" onclick="switchTab(this, 'محاضرات')">محاضرات</div>
+        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'tab3')">شؤون فنية</div>
+        <div class="tab text-center text-orange-300 items-center flex font-bold cursor-pointer leading-relaxed" onclick="switchTab(this, 'tab2')">إمتحانات</div>
+        <div class="tab active-tab text-center text-white cursor-pointer items-center flex font-bold border-y-4  border-orange-200 h-[6.6rem] leading-relaxed" onclick="switchTab(this, 'tab1')">محاضرات</div>
       </div>
     </div>
+<!-- Tabs end -->
 
-   <div class="content-rows flex-col">
-<!--row start-->
-    <div id="content-container" class="Frame324 w-[90.7vw] h-[156.9rem] top-[15rem] absolute flex-col justify-start items-center gap-5 inline-flex">
-        <h1 id="content-title" class="text-white text-[1.5rem]">سوف يكون محتوى محاضرات</h1>
-        <div id="content-body" class="text-white text-[1.5rem]">
-            سوف يكون عناصر المحتوى
+ <!-- Content sections -->
+<div id="content-sections" class="content-rows flex-col absolute  w-full top-[10rem] px-10" style="font-family:'Noto Kufi Arabic';">
+    <!--start  المحاضرات-->
+    <div id="tab1" class="content-tab  flex flex-col gap-4">
+    @if($moha->isEmpty())
+    <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
+@else
+    @foreach($moha as $item)
+    <!--start   المحاضرات-->
+    <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+                <div class="flex text-[1.5rem] text-[#C18F59]">
+                    <div class="day">{{ $item->day }}</div>
+                    <div>-</div>
+                    <div class="month">{{ $item->month }}</div>
+                </div>
+                <div class="year text-[1rem]">{{ $item->year }}</div>
+            </div>
+            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+                <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
+            </div>
         </div>
+        <div class=" w-[90%] flex flex-col justify-center gap-3">
+            <div class="topic-title">{{ $item->title }}</div>
+            
+                <div class="author-name flex gap-2 items-center justify-between ">
+                    <div class="flex items-center gap-3 ">
+                        <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                    </div>
+                    @if($item->updated == 1)
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                    @endif
+                </div>      
+        </div>     
     </div>
-      <!--end of content row-->
- 
- 
+    <!--end-->
+    @endforeach
+@endif
     </div>
-    <script>
-const contentMap = {
-    'محاضرات': {
-        title: 'المحاضرات',
-        body: 'هنا موضوعات  المحاضرات'
-    },
-    'إمتحانات': {
-        title: ' الامتحانات',
-        body: 'محتوى وموضوعات الامتحانات '
-    },
-    'شؤون فنية': {
-        title: 'شؤون فنية ',
-        body: 'محتوى وموضوعات  الشؤون الفنية'
-    },
-   
-};
+    <!--end-->
 
-function switchTab(element, tabName) {
+ <!--start  امتحانات-->
+ <div id="tab2" class="content-tab hidden flex flex-col gap-4">
+    @if($tests->isEmpty())
+    <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
+@else
+    @foreach($tests as $item)
+    <!--start   امتحانات-->
+    <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+                <div class="flex text-[1.5rem] text-[#C18F59]">
+                    <div class="day">{{ $item->day }}</div>
+                    <div>-</div>
+                    <div class="month">{{ $item->month }}</div>
+                </div>
+                <div class="year text-[1rem]">{{ $item->year }}</div>
+            </div>
+            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+                <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <div class=" w-[90%] flex flex-col justify-center gap-3">
+            <div class="topic-title">{{ $item->title }}</div>
+            
+                <div class="author-name flex gap-2 items-center justify-between ">
+                    <div class="flex items-center gap-3 ">
+                        <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                    </div>
+                    @if($item->updated == 1)
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                    @endif
+                </div>      
+        </div>     
+    </div>
+    <!--end-->
+    @endforeach
+@endif
+    </div>
+    <!--end-->
+
+    <!--start  شؤون فنية-->
+ <div id="tab3" class="content-tab hidden flex flex-col gap-4">
+    @if($shoon->isEmpty())
+    <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
+@else
+    @foreach($shoon as $item)
+    <!--start   شؤون فنية-->
+    <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+                <div class="flex text-[1.5rem] text-[#C18F59]">
+                    <div class="day">{{ $item->day }}</div>
+                    <div>-</div>
+                    <div class="month">{{ $item->month }}</div>
+                </div>
+                <div class="year text-[1rem]">{{ $item->year }}</div>
+            </div>
+            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+                <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <div class=" w-[90%] flex flex-col justify-center gap-3">
+            <div class="topic-title">{{ $item->title }}</div>
+            
+                <div class="author-name flex gap-2 items-center justify-between ">
+                    <div class="flex items-center gap-3 ">
+                        <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                    </div>
+                    @if($item->updated == 1)
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                    @endif
+                </div>      
+        </div>     
+    </div>
+    <!--end-->
+    @endforeach
+@endif
+    </div>
+    <!--end-->
+
+    <script>
+function switchTab(element, tabId) {
     // Remove active styling from all tabs
     document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active-tab');
-        tab.classList.remove('text-white');
-        tab.classList.remove('border-y-4');
-        tab.classList.remove('border-orange-200');
-        tab.classList.remove('h-[6.6rem]');
+        tab.classList.remove('active-tab', 'text-white', 'border-y-4', 'border-orange-200', 'h-[6.6rem]');
         tab.classList.add('text-orange-300');
     });
 
-    // Add active styling to clicked tab
-    element.classList.add('active-tab');
-    element.classList.add('text-white');
-    element.classList.add('border-y-4');
-    element.classList.add('border-orange-200');
-    element.classList.add('h-[6.6rem]');
+    // Add active styling to the clicked tab
+    element.classList.add('active-tab', 'text-white', 'border-y-4', 'border-orange-200', 'h-[6.6rem]');
     element.classList.remove('text-orange-300');
 
-    // Update the content
-    document.getElementById('content-title').textContent = contentMap[tabName].title;
-    document.getElementById('content-body').textContent = contentMap[tabName].body;
+    // Hide all content sections
+    document.querySelectorAll('.content-tab').forEach(tabContent => {
+        tabContent.classList.add('hidden');
+    });
+
+    // Show the content for the active tab
+    document.getElementById(tabId).classList.remove('hidden');
 }
+
 </script>
 
     @yield('content')
