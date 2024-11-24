@@ -7,20 +7,20 @@
 <!--fetch data-->
 @php
     $data = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 14)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
@@ -28,20 +28,20 @@
         ->get();
 
     $gena = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 15)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
@@ -49,20 +49,20 @@
         ->get();
 
     $shar3y = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 16)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
@@ -70,20 +70,20 @@
         ->get();
 
     $karar = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 19)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
@@ -91,20 +91,20 @@
         ->get();
 
     $niaba = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated')
+        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 20)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated')
+                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
@@ -259,12 +259,16 @@
             <div class="topic-title">{{ $item->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
-                    <div class="flex items-center gap-3 ">
+                    <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
                     </div>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    </div>
                     @if($item->updated == 1)
-                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدَث</div>
+                    @else
+                    <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
         </div>
@@ -301,12 +305,16 @@
             <div class="topic-title">{{ $item->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
-                    <div class="flex items-center gap-3 ">
+                    <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
                     </div>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    </div>
                     @if($item->updated == 1)
-                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
+                        @else
+                    <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
         </div>
@@ -343,12 +351,16 @@
             <div class="topic-title">{{ $item->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
-                    <div class="flex items-center gap-3 ">
+                    <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
                     </div>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    </div>
                     @if($item->updated == 1)
-                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
+                        @else
+                    <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
         </div>
@@ -384,12 +396,16 @@
             <div class="topic-title">{{ $item->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
-                    <div class="flex items-center gap-3 ">
+                    <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
                     </div>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    </div>
                     @if($item->updated == 1)
-                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
+                        @else
+                    <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
         </div>
@@ -425,12 +441,16 @@
             <div class="topic-title">{{ $item->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
-                    <div class="flex items-center gap-3 ">
+                    <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
                     </div>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    </div>
                     @if($item->updated == 1)
-                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدث</div>
+                        <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
+                        @else
+                    <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
         </div>
