@@ -6,21 +6,29 @@
 
 <!--fetch data-->
 @php
+
     $data = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        DB::raw("'مقالة' as category"), 
+        DB::raw("CONCAT('m', id) as id")) // Add 'm' prefix for makalat_3ama
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 14)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                DB::raw("'مشروع احكام' as category"),
+                DB::raw("CONCAT('h', id) as id")) // Add 'h' prefix for mashro3_a7kam
+
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                DB::raw("'كتاب صوتى' as category"),
+                DB::raw("CONCAT('k', id) as id")) // Add 'k' prefix for kitab_sawty)
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
@@ -28,20 +36,26 @@
         ->get();
 
     $gena = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        DB::raw("CONCAT('m', id) as id"),
+        DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 15)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                DB::raw("CONCAT('h', id) as id"),
+                DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                DB::raw("CONCAT('k', id) as id"),
+                DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
@@ -49,20 +63,26 @@
         ->get();
 
     $shar3y = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        DB::raw("CONCAT('m', id) as id"),
+        DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 16)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                DB::raw("CONCAT('h', id) as id"),
+                DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                DB::raw("CONCAT('k', id) as id"),
+                DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
@@ -70,20 +90,26 @@
         ->get();
 
     $karar = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        DB::raw("CONCAT('m', id) as id"),
+        DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 19)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                DB::raw("CONCAT('h', id) as id"),
+                DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                DB::raw("CONCAT('k', id) as id"),
+                DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
@@ -91,25 +117,33 @@
         ->get();
 
     $niaba = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id',
+        DB::raw("CONCAT('m', id) as id"),
+        DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 20)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                DB::raw("CONCAT('h', id) as id"),
+                DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                DB::raw("CONCAT('k', id) as id"),
+                DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
         )
         ->get();
+
+   
 @endphp
 <!--end-->
 <style>
