@@ -86,7 +86,7 @@ class KitabSawtyResource extends Resource
                     ->label('الملف الصوتى')
                     ->directory('audio_files')
                     ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
-                    ->maxSize(25600)
+                    ->maxSize(null)
                     ->nullable(),
     
                 Forms\Components\FileUpload::make('image')
