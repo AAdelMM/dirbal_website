@@ -7,20 +7,20 @@
 <!--fetch data-->
 @php
     $data = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 14)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
@@ -28,20 +28,20 @@
         ->get();
 
     $gena = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 15)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
@@ -49,20 +49,20 @@
         ->get();
 
     $shar3y = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 16)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
@@ -70,20 +70,20 @@
         ->get();
 
     $karar = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 19)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
@@ -91,20 +91,20 @@
         ->get();
 
     $niaba = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مقالة' as category"))
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 20)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'مشروع احكام' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated', DB::raw("'كتاب صوتى' as category"))
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
@@ -242,19 +242,43 @@
     @foreach($niaba as $item)
     <!--start  النيابة العامة-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
-        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
-            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
-                <div class="flex text-[1.5rem] text-[#C18F59]">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
+                <div class="flex text-[1.5rem] text-[#C18F59] ">
                     <div class="day">{{ $item->day }}</div>
                     <div>-</div>
                     <div class="month">{{ $item->month }}</div>
                 </div>
                 <div class="year text-[1rem]">{{ $item->year }}</div>
             </div>
-            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+            <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
+             <!--share icon -->
+                <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+                    <div class="Frame34 flex justify-center  gap-[3px] ">
+                        <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                    </div>
+                </div>
+            <!--share icon -->
+             <!--comment icon -->
+             <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
+                <div class="Frame34 flex justify-center  gap-[3px] ">
+                    <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+                </div>
+            </div>
+            <!--comment icon -->
+            <!--pdf icon -->
+            <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
+                <div class="Frame34 flex justify-center  gap-[3px] ">
+                    <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+                </div>
+            </div>
+            <!--pdf icon -->
+            
         </div>
+
+        
         <div class=" w-[90%] flex flex-col justify-center gap-3">
             <div class="topic-title">{{ $item->title }}</div>
             
@@ -271,6 +295,21 @@
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
+                 <!--mola5s start-->
+                 @php
+                 // Check which table the record belongs to and assign the appropriate column
+                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+             @endphp
+             <div id="extend-{{ $item->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+                 <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                 </div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                 </div>
+             </div>
+             <!--mola5s end-->
         </div>
     </div>
     <!--end-->
@@ -288,8 +327,8 @@
     @foreach($karar as $item)
     <!--start  قرارات قضائية-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
-        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
-            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
                     <div class="day">{{ $item->day }}</div>
                     <div>-</div>
@@ -297,9 +336,30 @@
                 </div>
                 <div class="year text-[1rem]">{{ $item->year }}</div>
             </div>
-            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+            <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
+            <!--share icon -->
+            <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+                <div class="Frame34 flex justify-center  gap-[3px] ">
+                    <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                </div>
+            </div>
+        <!--share icon -->
+         <!--comment icon -->
+         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--comment icon -->
+        <!--pdf icon -->
+        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--pdf icon -->
         </div>
         <div class=" w-[90%] flex flex-col justify-center gap-3">
             <div class="topic-title">{{ $item->title }}</div>
@@ -317,6 +377,23 @@
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
+
+                 <!--mola5s start-->
+                 @php
+                 // Check which table the record belongs to and assign the appropriate column
+                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+             @endphp
+             <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+                 <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                 </div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                 </div>
+             </div>
+             <!--mola5s end-->
+
         </div>
     </div>
     <!--end-->
@@ -334,8 +411,8 @@
     @foreach($shar3y as $item)
     <!--start القضاء الشرعى-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
-        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
-            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
                     <div class="day">{{ $item->day }}</div>
                     <div>-</div>
@@ -343,9 +420,30 @@
                 </div>
                 <div class="year text-[1rem]">{{ $item->year }}</div>
             </div>
-            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+            <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
+             <!--share icon -->
+             <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+                <div class="Frame34 flex justify-center  gap-[3px] ">
+                    <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                </div>
+            </div>
+        <!--share icon -->
+         <!--comment icon -->
+         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--comment icon -->
+        <!--pdf icon -->
+        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--pdf icon -->
         </div>
         <div class=" w-[90%] flex flex-col justify-center gap-3">
             <div class="topic-title">{{ $item->title }}</div>
@@ -363,6 +461,21 @@
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
+                 <!--mola5s start-->
+                 @php
+                 // Check which table the record belongs to and assign the appropriate column
+                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+             @endphp
+             <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+                 <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                 </div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                 </div>
+             </div>
+             <!--mola5s end-->
         </div>
     </div>
     <!--end-->
@@ -379,8 +492,8 @@
     @foreach($gena as $item)
     <!--start القضاء الجنائى-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
-        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
-            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
                     <div class="day">{{ $item->day }}</div>
                     <div>-</div>
@@ -388,9 +501,30 @@
                 </div>
                 <div class="year text-[1rem]">{{ $item->year }}</div>
             </div>
-            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+            <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
+            <!--share icon -->
+            <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+                <div class="Frame34 flex justify-center  gap-[3px] ">
+                    <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                </div>
+            </div>
+        <!--share icon -->
+         <!--comment icon -->
+         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--comment icon -->
+        <!--pdf icon -->
+        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--pdf icon -->
         </div>
         <div class=" w-[90%] flex flex-col justify-center gap-3">
             <div class="topic-title">{{ $item->title }}</div>
@@ -408,6 +542,21 @@
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
+                <!--mola5s start-->
+                @php
+                    // Check which table the record belongs to and assign the appropriate column
+                    $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                @endphp
+                <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+                    <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
+                        <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                    </div>
+                    <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                    <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                        <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                    </div>
+                </div>
+                <!--mola5s end-->
         </div>
     </div>
     <!--end-->
@@ -424,8 +573,8 @@
     @foreach($data as $item)
     <!--start القضاء المدنى-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
-        <div class="date-div border-2 border-gray-400  w-[7%] h-[10vw] flex flex-col items-center justify-center">
-            <div class="border-b-2 border-gray-400 w-[100%] h-[50%] flex flex-col justify-center items-center">
+        <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
+            <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
                     <div class="day">{{ $item->day }}</div>
                     <div>-</div>
@@ -433,9 +582,30 @@
                 </div>
                 <div class="year text-[1rem]">{{ $item->year }}</div>
             </div>
-            <div class="year w-[100%] h-[50%] flex justify-center items-center">
+            <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
+            <!--share icon -->
+            <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+                <div class="Frame34 flex justify-center  gap-[3px] ">
+                    <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                </div>
+            </div>
+        <!--share icon -->
+         <!--comment icon -->
+         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--comment icon -->
+        <!--pdf icon -->
+        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+                <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+            </div>
+        </div>
+        <!--pdf icon -->
         </div>
         <div class=" w-[90%] flex flex-col justify-center gap-3">
             <div class="topic-title">{{ $item->title }}</div>
@@ -453,6 +623,23 @@
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
                     @endif
                 </div>
+
+                 <!--mola5s start-->
+                 @php
+                 // Check which table the record belongs to and assign the appropriate column
+                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+             @endphp
+             <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+                 <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                 </div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                 </div>
+             </div>
+             <!--mola5s end-->
+
         </div>
     </div>
     <!--end-->
