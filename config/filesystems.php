@@ -16,7 +16,7 @@ return [
     'default' => env('FILESYSTEM_DISK', 'local'),
 
     'upload_max_filesize' => '25M',
-'post_max_size' => '25M',
+    'post_max_size' => '25M',
     /*
     |--------------------------------------------------------------------------
     | Filesystem Disks

@@ -20,7 +20,7 @@ use Filament\Forms\Components\Toggle;
 use App\Models\Branch;
 use App\Models\Item;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
-
+use Illuminate\Support\Facades\Log;
 use Filament\Tables\Columns\TextColumn;
 
 class KitabSawtyResource extends Resource
@@ -87,6 +87,16 @@ class KitabSawtyResource extends Resource
                     ->directory('audio_files')
                     ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
                     ->maxSize(null)
+                    ->afterStateUpdated(function($state) {
+                        // Only log if $state is not null
+                        if ($state) {
+                            Log::info('File Upload Debug', [
+                                'file_name' => $state->getClientOriginalName(),
+                                'file_size' => $state->getSize(),
+                                'file_mime' => $state->getMimeType()
+                            ]);
+                        }
+                    })
                     ->nullable(),
     
                 Forms\Components\FileUpload::make('image')
