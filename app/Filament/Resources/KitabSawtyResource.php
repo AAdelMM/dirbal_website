@@ -87,16 +87,7 @@ class KitabSawtyResource extends Resource
                     ->directory('audio_files')
                     ->acceptedFileTypes(['audio/mpeg', 'audio/mp3'])
                     ->maxSize(null)
-                    ->afterStateUpdated(function($state) {
-                        // Only log if $state is not null
-                        if ($state) {
-                            Log::info('File Upload Debug', [
-                                'file_name' => $state->getClientOriginalName(),
-                                'file_size' => $state->getSize(),
-                                'file_mime' => $state->getMimeType()
-                            ]);
-                        }
-                    })
+                   
                     ->nullable(),
     
                 Forms\Components\FileUpload::make('image')
