@@ -130,6 +130,37 @@
 #content-sections {
     direction:rtl;
 }
+.extend {
+                opacity: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 5s ease, opacity 5s ease;
+            }
+
+            .share,
+            .comment,
+            .pdf {
+                opacity: 0;
+                transition: opacity 3s ease-in-out;
+            }
+
+            .show-share,
+            .show-comment,
+            .show-pdf {
+                opacity: 1;
+            }
+
+            .extend.hidden {
+                display: none;
+                transition: display 5s ease,
+            }
+
+            .extend.show {
+                opacity: 1;
+                max-height: 1500px;
+                /* Set it to a value large enough to fit the content */
+
+            }
 </style>
 
 <div class="Frame338 w-[100vw] h-[268.6rem] flex-col justify-start items-center inline-flex">
@@ -239,57 +270,54 @@
     @if($niaba->isEmpty())
     <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
 @else
-    @foreach($niaba as $item)
+    @foreach($niaba as $n)
     <!--start  النيابة العامة-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
         <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
             <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59] ">
-                    <div class="day">{{ $item->day }}</div>
+                    <div class="day">{{ $n->day }}</div>
                     <div>-</div>
-                    <div class="month">{{ $item->month }}</div>
+                    <div class="month">{{ $n->month }}</div>
                 </div>
-                <div class="year text-[1rem]">{{ $item->year }}</div>
+                <div class="year text-[1rem]">{{ $n->year }}</div>
             </div>
             <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
              <!--share icon -->
-                <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+                <div id="share-{{ $n->id }}" class="share w-[100%] h-24  hidden flex items-center justify-center border-b-2 border-gray-200">
                     <div class="Frame34 flex justify-center  gap-[3px] ">
                         <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                     </div>
                 </div>
             <!--share icon -->
              <!--comment icon -->
-             <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
+             <div id="comment-{{ $n->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
                 <div class="Frame34 flex justify-center  gap-[3px] ">
                     <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
                 </div>
             </div>
             <!--comment icon -->
             <!--pdf icon -->
-            <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
+            <div id="pdf-{{ $n->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
                 <div class="Frame34 flex justify-center  gap-[3px] ">
                     <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
                 </div>
             </div>
             <!--pdf icon -->
-            
         </div>
-
-        
-        <div class=" w-[90%] flex flex-col justify-center gap-3">
-            <div class="topic-title">{{ $item->title }}</div>
+        <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $n->id }}')">
+            <div class="topic-title" >{{ $n->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
-                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $n->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $n->category }}</span>
                     </div>
-                    @if($item->updated == 1)
+                    @if($n->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدَث</div>
                     @else
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
@@ -298,15 +326,15 @@
                  <!--mola5s start-->
                  @php
                  // Check which table the record belongs to and assign the appropriate column
-                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $columnName = isset($n->ka3da_text) ? 'ka3da_text' : 'mola5s';
              @endphp
-             <div id="extend-{{ $item->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+             <div id="extend-{{ $n->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
                      <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
                  </div>
-                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $n->{$columnName} !!}</div>
                  <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                     <a href="{{ route('highCourt.a7kam.preview', $n->id) }}" class="block w-full h-full">واصل القراءة</a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -324,54 +352,54 @@
     @if($karar->isEmpty())
     <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
 @else
-    @foreach($karar as $item)
+    @foreach($karar as $k)
     <!--start  قرارات قضائية-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
         <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
             <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
-                    <div class="day">{{ $item->day }}</div>
+                    <div class="day">{{ $k->day }}</div>
                     <div>-</div>
-                    <div class="month">{{ $item->month }}</div>
+                    <div class="month">{{ $k->month }}</div>
                 </div>
-                <div class="year text-[1rem]">{{ $item->year }}</div>
+                <div class="year text-[1rem]">{{ $k->year }}</div>
             </div>
             <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
             <!--share icon -->
-            <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+            <div id="share-{{ $k->id }}" class="share w-[100%] h-24 hidden  flex items-center justify-center border-b-2 border-gray-200">
                 <div class="Frame34 flex justify-center  gap-[3px] ">
                     <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                 </div>
             </div>
         <!--share icon -->
          <!--comment icon -->
-         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+         <div id="comment-{{ $k->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--comment icon -->
         <!--pdf icon -->
-        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+        <div id="pdf-{{ $k->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--pdf icon -->
         </div>
-        <div class=" w-[90%] flex flex-col justify-center gap-3">
-            <div class="topic-title">{{ $item->title }}</div>
+        <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $k->id }}')">
+            <div class="topic-title">{{ $k->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
-                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $k->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $k->category }}</span>
                     </div>
-                    @if($item->updated == 1)
+                    @if($k->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
@@ -381,15 +409,15 @@
                  <!--mola5s start-->
                  @php
                  // Check which table the record belongs to and assign the appropriate column
-                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $columnName = isset($k->ka3da_text) ? 'ka3da_text' : 'mola5s';
              @endphp
-             <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+             <div id="extend-{{ $k->id }}" class="extend  container hidden mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
                      <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
                  </div>
-                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $k->{$columnName} !!}</div>
                  <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                     <a href="{{ route('highCourt.a7kam.preview', $k->id) }}" class="block w-full h-full">واصل القراءة</a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -408,54 +436,54 @@
     @if($shar3y->isEmpty())
     <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
 @else
-    @foreach($shar3y as $item)
+    @foreach($shar3y as $s)
     <!--start القضاء الشرعى-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
         <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
             <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
-                    <div class="day">{{ $item->day }}</div>
+                    <div class="day">{{ $s->day }}</div>
                     <div>-</div>
-                    <div class="month">{{ $item->month }}</div>
+                    <div class="month">{{ $s->month }}</div>
                 </div>
-                <div class="year text-[1rem]">{{ $item->year }}</div>
+                <div class="year text-[1rem]">{{ $s->year }}</div>
             </div>
             <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
              <!--share icon -->
-             <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+             <div id="share-{{ $s->id }}" class="share w-[100%] h-24  hidden flex items-center justify-center border-b-2 border-gray-200">
                 <div class="Frame34 flex justify-center  gap-[3px] ">
                     <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                 </div>
             </div>
         <!--share icon -->
          <!--comment icon -->
-         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+         <div id="comment-{{ $s->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--comment icon -->
         <!--pdf icon -->
-        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+        <div id="pdf-{{ $s->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--pdf icon -->
         </div>
-        <div class=" w-[90%] flex flex-col justify-center gap-3">
-            <div class="topic-title">{{ $item->title }}</div>
+        <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $s->id }}')">
+            <div class="topic-title">{{ $s->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
-                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $s->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $s->category }}</span>
                     </div>
-                    @if($item->updated == 1)
+                    @if($s->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
@@ -464,15 +492,15 @@
                  <!--mola5s start-->
                  @php
                  // Check which table the record belongs to and assign the appropriate column
-                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $columnName = isset($s->ka3da_text) ? 'ka3da_text' : 'mola5s';
              @endphp
-             <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+             <div id="extend-{{ $s->id }}" class="extend  container hidden mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
                      <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
                  </div>
-                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $s->{$columnName} !!}</div>
                  <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                     <a href="{{ route('highCourt.a7kam.preview', $s->id) }}" class="block w-full h-full">واصل القراءة</a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -489,54 +517,54 @@
     @if($gena->isEmpty())
     <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
 @else
-    @foreach($gena as $item)
+    @foreach($gena as $g)
     <!--start القضاء الجنائى-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
         <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
             <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
-                    <div class="day">{{ $item->day }}</div>
+                    <div class="day">{{ $g->day }}</div>
                     <div>-</div>
-                    <div class="month">{{ $item->month }}</div>
+                    <div class="month">{{ $g->month }}</div>
                 </div>
-                <div class="year text-[1rem]">{{ $item->year }}</div>
+                <div class="year text-[1rem]">{{ $g->year }}</div>
             </div>
             <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
             <!--share icon -->
-            <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+            <div id="share-{{ $g->id }}" class="share w-[100%] h-24 hidden  flex items-center justify-center border-b-2 border-gray-200">
                 <div class="Frame34 flex justify-center  gap-[3px] ">
                     <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                 </div>
             </div>
         <!--share icon -->
          <!--comment icon -->
-         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+         <div id="comment-{{ $g->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--comment icon -->
         <!--pdf icon -->
-        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+        <div id="pdf-{{ $g->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--pdf icon -->
         </div>
-        <div class=" w-[90%] flex flex-col justify-center gap-3">
-            <div class="topic-title">{{ $item->title }}</div>
+        <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $g->id }}')">
+            <div class="topic-title">{{ $g->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
-                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $g->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $g->category }}</span>
                     </div>
-                    @if($item->updated == 1)
+                    @if($g->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
@@ -545,15 +573,15 @@
                 <!--mola5s start-->
                 @php
                     // Check which table the record belongs to and assign the appropriate column
-                    $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                    $columnName = isset($g->ka3da_text) ? 'ka3da_text' : 'mola5s';
                 @endphp
-                <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+                <div id="extend-{{ $g->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                     <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
                         <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
                     </div>
-                    <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                    <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $g->{$columnName} !!}</div>
                     <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                        <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                        <a href="{{ route('highCourt.a7kam.preview', $g->id) }}" class="block w-full h-full">واصل القراءة</a>
                     </div>
                 </div>
                 <!--mola5s end-->
@@ -586,28 +614,28 @@
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
             <!--share icon -->
-            <div id="share-{{ $item->id }}" class="share w-[100%] h-24   flex items-center justify-center border-b-2 border-gray-200">
+            <div id="share-{{ $item->id }}" class="share w-[100%] h-24  hidden flex items-center justify-center border-b-2 border-gray-200">
                 <div class="Frame34 flex justify-center  gap-[3px] ">
                     <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                 </div>
             </div>
         <!--share icon -->
          <!--comment icon -->
-         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24  flex items-center justify-center border-b-2 border-gray-200">
+         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--comment icon -->
         <!--pdf icon -->
-        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24  flex items-center justify-center ">
+        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--pdf icon -->
         </div>
-        <div class=" w-[90%] flex flex-col justify-center gap-3">
+        <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $item->id }}')">
             <div class="topic-title">{{ $item->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
@@ -629,7 +657,7 @@
                  // Check which table the record belongs to and assign the appropriate column
                  $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
              @endphp
-             <div id="extend-{{ $item->id }}" class="extend  container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+             <div id="extend-{{ $item->id }}" class="extend  container mx-auto hidden flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
                      <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
                  </div>
@@ -670,6 +698,38 @@ function switchTab(element, tabId) {
     document.getElementById(tabId).classList.remove('hidden');
 }
 
+//extend effect
+ //content
+ function toggleExtend(id) {
+                var element = document.getElementById('extend-' + id);
+                var share = document.getElementById('share-' + id);
+                var comment = document.getElementById('comment-' + id);
+                var pdf = document.getElementById('pdf-' + id);
+
+                if (element.classList.contains('show')) {
+                    element.classList.remove('show');
+                    share.classList.remove('show-share');
+                    comment.classList.remove('show-comment');
+                    pdf.classList.remove('show-pdf');
+                    setTimeout(function() {
+                        element.classList.add('hidden');
+                        share.classList.add('hidden');
+                        comment.classList.add('hidden');
+                        pdf.classList.add('hidden');
+                    }, 500); // Time matches the transition duration
+                } else {
+                    element.classList.remove('hidden');
+                    share.classList.remove('hidden');
+                    comment.classList.remove('hidden');
+                    pdf.classList.remove('hidden');
+                    setTimeout(function() {
+                        element.classList.add('show');
+                        share.classList.add('show-share');
+                        comment.classList.add('show-comment');
+                        pdf.classList.add('show-pdf');
+                    }, 20); // Slight delay to allow display change to take effect
+                }
+            }
 </script>
     @yield('content')
     @include('homePage.footer')
