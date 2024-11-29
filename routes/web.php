@@ -74,7 +74,43 @@ Route::get('/montaqa', function () {
 Route::get('/shoon', function () {
     return view('highCourt.shoon');
 });
-
+/////////////////////////////
+// Preview Routes for Dynamic Categories
+Route::get('/preview/{category}/{id}', function($category, $id) {
+   // Remove the prefix letter from the ID
+   $cleanId = substr($id, 1);
+   
+    switch($category) {
+        case 'مقالة':
+            $article = DB::table('makalat_3ama')->where('id', $cleanId)->first();
+            if (!$article) {
+                abort(404);
+            }
+            return view('previewPages.articleShow', compact('article'));
+        
+        case 'كتاب صوتى':
+            $audio = DB::table('kitab_sawty')->where('id', $cleanId)->first();
+            if (!$audio) {
+                abort(404);
+            }
+            return view('previewPages.audioShow', compact('audio'));
+        
+        case 'مشروع احكام':
+            $decision = DB::table('mashro3_a7kam')->where('id', $cleanId)->first();
+            if (!$decision) {
+                abort(404);
+            }
+            return view('previewPages.a7kamShow', compact('decision'));
+        
+        default:
+            $decision = DB::table('mashro3_a7kam')->where('id', $cleanId)->first();
+            if (!$decision) {
+                abort(404);
+            }
+            return view('highCourt.a7kam_preview', compact('decision'));
+    }
+})->name('dynamic.preview');
+////////////////////////////
 //view buttons
 Route::get('/articles/{article}/view', [ArticleController::class, 'view'])->name('articles.view');
 

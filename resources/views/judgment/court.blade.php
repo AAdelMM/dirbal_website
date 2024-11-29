@@ -175,7 +175,7 @@
             .comment,
             .pdf {
                 opacity: 0;
-                transition: opacity 3s ease-in-out;
+                transition: opacity 5s ease;
             }
 
             .show-share,
@@ -195,6 +195,7 @@
                 /* Set it to a value large enough to fit the content */
 
             }
+    
 </style>
 
 <div class="Frame338 w-[100vw] h-[268.6rem] flex-col justify-start items-center inline-flex">
@@ -368,7 +369,16 @@
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $n->{$columnName} !!}</div>
                  <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                     <a href="{{ route('highCourt.a7kam.preview', $n->id) }}" class="block w-full h-full">واصل القراءة</a>
+                    @php
+                    $routeName = match($n->category) {
+                        'مقالة' => 'previewPages.articleShow',
+                        'كتاب صوتى' => 'previewPages.audioShow',
+                        'مشروع احكام' => 'previewPages.a7kamShow',
+                        default => 'highCourt.a7kam.preview'
+                    };
+                    @endphp
+                        <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class="block w-full h-full">واصل القراءة</a>
+
                  </div>
              </div>
              <!--mola5s end-->
@@ -451,7 +461,15 @@
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $k->{$columnName} !!}</div>
                  <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                     <a href="{{ route('highCourt.a7kam.preview', $k->id) }}" class="block w-full h-full">واصل القراءة</a>
+                    @php
+                    $routeName = match($k->category) {
+                        'مقالة' => 'previewPages.articleShow',
+                        'كتاب صوتى' => 'previewPages.audioShow',
+                        'مشروع احكام' => 'previewPages.a7kamShow',
+                        default => 'highCourt.a7kam.preview'
+                    };
+                    @endphp
+                        <a href="{{ route('dynamic.preview', ['category' => $k->category, 'id' => $k->id]) }}" class="block w-full h-full">واصل القراءة</a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -534,7 +552,15 @@
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $s->{$columnName} !!}</div>
                  <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                     <a href="{{ route('highCourt.a7kam.preview', $s->id) }}" class="block w-full h-full">واصل القراءة</a>
+                    @php
+                    $routeName = match($s->category) {
+                        'مقالة' => 'previewPages.articleShow',
+                        'كتاب صوتى' => 'previewPages.audioShow',
+                        'مشروع احكام' => 'previewPages.a7kamShow',
+                        default => 'highCourt.a7kam.preview'
+                    };
+                    @endphp
+                        <a href="{{ route('dynamic.preview', ['category' => $s->category, 'id' => $s->id]) }}" class="block w-full h-full">واصل القراءة</a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -615,7 +641,15 @@
                     </div>
                     <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $g->{$columnName} !!}</div>
                     <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                        <a href="{{ route('highCourt.a7kam.preview', $g->id) }}" class="block w-full h-full">واصل القراءة</a>
+                        @php
+                        $routeName = match($g->category) {
+                            'مقالة' => 'previewPages.articleShow',
+                            'كتاب صوتى' => 'previewPages.audioShow',
+                            'مشروع احكام' => 'previewPages.a7kamShow',
+                            default => 'highCourt.a7kam.preview'
+                        };
+                        @endphp
+                            <a href="{{ route('dynamic.preview', ['category' => $g->category, 'id' => $g->id]) }}" class="block w-full h-full">واصل القراءة</a>
                     </div>
                 </div>
                 <!--mola5s end-->
@@ -697,7 +731,15 @@
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
                  <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
-                     <a href="{{ route('highCourt.a7kam.preview', $item->id) }}" class="block w-full h-full">واصل القراءة</a>
+                    @php
+                    $routeName = match($item->category) {
+                        'مقالة' => 'previewPages.articleShow',
+                        'كتاب صوتى' => 'previewPages.audioShow',
+                        'مشروع احكام' => 'previewPages.a7kamShow',
+                        default => 'highCourt.a7kam.preview'
+                    };
+                    @endphp
+                        <a href="{{ route('dynamic.preview', ['category' => $item->category, 'id' => $item->id]) }}" class="block w-full h-full">واصل القراءة</a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -761,7 +803,7 @@ function switchTab(element, tabId) {
                         share.classList.add('show-share');
                         comment.classList.add('show-comment');
                         pdf.classList.add('show-pdf');
-                    }, 20); // Slight delay to allow display change to take effect
+                    }, 10); // Slight delay to allow display change to take effect
                 }
             }
 </script>
