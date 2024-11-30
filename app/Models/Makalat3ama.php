@@ -16,7 +16,7 @@ class Makalat3ama extends Model
         protected $fillable = [
             'title', 'mola5s', 'ref_number', 'image', 'video', 
             'author', 'updated', 'day', 'month', 'year', 'article_text', 
-            'section_id', 'branch_id', 'item_id'
+            'section_id', 'branch_id', 'item_id','topic_no','topic_letter'
         ];
     
         // Define any relationships here

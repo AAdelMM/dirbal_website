@@ -8,7 +8,7 @@
 @php
 
     $data = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
         DB::raw("'مقالة' as category"), 
         DB::raw("CONCAT('m', id) as id")) // Add 'm' prefix for makalat_3ama
         ->where('section_id', 1)
@@ -16,7 +16,7 @@
         ->where('item_id', 14)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
                 DB::raw("'مشروع احكام' as category"),
                 DB::raw("CONCAT('h', id) as id")) // Add 'h' prefix for mashro3_a7kam
 
@@ -26,7 +26,7 @@
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
                 DB::raw("'كتاب صوتى' as category"),
                 DB::raw("CONCAT('k', id) as id")) // Add 'k' prefix for kitab_sawty)
                 ->where('section_id', 1)
@@ -36,7 +36,7 @@
         ->get();
 
     $gena = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
@@ -44,7 +44,7 @@
         ->where('item_id', 15)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
@@ -53,7 +53,7 @@
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
@@ -63,7 +63,7 @@
         ->get();
 
     $shar3y = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
@@ -71,7 +71,7 @@
         ->where('item_id', 16)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
@@ -80,7 +80,7 @@
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
@@ -90,7 +90,7 @@
         ->get();
 
     $karar = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
@@ -98,7 +98,7 @@
         ->where('item_id', 19)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
@@ -107,7 +107,7 @@
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
@@ -117,7 +117,7 @@
         ->get();
 
     $niaba = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id',
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','topic_no','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
@@ -125,7 +125,7 @@
         ->where('item_id', 20)
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
@@ -134,7 +134,7 @@
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
@@ -343,15 +343,15 @@
             <!--pdf icon -->
         </div>
         <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $n->id }}')">
-            <div class="topic-title" >{{ $n->title }}</div>
+            <div class="topic-title" ><span class="text-[#FAE1C6] font-bold">{{$n->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$n->topic_letter}}: </span>{{ $n->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $n->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $n->category }}</span>
-                    </div>
+                    {{-- <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $n->category }}</span>
+                    </div> --}}
                     @if($n->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدَث</div>
                     @else
@@ -434,15 +434,15 @@
         <!--pdf icon -->
         </div>
         <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $k->id }}')">
-            <div class="topic-title">{{ $k->title }}</div>
+            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{$k->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$k->topic_letter}}: </span>{{ $k->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $k->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $k->category }}</span>
-                    </div>
+                   {{--  <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $k->category }}</span>
+                    </div> --}}
                     @if($k->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else
@@ -526,15 +526,15 @@
         <!--pdf icon -->
         </div>
         <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $s->id }}')">
-            <div class="topic-title">{{ $s->title }}</div>
+            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{$s->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$s->topic_letter}}: </span>{{ $s->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $s->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $s->category }}</span>
-                    </div>
+                    {{-- <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $s->category }}</span>
+                    </div> --}}
                     @if($s->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else
@@ -615,15 +615,15 @@
         <!--pdf icon -->
         </div>
         <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $g->id }}')">
-            <div class="topic-title">{{ $g->title }}</div>
+            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{$g->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$g->topic_letter}}: </span>{{ $g->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $g->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $g->category }}</span>
-                    </div>
+                    {{-- <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $g->category }}</span>
+                    </div> --}}
                     @if($g->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else
@@ -704,15 +704,15 @@
         <!--pdf icon -->
         </div>
         <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $item->id }}')">
-            <div class="topic-title">{{ $item->title }}</div>
+            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{$item->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$item->topic_letter}}: </span> {{ $item->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
                     </div>
-                    <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
-                    </div>
+                   {{--  <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
+                    </div> --}}
                     @if($item->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else

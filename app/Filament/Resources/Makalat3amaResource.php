@@ -48,6 +48,8 @@ class Makalat3amaResource extends Resource
                     TextInput::make('title')
                         ->label('عنوان')
                         ->required(),
+                        Forms\Components\TextInput::make('topic_no')->label('رقم الموضوع (بالارقام)')->required(),
+            Forms\Components\TextInput::make('topic_letter')->label('رقم الموضوع (بالاحرف)')->required(),
                     Textarea::make('mola5s')
                         ->label('ملخص')
                         ->required(),
