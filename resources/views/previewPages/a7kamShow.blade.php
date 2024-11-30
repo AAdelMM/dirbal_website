@@ -144,7 +144,7 @@ $parts = DB::table('mashro3_a7kam')
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->reason_title }}</h2>
     <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->reason_text !!}</div>
     <h2 class="text-3xl font-bold my-6 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->{'7okm_title'} }}</h2>
-    <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->{'7okm_title'} !!}</div>
+    <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->{'7okm_text'} !!}</div>
    
 </div>
 <div class="my-8 border-t-2 border-[#fdba74] pt-8">
