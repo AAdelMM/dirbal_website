@@ -147,27 +147,40 @@ $parts = DB::table('mashro3_a7kam')
     <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->{'7okm_text'} !!}</div>
    
 </div>
-<div class="my-8 border-t-2 border-[#fdba74] pt-8">
-    <h2 class="text-3xl font-bold mb-4" style="color:#fdba74 !important; font-family:'El Messiri'; text-align: right;">اضف تعليق</h2>
-    
+<div class="my-8 border-t-2 border-[#C18F59] pt-8 ">
+    <div class="flex justify-end">
+        <h2 class="text-3xl font-bold mb-4 inline-flex gap-4 justify-center text-right" style="color:#C18F59 !important; font-family:'El Messiri'; text-align: right;">أضف تعليقاً<span><img src="{{asset('images/mcomment.png')}}" alt="comment icon"></span></h2>
+    </div>
         <form action=""></form>
         @csrf
         <input type="hidden" name="decision_id" value="{{ $decision->id }}">
         <div>
-            <label for="name" class="block text-white my-3 text-right">الاسم</label>
-            <input type="text" id="name" name="name" required class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" style="direction: rtl;">
+            <label for="comment" class="block text-white my-3 text-right"></label>
+            <textarea id="comment" name="comment" rows="4" placeholder="التعليق" required class="w-full px-3 py-2 text-gray-700 border  focus:outline-none" style="direction: rtl;"></textarea>
         </div>
-        <div>
-            <label for="email" class="block text-white my-3 text-right">البريد الإلكتروني</label>
-            <input type="email" id="email" name="email" required class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" style="direction: rtl;">
+        <div class="flex justify-between mt-3">
+            <div class="w-[48%]">
+                <label for="name" class="block text-white my-3 text-right"></label>
+                <input type="text" id="name" name="name" placeholder=" الاسم  (إختياري) " required class="w-full px-3 py-5 text-gray-700 border  focus:outline-none h-[3.5rem]" style="direction: rtl;">
+            </div>
+            <div class="w-[48%]">
+                <label for="email" class="block text-white my-3 text-right"></label>
+                <input type="email" id="email"  name="email" placeholder="البريد الإلكتروني" required class="w-full px-3 py-2 text-gray-700 border focus:outline-none h-[3.5rem]"  style="direction: rtl;">
+            </div>
         </div>
-        <div>
-            <label for="comment" class="block text-white my-3 text-right">التعليق</label>
-            <textarea id="comment" name="comment" rows="4" required class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none" style="direction: rtl;"></textarea>
+        <div class="flex justify-end items-center my-3 gap-4">
+            <label for="save-data" class="text-white text-right" style="direction: rtl;">أحفظ بياناتى على هذا المتصفح لتعليقات قادمة</label>
+            <input
+                type="checkbox"
+                id="save-data"
+                name="save-data"
+                class="mr-2"
+            >
+            
         </div>
-        <div class="text-right my-5">
-            <button type="submit" class="bg-[#fdba74] text-white font-bold py-2 px-4 rounded">
-                اضف تعليق
+        <div class=" my-5 flex justify-end">
+            <button type="submit" class="bg-[#A6743E] text-white font-bold py-2 px-4 rounded inline-flex items-center gap-8">
+                 <span><img src="{{asset('images/arrowlw.png')}}" alt=""></span>تعليق
             </button>
         </div>
     </form>
