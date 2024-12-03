@@ -86,20 +86,21 @@ $parts = DB::table('mashro3_a7kam')
       <div class="border-t border-white mt-4"></div>
     </header>
     <!--last updated white header end-->
-    <div class="w-full h-[10rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover"  style="background-image: url("{{ asset('images/civil_law.png') }}");" >
+    <div class="w-full h-[10rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover"  style="background-image: url('{{ asset('images/civil_law.png') }}');" >
         <div>
           <h1 class="text-6xl text-default-white font-bold mb-4" style="font-family:"El messiri";">{{ $decision->title }}</h1>
         </div>
         <div class="relative ">
         <div class="relative text-5xl font-bold my-5 text-white w-[7rem] h-[7rem]" style="font-family:'El Messiri';">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url("{{ asset('images/numberbg.png') }}");"></div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ asset('images/numberbg.png') }}');"></div>
     <div class="absolute inset-0 bg-black opacity-70"></div>
     <h2 class="relative z-10 flex flex-col items-center justify-center w-full h-full text-center  p-1"  style="direction:rtl">
         @php
             $length = strlen($decision->topic_no);
             $fontSize = $length > 3 ? ($length > 4 ? '2rem' : '2.5rem') : '3rem';
         @endphp
-        <span style="font-size: {{ $fontSize }}; font-family:"sakkal majalla"; line-height: 1;">{{ $decision->topic_no }}</span>
+        <span style="font-size: {{ $fontSize }}; font-family:'sakkal majalla'; line-height: 1;">{{ $decision->topic_no }}</span>
+        <div class="text-[2rem]">{{ $decision->topic_letter }}</div>
     </h2>
 </div>
         </div>
@@ -108,7 +109,7 @@ $parts = DB::table('mashro3_a7kam')
 <div class="container w-[70vw] mx-auto  py-[6rem] ">
     
     <div class="container mx-auto text-default-white pb-10">
-    <h1 class="text-4xl text-default-white font-bold mb-4">{{ $decision->title }}</h1>
+    <h1 class="text-4xl text-default-white font-bold mb-4"><span>{{ $decision->topic_no }} </span><span>{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
     <div class="justify-start items-center gap-[5px] inline-flex w-[100%]" style="font-family:'El messiri'; ">
             <div class="Frame w-5 h-5 mx-2  ">
                 <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
