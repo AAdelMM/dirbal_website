@@ -109,10 +109,11 @@ $parts = DB::table('mashro3_a7kam')
     
     <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-4xl text-default-white font-bold mb-4">{{ $decision->title }}</h1>
-    <div class="DivMkdPostInfo  justify-center items-end gap-[5px] inline-flex" style="font-family:'El messiri'; ">
-            <div class="Frame w-5 h-5 mx-2 relative"><img src="{{ asset('images/goldAvatar.png')}}" alt=""></div>
+    <div class="justify-start items-center gap-[5px] inline-flex w-[100%]" style="font-family:'El messiri'; ">
+            <div class="Frame w-5 h-5 mx-2  ">
+                <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
             <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
-            <div class="text-orange-400 w-[6rem] text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">{{ $decision->author }} </div>
+            <div class="text-orange-400 w-[40%]  text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">{{ $decision->author }} </div>
     </div>
    
     
