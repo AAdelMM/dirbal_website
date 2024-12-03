@@ -22,7 +22,7 @@ $parts = DB::table('mashro3_a7kam')
         width: 100%;
         margin-bottom: 20px;
         background: #161D27;
-        border: 2px solid #fdba74;
+        border: 2px solid #C18F59;
         border-radius: 10px;
         padding: 10px;
     }
@@ -35,26 +35,26 @@ $parts = DB::table('mashro3_a7kam')
     }
     .audio-player audio::-webkit-media-controls-current-time-display,
     .audio-player audio::-webkit-media-controls-time-remaining-display {
-        color: #fdba74;
+        color: #C18F59;
     }
     .audio-player audio::-webkit-media-controls-play-button,
     .audio-player audio::-webkit-media-controls-mute-button {
-        background-color: #fdba74;
+        background-color: #C18F59;
         border-radius: 50%;
     }
     .audio-player audio::-webkit-media-controls-volume-slider,
     .audio-player audio::-webkit-media-controls-timeline {
-        background-color: #fdba74;
+        background-color: #C18F59;
         border-radius: 25px;
         margin-left: 10px;
         margin-right: 10px;
     }
     /* Firefox */
     .audio-player audio::-moz-range-thumb {
-        background: #fdba74;
+        background: #C18F59;
     }
     .audio-player audio::-moz-range-track {
-        background: #fdba74;
+        background: #C18F59;
     }
 </style>
 
@@ -114,13 +114,13 @@ $parts = DB::table('mashro3_a7kam')
             <div class="Frame w-5 h-5 mx-2  ">
                 <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
             <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
-            <div class="text-orange-400 w-[40%]  text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'">{{ $decision->author }} </div>
+            <div class="w-[40%]  text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'; color:#C18F59;">{{ $decision->author }} </div>
     </div>
    
     
 
   
-    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#fdba74] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{!! $decision->title !!}</h2>
+    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#C18F59] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{!! $decision->title !!}</h2>
 <!--audio player-->
 
     @if($decision->audio_files)
