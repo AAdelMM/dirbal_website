@@ -192,12 +192,30 @@ $parts = DB::table('mashro3_a7kam')
 
     <!-- action buttons-->
     <div class="action-buttons absolute lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[8rem]  lg:right-[4rem] right-[2rem]">
-    <div class="w-[5rem] h-auto border-2 border-white">
-        <div class="border-b-2 border-white h-[5rem]">1</div>
-        <div class="border-b-2 border-white h-[5rem]">2</div>
-        <div class="border-b-2 border-white h-[5rem]">3</div>
-        <div class="border-b-2 border-white h-[5rem]">4</div>
-        <div class="h-[5rem]">5</div>
+    <div class="w-[5rem] h-auto border-2 border-white text-white text-center ">
+        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
+            <div class=" w-[100%] h-24 flex flex-col justify-center items-center">
+                <div class="flex text-[1.5rem] text-[#C18F59]">
+                    <div class="day">{{ $decision->day }}</div>
+                    <div>-</div>
+                    <div class="month">{{ $decision->month }}</div>
+                </div>
+                <div class="year text-[1rem]">{{ $decision->year }}</div>
+            </div>
+        </div>
+        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center"><div class="year  w-[100%] h-24 flex justify-center items-center">
+            <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
+        </div></div>
+        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center"> <div class="Frame34 flex justify-center  gap-[3px] ">
+            <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+        </div></div>
+        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
+            <div class="Frame34 flex justify-center  gap-[3px] ">
+            <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+        </div></div>
+        <div class="h-[5rem] flex items-center justify-center"><div class="Frame34 flex justify-center  gap-[3px] ">
+            <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+        </div></div>
     </div>
    
 </div>
