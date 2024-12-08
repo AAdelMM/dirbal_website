@@ -57,6 +57,8 @@ class Makalat3amaResource extends Resource
                         ->label('رقم مسلسل')
                         ->numeric()
                         ->required(),
+                        Toggle::make('publish')
+                    ->label('نشر'),
                     FileUpload::make('image')
                         ->label('صورة')
                         ->directory('images')

@@ -57,6 +57,8 @@ class KitabSawtyResource extends Resource
                 ->minValue(1900)
                 ->maxValue(date('Y'))
                 ->label('السنة'),
+                Toggle::make('publish')
+                    ->label('نشر'),
                 Forms\Components\TextInput::make('topic_no')->label('رقم الموضوع (بالارقام)')->required(),
             Forms\Components\TextInput::make('topic_letter')->label('رقم الموضوع (بالاحرف)')->required(),
                 // Group ref_number and 3nwan fields on the same line

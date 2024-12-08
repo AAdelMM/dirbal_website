@@ -211,9 +211,10 @@ $parts = DB::table('mashro3_a7kam')
             <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
         </div></div>
         <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
-            <div class="Frame34 flex justify-center  gap-[3px] ">
-            <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
-        </div></div>
+            <a href="#comment"><div class="Frame34 flex justify-center  gap-[3px] ">
+                 <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+            </div></a>
+        </div>
         <div class="h-[5rem] flex items-center justify-center"><div class="Frame34 flex justify-center  gap-[3px] ">
             <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
         </div></div>

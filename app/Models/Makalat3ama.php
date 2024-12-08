@@ -15,7 +15,7 @@ class Makalat3ama extends Model
         // Define which fields are mass assignable
         protected $fillable = [
             'title', 'mola5s', 'ref_number', 'image', 'video', 
-            'author', 'updated', 'day', 'month', 'year', 'article_text', 
+            'author', 'updated', 'day', 'month', 'year', 'article_text', 'publish',
             'section_id', 'branch_id', 'item_id','topic_no','topic_letter'
         ];
     

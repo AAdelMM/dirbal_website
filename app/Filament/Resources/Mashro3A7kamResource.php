@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Models\Branch;
 use App\Models\Item;
+use Filament\Forms\Components\Toggle;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class Mashro3A7kamResource extends Resource
@@ -39,6 +40,8 @@ class Mashro3A7kamResource extends Resource
             Forms\Components\TextInput::make('topic_letter')->label('رقم الموضوع (بالاحرف)')->required(),
             Forms\Components\TextInput::make('author')->label('بقلم')->required(),
             Forms\Components\TextInput::make('ref_number')->label('الرقم المسلسل')->required(),
+            Toggle::make('publish')
+                    ->label('نشر'),
             Forms\Components\Textarea::make('title')->label('العنوان')->required(),
             Forms\Components\Section::make('الموجز')
                 ->schema([

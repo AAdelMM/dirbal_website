@@ -36,6 +36,7 @@ class Mashro3A7kam extends Model
         'section_id',
         'branch_id',
         'item_id',
+        'publish'
     ];
 
       // Relationships
