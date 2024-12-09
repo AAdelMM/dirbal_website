@@ -120,7 +120,7 @@ $parts = DB::table('mashro3_a7kam')
     
 
   
-    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#C18F59] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{!! $decision->title !!}</h2>
+    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#C18F59] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{!! $decision->mogaz !!}</h2>
 <!--audio player-->
 
     @if($decision->audio_files)
@@ -138,18 +138,18 @@ $parts = DB::table('mashro3_a7kam')
     <div class="prose lg:prose-xl pb-8 border-b-2 border-[#fdba74]">
         {!! $decision->ka3da_text !!}
     </div>
-    <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->dibaga !!}</div>
+    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->dibaga !!}</div>
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->wak3a_title }}</h2>
-    <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->wak3a_text !!}</div>
+    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->wak3a_text !!}</div>
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->egraa_title }}</h2>
-    <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->egraa_text !!}</div>
+    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->egraa_text !!}</div>
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->reason_title }}</h2>
-    <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->reason_text !!}</div>
+    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->reason_text !!}</div>
     <h2 class="text-3xl font-bold my-6 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->{'7okm_title'} }}</h2>
-    <div class="my-5 border-b-2 border-[#fdba74] pb-8">{!! $decision->{'7okm_text'} !!}</div>
+    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->{'7okm_text'} !!}</div>
    
 </div>
-<div class="my-8 border-t-2 border-[#C18F59] pt-8 ">
+<div class="my-8 border-t-2 border-[#A6743E] pt-8 ">
     <div class="flex justify-end">
         <h2 class="text-3xl font-bold mb-4 inline-flex gap-4 justify-center text-right" style="color:#C18F59 !important; font-family:'El Messiri'; text-align: right;">أضف تعليقاً<span><img src="{{asset('images/mcomment.png')}}" alt="comment icon"></span></h2>
     </div>

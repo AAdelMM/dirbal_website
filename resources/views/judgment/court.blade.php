@@ -377,13 +377,15 @@
                  @php
                  // Check which table the record belongs to and assign the appropriate column
                  $columnName = isset($n->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $short = ($n->category == 'مشروع احكام') ? 'القاعدة':'الملخص';
+
              @endphp
              <div id="extend-{{ $n->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{!! $short !!}</h1>
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $n->{$columnName} !!}</div>
-                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                 <div class=" border-t-2 border-[#fdba74] text-right py-5 my-5 text-white 2xl:w-[100%] lg:w-[80%]">
                     @php
                     $routeName = match($n->category) {
                         'مقالة' => 'previewPages.articleShow',
@@ -392,8 +394,10 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
+                    
+                        <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                      
-                        <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class="block w-full h-full">واصل القراءة</a>
+                       
 
                  </div>
              </div>
@@ -471,13 +475,15 @@
                  @php
                  // Check which table the record belongs to and assign the appropriate column
                  $columnName = isset($k->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $short = ($k->category == 'مشروع احكام') ? 'القاعدة':'الملخص';
+
              @endphp
              <div id="extend-{{ $k->id }}" class="extend  container hidden mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{!! $short !!}</h1>
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $k->{$columnName} !!}</div>
-                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                 <div class=" border-t-2 border-[#fdba74] text-right py-5 my-5 text-white 2xl:w-[100%] lg:w-[80%]">
                     @php
                     $routeName = match($k->category) {
                         'مقالة' => 'previewPages.articleShow',
@@ -486,7 +492,7 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
-                        <a href="{{ route('dynamic.preview', ['category' => $k->category, 'id' => $k->id]) }}" class="block w-full h-full">واصل القراءة</a>
+                         <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -562,13 +568,15 @@
                  @php
                  // Check which table the record belongs to and assign the appropriate column
                  $columnName = isset($s->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $short = ($s->category == 'مشروع احكام') ? 'القاعدة':'الملخص';
+
              @endphp
              <div id="extend-{{ $s->id }}" class="extend  container hidden mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{!! $short !!}</h1>
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $s->{$columnName} !!}</div>
-                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                 <div class=" border-t-2 border-[#fdba74] text-right py-5 my-5 text-white 2xl:w-[100%] lg:w-[80%]">
                     @php
                     $routeName = match($s->category) {
                         'مقالة' => 'previewPages.articleShow',
@@ -577,7 +585,7 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
-                        <a href="{{ route('dynamic.preview', ['category' => $s->category, 'id' => $s->id]) }}" class="block w-full h-full">واصل القراءة</a>
+                       <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -651,13 +659,15 @@
                 @php
                     // Check which table the record belongs to and assign the appropriate column
                     $columnName = isset($g->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                    $short = ($g->category == 'مشروع احكام') ? 'القاعدة':'الملخص';
+
                 @endphp
                 <div id="extend-{{ $g->id }}" class="extend hidden container mx-auto flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                     <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                        <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                        <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{!! $short !!}</h1>
                     </div>
                     <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $g->{$columnName} !!}</div>
-                    <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                    <div class=" border-t-2 border-[#fdba74] text-right py-5 my-5 text-white 2xl:w-[100%] lg:w-[80%]">
                         @php
                         $routeName = match($g->category) {
                             'مقالة' => 'previewPages.articleShow',
@@ -666,7 +676,7 @@
                             default => 'highCourt.a7kam.preview'
                         };
                         @endphp
-                            <a href="{{ route('dynamic.preview', ['category' => $g->category, 'id' => $g->id]) }}" class="block w-full h-full">واصل القراءة</a>
+                            <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                     </div>
                 </div>
                 <!--mola5s end-->
@@ -741,13 +751,14 @@
                  @php
                  // Check which table the record belongs to and assign the appropriate column
                  $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $short = ($item->category == 'مشروع احكام') ? 'القاعدة':'الملخص';
              @endphp
              <div id="extend-{{ $item->id }}" class="extend  container mx-auto hidden flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
-                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">الملخص</h1>
+                     <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{!! $short !!}</h1>
                  </div>
                  <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
-                 <div class="bg-[#fdba74] text-center p-2 my-5 text-blue-700 2xl:w-[100%] lg:w-[80%]">
+                 <div class=" border-t-2 border-[#fdba74] text-right py-5 my-5 text-white 2xl:w-[100%] lg:w-[80%]">
                     @php
                     $routeName = match($item->category) {
                         'مقالة' => 'previewPages.articleShow',
@@ -756,7 +767,7 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
-                        <a href="{{ route('dynamic.preview', ['category' => $item->category, 'id' => $item->id]) }}" class="block w-full h-full">واصل القراءة</a>
+                        <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                  </div>
              </div>
              <!--mola5s end-->
