@@ -8,138 +8,153 @@
 @php
 
     $data = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','publish','topic_letter',
         DB::raw("'مقالة' as category"), 
         DB::raw("CONCAT('m', id) as id")) // Add 'm' prefix for makalat_3ama
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 14)
+        ->where('publish', 1) // Add this line
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id','publish', 'topic_no','topic_letter',
                 DB::raw("'مشروع احكام' as category"),
                 DB::raw("CONCAT('h', id) as id")) // Add 'h' prefix for mashro3_a7kam
 
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
+                ->where('publish', 1) // Add this line
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','publish', 'topic_no','topic_letter',
                 DB::raw("'كتاب صوتى' as category"),
                 DB::raw("CONCAT('k', id) as id")) // Add 'k' prefix for kitab_sawty)
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 14)
+                ->where('publish', 1) // Add this line
         )
         ->get();
 
     $gena = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','publish', 'topic_no','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 15)
+        ->where('publish', 1) // Add this line
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id','publish', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
+                ->where('publish', 1) // Add this line
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'publish','topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 15)
+                ->where('publish', 1) // Add this line
         )
         ->get();
 
     $shar3y = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','publish', 'topic_no','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 16)
+        ->where('publish', 1) // Add this line
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id','publish', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
+                ->where('publish', 1) // Add this line
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','publish', 'topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 16)
+                ->where('publish', 1) // Add this line
         )
         ->get();
 
     $karar = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','publish', 'topic_no','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 19)
+        ->where('publish', 1) // Add this line
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id','publish', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
+                ->where('publish', 1) // Add this line
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','publish', 'topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 19)
+                ->where('publish', 1) // Add this line
         )
         ->get();
 
     $niaba = DB::table('makalat_3ama')
-        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','topic_no','topic_letter',
+        ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','topic_no','publish','topic_letter',
         DB::raw("CONCAT('m', id) as id"),
         DB::raw("'مقالة' as category"))
         ->where('section_id', 1)
         ->where('branch_id', 2)
         ->where('item_id', 20)
+        ->where('publish', 1) // Add this line
         ->union(
             DB::table('mashro3_a7kam')
-                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','ka3da_text','id','publish', 'topic_no','topic_letter',
                 DB::raw("CONCAT('h', id) as id"),
                 DB::raw("'مشروع احكام' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
+                ->where('publish', 1) // Add this line
         )
         ->union(
             DB::table('kitab_sawty')
-                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id', 'topic_no','topic_letter',
+                ->select('day', 'month', 'year', 'title', 'author','updated','mola5s','id','publish', 'topic_no','topic_letter',
                 DB::raw("CONCAT('k', id) as id"),
                 DB::raw("'كتاب صوتى' as category"))
                 ->where('section_id', 1)
                 ->where('branch_id', 2)
                 ->where('item_id', 20)
+                ->where('publish', 1) // Add this line
         )
         ->get();
 
@@ -306,6 +321,7 @@
     <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
 @else
     @foreach($niaba as $n)
+    
     <!--start  النيابة العامة-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
         <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
@@ -350,8 +366,7 @@
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
                         بقلم: <span class="author-name text-[#C18F59]">{{ $n->author }}</span>
                     </div>
-                    {{-- <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $n->category }}</span>
-                    </div> --}}
+                   
                     @if($n->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدَث</div>
                     @else
@@ -377,6 +392,7 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
+                     
                         <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class="block w-full h-full">واصل القراءة</a>
 
                  </div>
@@ -385,6 +401,7 @@
         </div>
     </div>
     <!--end-->
+    
     @endforeach
 @endif
     </div>

@@ -22,6 +22,7 @@ use Filament\Forms\Components\DatePicker;
 use App\Models\Branch;
 use App\Models\Item;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\IconColumn;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 use Filament\Tables\Columns\DateTimeColumn;
@@ -57,7 +58,7 @@ class Makalat3amaResource extends Resource
                         ->label('رقم مسلسل')
                         ->numeric()
                         ->required(),
-                        Toggle::make('publish')
+                    Toggle::make('publish')
                     ->label('نشر'),
                     FileUpload::make('image')
                         ->label('صورة')
@@ -143,7 +144,9 @@ class Makalat3amaResource extends Resource
                     ->label('مسلسل')
                     ->sortable()
                     ->searchable(),
-
+                IconColumn::make('publish')
+                    ->boolean()
+                    ->label('حالة النشر'),
                 // Section Column (via relationship)
                 TextColumn::make('section.name')
                     ->label('قسم')
@@ -177,6 +180,8 @@ class Makalat3amaResource extends Resource
                 // Updated At Column
                 Tables\Columns\BooleanColumn::make('updated')
                     ->label('محدث'),
+                
+                
             ])
             ->filters([
                 //

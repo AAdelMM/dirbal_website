@@ -17,6 +17,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\IconColumn;
 use App\Models\Branch;
 use App\Models\Item;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
@@ -159,6 +160,9 @@ class KitabSawtyResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('ref_number')->label('رقم مسلسل'),
+                IconColumn::make('publish')
+                    ->boolean()
+                    ->label('حالة النشر'),
                 TextColumn::make('section.name')->label('قسم'),
                 TextColumn::make('branch.name')->label('فرع'),
                 TextColumn::make('item.name')->label('عنصر'),

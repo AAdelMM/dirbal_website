@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Models\Branch;
 use App\Models\Item;
 use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\IconColumn;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class Mashro3A7kamResource extends Resource
@@ -135,7 +136,9 @@ class Mashro3A7kamResource extends Resource
                 Tables\Columns\TextColumn::make('year')->label('السنة'),
                 Tables\Columns\TextColumn::make('month')->label('الشهر'),
                 Tables\Columns\TextColumn::make('day')->label('اليوم'),
-                
+                IconColumn::make('publish')
+                    ->boolean()
+                    ->label('حالة النشر'),
                 Tables\Columns\TextColumn::make('author')->label('الكاتب'),
                 Tables\Columns\TextColumn::make('ref_number')->label('الرقم المسلسل'),
                 Tables\Columns\TextColumn::make('title')->label('العنوان'),
