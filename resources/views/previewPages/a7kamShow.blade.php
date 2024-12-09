@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\DB;
 
 $parts = DB::table('mashro3_a7kam')
-    ->select('year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title', 'ka3da_text', 'dibaga', 'wak3a_text',
+    ->select('year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title', 'ka3da_text', 'dibaga', 'wak3a_text','id',
      'wak3a_text','egraa_title', 'egraa_text', 'reason_title', 'reason_text', '7okm_title', '7okm_text',
      'author','audio_files','pdf_files','topic_letter','topic_no')
     ->get();
@@ -57,15 +57,16 @@ $parts = DB::table('mashro3_a7kam')
         background: #C18F59;
     }
 </style>
-
+@yield('content')
 <div class="main bg-[#161D27] w-full h-auto relative ">
+    @include('homePage.menu')
     <!--last updated white header-->
 <header class="HeaderHome  top-0 left-0 right-0 p-4">
     <div class="container-fluid mx-14">
       <div class="flex justify-between items-center">
-        <div class="Logo">
+        <a href="/"><div class="Logo">
           <img class="w-32 lg:w-40 xl:w-48" src="{{ asset('images/48.png') }}" alt="Logo" />
-        </div>
+        </div></a>
         
         <div class="flex items-center space-x-4">
           <div class="relative">
@@ -106,6 +107,7 @@ $parts = DB::table('mashro3_a7kam')
         </div>
        
     </div>
+    {{-- <img class="absolute w-full h-full z-[0]" src="{{asset('images/123.png')}}" alt="background"> --}}
 <div class="container w-[70vw] mx-auto  py-[6rem] ">
     
     <div class="container mx-auto text-default-white pb-10">
@@ -149,40 +151,43 @@ $parts = DB::table('mashro3_a7kam')
     <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->{'7okm_text'} !!}</div>
    
 </div>
-<div class="my-8 border-t-2 border-[#A6743E] pt-8 ">
-    <div class="flex justify-end">
+<!--add comment section-->
+<div class="my-8 border-t-2 border-[#A6743E] pt-8 z-[200]">
+    <div class="flex justify-end ">
         <h2 class="text-3xl font-bold mb-4 inline-flex gap-4 justify-center text-right" style="color:#C18F59 !important; font-family:'El Messiri'; text-align: right;">أضف تعليقاً<span><img src="{{asset('images/mcomment.png')}}" alt="comment icon"></span></h2>
     </div>
-        <form action=""></form>
+        <form action="{{ route('comments.store') }}" method="POST">
         @csrf
-        <input type="hidden" name="decision_id" value="{{ $decision->id }}">
+        <input type="hidden" name="contents_id" value="{{ $decision->id }}">
+        <input type="hidden" name="table_name" value="{{ 'مشروع احكام' }}">
+        
         <div>
             <label for="comment" class="block text-white my-3 text-right"></label>
             <textarea id="comment" name="comment" rows="4" placeholder="التعليق" required class="w-full px-3 py-2 text-gray-700 border  focus:outline-none" style="direction: rtl;"></textarea>
         </div>
         <div class="flex justify-between mt-3">
             <div class="w-[48%]">
-                <label for="name" class="block text-white my-3 text-right"></label>
-                <input type="text" id="name" name="name" placeholder=" الاسم  (إختياري) " required class="w-full px-3 py-5 text-gray-700 border  focus:outline-none h-[3.5rem]" style="direction: rtl;">
+                <label for="author" class="block text-white my-3 text-right"></label>
+                <input type="text" id="author" name="author" placeholder=" الاسم  (إختياري) " required value="{{ old('author') }}" class="w-full px-3 py-5 text-gray-700 border  focus:outline-none h-[3.5rem]" style="direction: rtl;">
             </div>
             <div class="w-[48%]">
                 <label for="email" class="block text-white my-3 text-right"></label>
-                <input type="email" id="email"  name="email" placeholder="البريد الإلكتروني" required class="w-full px-3 py-2 text-gray-700 border focus:outline-none h-[3.5rem]"  style="direction: rtl;">
+                <input type="email" id="email"  name="email" placeholder="البريد الإلكتروني" required value="{{ old('email', Cookie::get('guest_email')) }}" class="w-full px-3 py-2 text-gray-700 border focus:outline-none h-[3.5rem]"  style="direction: rtl;">
             </div>
         </div>
-        <div class="flex justify-end items-center my-3 gap-4">
-            <label for="save-data" class="text-white text-right" style="direction: rtl;">أحفظ بياناتى على هذا المتصفح لتعليقات قادمة</label>
+        <div class="flex justify-end items-center my-3 form-check gap-4">
+            <label for="save_guest_data" class="text-white text-right" style="direction: rtl;">أحفظ بياناتى على هذا المتصفح لتعليقات قادمة</label>
             <input
                 type="checkbox"
-                id="save-data"
-                name="save-data"
-                class="mr-2"
+                id="save_guest_data"
+                name="save_guest_data"
+                class="mr-2 form-check-input"
             >
             
         </div>
         <div class=" my-5 flex justify-end">
             <button type="submit" class="bg-[#A6743E] text-white font-bold py-2 px-4 rounded inline-flex items-center gap-8">
-                 <span><img src="{{asset('images/arrowlw.png')}}" alt=""></span>تعليق
+                 <span><img src="{{asset('images/arrowlw.png')}}" alt="add comment"></span>تعليق
             </button>
         </div>
     </form>

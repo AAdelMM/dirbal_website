@@ -395,7 +395,7 @@
                     };
                     @endphp
                     
-                        <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
+                        <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center lg:text-lg 2xl:text-xl">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                      
                        
 
@@ -492,7 +492,7 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
-                         <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
+                         <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center lg:text-lg 2xl:text-xl">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -585,7 +585,7 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
-                       <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
+                       <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center lg:text-lg 2xl:text-xl">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                  </div>
              </div>
              <!--mola5s end-->
@@ -676,7 +676,7 @@
                             default => 'highCourt.a7kam.preview'
                         };
                         @endphp
-                            <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
+                            <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center lg:text-lg 2xl:text-xl">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                     </div>
                 </div>
                 <!--mola5s end-->
@@ -767,7 +767,7 @@
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
-                        <a href="{{ route('dynamic.preview', ['category' => $n->category, 'id' => $n->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
+                        <a href="{{ route('dynamic.preview', ['category' => $item->category, 'id' => $item->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center lg:text-lg 2xl:text-xl">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                  </div>
              </div>
              <!--mola5s end-->
