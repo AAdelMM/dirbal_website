@@ -31,6 +31,7 @@ class CommentController extends Controller
         cookie()->queue('guest_email', $request->email, 60 * 24 * 30); // Save for 30 days
     }
 
-    return redirect()->back()->with('success', 'Comment saved successfully!');
+    // Redirect back with a success message
+    return redirect()->back()->with('comment_submitted', true);
 }
 }

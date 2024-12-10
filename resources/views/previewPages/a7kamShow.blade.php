@@ -194,6 +194,25 @@ $parts = DB::table('mashro3_a7kam')
 
 </div>
 
+<!-- Popup container -->
+<div id="thank-you-popup" 
+     style="
+         display: none;
+         position: fixed;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         z-index: 1000;
+         
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         text-align: center;
+     ">
+    <img src="{{ asset('images/commentThankyou.png') }}" alt="Thank you" style="width: 100%; max-width: 700px;">
+</div>
+<!--end popup-->
+
 </div>    
 
     <!-- action buttons-->
@@ -249,4 +268,19 @@ $parts = DB::table('mashro3_a7kam')
 
 
 </style>
- 
+@if (session('comment_submitted'))
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('thank-you-popup');
+
+        // Show the popup
+        popup.style.display = 'block';
+
+        // Hide the popup after 5 seconds
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 5000);
+    });
+</script>
+@endif
+
