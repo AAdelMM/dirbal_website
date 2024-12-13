@@ -153,7 +153,7 @@ $parts = DB::table('mashro3_a7kam')
    
 </div>
 <!--add comment section-->
-<div class="my-8 border-t-2 border-[#A6743E] pt-8 z-[200]">
+<div id="commentSection" class="my-8 border-t-2 border-[#A6743E] pt-8 z-[200]">
     <div class="flex justify-end ">
         <h2 class="text-3xl font-bold mb-4 inline-flex gap-4 justify-center text-right" style="color:#C18F59 !important; font-family:'El Messiri'; text-align: right;">أضف تعليقاً<span><img src="{{asset('images/mcomment.png')}}" alt="comment icon"></span></h2>
     </div>
@@ -236,7 +236,7 @@ $parts = DB::table('mashro3_a7kam')
             <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
         </div></div>
         <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
-            <a href="#comment"><div class="Frame34 flex justify-center  gap-[3px] ">
+            <a href="#commentSection"><div class="Frame34 flex justify-center  gap-[3px] ">
                  <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
             </div></a>
         </div>
