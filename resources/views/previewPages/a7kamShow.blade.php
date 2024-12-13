@@ -217,7 +217,7 @@ $parts = DB::table('mashro3_a7kam')
 </div>    
 
     <!-- action buttons-->
-    <div class="action-buttons absolute lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[8rem]  lg:right-[4rem] right-[2rem]">
+    <div class="action-buttons  lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[8rem]  lg:right-[4rem] right-[2rem] fixed">
     <div class="w-[5rem] h-auto border-2 border-white text-white text-center ">
         <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
             <div class=" w-[100%] h-24 flex flex-col justify-center items-center">
