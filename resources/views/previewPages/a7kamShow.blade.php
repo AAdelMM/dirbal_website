@@ -87,7 +87,7 @@ $parts = DB::table('mashro3_a7kam')
       <div class="border-t border-white mt-4"></div>
     </header>
     <!--last updated white header end-->
-    <div class="w-full h-[10rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
+    <div class="w-full h-[15rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
   background-position: center; " >
         <div class="w-[65%]">
           <h1 class=" text-default-white font-bold mb-4" style="font-family:'El messiri'; font-size:2rem;">{{ $decision->title }}</h1>
@@ -222,9 +222,9 @@ $parts = DB::table('mashro3_a7kam')
         <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
             <div class=" w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
-                    <div class="day">{{ $decision->day }}</div>
+                    <div class="month font-bold text-3xl">{{ $decision->month }}</div>
                     <div>-</div>
-                    <div class="month">{{ $decision->month }}</div>
+                    <div class="day font-bold text-3xl">{{ $decision->day }}</div>
                 </div>
                 <div class="year text-[1rem]">{{ $decision->year }}</div>
             </div>
