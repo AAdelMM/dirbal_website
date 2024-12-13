@@ -87,7 +87,8 @@ $parts = DB::table('mashro3_a7kam')
       <div class="border-t border-white mt-4"></div>
     </header>
     <!--last updated white header end-->
-    <div class="w-full h-[10rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover"  style="background-image: url('{{ asset('images/civil_law.png') }}');" >
+    <div class="w-full h-[10rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
+  background-position: center; " >
         <div class="w-[65%]">
           <h1 class=" text-default-white font-bold mb-4" style="font-family:'El messiri'; font-size:2rem;">{{ $decision->title }}</h1>
         </div>
@@ -168,7 +169,7 @@ $parts = DB::table('mashro3_a7kam')
         <div class="flex justify-between mt-3">
             <div class="w-[48%]">
                 <label for="author" class="block text-white my-3 text-right"></label>
-                <input type="text" id="author" name="author" placeholder=" الاسم  (إختياري) " required value="{{ old('author') }}" class="w-full px-3 py-5 text-gray-700 border  focus:outline-none h-[3.5rem]" style="direction: rtl;">
+                <input type="text" id="author" name="author" placeholder=" الاسم  (اختياري) " required value="{{ old('author') }}" class="w-full px-3 py-5 text-gray-700 border  focus:outline-none h-[3.5rem]" style="direction: rtl;">
             </div>
             <div class="w-[48%]">
                 <label for="email" class="block text-white my-3 text-right"></label>
@@ -176,7 +177,7 @@ $parts = DB::table('mashro3_a7kam')
             </div>
         </div>
         <div class="flex justify-end items-center my-3 form-check gap-4">
-            <label for="save_guest_data" class="text-white text-right" style="direction: rtl;">أحفظ بياناتى على هذا المتصفح لتعليقات قادمة</label>
+            <label for="save_guest_data" class="text-white text-right" style="direction: rtl;">احفظ بياناتى على هذا المتصفح لتعليقات قادمة</label>
             <input
                 type="checkbox"
                 id="save_guest_data"
