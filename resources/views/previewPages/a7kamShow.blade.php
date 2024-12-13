@@ -262,6 +262,9 @@ $parts = DB::table('mashro3_a7kam')
     </div>
 <!-- action buttons-->
     </div>
+    <button id="scrollToTopBtn" class=" scrollToTopBtn text-white block fixed right-8 p-2 bottom-5 z-[1000] bg-yellow-900">
+        صعود للأعلى 
+    </button>
 @include('homePage.footer')
 
     <style>
@@ -277,8 +280,21 @@ $parts = DB::table('mashro3_a7kam')
     transition: all 5.3s ease-in-out !important; /* Smooth transition */
 }
 *{
-    transition: all 5.3s ease-in-out !important;
+    transition: all 3s ease-in-out !important;
 }
+
+#scrollToTopBtn {
+             /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #C18F59;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
 
 }
 
@@ -292,6 +308,10 @@ $parts = DB::table('mashro3_a7kam')
     document.addEventListener('DOMContentLoaded', function() {
         const actionButtons = document.querySelector('.action-buttons');
         const sticky = actionButtons.offsetTop; // Get the initial position of the buttons
+        console.log('before');
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        console.log('after');
+
 
         window.addEventListener('scroll', function() {
             console.log('Scrolling...'); // Log message to check if scrolling is detected
@@ -299,12 +319,24 @@ $parts = DB::table('mashro3_a7kam')
             if (window.pageYOffset > sticky) {
                 actionButtons.classList.add('fixed','top-0');
                 actionButtons.classList.remove('absolute', 'lg:top-[28rem]', '2xl:top-[28.5rem]', 'top-[18rem]');
+                scrollToTopBtn.classList.add('block');
+                scrollToTopBtn.classList.remove('hidden');
                 
             } else {
                 actionButtons.classList.remove('fixed','top-0');
                 actionButtons.classList.add('absolute', 'lg:top-[28rem]', '2xl:top-[28.5rem]', 'top-[18rem]');
-              
+                scrollToTopBtn.classList.remove('block');
+                scrollToTopBtn.classList.add('hidden');
             }
+        });
+
+         // Scroll to top when the button is clicked
+         scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scroll effect
+            });
+            console.log('clicked')
         });
     });
 </script>
