@@ -262,8 +262,8 @@ $parts = DB::table('mashro3_a7kam')
     </div>
 <!-- action buttons-->
     </div>
-    <button id="scrollToTopBtn" class=" scrollToTopBtn text-white block fixed right-8 p-2 bottom-5 z-[1000] bg-yellow-900">
-        صعود للأعلى 
+    <button id="scrollToTopBtn" class=" scrollToTopBtn block fixed right-8 p-2 bottom-5 z-[1000]  ">
+       <img class="w-[70%] h-[70%]" src="{{asset('images/arrowUp.png')}}" alt="arrow up">
     </button>
 @include('homePage.footer')
 
