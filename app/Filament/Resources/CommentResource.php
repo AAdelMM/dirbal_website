@@ -41,7 +41,15 @@ class CommentResource extends Resource
                     ->label('التعليق'), //
             ]);
     }
+    public static function getNavigationBadge(): ?string
+    {
+        return Comment::count();
+    }
 
+    public static function getNavigationBadgeColor(): ?string
+    {
+        return 'primary';
+    }
     public static function table(Table $table): Table
     {
         return $table
