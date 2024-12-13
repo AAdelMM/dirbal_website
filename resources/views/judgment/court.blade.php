@@ -693,54 +693,54 @@
 @if($data->isEmpty())
     <div class="topic-title">حاليا لا يوجد محتوى فى هذا الفرع</div>
 @else
-    @foreach($data as $item)
+    @foreach($data as $d)
     <!--start القضاء المدنى-->
     <div  class=" flex gap-4 border-b-2 border-gray-400 pb-4">
         <div class="date-div border-2 border-gray-400  w-[7%] h-[20%] flex flex-col items-center justify-center">
             <div class="border-b-2 border-gray-400 w-[100%] h-24 flex flex-col justify-center items-center">
                 <div class="flex text-[1.5rem] text-[#C18F59]">
-                    <div class="day">{{ $item->day }}</div>
+                    <div class="day">{{ $d->day }}</div>
                     <div>-</div>
-                    <div class="month">{{ $item->month }}</div>
+                    <div class="month">{{ $d->month }}</div>
                 </div>
-                <div class="year text-[1rem]">{{ $item->year }}</div>
+                <div class="year text-[1rem]">{{ $d->year }}</div>
             </div>
             <div class="year border-b-2 border-gray-400 w-[100%] h-24 flex justify-center items-center">
                 <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
             </div>
             <!--share icon -->
-            <div id="share-{{ $item->id }}" class="share w-[100%] h-24  hidden flex items-center justify-center border-b-2 border-gray-200">
+            <div id="share-{{ $d->id }}" class="share w-[100%] h-24  hidden flex items-center justify-center border-b-2 border-gray-200">
                 <div class="Frame34 flex justify-center  gap-[3px] ">
                     <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
                 </div>
             </div>
         <!--share icon -->
          <!--comment icon -->
-         <div id="comment-{{ $item->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
+         <div id="comment-{{ $d->id }}" class="comment w-[100%] h-24 hidden flex items-center justify-center border-b-2 border-gray-200">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--comment icon -->
         <!--pdf icon -->
-        <div id="pdf-{{ $item->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
+        <div id="pdf-{{ $d->id }}" class="pdf w-[5.6rem] h-24 hidden flex items-center justify-center ">
             <div class="Frame34 flex justify-center  gap-[3px] ">
                 <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
             </div>
         </div>
         <!--pdf icon -->
         </div>
-        <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $item->id }}')">
-            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{$item->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$item->topic_letter}}: </span> {{ $item->title }}</div>
+        <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $d->id }}')">
+            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{$d->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$d->topic_letter}}: </span> {{ $d->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">
                         <span><img src="{{ asset('images/goldAvatar.png') }}" alt=""></span>
-                        بقلم: <span class="author-name text-[#C18F59]">{{ $item->author }}</span>
+                        بقلم: <span class="author-name text-[#C18F59]">{{ $d->author }}</span>
                     </div>
                    {{--  <div class="category text-[#C18F59]">التصنيف: <span class="text-white">{{ $item->category }}</span>
                     </div> --}}
-                    @if($item->updated == 1)
+                    @if($d->updated == 1)
                         <div class="updated w-[4%] bg-red-600 text-center text-sm font-bold">محدّث</div>
                         @else
                     <div class="updated w-[4%] bg-gray-400 text-center text-sm font-bold"></div>
@@ -750,24 +750,24 @@
                  <!--mola5s start-->
                  @php
                  // Check which table the record belongs to and assign the appropriate column
-                 $columnName = isset($item->ka3da_text) ? 'ka3da_text' : 'mola5s';
-                 $short = ($item->category == 'مشروع احكام') ? 'القاعدة':'الملخص';
+                 $columnName = isset($d->ka3da_text) ? 'ka3da_text' : 'mola5s';
+                 $short = ($d->category == 'مشروع احكام') ? 'القاعدة':'الملخص';
              @endphp
-             <div id="extend-{{ $item->id }}" class="extend  container mx-auto hidden flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
+             <div id="extend-{{ $d->id }}" class="extend  container mx-auto hidden flex flex-col justify-center items-center w-full mt-[10rem] transition-all duration-200 ease-in-out">
                  <div class="border-y-2 border-[#fdba74] flex justify-center items-center 2xl:w-[100%] lg:w-[90%]">
                      <h1 class="text-[2rem] text-[#fdba74] 2xl:w-[100%] py-3  lg:w-[80%] text-center">{!! $short !!}</h1>
                  </div>
-                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $item->{$columnName} !!}</div>
+                 <div class="2xl:w-full lg:w-[80%] text-default-white mt-8">{!! $d->{$columnName} !!}</div>
                  <div class=" border-t-2 border-[#fdba74] text-right py-5 my-5 text-white 2xl:w-[100%] lg:w-[80%]">
                     @php
-                    $routeName = match($item->category) {
+                    $routeName = match($d->category) {
                         'مقالة' => 'previewPages.articleShow',
                         'كتاب صوتى' => 'previewPages.audioShow',
                         'مشروع احكام' => 'previewPages.a7kamShow',
                         default => 'highCourt.a7kam.preview'
                     };
                     @endphp
-                        <a href="{{ route('dynamic.preview', ['category' => $item->category, 'id' => $item->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center lg:text-lg 2xl:text-xl">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
+                        <a href="{{ route('dynamic.preview', ['category' => $d->category, 'id' => $d->id]) }}" class=" w-[20%] h-full bg-[#CF9455] font-bold py-4 inline-flex gap-4 items-center justify-center lg:text-lg 2xl:text-xl">واصل القراءة<span><img src="{{asset('images/arrowlw.png')}}" alt=""></span></a>
                  </div>
              </div>
              <!--mola5s end-->
