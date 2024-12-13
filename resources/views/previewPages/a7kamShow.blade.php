@@ -56,7 +56,14 @@ $parts = DB::table('mashro3_a7kam')
     .audio-player audio::-moz-range-track {
         background: #C18F59;
     }
+    html, body {
+    height: 100%;
+    overflow: visible !important; /* Ensure scrolling is not restricted */
+}
 </style>
+
+
+
 @yield('content')
 <div class="main bg-[#161D27] w-full h-auto relative ">
     @include('homePage.menu')
@@ -217,35 +224,42 @@ $parts = DB::table('mashro3_a7kam')
 </div>    
 
     <!-- action buttons-->
-    <div class="action-buttons  lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[8rem]  lg:right-[4rem] right-[2rem] fixed">
-    <div class="w-[5rem] h-auto border-2 border-white text-white text-center ">
-        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
-            <div class=" w-[100%] h-24 flex flex-col justify-center items-center">
-                <div class="flex text-[1.5rem] text-[#C18F59]">
-                    <div class="month font-bold text-3xl">{{ $decision->month }}</div>
-                    <div>-</div>
-                    <div class="day font-bold text-3xl">{{ $decision->day }}</div>
+    <div  class="action-buttons lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[8rem] lg:right-[4rem] right-[2rem] absolute">
+        <div class="w-[5rem] h-auto border-2 border-white text-white text-center ">
+            <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
+                <div class="w-[100%] h-24 flex flex-col justify-center items-center">
+                    <div class="flex text-[1.5rem] text-[#C18F59]">
+                        <div class="month font-bold text-3xl">{{ $decision->month }}</div>
+                        <div>-</div>
+                        <div class="day font-bold text-3xl">{{ $decision->day }}</div>
+                    </div>
+                    <div class="year text-[1rem]">{{ $decision->year }}</div>
                 </div>
-                <div class="year text-[1rem]">{{ $decision->year }}</div>
+            </div>
+            <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
+                <div class="year w-[100%] h-24 flex justify-center items-center">
+                    <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
+                </div>
+            </div>
+            <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
+                <div class="Frame34 flex justify-center gap-[3px] ">
+                    <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                </div>
+            </div>
+            <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
+                <a href="#commentSection">
+                    <div class="Frame34 flex justify-center gap-[3px] ">
+                        <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+                    </div>
+                </a>
+            </div>
+            <div class="h-[5rem] flex items-center justify-center">
+                <div class="Frame34 flex justify-center gap-[3px] ">
+                    <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+                </div>
             </div>
         </div>
-        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center"><div class="year  w-[100%] h-24 flex justify-center items-center">
-            <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
-        </div></div>
-        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center"> <div class="Frame34 flex justify-center  gap-[3px] ">
-            <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
-        </div></div>
-        <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
-            <a href="#commentSection"><div class="Frame34 flex justify-center  gap-[3px] ">
-                 <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
-            </div></a>
-        </div>
-        <div class="h-[5rem] flex items-center justify-center"><div class="Frame34 flex justify-center  gap-[3px] ">
-            <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
-        </div></div>
     </div>
-   
-</div>
 <!-- action buttons-->
     </div>
 @include('homePage.footer')
@@ -258,17 +272,43 @@ $parts = DB::table('mashro3_a7kam')
     font-size: 1.8rem;
     font-family:'sakkal majalla'
     
-    
+    /*right buttons*/
+    .action-buttons {
+    transition: all 5.3s ease-in-out !important; /* Smooth transition */
+}
+*{
+    transition: all 5.3s ease-in-out !important;
 }
 
-/* Optionally, include any other default styles you might need */
-.text-default-white * {
-    color: inherit; /* Ensure all child elements inherit the white color */
-    text-align:justify;
 }
+
+
 
 
 </style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const actionButtons = document.querySelector('.action-buttons');
+        const sticky = actionButtons.offsetTop; // Get the initial position of the buttons
+
+        window.addEventListener('scroll', function() {
+            console.log('Scrolling...'); // Log message to check if scrolling is detected
+
+            if (window.pageYOffset > sticky) {
+                actionButtons.classList.add('fixed','top-0');
+                actionButtons.classList.remove('absolute', 'lg:top-[28rem]', '2xl:top-[28.5rem]', 'top-[18rem]');
+                
+            } else {
+                actionButtons.classList.remove('fixed','top-0');
+                actionButtons.classList.add('absolute', 'lg:top-[28rem]', '2xl:top-[28.5rem]', 'top-[18rem]');
+              
+            }
+        });
+    });
+</script>
+
 @if (session('comment_submitted'))
 <script>
     document.addEventListener('DOMContentLoaded', function () {
