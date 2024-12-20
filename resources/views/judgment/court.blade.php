@@ -731,7 +731,7 @@
         <!--pdf icon -->
         </div>
         <div class=" w-[90%] cursor-pointer flex flex-col justify-center gap-3" onclick="toggleExtend('{{ $d->id }}')">
-            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{$d->topic_no}} </span><span class="text-[#FAE1C6] font-bold">{{$d->topic_letter}}: </span> {{ $d->title }}</div>
+            <div class="topic-title"><span class="text-[#FAE1C6] font-bold">{{ $d->topic_no }} </span><span class="text-[#FAE1C6] font-bold">{{$d->topic_letter}}: </span> {{ $d->title }}</div>
             
                 <div class="author-name flex gap-2 items-center justify-between ">
                     <div class="flex items-center gap-3 w-[30%]">

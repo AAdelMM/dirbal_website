@@ -116,7 +116,7 @@ $parts = DB::table('mashro3_a7kam')
        
     </div>
     {{-- <img class="absolute w-full h-full z-[0]" src="{{asset('images/123.png')}}" alt="background"> --}}
-<div class="container w-[70vw] mx-auto  py-[6rem] ">
+<div class="container w-[60vw] ml-[25vw]  py-[6rem] ">
     
     <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-6xl text-default-white font-bold mb-4"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
@@ -262,6 +262,53 @@ $parts = DB::table('mashro3_a7kam')
     </div>
 <!-- action buttons-->
     </div>
+    <!-- last topics and search start-->
+    <div class="last-topics top-[40rem] w-[25vw] absolute flex flex-col px-10">
+        <div class="search-in-topics w-[100%]">
+            <div class="inline-flex justify-around gap-5 w-[100%] h-[100%]">
+                <div class="w-[25%]">
+                    <button
+                        type="button"
+                        class="px-4 py-2 bg-[#C18F59] text-white rounded-sm hover:bg-brown-600 w-[100%]">
+                        بحث
+                    </button>
+                </div>
+                
+                    <input
+                    type="text"
+                    placeholder="ابحث في هذا المقال"
+                    class="w-[80%] px-4 py-2 rounded-sm border border-gray-300 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none text-right"/>
+                
+              </div>
+        </div>
+        <div class="last-topics mt-[6rem]">
+            <div class="text-white text-right text-2xl font-bold"style="font-family:'El messiri';">آخر موضوعات الفرع</div>
+            <div class="topics-list bg-white mt-5">
+                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
+                    <div class="w-[30%] h-[100%]  p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
+                    <h1 class="w-[70%] h-[100%] border text-right py-4"> {{ $decision->title }} </h1>
+
+                </div>
+                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
+                    <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
+                    <h1 class="w-[70%] h-[100%] border text-right py-4"> {{ $decision->title }} </h1>
+                </div>
+
+                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
+                    <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
+                    <h1 class="w-[70%] h-[100%] border text-right py-4"> {{ $decision->title }} </h1>
+                </div>
+
+                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
+                    <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
+                    <h1 class="w-[70%] h-[100%] border text-right py-4 items-center"> {{ $decision->title }} </h1>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- last topics and search start-->
+
     <button id="scrollToTopBtn" class=" scrollToTopBtn hidden fixed right-8 p-2 bottom-5 z-[1000]  ">
        <img class="w-[70%] h-[70%]" src="{{asset('images/arrowUp.png')}}" alt="arrow up">
     </button>
