@@ -286,22 +286,22 @@ $parts = DB::table('mashro3_a7kam')
             <div class="topics-list bg-white mt-5">
                 <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
                     <div class="w-[30%] h-[100%]  p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-4"> {{ $decision->title }} </h1>
+                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
 
                 </div>
                 <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
                     <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-4"> {{ $decision->title }} </h1>
+                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
                 </div>
 
                 <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
                     <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-4"> {{ $decision->title }} </h1>
+                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
                 </div>
 
                 <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
                     <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-4 items-center"> {{ $decision->title }} </h1>
+                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
                 </div>
             </div>
         </div>
