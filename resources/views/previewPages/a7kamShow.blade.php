@@ -126,7 +126,7 @@ $latestTitles = DB::table('mashro3_a7kam')
     
     <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-6xl text-default-white font-bold mb-4"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
-    <div class="justify-start items-center gap-[5px] inline-flex w-[100%]" style="font-family:'El messiri'; ">
+    <div class="justify-start items-center gap-[5px] mt-5 inline-flex w-[100%]" style="font-family:'El messiri'; ">
             <div class="Frame w-5 h-5 mx-2  ">
                 <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
             <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
@@ -269,7 +269,7 @@ $latestTitles = DB::table('mashro3_a7kam')
 <!-- action buttons-->
     </div>
     <!-- last topics and search start-->
-    <div class="last-topics top-[40rem] w-[25vw] absolute flex flex-col px-10">
+    <div class="last-topics top-[40rem] w-[24vw] absolute flex flex-col px-[3.5rem]">
         <div class="search-in-topics w-[100%]">
             <div class="inline-flex justify-around gap-5 w-[100%] h-[100%]">
                 <div class="w-[25%]">
@@ -291,7 +291,6 @@ $latestTitles = DB::table('mashro3_a7kam')
             <div class="text-white text-right text-2xl font-bold"style="font-family:'El messiri';">آخر موضوعات الفرع</div>
             <div class="topics-list bg-white mt-5">
                 
-            
                 @foreach ($latestTitles as $title)
                 <div class="topic w-[100%] border h-[auto] flex items-center justify-between"> 
                     <div class="w-[30%] h-[100%] border-r-2 p-2"><img class="w-[auto] h-[100%]  border-blue-200" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
