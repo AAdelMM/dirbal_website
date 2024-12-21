@@ -8,10 +8,20 @@ $parts = DB::table('mashro3_a7kam')
     ->get();
 
 $latestTitles = DB::table('mashro3_a7kam')
-    ->select('title', 'created_at')
+    ->select('title', 'created_at','day','month')
     ->orderBy('created_at', 'desc')
     ->limit(4)
     ->get();
+
+   
+$monthNames = [
+    1 => 'يناير', 2 => 'فبراير', 3 => 'مارس', 4 => 'أبريل', 
+    5 => 'مايو', 6 => 'يونيو', 7 => 'يوليو', 8 => 'أغسطس', 
+    9 => 'سبتمبر', 10 => 'أكتوبر', 11 => 'نوفمبر', 12 => 'ديسمبر'
+];
+
+
+
 @endphp
 
 @extends('homePage.test')
@@ -292,11 +302,28 @@ $latestTitles = DB::table('mashro3_a7kam')
             <div class="topics-list bg-white mt-5">
                 
                 @foreach ($latestTitles as $title)
-                <div class="topic w-[100%] border h-[auto] flex items-center justify-between"> 
-                    <div class="w-[30%] h-[100%] border-r-2 p-2"><img class="w-[auto] h-[100%]  border-blue-200" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] text-right py-1 px-1 text-[0.75rem] 2xl:text-[1rem]" style="font-family:'Noto Kufi Arabic';"> {{ $title->title }} </h1>
+                    <div class="topic w-[100%] border h-[auto] flex items-center justify-between"> 
+                        <!-- Image with Overlay -->
+                        <div class="relative w-[30%] h-[100%] border-r-2 p-2">
+                            <img class="w-[auto] h-[100%] border-blue-200" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1">
+                            
+                            <!-- Overlay -->
+                            <div class="absolute inset-0 w-[85%] h-[85%] m-auto bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 text-white">
+                                @php
+                                    $monthName = $monthNames[$title->month] ?? 'شهر غير معروف';
+                                @endphp
+                                <h2 class="text-white text-xl font-bold text-center">{{$title->day}}</h2>
+                                <h2>{{ $monthName }}</h2>
+                            </div>
+                        </div>
+                    
+                        <!-- Text Content -->
+                        <h1 class="w-[70%] h-[100%] text-right py-1 px-1 text-[0.75rem] 2xl:text-[1rem]" style="font-family:'Noto Kufi Arabic';"> 
+                            {{ $title->title }} 
+                        </h1>
+                    </div>
                 
-                </div>
+                
                 @endforeach
             </div>
         </div>
