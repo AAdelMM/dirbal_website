@@ -103,7 +103,7 @@ $latestTitles = DB::table('mashro3_a7kam')
     <div class="w-full h-[15rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
   background-position: center; " >
         <div class="w-[65%]">
-          <h1 class=" text-default-white font-bold mb-4" style="font-family:'El messiri'; font-size:2rem;">{{ $decision->title }}</h1>
+          <h1 class=" text-default-white font-bold mb-4 leading-4" style="font-family:'El messiri'; font-size:2rem;">{{ $decision->title }}</h1>
         </div>
         <div class="relative ">
         <div class="relative text-5xl font-bold my-5 text-white w-[7rem] h-[7rem]" style="font-family:'El Messiri';">
