@@ -271,7 +271,7 @@ $latestTitles = DB::table('mashro3_a7kam')
     <!-- last topics and search start-->
     <div class="last-topics top-[40rem] w-[24vw] absolute flex flex-col px-[3.5rem]">
         <div class="search-in-topics w-[100%]">
-            <div class="inline-flex justify-around gap-5 w-[100%] h-[100%]">
+            <div class="inline-flex justify-around gap-1 w-[100%] h-[100%]">
                 <div class="w-[25%]">
                     <button
                         type="button"
