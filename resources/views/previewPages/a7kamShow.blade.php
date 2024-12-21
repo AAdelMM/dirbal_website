@@ -103,7 +103,7 @@ $latestTitles = DB::table('mashro3_a7kam')
     <div class="w-full h-[15rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
   background-position: center; " >
         <div class="w-[65%]">
-          <h1 class=" text-default-white font-bold mb-4 leading-relaxed" style="font-family:'El messiri'; font-size:2rem;">{{ $decision->title }}</h1>
+          <h1 class=" text-default-white font-bold mb-4 " style="font-family:'El messiri'; font-size:2rem;">{{ $decision->title }}</h1>
         </div>
         <div class="relative ">
         <div class="relative text-5xl font-bold my-5 text-white w-[7rem] h-[7rem]" style="font-family:'El Messiri';">
@@ -125,7 +125,7 @@ $latestTitles = DB::table('mashro3_a7kam')
 <div class="container w-[60vw] ml-[25vw]  py-[6rem] ">
     
     <div class="container mx-auto text-default-white pb-10">
-    <h1 class="text-6xl text-default-white font-bold mb-4"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
+    <h1 class="text-6xl text-default-white font-bold mb-4 leading-relaxed"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
     <div class="justify-start items-center gap-[5px] mt-5 inline-flex w-[100%]" style="font-family:'El messiri'; ">
             <div class="Frame w-5 h-5 mx-2  ">
                 <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
