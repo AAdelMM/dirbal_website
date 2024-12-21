@@ -4,7 +4,13 @@ use Illuminate\Support\Facades\DB;
 $parts = DB::table('mashro3_a7kam')
     ->select('year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title', 'ka3da_text', 'dibaga', 'wak3a_text','id',
      'wak3a_text','egraa_title', 'egraa_text', 'reason_title', 'reason_text', '7okm_title', '7okm_text',
-     'author','audio_files','pdf_files','topic_letter','topic_no')
+     'author','audio_files','pdf_files','topic_letter','topic_no','created_at')
+    ->get();
+
+$latestTitles = DB::table('mashro3_a7kam')
+    ->select('title', 'created_at')
+    ->orderBy('created_at', 'desc')
+    ->limit(4)
     ->get();
 @endphp
 
@@ -284,25 +290,15 @@ $parts = DB::table('mashro3_a7kam')
         <div class="last-topics mt-[6rem]">
             <div class="text-white text-right text-2xl font-bold"style="font-family:'El messiri';">آخر موضوعات الفرع</div>
             <div class="topics-list bg-white mt-5">
-                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
-                    <div class="w-[30%] h-[100%]  p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
-
+                
+            
+                @foreach ($latestTitles as $title)
+                <div class="topic w-[100%] border h-[auto] flex items-center justify-between"> 
+                    <div class="w-[30%] h-[100%] border-r-2 p-2"><img class="w-[auto] h-[100%]  border-blue-200" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
+                    <h1 class="w-[70%] h-[100%] text-right py-1 px-1 text-[0.75rem] 2xl:text-[1rem]" style="font-family:'Noto Kufi Arabic';"> {{ $title->title }} </h1>
+                
                 </div>
-                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
-                    <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
-                </div>
-
-                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
-                    <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
-                </div>
-
-                <div class="topic w-[100%] border h-[5rem] flex items-center justify-between"> 
-                    <div class="w-[30%] h-[100%] p-2"><img class="w-[auto] h-[100%]" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1"></div>
-                    <h1 class="w-[70%] h-[100%] border text-right py-1 text-[0.75rem] 2xl:text-[1rem]"> {{ $decision->title }} </h1>
-                </div>
+                @endforeach
             </div>
         </div>
         
