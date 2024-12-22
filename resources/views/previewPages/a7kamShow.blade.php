@@ -132,10 +132,10 @@ $monthNames = [
        
     </div>
     {{-- <img class="absolute w-full h-full z-[0]" src="{{asset('images/123.png')}}" alt="background"> --}}
-<div class="container w-[60vw] ml-[25vw]  py-[6rem] ">
+<div class="container w-[60vw] ml-[25vw]  py-[2rem] ">
     
     <div class="container mx-auto text-default-white pb-10">
-    <h1 class="text-6xl text-default-white font-bold mb-4 leading-relaxed"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
+    <h1 class="text-4xl text-slate-200 font-bold mb-4 leading-relaxed underline underline-offset-8" style="font-family: 'zain';"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
     <div class="justify-start items-center gap-[5px] mt-5 inline-flex w-[100%]" style="font-family:'El messiri'; ">
             <div class="Frame w-5 h-5 mx-2  ">
                 <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
@@ -146,7 +146,7 @@ $monthNames = [
     
 
   
-    <h2 class="text-3xl font-bold my-5 border-b-2 border-[#C18F59] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{!! $decision->mogaz !!}</h2>
+    <h2 class="text-3xl font-bold my-5 border-b border-[#A6743E] py-5" style=" !important; font-family:'El Messiri'; text-align: center;">{!! $decision->mogaz !!}</h2>
 <!--audio player-->
 
     @if($decision->audio_files)
@@ -161,18 +161,18 @@ $monthNames = [
 <!--audio player end-->
     <h2 id="ka3da" class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->ka3da_title }}</h2>
 
-    <div class="prose lg:prose-xl pb-8 border-b-2 border-[#fdba74]">
+    <div class="prose lg:prose-xl pb-8 border-b border-[#A6743E]">
         {!! $decision->ka3da_text !!}
     </div>
-    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->dibaga !!}</div>
+    <div class="my-5 border-b border-[#A6743E] pb-8">{!! $decision->dibaga !!}</div>
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->wak3a_title }}</h2>
-    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->wak3a_text !!}</div>
+    <div class="my-5 border-b border-[#A6743E] pb-8">{!! $decision->wak3a_text !!}</div>
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->egraa_title }}</h2>
-    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->egraa_text !!}</div>
+    <div class="my-5 border-b border-[#A6743E] pb-8">{!! $decision->egraa_text !!}</div>
     <h2 class="text-3xl font-bold my-5 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->reason_title }}</h2>
-    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->reason_text !!}</div>
+    <div class="my-5 border-b border-[#A6743E] pb-8">{!! $decision->reason_text !!}</div>
     <h2 class="text-3xl font-bold my-6 " style="color:#fdba74 !important; font-family:'El Messiri'; text-align: center;">{{ $decision->{'7okm_title'} }}</h2>
-    <div class="my-5 border-b-2 border-[#A6743E] pb-8">{!! $decision->{'7okm_text'} !!}</div>
+    <div class="my-5 border-b border-[#A6743E] pb-8">{!! $decision->{'7okm_text'} !!}</div>
    
 </div>
 <!--add comment section-->
