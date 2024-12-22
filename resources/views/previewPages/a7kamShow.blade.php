@@ -131,9 +131,9 @@ $monthNames = [
         </div>
        
     </div>
-    {{-- <img class="absolute w-full h-full z-[0]" src="{{asset('images/123.png')}}" alt="background"> --}}
-<div class="container w-[60vw] ml-[25vw]  py-[2rem] ">
-    
+    <img class="absolute w-full h-full z-[0] auto mt-[-3rem]" src="{{asset('images/123.png')}}" alt="background">
+
+<div class="container w-[60vw] ml-[25vw]  py-[2rem] relative">
     <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-4xl text-slate-200 font-bold mb-4 leading-relaxed underline underline-offset-8" style="font-family: 'zain';"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
     <div class="justify-start items-center gap-[5px] mt-5 inline-flex w-[100%]" style="font-family:'El messiri'; ">
