@@ -257,11 +257,26 @@ $monthNames = [
                     <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
                 </div>
             </div>
-            <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
+            <div class="share cursor-pointer  border-b-2 border-white h-[5rem] flex items-center justify-center">
                 <div class="Frame34 flex justify-center gap-[3px] ">
-                    <img src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                    <img id="share-icon" src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                </div>
+                <div id="sub-icon1" class="sub-icon hidden border h-[5rem] w-[5rem] right-[5rem] absolute flex justify-center">
+                    <a href="https://wa.me/?text={{ urlencode(url()->current()) }}" target="_blank">
+                        <img class="p-2" src="{{ asset('images/whatshare.png') }}" alt="add to favorite">
+                </div>
+                <div id="sub-icon2" class="sub-icon hidden border h-[5rem] w-[5rem] right-[10rem] absolute flex justify-center">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank">
+
+                    <img class="p-2" src="{{ asset('images/face.png') }}" alt="add to favorite">
+                </div>
+                <div id="sub-icon3" class="sub-icon hidden border h-[5rem] w-[5rem] right-[15rem] absolute flex justify-center items-center">
+                    <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode('Check out this article!') }}" target="_blank">
+
+                    <img class="p-2" src="{{ asset('images/x.png') }}" alt="add to favorite">
                 </div>
             </div>
+            
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
                 <a href="#commentSection">
                     <div class="Frame34 flex justify-center gap-[3px] ">
@@ -368,7 +383,19 @@ $monthNames = [
 }
 
 
+.sub-icon {
+    opacity: 0;
+    transform: scale(0.9); /* Shrink slightly */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 2.3s ease-in-out, transform 2.3s ease-in-out;
+}
 
+/* Fade-In State */
+.sub-icon.fade-in {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto; /* Enable interaction when visible */
+}
 
 </style>
 
@@ -406,6 +433,18 @@ $monthNames = [
                 behavior: 'smooth' // Smooth scroll effect
             });
             console.log('clicked')
+        });
+    });
+
+    //share icon
+    document.getElementById('share-icon').addEventListener('click', () => {
+        const icons = ['sub-icon1', 'sub-icon2', 'sub-icon3'];
+        icons.forEach((icon, index) => {
+            setTimeout(() => {
+                const element = document.getElementById(icon);
+                element.classList.toggle('hidden');
+                element.classList.toggle('fade-in'); // Add fade-in class
+            }, index * 500); // Delay of 300ms between icons
         });
     });
 </script>
