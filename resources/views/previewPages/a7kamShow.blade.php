@@ -444,7 +444,7 @@ $monthNames = [
                 const element = document.getElementById(icon);
                 element.classList.toggle('hidden');
                 element.classList.toggle('fade-in'); // Add fade-in class
-            }, index * 500); // Delay of 300ms between icons
+            }, index * 100); // Delay of 300ms between icons
         });
     });
 </script>
