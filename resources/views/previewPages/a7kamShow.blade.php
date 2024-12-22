@@ -113,7 +113,7 @@ $monthNames = [
     <div class="w-full h-[15rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
   background-position: center; " >
         <div class="w-[65%]">
-          <h1 class=" text-default-white font-bold mb-4 " style="font-family:'El messiri'; font-size:2rem;">{{ $decision->title }}</h1>
+          <h1 class=" text-slate-300 font-bold mb-4 text-[3.5rem]" style="font-family:'zain'; direction:rtl;">{{ $decision->title }}</h1>
         </div>
         <div class="relative ">
         <div class="relative text-5xl font-bold my-5 text-white w-[7rem] h-[7rem]" style="font-family:'El Messiri';">
@@ -178,7 +178,7 @@ $monthNames = [
 <!--add comment section-->
 <div id="commentSection" class="my-8 border-t-2 border-[#A6743E] pt-8 z-[200]">
     <div class="flex justify-end ">
-        <h2 class="text-3xl font-bold mb-4 inline-flex gap-4 justify-center text-right" style="color:#C18F59 !important; font-family:'El Messiri'; text-align: right;">أضف تعليقاً<span><img src="{{asset('images/mcomment.png')}}" alt="comment icon"></span></h2>
+        <h2 class="text-2xl font-bold mb-4 inline-flex gap-4 justify-center text-right" style="color:#C18F59 !important; font-family:'El Messiri'; text-align: right;">أضف تعليقاً<span><img src="{{asset('images/mcomment.png')}}" alt="comment icon"></span></h2>
     </div>
         <form action="{{ route('comments.store') }}" method="POST">
         @csrf
@@ -187,7 +187,7 @@ $monthNames = [
         
         <div>
             <label for="comment" class="block text-white my-3 text-right"></label>
-            <textarea id="comment" name="comment" rows="4" placeholder="التعليق" required class="w-full px-3 py-2 text-gray-700 border  focus:outline-none" style="direction: rtl;"></textarea>
+            <textarea id="comment" name="comment" rows="6" placeholder="التعليق" required class="w-full px-3 py-2 text-gray-700 border  focus:outline-none" style="direction: rtl;"></textarea>
         </div>
         <div class="flex justify-between mt-3">
             <div class="w-[48%]">
@@ -308,11 +308,11 @@ $monthNames = [
                             <img class="w-[auto] h-[100%] border-blue-200" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1">
                             
                             <!-- Overlay -->
-                            <div class="absolute inset-0 w-[85%] h-[85%] m-auto bg-black bg-opacity-50 flex flex-col items-center justify-center p-2 text-white">
+                            <div class="absolute inset-0 w-[85%] h-[85%] m-auto bg-black bg-opacity-50 flex flex-col items-center justify-center  text-white">
                                 @php
                                     $monthName = $monthNames[$title->month] ?? 'شهر غير معروف';
                                 @endphp
-                                <h2 class="text-white text-xl font-bold text-center">{{$title->day}}</h2>
+                                <h1 class="text-white 2xl:text-xl text-md font-bold text-center">{{$title->day}}</h1>
                                 <h2>{{ $monthName }}</h2>
                             </div>
                         </div>
