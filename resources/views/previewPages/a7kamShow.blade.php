@@ -448,17 +448,32 @@ $monthNames = [
         });
     });
 
-    //share icon
-    document.getElementById('share-icon').addEventListener('click', () => {
-        const icons = ['sub-icon1', 'sub-icon2', 'sub-icon3'];
+    // Share icon
+document.getElementById('share-icon').addEventListener('click', () => {
+    const icons = ['sub-icon1', 'sub-icon2', 'sub-icon3'];
+    const firstIcon = document.getElementById(icons[0]);
+    const isVisible = !firstIcon.classList.contains('hidden'); // Check if icons are currently visible
+
+    if (isVisible) {
+        // Hide icons in reverse order
+        icons.slice().reverse().forEach((icon, index) => {
+            setTimeout(() => {
+                const element = document.getElementById(icon);
+                element.classList.toggle('hidden');
+                element.classList.remove('fade-in'); // Remove fade-in class
+            }, index * 50); // Delay of 50ms between icons
+        });
+    } else {
+        // Show icons in normal order
         icons.forEach((icon, index) => {
             setTimeout(() => {
                 const element = document.getElementById(icon);
                 element.classList.toggle('hidden');
-                element.classList.toggle('fade-in'); // Add fade-in class
-            }, index * 50); // Delay of 300ms between icons
+                element.classList.add('fade-in'); // Add fade-in class
+            }, index * 50); // Delay of 50ms between icons
         });
-    });
+    }
+});
 </script>
 
 @if (session('comment_submitted'))
