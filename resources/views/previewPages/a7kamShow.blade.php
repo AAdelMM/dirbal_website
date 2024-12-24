@@ -264,14 +264,14 @@ $monthNames = [
                          onmouseover="this.src='{{ asset('images/share_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/shareicon.png') }}';">
                 </div>
-                <div id="sub-icon1" class="sub-icon hidden border h-[5rem] w-[5rem] right-[5rem] absolute flex justify-center">
+                <div id="sub-icon1" class="sub-icon hidden border h-[5rem] w-[5rem] right-[5rem] absolute flex justify-center bg-[#161D27]">
                     <a href="https://wa.me/?text={{ urlencode(url()->current()) }}" target="_blank">
                         <img class="p-[1.2rem]" src="{{ asset('images/whatsapp.svg') }}" alt="add to favorite"
                         style=" transition: all 0.3s ease;"
                          onmouseover="this.src='{{ asset('images/whatsapp_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/whatsapp.png') }}';">
                 </div>
-                <div id="sub-icon2" class="sub-icon hidden border h-[5rem] w-[5rem] right-[10rem] absolute flex justify-center">
+                <div id="sub-icon2" class="sub-icon hidden border h-[5rem] w-[5rem] right-[10rem] absolute flex justify-center bg-[#161D27]">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank">
 
                     <img class="p-[1.2rem] m-auto" src="{{ asset('images/facebook.svg') }}" alt="add to favorite" 
@@ -279,7 +279,7 @@ $monthNames = [
                          onmouseover="this.src='{{ asset('images/facebook_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/facebook.svg') }}';">
                 </div>
-                <div id="sub-icon3" class="sub-icon hidden border h-[5rem] w-[5rem] right-[15rem] absolute flex justify-center items-center">
+                <div id="sub-icon3" class="sub-icon hidden border h-[5rem] w-[5rem] right-[15rem] absolute flex justify-center items-center bg-[#161D27]">
                     <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode('Check out this article!') }}" target="_blank">
 
                     <img class="p-[1.2rem] " src="{{ asset('images/x.png') }}" alt="add to favorite"
