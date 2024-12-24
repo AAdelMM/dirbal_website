@@ -296,9 +296,16 @@ $monthNames = [
                     </div>
                 </a>
             </div>
-            <div class="h-[5rem] flex items-center justify-center">
+            <div id="download_pdf" class="h-[5rem] flex items-center justify-center">
                 <div class="Frame34 flex justify-center gap-[3px] ">
+                @if (!empty($record->pdf_file))<!-- Ensure $record->pdf_file contains the PDF path -->
+                <a href="{{ asset($record->pdf_file) }}" download class="btn btn-primary">
                     <img src="{{ asset('images/pdficon.png') }}" alt="add to favorite">
+                </a>
+                @else
+                    <p>لا يوجد ملف</p>
+                @endif
+                    
                 </div>
             </div>
         </div>
