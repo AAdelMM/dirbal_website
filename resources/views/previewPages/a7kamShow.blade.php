@@ -274,7 +274,7 @@ $monthNames = [
                 <div id="sub-icon2" class="sub-icon hidden border h-[5rem] w-[5rem] right-[10rem] absolute flex justify-center bg-[#161D27]">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank">
 
-                    <img class="p-[1.2rem] m-auto" src="{{ asset('images/facebook.svg') }}" alt="add to favorite" 
+                    <img class="p-[1.3rem] m-auto" src="{{ asset('images/facebook.svg') }}" alt="add to favorite" 
                     style=" transition: all 0.3s ease;"
                          onmouseover="this.src='{{ asset('images/facebook_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/facebook.svg') }}';">
@@ -286,6 +286,14 @@ $monthNames = [
                     style=" transition: all 0.3s ease; max-width:5rem;"
                          onmouseover="this.src='{{ asset('images/x_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/x.png') }}';">
+                </div>
+                <div id="sub-icon4" class="sub-icon hidden border h-[5rem] w-[5rem] right-[20rem] absolute flex justify-center items-center bg-[#161D27]">
+                    <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode('Check out this article!') }}" target="_blank">
+
+                    <img class="p-[1rem] " src="{{ asset('images/e.png') }}" alt="add to favorite"
+                    style=" transition: all 0.3s ease; max-width:7rem;"
+                         onmouseover="this.src='{{ asset('images/e_gold.png') }}';"
+                         onmouseout="this.src='{{ asset('images/e.png') }}';">
                 </div>
             </div>
             
@@ -458,7 +466,7 @@ $monthNames = [
 
     // Share icon
 document.getElementById('share-icon').addEventListener('click', () => {
-    const icons = ['sub-icon1', 'sub-icon2', 'sub-icon3'];
+    const icons = ['sub-icon1', 'sub-icon2', 'sub-icon3', 'sub-icon4'];
     const firstIcon = document.getElementById(icons[0]);
     const isVisible = !firstIcon.classList.contains('hidden'); // Check if icons are currently visible
 
