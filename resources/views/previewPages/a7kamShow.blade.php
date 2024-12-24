@@ -283,12 +283,12 @@ $monthNames = [
                     <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode('Check out this article!') }}" target="_blank">
 
                     <img class="p-[1.2rem] " src="{{ asset('images/x.png') }}" alt="add to favorite"
-                    style=" transition: all 0.3s ease; max-width:5rem;"
+                    style=" transition: all 0.3s ease; max-width:6rem;"
                          onmouseover="this.src='{{ asset('images/x_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/x.png') }}';">
                 </div>
                 <div id="sub-icon4" class="sub-icon hidden border h-[5rem] w-[5rem] right-[20rem] absolute flex justify-center items-center bg-[#161D27]">
-                    <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode('Check out this article!') }}" target="_blank">
+                    <a href="mailto:?subject={{ urlencode('Check out this article!') }}&body={{ urlencode('لقد وجدت هذه المقالة الرائعة اتمنى ان تنال اعجابكم: ' . url()->current()) }}" target="_blank">
 
                     <img class="p-[1rem] " src="{{ asset('images/e.png') }}" alt="add to favorite"
                     style=" transition: all 0.3s ease; max-width:7rem;"
