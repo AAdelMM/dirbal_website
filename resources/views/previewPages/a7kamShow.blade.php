@@ -133,7 +133,7 @@ $monthNames = [
     </div>
     <img class="absolute w-full h-full z-[0] auto mt-[-3rem]" src="{{asset('images/123.png')}}" alt="background">
 
-<div class="container w-[60vw] ml-[25vw]  py-[2rem] relative">
+<div id="article-content" class="container w-[60vw] ml-[25vw]  py-[2rem] relative">
     <div class="container mx-auto text-default-white pb-10">
     <h1 class="text-4xl text-slate-200 font-bold mb-4 leading-relaxed underline underline-offset-8" style="font-family: 'zain';"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
     <div class="justify-start items-center gap-[5px] mt-5 inline-flex w-[100%]" style="font-family:'El messiri'; ">
@@ -288,7 +288,7 @@ $monthNames = [
                          onmouseout="this.src='{{ asset('images/x.png') }}';">
                 </div>
                 <div id="sub-icon4" class="sub-icon hidden border h-[5rem] w-[5rem] right-[20rem] absolute flex justify-center items-center bg-[#161D27]">
-                    <a href="mailto:?subject={{ urlencode('Check out this article!') }}&body={{ urlencode('لقد وجدت هذه المقالة الرائعة اتمنى ان تنال اعجابكم: ' . url()->current()) }}" target="_blank">
+                    <a href="mailto:?subject={{ urlencode('شاهد هذه المقالة!') }}&body={{ urlencode('لقد وجدت هذه المقالة الرائعة اتمنى ان تنال اعجابكم: ' . url()->current()) }}" target="_blank">
 
                     <img class="p-[1rem] " src="{{ asset('images/e.png') }}" alt="add to favorite"
                     style=" transition: all 0.3s ease; max-width:7rem;"
@@ -328,6 +328,7 @@ $monthNames = [
                 <div class="w-[25%]">
                     <button
                         type="button"
+                        id="search-button"
                         class="px-4 py-2 bg-[#C18F59] text-white rounded-sm hover:bg-brown-600 w-[100%]">
                         بحث
                     </button>
@@ -335,10 +336,12 @@ $monthNames = [
                 
                     <input
                     type="text"
+                    id="search-input"
                     placeholder="ابحث في هذا المقال"
-                    class="w-[80%] px-4 py-2 rounded-sm border border-gray-300 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none text-right"/>
+                    class="form-control w-[80%] px-4 py-2 rounded-sm border border-gray-300 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none text-right"/>
                 
               </div>
+              
         </div>
         <div class="last-topics mt-[6rem]">
             <div class="text-white text-right text-2xl font-bold"style="font-family:'El messiri';">آخر موضوعات الفرع</div>
@@ -425,6 +428,11 @@ $monthNames = [
     pointer-events: auto; /* Enable interaction when visible */
 }
 
+.highlight {
+    background-color: yellow;
+    color: #161D27
+    
+}
 </style>
 
 
@@ -490,6 +498,36 @@ document.getElementById('share-icon').addEventListener('click', () => {
         });
     }
 });
+
+//search 
+document.getElementById('search-button').addEventListener('click', function () {
+    const input = document.getElementById('search-input');
+    const article = document.getElementById('article-content');
+    const searchText = input.value.trim();
+
+    // Validate input: only Arabic words and at least two characters
+    const arabicRegex = /^[\u0600-\u06FF\s]+$/;
+    if (!arabicRegex.test(searchText) || searchText.length < 2) {
+        alert('يرجى إدخال كلمة باللغة العربية تحتوي على حرفين على الأقل.');
+        return;
+    }
+
+    // Clear previous highlights
+    const originalText = article.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+    article.innerHTML = originalText;
+
+    // Highlight matches
+    const regex = new RegExp(`(${searchText})`, 'gi'); // Match Arabic text
+    const highlighted = originalText.replace(regex, '<span class="highlight">$1</span>');
+    article.innerHTML = highlighted;
+
+    // Check if any match occurred
+    if (originalText === article.innerHTML) {
+        alert('الكلمة غير موجودة في النص.');
+    }
+});
+
+
 </script>
 
 @if (session('comment_submitted'))
