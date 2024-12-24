@@ -259,21 +259,33 @@ $monthNames = [
             </div>
             <div class="share cursor-pointer  border-b-2 border-white h-[5rem] flex items-center justify-center">
                 <div class="Frame34 flex justify-center gap-[3px] ">
-                    <img id="share-icon" src="{{ asset('images/shareicon.png') }}" alt="add to favorite">
+                    <img id="share-icon"   src="{{ asset('images/shareicon.png') }}" alt="add to favorite"
+                         style=" transition: all 0.3s ease; max-width:5rem;"
+                         onmouseover="this.src='{{ asset('images/share_gold.png') }}';"
+                         onmouseout="this.src='{{ asset('images/shareicon.png') }}';">
                 </div>
                 <div id="sub-icon1" class="sub-icon hidden border h-[5rem] w-[5rem] right-[5rem] absolute flex justify-center">
                     <a href="https://wa.me/?text={{ urlencode(url()->current()) }}" target="_blank">
-                        <img class="p-2" src="{{ asset('images/whatshare.png') }}" alt="add to favorite">
+                        <img class="p-[1.2rem]" src="{{ asset('images/whatsapp.svg') }}" alt="add to favorite"
+                        style=" transition: all 0.3s ease;"
+                         onmouseover="this.src='{{ asset('images/whatsapp_gold.png') }}';"
+                         onmouseout="this.src='{{ asset('images/whatsapp.png') }}';">
                 </div>
                 <div id="sub-icon2" class="sub-icon hidden border h-[5rem] w-[5rem] right-[10rem] absolute flex justify-center">
                     <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank">
 
-                    <img class="p-2" src="{{ asset('images/face.png') }}" alt="add to favorite">
+                    <img class="p-[1.2rem] m-auto" src="{{ asset('images/facebook.svg') }}" alt="add to favorite" 
+                    style=" transition: all 0.3s ease;"
+                         onmouseover="this.src='{{ asset('images/facebook_gold.png') }}';"
+                         onmouseout="this.src='{{ asset('images/facebook.svg') }}';">
                 </div>
                 <div id="sub-icon3" class="sub-icon hidden border h-[5rem] w-[5rem] right-[15rem] absolute flex justify-center items-center">
                     <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode('Check out this article!') }}" target="_blank">
 
-                    <img class="p-2" src="{{ asset('images/x.png') }}" alt="add to favorite">
+                    <img class="p-[1.2rem] " src="{{ asset('images/x.png') }}" alt="add to favorite"
+                    style=" transition: all 0.3s ease; max-width:5rem;"
+                         onmouseover="this.src='{{ asset('images/x_gold.png') }}';"
+                         onmouseout="this.src='{{ asset('images/x.png') }}';">
                 </div>
             </div>
             
@@ -444,7 +456,7 @@ $monthNames = [
                 const element = document.getElementById(icon);
                 element.classList.toggle('hidden');
                 element.classList.toggle('fade-in'); // Add fade-in class
-            }, index * 100); // Delay of 300ms between icons
+            }, index * 50); // Delay of 300ms between icons
         });
     });
 </script>
