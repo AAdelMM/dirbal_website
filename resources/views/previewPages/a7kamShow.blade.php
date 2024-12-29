@@ -307,7 +307,8 @@ $monthNames = [
             <div id="download_pdf" class="h-[5rem] flex items-center justify-center">
                 <div class="Frame34 flex justify-center gap-[3px] ">
                 @if (!empty($decision->pdf_files))<!-- Ensure $record->pdf_file contains the PDF path -->
-                <a href="{{ asset('storage/pdf_files/' . basename($decision->pdf_files)) }}" download class="btn btn-primary">
+                <a href="{{ asset('storage/pdf_files/' . basename($decision->pdf_files)) }}" 
+                    download="{{ $decision->title ?? 'file' }}.pdf" class="btn btn-primary">
                     
                     <img src="{{ asset('images/pdf.png') }}" alt="download">
                 </a>
