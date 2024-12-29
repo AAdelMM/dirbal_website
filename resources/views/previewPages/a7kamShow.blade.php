@@ -10,7 +10,7 @@ $parts = DB::table('mashro3_a7kam')
 $latestTitles = DB::table('mashro3_a7kam')
     ->select('title', 'created_at','day','month')
     ->orderBy('created_at', 'desc')
-    ->limit(4)
+    ->limit(5)
     ->get();
 
    
@@ -240,8 +240,8 @@ $monthNames = [
 </div>    
 
     <!-- action buttons-->
-    <div  class="action-buttons lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[8rem] lg:right-[4rem] right-[2rem] absolute">
-        <div class="w-[5rem] h-auto border-2 border-white text-white text-center ">
+    <div  class="action-buttons lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[6.2rem] lg:right-[4rem] right-[2rem] absolute">
+        <div class="w-[5.7rem] h-auto border-[1px] border-white text-white text-center ">
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
                 <div class="w-[100%] h-24 flex flex-col justify-center items-center">
                     <div class="flex text-[1.5rem] text-[#C18F59]">
@@ -322,14 +322,14 @@ $monthNames = [
 <!-- action buttons-->
     </div>
     <!-- last topics and search start-->
-    <div class="last-topics top-[40rem] w-[24vw] absolute flex flex-col px-[3.5rem]">
+    <div class="last-topics top-[40rem] w-[16vw] 2xl:left-[4.8rem] lg:left-[3.5rem] absolute flex flex-col ">
         <div class="search-in-topics w-[100%]">
             <div class="inline-flex justify-around gap-1 w-[100%] h-[100%]">
-                <div class="w-[25%]">
+                <div class="w-[28%]">
                     <button
                         type="button"
                         id="search-button"
-                        class="px-4 py-2 bg-[#C18F59] text-white rounded-sm hover:bg-brown-600 w-[100%]">
+                        class="px-4 py-1 bg-[#C18F59] text-white rounded-sm hover:bg-brown-600 w-[100%]">
                         بحث
                     </button>
                 </div>
@@ -338,7 +338,7 @@ $monthNames = [
                     type="text"
                     id="search-input"
                     placeholder="ابحث في هذا المقال"
-                    class="form-control w-[80%] px-4 py-2 rounded-sm border border-gray-300 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none text-right"/>
+                    class="form-control w-[69%] px-4 py-1 rounded-sm border border-gray-300 focus:ring focus:ring-blue-500 focus:ring-opacity-50 focus:outline-none text-right"/>
                 
               </div>
               
@@ -350,7 +350,7 @@ $monthNames = [
                 @foreach ($latestTitles as $title)
                     <div class="topic w-[100%] border h-[auto] flex items-center justify-between"> 
                         <!-- Image with Overlay -->
-                        <div class="relative w-[30%] h-[100%] border-r-2 p-2">
+                        <div class="relative w-[30%] h-[100%] p-2">
                             <img class="w-[auto] h-[100%] border-blue-200" src="{{ asset('images/numberbg.png') }}" alt="صورة الموضوع1">
                             
                             <!-- Overlay -->
@@ -364,7 +364,7 @@ $monthNames = [
                         </div>
                     
                         <!-- Text Content -->
-                        <h1 class="w-[70%] h-[100%] text-right py-1 px-1 text-[0.75rem] 2xl:text-[1rem]" style="font-family:'Noto Kufi Arabic';"> 
+                        <h1 class="w-[70%] h-[100%] text-right py-1 px-1 text-[0.75rem] 2xl:text-[1rem] border-l-2" style="font-family:'Noto Kufi Arabic';"> 
                             {{ $title->title }} 
                         </h1>
                     </div>
