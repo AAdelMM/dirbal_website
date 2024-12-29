@@ -257,13 +257,14 @@ $monthNames = [
                     <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
                 </div>
             </div>
-            <div class="share cursor-pointer  border-b-2 border-white h-[5rem] flex items-center justify-center">
-                <div class="Frame34 flex justify-center gap-[3px] ">
+            <div class="share cursor-pointer  border-b-2 border-white h-[5rem]  flex items-center justify-center relative">
+                <div class="Frame34 flex justify-center gap-[3px] w-[0.5rem]">
                     <img id="share-icon"   src="{{ asset('images/shareicon.png') }}" alt="add to favorite"
-                         style=" transition: all 0.3s ease; max-width:5rem;"
+                         style=" transition: all 0.3s ease; max-width:6rem;"
                          onmouseover="this.src='{{ asset('images/share_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/shareicon.png') }}';">
                 </div>
+                <div id="sub-icons-container" class="absolute right-2 top-0">
                 <div id="sub-icon1" class="sub-icon hidden border h-[5rem] w-[5rem] right-[5rem] absolute flex justify-center bg-[#161D27]">
                     <a href="https://wa.me/?text={{ urlencode(url()->current()) }}" target="_blank">
                         <img class="p-[1.2rem]" src="{{ asset('images/whatsapp.svg') }}" alt="add to favorite"
@@ -295,6 +296,7 @@ $monthNames = [
                          onmouseover="this.src='{{ asset('images/e_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/e.png') }}';">
                 </div>
+            </div>
             </div>
             
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
@@ -474,31 +476,51 @@ $monthNames = [
     });
 
     // Share icon
-document.getElementById('share-icon').addEventListener('click', () => {
-    const icons = ['sub-icon1', 'sub-icon2', 'sub-icon3', 'sub-icon4'];
-    const firstIcon = document.getElementById(icons[0]);
-    const isVisible = !firstIcon.classList.contains('hidden'); // Check if icons are currently visible
+    document.addEventListener('DOMContentLoaded', () => {
+    const shareIcon = document.getElementById('share-icon');
+    const submenuContainer = document.getElementById('sub-icons-container'); // The submenu wrapper
+    const subIcons = document.querySelectorAll('.sub-icon');
 
-    if (isVisible) {
-        // Hide icons in reverse order
-        icons.slice().reverse().forEach((icon, index) => {
+    // Helper function to show submenu
+    const showSubmenu = () => {
+        subIcons.forEach((icon, index) => {
             setTimeout(() => {
-                const element = document.getElementById(icon);
-                element.classList.toggle('hidden');
-                element.classList.remove('fade-in'); // Remove fade-in class
-            }, index * 50); // Delay of 50ms between icons
+                icon.classList.remove('hidden');
+                icon.classList.add('fade-in');
+            }, index * 50); // Staggered animation
         });
-    } else {
-        // Show icons in normal order
-        icons.forEach((icon, index) => {
+    };
+
+    // Helper function to hide submenu
+    const hideSubmenu = () => {
+        subIcons.forEach((icon, index) => {
             setTimeout(() => {
-                const element = document.getElementById(icon);
-                element.classList.toggle('hidden');
-                element.classList.add('fade-in'); // Add fade-in class
-            }, index * 50); // Delay of 50ms between icons
+                icon.classList.remove('fade-in');
+                icon.classList.add('hidden');
+            }, index * 50); // Reverse staggered animation
         });
-    }
+    };
+
+    // Show submenu when mouse enters the share icon
+    shareIcon.addEventListener('mouseenter', showSubmenu);
+
+    // Keep submenu visible when hovering over the submenu container
+    submenuContainer.addEventListener('mouseenter', showSubmenu);
+
+    // Hide submenu when mouse leaves both the share icon and submenu container
+   
+
+    submenuContainer.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!shareIcon.matches(':hover')) {
+                hideSubmenu();
+            }
+        }, 50);
+    });
 });
+
+
+
 
 //search 
 document.getElementById('search-button').addEventListener('click', function () {
