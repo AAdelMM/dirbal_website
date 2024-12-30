@@ -141,6 +141,9 @@ $monthNames = [
                 <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
             <div class="text-white text-[1rem] font-normal leading-[18px]" style="font-family:'Noto Kufi Arabic';direction:rtl;">بقلم:</div>
             <div class="w-[40%]  text-[1rem] font-normal text-right leading-[18px]" style="font-family:'Noto Kufi Arabic'; color:#C18F59;">{{ $decision->author }} </div>
+            
+            
+            <div class=" 2xl:text-[1rem] lg:text-[0.9rem] inline-flex items-center gap-2" style="font-family:'Noto Kufi Arabic';"><span class="date-icon w-5 h-5"><img src="{{ asset('images/date.png')}}" alt="date-icon"></span>بتاريخ: <span class="text-[#C18F59]">{{ $decision->day}} / </span><span class="text-[#C18F59]">{{$decision->month}} / </span><span class="text-[#C18F59]"> {{ $decision->year}}</span></div>
     </div>
    
     
@@ -243,13 +246,10 @@ $monthNames = [
     <div  class="action-buttons lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[6.2rem] lg:right-[4rem] right-[2rem] absolute">
         <div class="w-[5.7rem] h-auto border-[1px] border-white text-white text-center ">
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
-                <div class="w-[100%] h-24 flex flex-col justify-center items-center">
-                    <div class="flex text-[1.5rem] text-[#C18F59]">
-                        <div class="month font-bold text-3xl">{{ $decision->month }}</div>
-                        <div>-</div>
-                        <div class="day font-bold text-3xl">{{ $decision->day }}</div>
-                    </div>
-                    <div class="year text-[1rem]">{{ $decision->year }}</div>
+                <div class="like w-[100%] h-24 flex justify-center items-center cursor-pointer" style="max-width: 3rem;">
+                    <img src="{{ asset('images/like.png') }}" alt="like-icon" style=" transition: all 0.3s ease;"
+                    onmouseover="this.src='{{ asset('images/like-gold.png') }}';"
+                    onmouseout="this.src='{{ asset('images/like.png') }}';">
                 </div>
             </div>
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
