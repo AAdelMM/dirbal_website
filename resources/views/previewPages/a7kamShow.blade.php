@@ -302,7 +302,9 @@ $monthNames = [
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
                 <a href="#commentSection">
                     <div class="Frame34 flex justify-center gap-[3px] ">
-                        <img src="{{ asset('images/commenticon.png') }}" alt="add to favorite">
+                        <img src="{{ asset('images/commenticon.png') }}" alt="comment" style=" transition: all 0.3s ease; max-width:6rem;"
+                        onmouseover="this.src='{{ asset('images/comment-gold.png') }}';"
+                        onmouseout="this.src='{{ asset('images/comment.png') }}';">
                     </div>
                 </a>
             </div>
