@@ -2,10 +2,15 @@
 use Illuminate\Support\Facades\DB;
 
 $parts = DB::table('mashro3_a7kam')
-    ->select('year', 'month', 'ref_number', 'title', 'mogaz', 'ka3da_title', 'ka3da_text', 'dibaga', 'wak3a_text','id',
-     'wak3a_text','egraa_title', 'egraa_text', 'reason_title', 'reason_text', '7okm_title', '7okm_text',
-     'author','audio_files','pdf_files','topic_letter','topic_no','created_at')
+->select('*', DB::raw('COALESCE((SELECT COUNT(*) FROM likes WHERE likes.contents_id = mashro3_a7kam.id), 0) as likes_count'))
     ->get();
+
+ // Fetch likes_count for the current topic based on section_id, branch_id, and item_id
+ $likes_count = DB::table('likes')
+        ->where('section_id', $decision->section_id)
+        ->where('branch_id', $decision->branch_id)
+        ->where('item_id', $decision->item_id)
+        ->count();
 
 $latestTitles = DB::table('mashro3_a7kam')
     ->select('title', 'created_at','day','month')
@@ -110,8 +115,8 @@ $monthNames = [
       <div class="border-t border-white mt-4"></div>
     </header>
     <!--last updated white header end-->
-    <div class="w-full h-[15rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
-  background-position: center; " >
+    <div class="w-full h-[18rem] my-10 inline-flex justify-end items-center gap-10 px-10 bg-cover "  style="background-image: url('{{ asset('images/a7kamfullbg.jpeg') }}');  background-attachment: fixed;
+   background-repeat: no-repeat; background-position: center center; " >
         <div class="w-[65%]">
           <h1 class=" text-slate-300 font-bold mb-4 text-[3.5rem]" style="font-family:'zain'; direction:rtl;">{{ $decision->title }}</h1>
         </div>
@@ -135,7 +140,7 @@ $monthNames = [
 
 <div id="article-content" class="container w-[60vw] ml-[25vw]  py-[2rem] relative">
     <div class="container mx-auto text-default-white pb-10">
-    <h1 class="text-4xl text-slate-200 font-bold mb-4 leading-relaxed underline underline-offset-8" style="font-family: 'zain';"><span>{{ $decision->topic_no }} </span><span >{{ $decision->topic_letter }}: </span> {{ $decision->title }} </h1>
+    <h1 class="text-4xl text-slate-200 font-bold mb-4 leading-relaxed underline underline-offset-8" style="font-family: 'zain'; "><span class="text-[#FAE1C6]">{{ $decision->topic_no }} </span><span class="text-[#FAE1C6]">{{ $decision->topic_letter }}: </span > {{ $decision->title }} </h1>
     <div class="justify-start items-center gap-[5px] mt-5 inline-flex w-[100%]" style="font-family:'El messiri'; ">
             <div class="Frame w-5 h-5 mx-2  ">
                 <img src="{{ asset('images/goldAvatar.png')}}" alt="author avatar"></div>
@@ -246,10 +251,10 @@ $monthNames = [
     <div  class="action-buttons lg:top-[28rem] 2xl:top-[28.5rem] top-[18rem] 2xl:right-[6.2rem] lg:right-[4rem] right-[2rem] absolute">
         <div class="w-[5.7rem] h-auto border-[1px] border-white text-white text-center ">
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
-                <div class="like w-[100%] h-24 flex justify-center items-center cursor-pointer" style="max-width: 3rem;">
-                    <img src="{{ asset('images/like.png') }}" alt="like-icon" style=" transition: all 0.3s ease;"
-                    onmouseover="this.src='{{ asset('images/like-gold.png') }}';"
-                    onmouseout="this.src='{{ asset('images/like.png') }}';">
+                <div class="like w-[100%] h-24 flex justify-center items-center cursor-pointer" style="max-width: 3rem;" 
+                onclick="likeArticle({{ $decision->id }}, {{ $decision->section_id }}, {{ $decision->branch_id }}, {{ $decision->item_id }})">
+                    <img id="like-icon-{{ $decision->id }}" src="{{ asset('images/like.png') }}" alt="like-icon" style="transition: all 0.3s ease;">
+                    <span id="like-count-{{ $decision->id }}" class="text-white ml-2">{{ $likes_count}}</span>
                 </div>
             </div>
             <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
@@ -551,6 +556,53 @@ document.getElementById('search-button').addEventListener('click', function () {
         alert('الكلمة غير موجودة في النص.');
     }
 });
+
+/////////////like button 
+function likeArticle(contentsId, sectionId, branchId, itemId) {
+    // Change the icon to gold
+    const likeIcon = document.getElementById(`like-icon-${contentsId}`);
+    likeIcon.src = "{{ asset('images/like-gold.png') }}";
+
+    // Send an AJAX request to save the like
+    fetch('/like', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        },
+        body: JSON.stringify({
+            contents_id: contentsId,
+            section_id: sectionId,
+            branch_id: branchId,
+            item_id: itemId
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json(); // Parse the response as JSON
+    })
+    .then(data => {
+        if (data.success) {
+            console.log('Like saved successfully');
+            // Set a cookie to remember that the user has liked this topic
+            document.cookie = `liked_${contentsId}=true; max-age=31536000; path=/`; // Cookie lasts for 1 year
+            // Update the like count dynamically
+            fetch(`/get-likes-count?section_id=${sectionId}&branch_id=${branchId}&item_id=${itemId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const likeCountElement = document.getElementById(`like-count-${contentsId}`);
+                    likeCountElement.innerText = data.likes_count;
+                });
+        } else {
+            console.error('Failed to save like:', data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
 
 
 </script>

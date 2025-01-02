@@ -119,7 +119,7 @@ Route::get('/ma7kama-olia/{ma7kamaOlia}/preview', [Ma7kamaOliaPreviewController:
     ->name('ma7kama-olia.preview');
 
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
-Route::post('/likes', [LikeController::class, 'store'])->name('likes.store');
+Route::post('/like', [LikeController::class, 'store'])->name('likes.store');
 
 Route::middleware(['auth', 'filament'])->group(function () {
     Route::get('/admin/section', [SectionResource::class, 'index'])->name('admin.sections');

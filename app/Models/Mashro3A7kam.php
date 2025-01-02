@@ -54,4 +54,5 @@ class Mashro3A7kam extends Model
       {
           return $this->belongsTo(Item::class);
       }
+  
 }

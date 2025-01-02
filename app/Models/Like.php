@@ -9,11 +9,11 @@ class Like extends Model
 {
     use HasFactory;
 
-
-    protected $fillable = ['content_id', 'user_ip'];
-
-    public function content()
-    {
-        return $this->belongsTo(Content::class);
-    }
+    protected $fillable = [
+        'content_id',
+        'section_id',
+        'branch_id',
+        'item_id',
+        'user_ip',
+    ];
 }
