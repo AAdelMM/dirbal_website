@@ -25,7 +25,9 @@ $monthNames = [
     9 => 'سبتمبر', 10 => 'أكتوبر', 11 => 'نوفمبر', 12 => 'ديسمبر'
 ];
 
-
+// Retrieve the current favorites from the cookie
+$favorites = json_decode(request()->cookie('favorites', '[]'), true);
+$favoriteCount = count($favorites);
 
 @endphp
 
@@ -96,13 +98,15 @@ $monthNames = [
           <img class="w-32 lg:w-40 xl:w-48" src="{{ asset('images/48.png') }}" alt="Logo" />
         </div></a>
         
+        
+
         <div class="flex items-center space-x-4">
           <div class="relative">
           </div>
          <div class="relative">
           <img class="w- h-auto lg:w-5  cursor-pointer" src="{{ asset('images/favw.png') }}" alt="fav" onclick="redirectToFavorite()">
           <div class="absolute -top-2 -right-2 w-5 h-5 bg-red-600 rounded-full flex items-center justify-center">
-              <span class="text-white text-xs">3</span>
+              <span id="favorite-count" class="text-white text-xs">{{ $favoriteCount }}</span>
             </div>
           </div> 
           
@@ -257,14 +261,16 @@ $monthNames = [
                     <span id="like-count-{{ $decision->id }}" class="text-white ml-2">{{ $likes_count}}</span>
                 </div>
             </div>
-            <div class="border-b-2 border-white h-[5rem] flex items-center justify-center">
-                <div class="year w-[100%] h-24 flex justify-center items-center">
-                    <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite">
+            <div class="border-b-2 cursor-pointer  border-white h-[5rem] flex items-center justify-center">
+                <div class="favorite w-[100%] h-24 flex justify-center items-center" onclick="saveToFavorites({{ $decision->id }})">
+                    <img src="{{ asset('images/Vector1.png') }}" alt="add to favorite" style=" transition: all 0.3s ease; max-width:6rem;"
+                    onmouseover="this.src='{{ asset('images/fav_gold.png') }}';"
+                    onmouseout="this.src='{{ asset('images/favw.png') }}';">
                 </div>
             </div>
             <div class="share cursor-pointer  border-b-2 border-white h-[5rem]  flex items-center justify-center relative">
                 <div class="Frame34 flex justify-center gap-[3px] w-[0.5rem]">
-                    <img id="share-icon"   src="{{ asset('images/shareicon.png') }}" alt="add to favorite"
+                    <img id="share-icon"   src="{{ asset('images/shareicon.png') }}" alt="share"
                          style=" transition: all 0.3s ease; max-width:6rem;"
                          onmouseover="this.src='{{ asset('images/share_gold.png') }}';"
                          onmouseout="this.src='{{ asset('images/shareicon.png') }}';">
@@ -604,6 +610,56 @@ function likeArticle(contentsId, sectionId, branchId, itemId) {
     });
 }
 
+//favorite icon
+function saveToFavorites(articleId) {
+    // Retrieve the current favorites from the cookie
+    let favorites = JSON.parse(getCookie('favorites') || '[]');
+
+    // Check if the article is already in favorites
+    if (!favorites.includes(articleId)) {
+        favorites.push(articleId); // Add the article ID to favorites
+        setCookie('favorites', JSON.stringify(favorites), 365); // Save the updated favorites to a cookie
+
+        // Increment the favorite count
+        const favoriteCountElement = document.getElementById('favorite-count');
+        let currentCount = parseInt(favoriteCountElement.innerText, 10);
+        favoriteCountElement.innerText = currentCount + 1;
+
+        alert('تمت إضافة المقال إلى المفضلة.');
+    } else {
+        alert('هذا المقال موجود بالفعل في المفضلة.');
+    }
+}
+
+// Helper function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Helper function to get a cookie
+function getCookie(name) {
+    let nameEQ = name + "=";
+    let ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+// Initialize the favorite count when the page loads
+document.addEventListener('DOMContentLoaded', function () {
+    const favorites = JSON.parse(getCookie('favorites') || '[]');
+    const favoriteCountElement = document.getElementById('favorite-count');
+    favoriteCountElement.innerText = favorites.length;
+});
 
 </script>
 
